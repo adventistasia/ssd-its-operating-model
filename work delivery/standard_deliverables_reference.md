@@ -8,13 +8,25 @@ This document helps teams think through what artifacts may be needed across diff
 
 ## Deliverable Domains
 
-A deliverable domain is a simple way to group related types of deliverables.
+A deliverable domain is a practical grouping of related deliverables.
 
-Each domain represents a different aspect of an initiative that may need attention — for example, the solution itself, data, operations, security, governance, or user adoption.
+Each domain covers one important area of delivery, such as solution design, governance, operations, data, security, or user adoption.
 
-Thinking in domains helps teams ask: “Have we covered all the important areas?” It prevents focusing only on building the solution while overlooking data ownership, operational support, security risk, or change impact.
+Using domains helps teams answer a simple question early: **"Have we covered all critical areas, not only build work?"**
 
-During Delivery Definition, the team identifies which domains apply to the initiative. Not every initiative will need every domain.
+During Delivery Definition, the team confirms which domains are in scope. Not every initiative needs every domain.
+
+## How to Use Standard Deliverables
+
+Use this document as a **selection and control guide**, not as a requirement to produce every document listed.
+
+1. Confirm which deliverable domains are in scope for the initiative.
+2. For each in-scope domain, select the standard deliverables that fit the initiative size, risk, and complexity.
+3. Assign a clear owner and Acceptance Authority for each selected deliverable.
+4. Use the domain Acceptance Focus questions to define what "done" means.
+5. Collect acceptance evidence as delivery progresses, then record formal acceptance.
+
+If a deliverable is excluded, record why it is excluded. This keeps governance decisions visible and auditable.
 
 ## 1. Solution Deliverables
 
@@ -27,8 +39,8 @@ Deliver the approved business outcomes through an implemented solution that rema
 - **Deployed Solution**
 - **Functional Capabilities Baseline**
 - **Solution Modules**
-- **Use Case Narrative Set**
-- **User Roles & Access Model**
+- **Use Case Narratives**
+- **User Roles, Personas & Access Model**
 - **Acceptance Record**
 
 ### Deployed Solution
@@ -53,7 +65,7 @@ This document clarifies how approved capabilities are grouped for build, testing
 
 ### Use Case Narratives
 
-Describes how users achieve outcomes using the solution.
+Describe how users achieve outcomes using the solution.
 
 Use cases define:
 
@@ -92,7 +104,7 @@ This artifact demonstrates that the delivered solution aligns with what was auth
 
 ### Acceptance Focus
 
-Acceptance Focus defines the critical questions that must be clearly and defensibly answered before this deliverable domain is considered complete.
+Acceptance Focus lists the key questions that must be clearly answered before this deliverable domain can be accepted.
 
 - What business capabilities define the authorized scope of the solution?
 - Does the implemented solution align with those approved capabilities and outcomes?
@@ -156,7 +168,7 @@ This prevents informal completion without accountability.
 
 ### Acceptance Focus
 
-Acceptance Focus defines the critical questions that must be clearly and defensibly answered before this deliverable domain is considered complete.
+Acceptance Focus lists the key questions that must be clearly answered before this deliverable domain can be accepted.
 
 - What organizational problem and outcome justified this initiative?
 - Are scope boundaries explicit and consistently respected?
@@ -265,7 +277,7 @@ This artifact prevents informal or unsupported handover.
 
 ### Acceptance Focus
 
-Acceptance Focus defines the critical questions that must be clearly and defensibly answered before this deliverable domain is considered complete.
+Acceptance Focus lists the key questions that must be clearly answered before this deliverable domain can be accepted.
 
 - Can the solution be deployed and administered in a controlled and repeatable way?
 - Are the technical design, dependencies, and operational constraints clearly understood?
@@ -348,7 +360,7 @@ May include:
 
 ### Acceptance Focus
 
-Acceptance Focus defines the critical questions that must be clearly and defensibly answered before this deliverable domain is considered complete.
+Acceptance Focus lists the key questions that must be clearly answered before this deliverable domain can be accepted.
 
 - What categories of data are produced, stored, or processed by the initiative?
 - What is the sensitivity classification of that data?
@@ -433,7 +445,7 @@ This prevents silent or assumed risk acceptance.
 
 ### Acceptance Focus
 
-Acceptance Focus defines the critical questions that must be clearly and defensibly answered before this deliverable domain is considered complete.
+Acceptance Focus lists the key questions that must be clearly answered before this deliverable domain can be accepted.
 
 - What security and privacy risks does this solution introduce or change?
 - Have appropriate controls been defined to mitigate identified risks?
@@ -528,7 +540,7 @@ This prevents informal or assumed adoption.
 
 ### Acceptance Focus
 
-Acceptance Focus defines the critical questions that must be clearly and defensibly answered before this deliverable domain is considered complete.
+Acceptance Focus lists the key questions that must be clearly answered before this deliverable domain can be accepted.
 
 - Which user groups are impacted, and how does their behavior change?
 - Have users been clearly informed about what is changing and why?
