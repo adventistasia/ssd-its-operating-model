@@ -8,14 +8,14 @@ description: >
 # Write spec skill
 
 ## Gather context
-- Before drafting, open and review `specification_for_writing_specifications.md` so you align with its section guidance and examples.
+- Before drafting, open and review `specification_writing_guide.md` so you align with its section guidance and examples.
 - Capture the artifact name plus its role (governance, delivery, implementation, operations, or compliance) and the audience who will sign, consume, or act on it.
 - Clarify why it exists: what trigger, capability gap, business outcome, or risk it resolves; link to the supporting initiative or operating model artifact (e.g., reference `its_operating_model.md` or `its_work_management_model.md`).
 - Ask for measurable success criteria, acceptance tests, or definition of done, and record any timelines or milestones that constrain the work.
 - Document the authoring owner(s) and supporting SMEs who will keep the spec current.
 
 ## Draft the structure
-Use the sections in `specification_for_writing_specifications.md` as the base template, but keep them practical:
+Use the sections in `specification_writing_guide.md` as the base template, but keep them practical:
 1. **Purpose & value** (intent, why now, and how it supports delivery/governance).
 2. **Problem/opportunity statement** (current state, gaps, or requests) plus desired outcomes.
 3. **Scope boundaries** (what is included, what is excluded, dependencies, handoffs, and affected capabilities).
@@ -38,5 +38,5 @@ Use the sections in `specification_for_writing_specifications.md` as the base te
 - After drafting, walk through the spec with stakeholders to confirm the decision log, owners, and acceptance criteria are accurate.
 
 ## References
-- Use `specification_for_writing_specifications.md` for canonical sections and examples.
+- Use `specification_writing_guide.md` for canonical sections and examples.
 - Consult `its_operating_model.md` and `its_work_management_model.md` for governance expectations, work visibility requirements, and accountability structures.
