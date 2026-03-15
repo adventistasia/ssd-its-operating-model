@@ -1,12 +1,12 @@
 # Work Delivery Framework
 
-## Purpose
+## 1. Purpose
 
 This framework governs planned work delivery initiatives, including projects, significant enhancements, and smaller governed initiatives.
 
 It puts the Define-Decide-Deliver (DDD) Work Management Model into practice by defining the minimum decisions, documents, ownership, and controls needed to deliver work clearly, accountably, and sustainably.
 
-## Intended Outcome
+## 2. Intended Outcome
 
 When applied consistently:
 
@@ -18,7 +18,7 @@ When applied consistently:
 - operational support is prepared before handover
 - acceptance and closure are formal, attributable, and evidence-based
 
-## Applicability and Scaling
+## 3. Applicability and Scaling
 
 This framework applies to:
 
@@ -34,7 +34,7 @@ To keep the framework practical:
 
 The framework is intentionally control-light for low-complexity work and should scale up only where risk, cost, impact, or cross-team coordination require it.
 
-## Operating Principles
+## 4. Operating Principles
 
 1. Define before authorizing.
 2. Authorize before delivering.
@@ -43,20 +43,36 @@ The framework is intentionally control-light for low-complexity work and should 
 5. Transition to operations with named ownership.
 6. Keep artifacts practical, readable, and usable by both humans and AI.
 
-## Core Roles
+## 5. Core Roles
 
-| Role                              | Accountable for                                                      | Practical working expectation                                                  |
-| --------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| Sponsor                           | Sponsorship, priority, funding support, risk sponsorship             | Confirms why the work matters and keeps it supported                           |
-| Decision Authority                | Formal go / no-go and major governance decisions                     | Approves, defers, rejects, or conditions work                                  |
-| Outcome Owner                     | Intended business outcome and success measures                       | Confirms the work is solving the right problem                                 |
-| Delivery Owner                    | Stage discipline, coordination, delivery control, evidence readiness | Usually leads the operating rhythm of the work                                 |
-| Project Manager (if assigned)     | Delivery coordination on behalf of the Delivery Owner                | Maintains plans, status, risks, decisions, dependencies, and follow-up actions |
-| Acceptance Authority              | Formal sign-off for a deliverable domain or deliverable              | Accepts based on defined acceptance focus and evidence                         |
-| Support Owner / Operational Owner | Ongoing operational support and service continuity                   | Confirms readiness to run and support the solution                             |
-| Subject Matter Leads              | Domain-specific content quality                                      | Draft or review specialist inputs as required                                  |
+| Role                              | Accountable for                                                      | Practical working expectation                                                                       |
+| --------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| Sponsor                           | Sponsorship, priority, funding support, risk sponsorship             | Confirms why the work matters and keeps it supported                                                |
+| Decision Authority                | Formal go / no-go and major governance decisions                     | May be the committee itself or a formally delegated person acting within recorded delegation limits |
+| Outcome Owner                     | Intended business outcome and success measures                       | Confirms the work is solving the right problem                                                      |
+| Delivery Owner                    | Stage discipline, coordination, delivery control, evidence readiness | Usually leads the operating rhythm of the work                                                      |
+| Project Manager (if assigned)     | Delivery coordination on behalf of the Delivery Owner                | Maintains plans, status, risks, decisions, dependencies, and follow-up actions                      |
+| Acceptance Authority              | Formal sign-off for a deliverable domain or deliverable              | Accepts based on defined acceptance focus and evidence                                              |
+| Support Owner / Operational Owner | Ongoing operational support and service continuity                   | Confirms readiness to run and support the solution                                                  |
+| Subject Matter Leads              | Domain-specific content quality                                      | Draft or review specialist inputs as required                                                       |
 
-## Decision Record Minimum
+### 5.1. Delegated Decision Authority
+
+For organizational initiatives, a committee may be the ultimate approving body.
+
+It is not necessary for the committee to make every decision directly. A named person may act as the Decision Authority on behalf of the committee when delegation is explicit and recorded.
+
+Where decision authority is delegated, the record should make visible:
+
+- the committee or authority delegating the decision right
+- the named delegated person
+- the kinds of decisions covered by the delegation
+- any limits on scope, cost, risk, policy, or acceptance authority
+- when the matter must return to the committee or higher authority
+
+Delegated authority must not be assumed or inferred. If delegation is not explicit, the decision should be treated as reserved to the committee or other formal approving authority.
+
+## 6. Decision Record Minimum
 
 The minimum standard for a decision record in Stages 1, 2, 3, and 7 is:
 
@@ -69,7 +85,7 @@ The minimum standard for a decision record in Stages 1, 2, 3, and 7 is:
 
 The decision record may be a standalone artifact or a clearly identified section in another approved record.
 
-## AI-Assisted Delivery Rules
+## 7. AI-Assisted Delivery Rules
 
 AI may be used to speed up drafting, summarization, traceability checks, review preparation, and revision cycles.
 
@@ -83,19 +99,47 @@ AI must not:
 
 AI-generated outputs should include clear source context, stable IDs where used, and a concise change summary when materially revised.
 
-## End-to-End Stage Summary
+If an AI agent is asked to draft or revise a governed artifact and any of the following are missing, unclear, or contradictory:
 
-| Stage                               | Primary Decision                                      | Primary Owner                                    | Minimum Outcome                                                                |
-| ----------------------------------- | ----------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------ |
-| 1. Work Assessment                  | Proceed / Defer / Reject                              | ITS                                              | Worth defining further or not                                                  |
-| 2. Work Definition                  | Ready / Not ready for authorization                   | Delivery Owner with Outcome Owner                | Decision-ready Initiative Definition Document with supporting detail as needed |
-| 3. Work Authorization               | Approve / Defer / Reject / Approve with conditions    | Decision Authority                               | Work formally authorized with funding and accountability                       |
-| 4. Work Definition Details          | Ready to mobilize / Rework / Return to Stage 2        | Delivery Owner with design leads                 | Detailed design and delivery-ready elaboration                                 |
-| 5. Delivery Mobilization            | Ready to execute                                      | Delivery Owner                                   | Delivery rhythm, controls, and team setup in place                             |
-| 6. Work Delivery                    | Continue / Escalate / Change / Prepare for acceptance | Delivery Owner                                   | Authorized deliverables produced with evidence                                 |
-| 7. Acceptance, Transition & Closure | Accept / Conditionally accept / Reject / Close        | Acceptance Authorities and Sponsor as applicable | Formal acceptance, handover, and closure                                       |
+- approved scope boundary
+- required deliverable identity
+- named owner or Acceptance Authority
+- decision basis
+- evidence basis
+- status of authorization
 
-## Stage 1 - Work Assessment
+the AI should:
+
+- label the output as a working draft
+- state the missing control inputs explicitly
+- avoid presenting assumptions as approved facts
+- avoid marking status as authorized, accepted, or complete
+- route the matter back to the Delivery Owner or named human owner for resolution
+
+Where AI or humans draft governed artifacts with multiple sections or sub-sections, visible section numbering is recommended so content can be referenced unambiguously during review, decision-making, acceptance, and change control.
+
+Use numbering consistently in headings where practical, for example:
+
+- `## 1. Purpose`
+- `## 7. Required Content or Minimum Structure`
+- `### 7.1. Baseline context`
+- `### 12.2. Section prompts`
+
+## 8. End-to-End Stage Summary
+
+Accountable means they are accountable for moving the stage forward.
+
+| Stage                               | Primary Decision                                      | Accountable                                      | Minimum Outcome                                                                                                  |
+| ----------------------------------- | ----------------------------------------------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| 1. Work Assessment                  | Proceed / Defer / Reject                              | ITS + Submitter                                  | Worth defining further or not                                                                                    |
+| 2. Work Definition                  | Ready / Not ready for authorization                   | Delivery Owner with Outcome Owner                | Decision-ready Initiative Definition Document with required deliverables and supporting detail as needed         |
+| 3. Work Authorization               | Approve / Defer / Reject / Approve with conditions    | Sponsor with Decision Authority                  | Work formally authorized with funding and accountability.<br><br>Appropriate committee approval may be necessary |
+| 4. Work Definition Details          | Ready to mobilize / Rework / Return to Stage 2        | Delivery Owner with design leads                 | Detailed design and delivery-ready elaboration                                                                   |
+| 5. Delivery Mobilization            | Ready to execute                                      | Delivery Owner                                   | Delivery rhythm, controls, and team setup in place                                                               |
+| 6. Work Delivery                    | Continue / Escalate / Change / Prepare for acceptance | Delivery Owner                                   | Authorized deliverables produced with evidence                                                                   |
+| 7. Acceptance, Transition & Closure | Accept / Conditionally accept / Reject / Close        | Acceptance Authorities and Sponsor as applicable | Formal acceptance, handover, and closure                                                                         |
+
+## 9. Stage 1 - Work Assessment
 
 **Purpose:** Determine whether the request is worth further investment before entering Work Definition.
 
@@ -103,13 +147,13 @@ AI-generated outputs should include clear source context, stable IDs where used,
 
 **Primary Owner:** ITS, supported by intake / portfolio governance.
 
-### Minimum Outputs
+### 9.1. Minimum Outputs
 
 - Work Assessment Report
 - decision record
 - named sponsor or sponsor candidate
 
-### Stage Output Checklist
+### 9.2. Stage Output Checklist
 
 | Output                  | Required  | Accountable              | Practical note                                                              |
 | ----------------------- | --------- | ------------------------ | --------------------------------------------------------------------------- |
@@ -117,7 +161,7 @@ AI-generated outputs should include clear source context, stable IDs where used,
 | Early stakeholder input | As needed | ITS                      | Keep notes inside the assessment report unless separate notes are necessary |
 | Decision record         | Yes       | ITS / Decision Authority | Record proceed / defer / reject and any conditions                          |
 
-### AI Use in This Stage
+### 9.3. AI Use in This Stage
 
 AI can:
 
@@ -131,7 +175,7 @@ Humans must:
 - decide whether the work should proceed
 - confirm the recorded decision
 
-### Exit Criteria
+### 9.4. Exit Criteria
 
 - problem and opportunity are clearly stated
 - sponsorship is confirmed or explicitly unresolved
@@ -139,70 +183,81 @@ Humans must:
 - the decision is recorded
 - if proceeding, the work is ready to enter Stage 2
 
-## Stage 2 - Work Definition
+## 10. Stage 2 - Work Definition
 
-**Purpose:** Define enough to support an informed Work Authorization decision - no more, no less.
+**Purpose:** Define the initiative enough to support a sound Work Authorization decision - no more, no less.
 
 **Primary Decision:** Ready or not ready for Work Authorization.
 
 **Primary Owner:** Delivery Owner, with Outcome Owner accountability for business intent.
 
-### What Stage 2 Must Produce
+### 10.1. What Stage 2 Must Produce
 
-Stage 2 stays at approval-level detail. It defines what is to be delivered, why it matters, who owns it, what domains are in scope, what acceptance will focus on, and what level of cost and risk the organization is being asked to approve.
+Stage 2 stays at authorization-level detail. It defines what the initiative is expected to deliver, why it matters, who owns it, what acceptance will focus on, and what level of cost and risk the organization is being asked to approve.
+
+Deliverable domains may be used to organize the delivery view, but they do not replace visibility of the actual deliverables expected from the initiative.
 
 The **Initiative Definition Document** is the primary artifact for Stage 2. Supporting artifacts may be attached or referenced only when they are needed to hold additional detail that enables a sound Work Authorization decision.
 
 As much as possible, the Initiative Definition Document should contain enough information to support authorization without forcing readers to assemble the decision case from many separate documents.
 
-### Initiative Definition Document Minimum Content
+Deliverables not needed for authorization may still be listed in Stage 2 at summary level so the likely delivery footprint and effort remain visible, but they should be elaborated only in Stage 4.
+
+### 10.2. Initiative Definition Document Minimum Content
 
 - problem and current-state summary
 - future-state intent and expected value
 - outcome statement and measurable success criteria
 - in-scope and out-of-scope boundaries
-- selected deliverable domains and excluded domains
-- named Acceptance Authority for every in-scope domain
+- required deliverables for the initiative, grouped by deliverable domain where useful
+- named Acceptance Authority for every required deliverable or clearly defined deliverable grouping
 - delivery owner, outcome owner, sponsor, and key stakeholders
 - approval-level cost, financial impact, and major risk summary
 - support and operational ownership expectations
 - approval-level functional scope where solution behavior is in scope
 
-### Stage Output Checklist
+Additional expected deliverables not needed for authorization may be listed at summary level so likely effort is visible without forcing premature elaboration.
+
+### 10.3. Stage Output Checklist
 
 | Output                                          | Required                                                                           | Accountable                                   | Practical note                                                                                       |
 | ----------------------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | Initiative Definition Document                  | Yes                                                                                | Delivery Owner                                | Primary authorization artifact; keep it decision-ready, not design-heavy                             |
 | Functional Capabilities                         | When solution behavior is in scope and the ID cannot hold enough clarity concisely | Delivery Owner with business / solution leads | Approval-level only; do not turn Stage 2 into detailed design                                        |
-| Deliverable domain and Acceptance Authority map | Yes                                                                                | Delivery Owner                                | Prefer to keep this inside the Initiative Definition Document                                        |
+| Required deliverables and Acceptance Authority map | Yes                                                                              | Delivery Owner                                | Prefer to keep this inside the Initiative Definition Document; domains may be used only as organizing structure |
 | Cost, funding, and risk summary                 | Yes                                                                                | Sponsor with Delivery Owner                   | Prefer to keep this inside the Initiative Definition Document unless detail must sit separately      |
 | Support / operational impact summary            | When service or system impact exists                                               | Delivery Owner with operations                | May be summarized in the Initiative Definition Document with supporting detail referenced separately |
 | Supporting authorization artifacts              | As needed                                                                          | Relevant owner                                | Use only where additional detail is necessary for a sound authorization decision                     |
 | Draft Project Charter                           | Yes                                                                                | Delivery Owner                                | Prepare the decision-ready charter for Stage 3                                                       |
+| Stage 2 readiness decision record               | Yes                                                                                | Delivery Owner with Outcome Owner             | Record whether the package is ready or not ready for Work Authorization, with basis and follow-up    |
 
-### AI Use in This Stage
+### 10.4. AI Use in This Stage
 
 AI can:
 
 - draft the Initiative Definition Document from structured inputs
 - suggest scope wording, outcome statements, and artifact structure
-- help identify candidate deliverable domains from the Standard Deliverables Reference
+- help identify candidate deliverables from the Standard Deliverables Guide
+- help list additional expected deliverables that may need elaboration after authorization
 
 AI must not:
 
 - decide what is in or out of scope
+- decide which deliverables are required without instruction
 - assign Acceptance Authorities without instruction
 - approve the authorization package
 
-### Exit Criteria
+### 10.5. Exit Criteria
 
-- the work is described clearly enough for a go / no-go decision
-- deliverable domains are explicitly included or excluded
-- Acceptance Authorities are named for each in-scope domain
+- the initiative is defined clearly enough for a go / no-go decision
+- required deliverables are explicitly identified at authorization level
+- Acceptance Authorities are named for each required deliverable or deliverable grouping
+- additional expected deliverables not needed for authorization may be listed at summary level so likely effort remains visible
 - owners, cost, risks, and support implications are visible
+- the readiness decision is recorded
 - the package is ready for Work Authorization
 
-## Stage 3 - Work Authorization
+## 11. Stage 3 - Work Authorization
 
 **Purpose:** Formally authorize delivery by committing people, time, funding, and risk to the defined work.
 
@@ -210,14 +265,14 @@ AI must not:
 
 **Primary Owner:** Decision Authority.
 
-### Minimum Outputs
+### 11.1. Minimum Outputs
 
 - approved or rejected Project Charter
 - decision record
 - funding confirmation or explicit funding condition
 - any conditions, limits, or phased authorization notes
 
-### Stage Output Checklist
+### 11.2. Stage Output Checklist
 
 | Output | Required | Accountable | Practical note |
 | --- | --- | --- | --- |
@@ -226,7 +281,7 @@ AI must not:
 | Funding confirmation | Yes for approved work | Sponsor / Finance / Decision Authority | Must identify the source or condition of funding |
 | Authorization conditions log | When applicable | Delivery Owner | Track what must be satisfied after authorization |
 
-### AI Use in This Stage
+### 11.3. AI Use in This Stage
 
 AI can:
 
@@ -239,64 +294,67 @@ AI must not:
 - make the authorization decision
 - claim funding is approved when it is not
 
-### Exit Criteria
+### 11.4. Exit Criteria
 
 - delivery is explicitly approved, deferred, or rejected
 - the Project Charter status is clear
 - funding and accountability are clear enough to proceed
 - any conditions are recorded with owners
 
-### Hard Rule
+### 11.5. Hard Rule
 
 No delivery work may start without explicit Work Authorization.
 
-## Stage 4 - Work Definition Details
+## 12. Stage 4 - Work Definition Details
 
-**Purpose:** Produce the detailed design and elaboration needed to build what was authorized, without changing approved scope, outcomes, capabilities, or acceptance structure.
+**Purpose:** Elaborate the authorized initiative into the delivery-ready detail needed to build, test, transition, and accept what was authorized, without changing approved scope, outcomes, capabilities, or acceptance structure.
 
 **Primary Decision:** Ready to mobilize, rework, or return to Stage 2.
 
 **Primary Owner:** Delivery Owner, working with solution and domain leads.
 
-### Minimum Outputs
+### 12.1. Minimum Outputs
 
-- Detailed Design Package
-- detailed domain-specific design or elaboration artifacts for in-scope domains
+- elaborated versions of required Stage 2 deliverables where further detail is needed
+- additional definition deliverables needed for controlled delivery
+- detailed solution and domain-specific design or elaboration artifacts for in-scope work
 - acceptance test approach aligned to Stage 2 acceptance focus
 - rollout, migration, and recovery approach as applicable
 
-### Stage Output Checklist
+### 12.2. Stage Output Checklist
 
-| Output | Required | Accountable | Practical note |
-| --- | --- | --- | --- |
-| Detailed Design Package | Yes | Delivery Owner with design leads | Organize the build-ready design view |
-| Solution Modules and Use Case Narratives | When solution behavior is in scope | Solution lead | Must remain traceable to approved Functional Capabilities |
-| Acceptance test approach | Yes for deliverables requiring testing | Delivery Owner with testers / reviewers | Show how acceptance will be evidenced |
-| Data move, rollout, and recovery approach | When applicable | Delivery Owner with operations / data leads | Make transition and recovery practical |
-| Detailed operational design summary | When system impact exists | Operations / support lead | Confirm how the solution will be run and supported |
+| Output                                    | Required                               | Accountable                                 | Practical note                                                                                    |
+| ----------------------------------------- | -------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Delivery-ready elaboration set            | Yes                                    | Delivery Owner with design leads            | Elaborate the authorized initiative into the detailed artifact set needed for controlled delivery |
+| Additional definition deliverables        | When needed for controlled delivery    | Delivery Owner with domain leads            | May be identified in Stage 2 at summary level, but elaborated here only when needed               |
+| Solution Modules and Use Case Narratives  | When solution behavior is in scope     | Solution lead                               | Must remain traceable to approved Functional Capabilities                                         |
+| Acceptance test approach                  | Yes for deliverables requiring testing | Delivery Owner with testers / reviewers     | Show how acceptance will be evidenced                                                             |
+| Data move, rollout, and recovery approach | When applicable                        | Delivery Owner with operations / data leads | Make transition and recovery practical                                                            |
+| Detailed operational design summary       | When system impact exists              | Operations / support lead                   | Confirm how the solution will be run and supported                                                |
 
-### AI Use in This Stage
+### 12.3. AI Use in This Stage
 
 AI can:
 
 - draft detailed design sections from approved scope
 - help structure modules, use cases, test outlines, and traceability tables
 - identify obvious mismatches between Stage 2 scope and Stage 4 detail
+- help elaborate Stage 2 deliverables into delivery-ready detail
 
 AI must not:
 
 - introduce new capabilities
 - silently expand scope through design detail
 
-### Exit Criteria
+### 12.4. Exit Criteria
 
-- design detail is complete enough to execute
+- design and deliverable detail are complete enough to execute
 - traceability to authorized scope is clear
 - acceptance approach is defined
 - no material scope expansion has been introduced
 - the work is ready for Delivery Mobilization
 
-## Stage 5 - Delivery Mobilization
+## 13. Stage 5 - Delivery Mobilization
 
 **Purpose:** Prepare the team and governance rhythm to execute in a controlled, visible, and sustainable way.
 
@@ -304,7 +362,7 @@ AI must not:
 
 **Primary Owner:** Delivery Owner.
 
-### Minimum Outputs
+### 13.1. Minimum Outputs
 
 - Delivery Charter
 - delivery plan or initial task breakdown
@@ -312,7 +370,7 @@ AI must not:
 - change and escalation rules
 - working cadence for status, risks, decisions, and acceptance readiness
 
-### Stage Output Checklist
+### 13.2. Stage Output Checklist
 
 | Output | Required | Accountable | Practical note |
 | --- | --- | --- | --- |
@@ -323,7 +381,7 @@ AI must not:
 | RAID / dependency log setup | Yes | Project Manager or Delivery Owner | Risks, assumptions, issues, dependencies in one maintained place |
 | Acceptance tracker setup | Yes | Delivery Owner | Track domain-level readiness, evidence, and sign-off status |
 
-### Minimum Operating Rhythm
+### 13.3. Minimum Operating Rhythm
 
 At minimum, the delivery team should establish:
 
@@ -333,7 +391,7 @@ At minimum, the delivery team should establish:
 - a decision log
 - a clear path for preparing acceptance evidence
 
-### AI Use in This Stage
+### 13.4. AI Use in This Stage
 
 AI can:
 
@@ -345,14 +403,14 @@ AI must not:
 
 - close risks, approve changes, or assign decisions without human confirmation
 
-### Exit Criteria
+### 13.5. Exit Criteria
 
 - the team knows how work will be executed and governed
 - plans and trackers exist and are usable
 - status, escalation, and acceptance preparation rhythms are in place
 - the work is ready to begin controlled execution
 
-## Stage 6 - Work Delivery
+## 14. Stage 6 - Work Delivery
 
 **Purpose:** Produce the authorized deliverables, collect evidence, manage changes visibly, and progress work toward acceptance.
 
@@ -360,7 +418,7 @@ AI must not:
 
 **Primary Owner:** Delivery Owner.
 
-### Minimum Outputs
+### 14.1. Minimum Outputs
 
 - in-scope deliverables
 - acceptance evidence
@@ -368,18 +426,18 @@ AI must not:
 - current status, risk, and dependency reporting
 - updated acceptance tracker
 
-### Stage Output Checklist
+### 14.2. Stage Output Checklist
 
-| Output | Required | Accountable | Practical note |
-| --- | --- | --- | --- |
-| Deliverables for each in-scope domain | Yes | Assigned Delivery Owners | Build and validate only what was authorized or formally changed |
-| Evidence linked to deliverables | Yes | Delivery Owner with domain leads | Evidence must be attributable and reviewable |
-| Status reporting | Yes | Project Manager or Delivery Owner | Report progress by deliverable status and major outcomes |
-| RAID / dependency log updates | Yes | Project Manager or Delivery Owner | Keep risks, issues, and dependencies current |
-| Change records | When change occurs | Delivery Owner | Record scope, decision, and impact of changes |
-| Acceptance tracker updates | Yes | Delivery Owner | Show what is ready, blocked, or pending sign-off |
+| Output                                            | Required           | Accountable                       | Practical note                                                  |
+| ------------------------------------------------- | ------------------ | --------------------------------- | --------------------------------------------------------------- |
+| Deliverables as approved in Initiative Definition | Yes                | Assigned Delivery Owners          | Build and validate only what was authorized or formally changed |
+| Evidence linked to deliverables                   | Yes                | Delivery Owner with domain leads  | Evidence must be attributable and reviewable                    |
+| Status reporting                                  | Yes                | Project Manager or Delivery Owner | Report progress by deliverable status and major outcomes        |
+| RAID / dependency log updates                     | Yes                | Project Manager or Delivery Owner | Keep risks, issues, and dependencies current                    |
+| Change records                                    | When change occurs | Delivery Owner                    | Record scope, decision, and impact of changes                   |
+| Acceptance tracker updates                        | Yes                | Delivery Owner                    | Show what is ready, blocked, or pending sign-off                |
 
-### Minimum Control Expectations
+### 14.3. Minimum Control Expectations
 
 During execution:
 
@@ -389,7 +447,7 @@ During execution:
 - evidence should be collected as work is completed, not reconstructed at the end
 - the Delivery Owner or project manager should keep the operating picture current
 
-### AI Use in This Stage
+### 14.4. AI Use in This Stage
 
 AI can:
 
@@ -403,14 +461,14 @@ AI must not:
 - hide unresolved risks or gaps
 - substitute generated text for real evidence
 
-### Exit Criteria
+### 14.5. Exit Criteria
 
 - all in-scope deliverables are produced and validated against defined acceptance focus
 - evidence is complete and linked
 - unresolved sign-off blockers are visible and addressed
 - the work is ready for formal acceptance, transition, and closure
 
-## Stage 7 - Acceptance, Transition & Closure
+## 15. Stage 7 - Acceptance, Transition & Closure
 
 **Purpose:** Formally accept the delivered outcomes, transition responsibility, and close the work.
 
@@ -418,7 +476,7 @@ AI must not:
 
 **Primary Owner:** Acceptance Authorities for their domains, coordinated by the Delivery Owner.
 
-### Minimum Outputs
+### 15.1. Minimum Outputs
 
 - acceptance records for in-scope deliverables or domains
 - operational handover confirmation where applicable
@@ -426,7 +484,7 @@ AI must not:
 - final unresolved actions list if any conditions remain
 - final financial and delivery summary
 
-### Stage Output Checklist
+### 15.2. Stage Output Checklist
 
 | Output | Required | Accountable | Practical note |
 | --- | --- | --- | --- |
@@ -436,7 +494,7 @@ AI must not:
 | Outstanding conditions list | When applicable | Delivery Owner | Make remaining actions visible and owned |
 | Final financial / delivery summary | Yes | Delivery Owner with Sponsor | Record actual vs approved at an appropriate level |
 
-### AI Use in This Stage
+### 15.3. AI Use in This Stage
 
 AI can:
 
@@ -449,25 +507,25 @@ AI must not:
 - approve acceptance
 - claim transition is complete without confirmation from the receiving owner
 
-### Exit Criteria
+### 15.4. Exit Criteria
 
 - all required deliverables are accepted or explicitly conditionally accepted
 - operational ownership is confirmed where needed
 - closure is recorded
 - any remaining follow-up actions are assigned and visible
 
-### Hard Rule
+### 15.5. Hard Rule
 
 Delivered without acceptance is not complete.
 
-## Artifact Summary by Stage
+## 16. Artifact Summary by Stage
 
-| Stage | Core Artifacts |
-| --- | --- |
-| Work Assessment | Work Assessment Report, decision record |
-| Work Definition | Initiative Definition Document, supporting authorization artifacts as needed, Functional Capabilities (if applicable), draft Project Charter |
-| Work Authorization | Decision record, approved Project Charter, funding confirmation |
-| Work Definition Details | Detailed Design Package, detailed domain artifacts, acceptance test approach |
-| Delivery Mobilization | Delivery Charter, communication plan, change and escalation rules, delivery plan, trackers |
-| Work Delivery | Deliverables, evidence, status reports, decision and change records |
-| Acceptance, Transition & Closure | Acceptance records, handover confirmation, closure record |
+| Stage                            | Core Artifacts                                                                                                                                                                                                                      |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Work Assessment                  | Work Assessment Report, decision record                                                                                                                                                                                             |
+| Work Definition                  | Initiative Definition Document, required deliverables and Acceptance Authority map, supporting authorization artifacts as needed, Functional Capabilities (if applicable), draft Project Charter, Stage 2 readiness decision record |
+| Work Authorization               | Decision record, approved Project Charter, funding confirmation                                                                                                                                                                     |
+| Work Definition Details          | Delivery-ready elaboration set, additional definition deliverables as needed, detailed domain artifacts, acceptance test approach                                                                                                   |
+| Delivery Mobilization            | Delivery Charter, communication plan, change and escalation rules, delivery plan, trackers                                                                                                                                          |
+| Work Delivery                    | Deliverables, evidence, status reports, decision and change records                                                                                                                                                                 |
+| Acceptance, Transition & Closure | Acceptance records, handover confirmation, closure record                                                                                                                                                                           |
