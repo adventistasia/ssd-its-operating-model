@@ -186,6 +186,26 @@ Where useful, include:
 - section prompts
 - validation prompts
 
+### 4.10 Recommend section numbering for usability
+
+Where a specification has multiple major sections or sub-sections, number them so they are easy to identify, reference, review, and discuss.
+
+Use numbering consistently in the visible headings, especially for:
+
+- major sections
+- sub-sections under a major section
+- prompt guide sub-sections
+- validation or checklist sub-sections where reviewers may need to cite a specific item
+
+For example:
+
+- `## 1. Purpose and Intended Outcome`
+- `## 7. Required Content or Minimum Structure`
+- `### 7.1. Baseline context`
+- `### 12.2. Section prompts`
+
+This improves traceability in review comments, governance discussions, change requests, and AI-assisted drafting.
+
 ## 5. Recommended Structure for a Specification
 
 The sections below are the recommended default structure for writing a specification for a deliverable, artifact, or document.
@@ -287,6 +307,8 @@ For each required section, content item, or information category, explain in sho
 - what it should help the reader understand, decide, do, validate, or accept
 
 When the artifact naturally has major parts, structure this section in a way that reflects those parts rather than using one flat list.
+
+Where practical, number the section and its sub-sections so reviewers and drafters can refer to them unambiguously.
 
 When the artifact is entry-based, record-based, log-based, or table-based, define the required fields for each entry or row, not only the overall document sections.
 

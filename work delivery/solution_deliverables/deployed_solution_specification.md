@@ -1,6 +1,6 @@
 # Deployed Solution Specification
 
-## Purpose and Intended Outcome
+## 1. Purpose and Intended Outcome
 
 The Deployed Solution artifact records what approved solution behavior is actually live, where it is live, and under what operational and acceptance conditions it has been released.
 
@@ -8,13 +8,13 @@ It exists to make the live outcome visible and attributable. A useful Deployed S
 
 The intended outcome is that the live implementation is clearly understood as an accountable, supportable, in-scope release rather than an assumed technical state.
 
-## When It Is Required
+## 2. When It Is Required
 
 This artifact is required when an initiative places a new or materially changed application, service, integration, automation, portal, or platform capability into production or another formally accepted live environment.
 
 It is conditionally required for pilots, phased releases, and limited rollouts. In those cases, the deployment boundary and usage conditions must be explicit.
 
-## Intended Readers and Users
+## 3. Intended Readers and Users
 
 - Business Owner / Process Owner
 - Delivery Owner and implementation leads
@@ -23,21 +23,21 @@ It is conditionally required for pilots, phased releases, and limited rollouts. 
 - Acceptance Authorities
 - audit and control reviewers where needed
 
-## Intended Project Context
+## 4. Intended Project Context
 
 Use this artifact when the organization needs a clear record of what is live and how that live state relates to approved scope, release control, and service ownership.
 
 It is especially useful in phased delivery, controlled go-live, or environments where release traceability matters. It should align with ITIL 4 Change Enablement, Deployment Management, and Release Management practices, which emphasize controlled change, movement into live environments, and clarity about what has been made available for use. It should also stay consistent with NIST risk and control planning expectations by showing ownership, dependencies, and live operating conditions explicitly.
 
-## How Much Detail to Include
+## 5. How Much Detail to Include
 
 Include enough detail to identify the live release clearly, show what approved scope it delivers, and support operations and acceptance. Do not turn it into a design document, runbook, or full test report.
 
-## Required Content or Minimum Structure
+## 6. Required Content or Minimum Structure
 
 This artifact should normally be a short structured record supported by references to authoritative evidence.
 
-### 1. Deployment identity
+### 6.1. Deployment identity
 
 Must include:
 
@@ -51,7 +51,7 @@ Must include:
 
 This section identifies exactly what live state the artifact is describing.
 
-### 2. Scope delivered
+### 6.2. Scope delivered
 
 Must include:
 
@@ -62,7 +62,7 @@ Must include:
 
 This section helps a reviewer confirm what approved scope is actually represented in the live release.
 
-### 3. Live composition and dependencies
+### 6.3. Live composition and dependencies
 
 Must include:
 
@@ -73,7 +73,7 @@ Must include:
 
 This section gives operations and reviewers enough context to understand what was activated without repeating the full design.
 
-### 4. Operational activation status
+### 6.4. Operational activation status
 
 Must include:
 
@@ -84,7 +84,7 @@ Must include:
 
 This section makes the operational state of the live release visible.
 
-### 5. Validation and release evidence
+### 6.5. Validation and release evidence
 
 Must include:
 
@@ -96,7 +96,7 @@ Must include:
 
 This section shows the basis for trusting the live release and accepting it.
 
-### 6. Open conditions and follow-up actions
+### 6.6. Open conditions and follow-up actions
 
 Should include:
 
@@ -106,7 +106,7 @@ Should include:
 
 This section prevents hidden live conditions from being lost in release notes or verbal handover.
 
-### 7. Template guide
+### 6.7. Template guide
 
 If a table summary is used, recommended columns are:
 
@@ -115,7 +115,7 @@ If a table summary is used, recommended columns are:
 
 Use short entries. Reference detailed evidence rather than embedding it.
 
-## What to Keep Out
+## 7. What to Keep Out
 
 Keep the following out of this artifact:
 
@@ -127,23 +127,23 @@ Keep the following out of this artifact:
 
 Reference the authoritative artifacts instead.
 
-## Relationships to Other Artifacts
+## 8. Relationships to Other Artifacts
 
 This artifact should align with the Initiative Definition Document, Functional Capabilities, Solution Modules, Use Case Narratives, Technical Design Document, Operations & Support Model, System Administration Guide, and Acceptance Record.
 
 It may also support the Operational Readiness Confirmation Record and Formal Acceptance & Closure Record.
 
-## Ownership, Review, and Acceptance Expectations
+## 9. Ownership, Review, and Acceptance Expectations
 
 The implementation lead or Delivery Owner usually assembles this artifact with input from operations and business representatives.
 
 It should be reviewed by the Service Owner, Support Owner, and Business Owner / Process Owner. Formal solution acceptance normally remains with the Business Owner / Process Owner.
 
-## Maintenance Expectations
+## 10. Maintenance Expectations
 
 Update the artifact at each material live release until the solution has been fully accepted and handed into steady-state service records. If the rollout is phased, keep the live boundary and open conditions current.
 
-## Validation Guide
+## 11. Validation Guide
 
 - Does the artifact show clearly what is live, where, and under what status?
 - Does it make the live boundary explicit enough that readers can tell who or what is actually included?
@@ -154,21 +154,21 @@ Update the artifact at each material live release until the solution has been fu
 
 If weak, clarify the deployment boundary, add missing scope references, and tighten the evidence links.
 
-## Prompt Guide for Drafting the Artifact
+## 12. Prompt Guide for Drafting the Artifact
 
-### Starter prompt
+### 12.1. Starter prompt
 
 > Draft a Deployed Solution artifact for this initiative.
 > Show what approved scope is now live, where it is live, what major components and dependencies are active, who owns it operationally, what evidence supports release, and what conditions remain open.
 > Keep the artifact concise and evidence-based.
 
-### Section prompts
+### 12.2. Section prompts
 
 > Draft the scope delivered section so it shows exactly what approved capabilities or modules are represented in this release and what remains deferred.
 
 > Draft the operational activation status section so an operations reviewer can see whether ownership, monitoring, support, and recovery arrangements are in place.
 
-### Validation prompts
+### 12.3. Validation prompts
 
 > Check whether this Deployed Solution artifact proves what is live and whether it stays within approved scope.
 

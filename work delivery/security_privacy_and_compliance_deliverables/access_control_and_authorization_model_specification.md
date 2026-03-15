@@ -1,6 +1,6 @@
 # Access Control & Authorization Model Specification
 
-## Purpose and Intended Outcome
+## 1. Purpose and Intended Outcome
 
 The Access Control & Authorization Model defines how access to the solution is granted, restricted, reviewed, and governed.
 
@@ -8,11 +8,11 @@ It exists to make access decisions intentional, reviewable, and aligned with rol
 
 The intended outcome is that access remains deliberately controlled, appropriately limited, and reviewable across the full user lifecycle, with clear accountability for privileged and sensitive access.
 
-## When It Is Required
+## 2. When It Is Required
 
 This artifact is required when the solution has role-based access, privileged functions, sensitive data, approval authority, or integration with identity systems.
 
-## Intended Readers and Users
+## 3. Intended Readers and Users
 
 - Security / Data Protection Officer
 - Business Owner / Process Owner
@@ -20,19 +20,19 @@ This artifact is required when the solution has role-based access, privileged fu
 - Delivery Owner and solution leads
 - audit reviewers
 
-## Intended Project Context
+## 4. Intended Project Context
 
 Use this artifact before implementation is finalized and before access is provisioned in production. It is most useful where access rights, privileged functions, review controls, and identity assumptions must be explicit and defensible.
 
 It should align with NIST SP 800-53 access-control expectations, NIST SP 800-63 identity guidance where relevant, and CIS Control 6 on access control management.
 
-## How Much Detail to Include
+## 5. How Much Detail to Include
 
 Include enough detail to explain access roles, authorization rules, privileged access treatment, account lifecycle expectations, and review controls. Do not turn it into a directory configuration manual.
 
-## Required Content or Minimum Structure
+## 6. Required Content or Minimum Structure
 
-### 1. Access model context
+### 6.1. Access model context
 
 Must include:
 
@@ -43,7 +43,7 @@ Must include:
 
 This section identifies what environment and functionality the model covers.
 
-### 2. Role and authorization structure
+### 6.2. Role and authorization structure
 
 Must include:
 
@@ -53,7 +53,7 @@ Must include:
 
 This section defines the core authorization model.
 
-### 3. Privileged and sensitive access treatment
+### 6.3. Privileged and sensitive access treatment
 
 Must include:
 
@@ -64,7 +64,7 @@ Must include:
 
 This section helps protect high-risk actions from casual or ambiguous handling.
 
-### 4. Access lifecycle controls
+### 6.4. Access lifecycle controls
 
 Must include:
 
@@ -76,7 +76,7 @@ Must include:
 
 This section makes access governance operational rather than theoretical.
 
-### 5. Template guide
+### 6.5. Template guide
 
 Recommended summary columns:
 
@@ -85,7 +85,7 @@ Recommended summary columns:
 
 Use references for platform-specific implementation detail rather than embedding it here.
 
-## What to Keep Out
+## 7. What to Keep Out
 
 Keep the following out of this artifact:
 
@@ -93,21 +93,21 @@ Keep the following out of this artifact:
 - secrets or credential values
 - implementation-specific group syntax that belongs in technical administration records
 
-## Relationships to Other Artifacts
+## 8. Relationships to Other Artifacts
 
 This artifact should align with the User Roles, Personas & Access Model, Use Case Narratives, Security & Privacy Risk Assessment, Audit & Monitoring Design Summary, and System Administration Guide.
 
-## Ownership, Review, and Acceptance Expectations
+## 9. Ownership, Review, and Acceptance Expectations
 
 The security lead, identity lead, or solution lead usually prepares this artifact with business owner input.
 
 It should be reviewed by the Security / Data Protection Officer and relevant role owners.
 
-## Maintenance Expectations
+## 10. Maintenance Expectations
 
 Update when roles, privileges, approval logic, identity integration, or review requirements change materially.
 
-## Validation Guide
+## 11. Validation Guide
 
 - Is it clear who can do what and under what approval basis?
 - Are privileged and sensitive actions handled more strictly where needed?
@@ -117,9 +117,9 @@ Update when roles, privileges, approval logic, identity integration, or review r
 
 If weak, clarify the permission model and make lifecycle controls more explicit.
 
-## Prompt Guide for Drafting the Artifact
+## 12. Prompt Guide for Drafting the Artifact
 
-### Starter prompt
+### 12.1. Starter prompt
 
 > Draft an Access Control & Authorization Model for this solution.
 > Define roles, permissions, restricted actions, privileged access rules, separation-of-duties assumptions, and how access is approved, reviewed, and revoked.

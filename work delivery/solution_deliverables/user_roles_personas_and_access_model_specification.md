@@ -1,6 +1,6 @@
 # User Roles, Personas & Access Model Specification
 
-## Purpose and Intended Outcome
+## 1. Purpose and Intended Outcome
 
 This artifact defines the categories of users who interact with the solution, the responsibilities and goals associated with those roles, and the access boundaries that govern what each role is allowed or expected to do.
 
@@ -10,13 +10,13 @@ The artifact exists to make user assumptions explicit before build and acceptanc
 
 The intended outcome is that user roles, access expectations, and relevant personas are clear enough to support consistent design, access control, testing, training, and acceptance decisions.
 
-## When It Is Required
+## 2. When It Is Required
 
 This artifact is required when the solution has multiple meaningful user groups, differentiated access, privileged actions, approval authority, or sensitive data exposure.
 
 It is strongly recommended for any solution that depends on role boundaries, separation of duties, or privacy and audit controls.
 
-## Intended Readers and Users
+## 3. Intended Readers and Users
 
 - Business Owner / Process Owner
 - analysts and designers
@@ -24,21 +24,21 @@ It is strongly recommended for any solution that depends on role boundaries, sep
 - Delivery Owner
 - test, training, and change enablement leads
 
-## Intended Project Context
+## 4. Intended Project Context
 
 Use this artifact before detailed behavior and access implementation are finalized. It is most useful where different actors have distinct responsibilities, authority, or sensitivity exposure that must stay consistent across scope, use cases, and operational controls.
 
 It should align with NIST SP 800-53 access-control expectations, NIST SP 800-63 digital identity guidance where assurance matters, and CIS Control 6 on access control management. When personas are used, it should also support practical change and enablement work without changing formal scope.
 
-## How Much Detail to Include
+## 5. How Much Detail to Include
 
 Include enough detail to make role purpose, access boundaries, and sensitive interactions understandable. Do not turn the artifact into a full identity architecture, account register, or HR organization chart.
 
-## Required Content or Minimum Structure
+## 6. Required Content or Minimum Structure
 
 This artifact should define the overall user model, the required content for each role, and optional persona content where it adds real value.
 
-### 1. User model context
+### 6.1. User model context
 
 Must include:
 
@@ -48,7 +48,7 @@ Must include:
 
 This section helps readers understand how the role model should be used.
 
-### 2. Required content for each role entry
+### 6.2. Required content for each role entry
 
 Each role entry must include:
 
@@ -68,7 +68,7 @@ Each role entry should include when useful:
 
 This section defines the minimum information needed for a role to be useful in drafting and review.
 
-### 3. Role relationships and control assumptions
+### 6.3. Role relationships and control assumptions
 
 Must include where relevant:
 
@@ -80,7 +80,7 @@ Must include where relevant:
 
 This section is important whenever relationships between roles affect the correctness or control of the solution.
 
-### 4. Role-to-solution mapping
+### 6.4. Role-to-solution mapping
 
 Should include:
 
@@ -93,7 +93,7 @@ Recommended columns:
 
 This section helps keep downstream artifacts aligned to the same actor model.
 
-### 5. Optional persona entries
+### 6.5. Optional persona entries
 
 If personas are used, each persona should include:
 
@@ -106,7 +106,7 @@ If personas are used, each persona should include:
 
 Personas must not add new scope or override the formal role boundary. They exist to improve clarity, not to create new requirements silently.
 
-### 6. Access modeling cautions
+### 6.6. Access modeling cautions
 
 Must state that the artifact:
 
@@ -116,7 +116,7 @@ Must state that the artifact:
 
 This section keeps the artifact bounded.
 
-## What to Keep Out
+## 7. What to Keep Out
 
 Keep the following out of this artifact:
 
@@ -126,23 +126,23 @@ Keep the following out of this artifact:
 - full identity-platform design
 - training plans or campaign content
 
-## Relationships to Other Artifacts
+## 8. Relationships to Other Artifacts
 
 This artifact should align with the Functional Capabilities, Use Case Narratives, Access Control & Authorization Model, Security & Privacy Risk Assessment, Training & Enablement Materials, and Adoption Support Model.
 
 Where detailed authorization logic, provisioning rules, or technical enforcement are required, the formal Access Control & Authorization Model remains the authoritative control artifact.
 
-## Ownership, Review, and Acceptance Expectations
+## 9. Ownership, Review, and Acceptance Expectations
 
 The artifact is usually authored by analysts or solution leads with business and security input.
 
 It should be reviewed by the Business Owner / Process Owner, Delivery Owner, and Security / Data Protection Officer where relevant. Change and training leads should review persona content where it affects adoption planning.
 
-## Maintenance Expectations
+## 10. Maintenance Expectations
 
 Update when role responsibilities, approval boundaries, privileged actions, or sensitivity assumptions change materially. Keep persona content current only while it remains useful and representative.
 
-## Validation Guide
+## 11. Validation Guide
 
 - Are the role entries distinct and practically useful?
 - Are access boundaries and sensitive interactions explicit where needed?
@@ -153,22 +153,22 @@ Update when role responsibilities, approval boundaries, privileged actions, or s
 
 If weak, sharpen the role distinctions, add control-relevant notes, and separate persona context from formal role boundaries.
 
-## Prompt Guide for Drafting the Artifact
+## 12. Prompt Guide for Drafting the Artifact
 
-### Starter prompt
+### 12.1. Starter prompt
 
 > Draft a User Roles, Personas & Access Model for this solution.
 > For each role, include its purpose, goals, key actions, access boundary, and any sensitivity or control notes.
 > Add role relationships where they affect approvals, visibility, or separation of duties.
 > Use personas only when they improve practical clarity and do not add scope.
 
-### Section prompts
+### 12.2. Section prompts
 
 > Draft the role catalog so each role is distinct, behavior-oriented, and usable for downstream use cases and access review.
 
 > Draft the role relationships section so reviewer chains, visibility rules, and separation-of-duties assumptions are explicit.
 
-### Validation prompts
+### 12.3. Validation prompts
 
 > Check whether the role model is consistent with the approved scope and planned use cases.
 

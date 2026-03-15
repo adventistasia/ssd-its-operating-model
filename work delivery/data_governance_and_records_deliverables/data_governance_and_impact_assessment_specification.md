@@ -1,6 +1,6 @@
 # Data Governance & Impact Assessment Specification
 
-## Purpose and Intended Outcome
+## 1. Purpose and Intended Outcome
 
 The Data Governance & Impact Assessment identifies the data categories handled by the initiative, the governance implications they create, and the operational, privacy, or compliance impacts that must be managed.
 
@@ -8,11 +8,11 @@ It exists to make data accountability visible before implementation is finalized
 
 The intended outcome is that data-related obligations, sensitivities, and required actions are identified early enough to shape design, controls, approvals, and operational readiness.
 
-## When It Is Required
+## 2. When It Is Required
 
 This artifact is required when the initiative creates, collects, stores, processes, shares, or materially changes organizational data.
 
-## Intended Readers and Users
+## 3. Intended Readers and Users
 
 - Data Steward
 - Data Governance Officer
@@ -21,19 +21,19 @@ This artifact is required when the initiative creates, collects, stores, process
 - Delivery Owner
 - operations and support stakeholders where data handling affects service
 
-## Intended Project Context
+## 4. Intended Project Context
 
 Use this artifact during design and governance review before implementation is finalized. It is most useful where data sensitivity, stewardship, retention, privacy, or operational impact must be made explicit.
 
 It should align with the NIST Privacy Framework by identifying data categories, privacy implications, and governance actions early. It should also align with NIST CSF governance and identification outcomes by making stewardship, sensitivity, and obligations explicit.
 
-## How Much Detail to Include
+## 5. How Much Detail to Include
 
 Include enough detail to explain data categories, sensitivity, obligations, stewardship, and material impacts. Do not turn it into a full data model or a legal opinion.
 
-## Required Content or Minimum Structure
+## 6. Required Content or Minimum Structure
 
-### 1. Assessment context
+### 6.1. Assessment context
 
 Must include:
 
@@ -44,7 +44,7 @@ Must include:
 
 This section identifies what data-handling context the assessment covers.
 
-### 2. Data categories and sensitivity
+### 6.2. Data categories and sensitivity
 
 Must include:
 
@@ -54,7 +54,7 @@ Must include:
 
 This section makes the data exposure visible in practical terms.
 
-### 3. Governance and obligation impacts
+### 6.3. Governance and obligation impacts
 
 Must include:
 
@@ -65,7 +65,7 @@ Must include:
 
 This section shows why the data matters beyond implementation.
 
-### 4. Accountability and stewardship
+### 6.4. Accountability and stewardship
 
 Must include:
 
@@ -76,7 +76,7 @@ Must include:
 
 This section makes accountability explicit.
 
-### 5. Risks, issues, and required actions
+### 6.5. Risks, issues, and required actions
 
 Should include:
 
@@ -86,7 +86,7 @@ Should include:
 
 This section turns the assessment into a usable governance tool.
 
-## What to Keep Out
+## 7. What to Keep Out
 
 Keep the following out of this artifact:
 
@@ -95,21 +95,21 @@ Keep the following out of this artifact:
 - full migration procedure detail
 - lengthy legal analysis copied from other sources
 
-## Relationships to Other Artifacts
+## 8. Relationships to Other Artifacts
 
 This artifact should inform the Data Asset Specification, Security & Privacy Risk Assessment, Compliance & Regulatory Alignment Statement, Backup, Restore & Recovery Plan, and operational support planning.
 
-## Ownership, Review, and Acceptance Expectations
+## 9. Ownership, Review, and Acceptance Expectations
 
 The Data Steward or analyst responsible for data governance usually coordinates this artifact with security, privacy, and business input.
 
 Review should include the Data Governance Officer where governance exposure is material.
 
-## Maintenance Expectations
+## 10. Maintenance Expectations
 
 Update when data categories, sensitivity, stewardship, storage patterns, or triggered obligations change.
 
-## Validation Guide
+## 11. Validation Guide
 
 - Does the assessment make the handled data and its sensitivity clear?
 - Are stewardship and governance accountability explicit?
@@ -119,9 +119,9 @@ Update when data categories, sensitivity, stewardship, storage patterns, or trig
 
 If weak, sharpen the data categories, add accountability, and state the triggered obligations more plainly.
 
-## Prompt Guide for Drafting the Artifact
+## 12. Prompt Guide for Drafting the Artifact
 
-### Starter prompt
+### 12.1. Starter prompt
 
 > Draft a Data Governance & Impact Assessment for this initiative.
 > Identify the categories of data involved, their sensitivity, the main governance or compliance implications, the named Data Steward, and the operational or privacy impacts that must be managed.

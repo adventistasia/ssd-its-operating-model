@@ -1,6 +1,6 @@
 # Use Case Narratives Specification
 
-## Purpose and Intended Outcome
+## 1. Purpose and Intended Outcome
 
 Use Case Narratives describe how users achieve defined outcomes using the solution. They turn approved capabilities into reviewable, testable, and acceptance-ready behavior.
 
@@ -8,13 +8,13 @@ This artifact exists to reduce ambiguity about how the solution should behave fr
 
 The intended outcome is that user-visible behavior and expected results are explicit enough to guide design, validation, and acceptance without guesswork.
 
-## When It Is Required
+## 2. When It Is Required
 
 This artifact is required when behavioral clarity is needed to design, validate, or accept the solution.
 
 It is especially important for role-based workflows, approvals, exception handling, sensitive actions, and any scope where misunderstanding user behavior would create delivery or acceptance risk.
 
-## Intended Readers and Users
+## 3. Intended Readers and Users
 
 - business reviewers
 - analysts and designers
@@ -22,21 +22,21 @@ It is especially important for role-based workflows, approvals, exception handli
 - Acceptance Authorities
 - security or control reviewers where sensitive behavior is involved
 
-## Intended Project Context
+## 4. Intended Project Context
 
 Use this artifact after the Functional Capabilities artifact and Solution Modules are defined. It is most useful when the team needs business-behavior detail that remains traceable to approved scope.
 
 It should align with ISO/IEC/IEEE 29148 requirements-elaboration principles by turning approved scope into clearer behavioral detail without changing the baseline. It should also align with ITIL 4 service validation and testing intent by making expected behavior explicit, reviewable, and testable.
 
-## How Much Detail to Include
+## 5. How Much Detail to Include
 
 Include enough detail that a business reviewer, tester, or AI drafter can understand and validate the behavior without inventing missing steps or rules. Keep the description at business-behavior level. Do not turn the artifact into a UI specification, API specification, or full test script.
 
-## Required Content or Minimum Structure
+## 6. Required Content or Minimum Structure
 
 This artifact should define both the required content for each use case and the rules that keep the set traceable and bounded.
 
-### 1. Use case set context
+### 6.1. Use case set context
 
 Must include:
 
@@ -46,7 +46,7 @@ Must include:
 
 This section identifies what approved baseline the behavior descriptions belong to.
 
-### 2. Required content for each use case
+### 6.2. Required content for each use case
 
 Each use case must include:
 
@@ -69,7 +69,7 @@ Each use case must include:
 
 Each use case should be self-contained enough that a reviewer can understand the expected behavior without reading multiple other documents first.
 
-### 3. Guidance for each required section
+### 6.3. Guidance for each required section
 
 The use case entry should describe the following in practical terms:
 
@@ -85,7 +85,7 @@ The use case entry should describe the following in practical terms:
 
 This section keeps the required structure usable rather than heading-only.
 
-### 4. Traceability rules
+### 6.4. Traceability rules
 
 Must include rules stating that:
 
@@ -95,7 +95,7 @@ Must include rules stating that:
 
 This section protects scope and supports later evidence tracing.
 
-### 5. Coverage expectations
+### 6.5. Coverage expectations
 
 Must include:
 
@@ -104,7 +104,7 @@ Must include:
 
 This section helps the use case set function as a complete behavior model instead of a partial sample.
 
-### 6. Template guide
+### 6.6. Template guide
 
 Recommended use case headings:
 
@@ -119,7 +119,7 @@ Recommended use case headings:
 
 If the artifact becomes heavily tabular, keep the flow, exceptions, and rules readable and do not collapse everything into one line per use case.
 
-## What to Keep Out
+## 7. What to Keep Out
 
 Keep the following out of this artifact:
 
@@ -129,21 +129,21 @@ Keep the following out of this artifact:
 - full test scripts
 - new business scope not traceable to approved capabilities
 
-## Relationships to Other Artifacts
+## 8. Relationships to Other Artifacts
 
 This artifact should align with the Functional Capabilities, Solution Modules, User Roles, Personas & Access Model, Access Control & Authorization Model, Audit & Monitoring Design Summary, and final validation evidence.
 
-## Ownership, Review, and Acceptance Expectations
+## 9. Ownership, Review, and Acceptance Expectations
 
 Use Case Narratives are usually authored by analysts or functional leads with business owner input.
 
 They should be reviewed by the Business Owner / Process Owner, Delivery Owner, test lead, and security reviewers where access or sensitive behavior is material. Acceptance normally feeds the broader Solution Deliverables Acceptance Record.
 
-## Maintenance Expectations
+## 10. Maintenance Expectations
 
 Keep the use case set current while behavior is still being elaborated and whenever approved behavior changes. Update when business rules, roles, or acceptance conditions change materially.
 
-## Validation Guide
+## 11. Validation Guide
 
 - Does every use case trace back to approved modules and capabilities?
 - Is each use case complete enough to understand expected behavior without major guessing?
@@ -154,21 +154,21 @@ Keep the use case set current while behavior is still being elaborated and whene
 
 If weak, tighten traceability, complete the missing sections, and remove technical detail.
 
-## Prompt Guide for Drafting the Artifact
+## 12. Prompt Guide for Drafting the Artifact
 
-### Starter prompt
+### 12.1. Starter prompt
 
 > Draft a Use Case Narrative for this solution behavior.
 > Include the required fields from this specification, keep the behavior traceable to approved Module and Capability IDs, describe the main and alternate paths in business language, and make the acceptance criteria observable and testable.
 > Do not introduce new scope or technical design detail.
 
-### Section prompts
+### 12.2. Section prompts
 
 > Draft the main flow and alternate paths so a business reviewer can understand the behavior and a tester can validate it.
 
 > Draft the access, audit, and acceptance sections so sensitive or controlled behavior is explicit and reviewable.
 
-### Validation prompts
+### 12.3. Validation prompts
 
 > Check whether this use case introduces behavior outside the approved Capability IDs.
 

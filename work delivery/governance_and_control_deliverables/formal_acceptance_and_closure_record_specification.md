@@ -1,6 +1,6 @@
 # Formal Acceptance & Closure Record Specification
 
-## Purpose and Intended Outcome
+## 1. Purpose and Intended Outcome
 
 The Formal Acceptance & Closure Record confirms that required deliverables or deliverable domains have been accepted, that the relevant authorities have signed off, and that the initiative is formally closed or conditionally closed.
 
@@ -8,11 +8,11 @@ It exists to prevent informal completion and to preserve a clear decision trail 
 
 The intended outcome is that initiative completion or conditional closure is explicit, attributable, and supported by a clear record of accepted results, remaining actions, and accountable sign-off.
 
-## When It Is Required
+## 2. When It Is Required
 
 This artifact is required when the initiative reaches final acceptance, handover, or closure.
 
-## Intended Readers and Users
+## 3. Intended Readers and Users
 
 - Sponsor
 - Decision Authorities
@@ -20,21 +20,21 @@ This artifact is required when the initiative reaches final acceptance, handover
 - Acceptance Authorities
 - audit and governance reviewers
 
-## Intended Project Context
+## 4. Intended Project Context
 
 Use this artifact after the required deliverable domains have been accepted or formally dispositioned. It is most useful where final closure must be explicit, attributable, and auditable.
 
 It should align with PMI closeout practice by linking final closure to accepted deliverables, unresolved obligations, and formal decision authority.
 
-## How Much Detail to Include
+## 5. How Much Detail to Include
 
 Keep it concise and decision-focused. Include enough detail to show what has been accepted, what obligations remain, and who approved closure. Link to supporting records rather than duplicating them.
 
-## Required Content or Minimum Structure
+## 6. Required Content or Minimum Structure
 
 This artifact is usually a short record with a summary table.
 
-### 1. Closure record identity
+### 6.1. Closure record identity
 
 Must include:
 
@@ -46,7 +46,7 @@ Must include:
 
 This section identifies the closure decision record.
 
-### 2. Acceptance summary
+### 6.2. Acceptance summary
 
 Must include a summary of required deliverables or deliverable domains and their acceptance status.
 
@@ -66,7 +66,7 @@ This table shows whether closure is actually supported by prior acceptance.
 
 If a required deliverable or domain was excluded from closure, the reason and authorizing decision should be visible.
 
-### 3. Residual obligations and transition items
+### 6.3. Residual obligations and transition items
 
 Must include:
 
@@ -76,7 +76,7 @@ Must include:
 
 This section makes it clear what closure does and does not mean.
 
-### 4. Closure decision
+### 6.4. Closure decision
 
 Must include:
 
@@ -88,7 +88,7 @@ Must include:
 
 This section is the formal act of closure.
 
-### 5. Template guide
+### 6.5. Template guide
 
 Keep entries short:
 
@@ -97,7 +97,7 @@ Keep entries short:
 - `Closed by exception`: use only when formal authority has approved closure despite outstanding items
 - Residual obligations should remain actionable, with clear owners and due dates rather than general comments
 
-## What to Keep Out
+## 7. What to Keep Out
 
 Keep the following out of this artifact:
 
@@ -105,19 +105,19 @@ Keep the following out of this artifact:
 - detailed retrospective content unless formally required
 - repeated copies of all acceptance records
 
-## Relationships to Other Artifacts
+## 8. Relationships to Other Artifacts
 
 This record should reference domain acceptance records, decision logs, operational readiness confirmation, residual risk acceptance where relevant, and final handover or contract records.
 
-## Ownership, Review, and Acceptance Expectations
+## 9. Ownership, Review, and Acceptance Expectations
 
 The Delivery Owner or governance lead usually prepares the record. Formal closure is normally confirmed by the Sponsor or delegated Decision Authority after relevant Acceptance Authorities have completed their part.
 
-## Maintenance Expectations
+## 10. Maintenance Expectations
 
 The record is normally finalized once closure is approved. If closure is conditional, update the record or issue a superseding version once conditions are resolved.
 
-## Validation Guide
+## 11. Validation Guide
 
 - Does the record show clearly that required acceptance happened before closure?
 - Are residual obligations or exceptions explicit?
@@ -127,21 +127,21 @@ The record is normally finalized once closure is approved. If closure is conditi
 
 If weak, improve the acceptance references, clarify the closure status, and make outstanding conditions more explicit.
 
-## Prompt Guide for Drafting the Artifact
+## 12. Prompt Guide for Drafting the Artifact
 
-### Starter prompt
+### 12.1. Starter prompt
 
 > Draft a Formal Acceptance & Closure Record for this initiative.
 > Summarize accepted deliverables or domains, any residual obligations or exceptions, and the final closure decision with named authority and date.
 > Keep it concise, attributable, and evidence-linked.
 
-### Section prompts
+### 12.2. Section prompts
 
 > Create the acceptance summary table using the required columns and controlled status values in this specification.
 
 > Draft the closure decision section so the authority, decision, and any exception-based closure are explicit.
 
-### Validation prompts
+### 12.3. Validation prompts
 
 > Check whether this record proves that closure is supported by prior acceptance and not just by completion of activity.
 

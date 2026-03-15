@@ -1,6 +1,6 @@
 # Technical Design Document Specification
 
-## Purpose and Intended Outcome
+## 1. Purpose and Intended Outcome
 
 The Technical Design Document explains how the solution is structured, what it depends on, and what technical decisions affect deployment, operation, security, resilience, and future change.
 
@@ -8,11 +8,11 @@ It exists to make the technical design understandable to people other than the o
 
 The intended outcome is that the solution's technical design can be reviewed, supported, changed, and governed without relying on undocumented knowledge held by the original implementer.
 
-## When It Is Required
+## 2. When It Is Required
 
 This artifact is required for any solution with meaningful technical structure, dependencies, integration points, infrastructure, security controls, or operational impact.
 
-## Intended Readers and Users
+## 3. Intended Readers and Users
 
 - solution and infrastructure engineers
 - Delivery Owner
@@ -21,19 +21,19 @@ This artifact is required for any solution with meaningful technical structure, 
 - security reviewers
 - future maintainers
 
-## Intended Project Context
+## 4. Intended Project Context
 
 Use this artifact before deployment and operational handover. It is most useful where the organization needs a design-level explanation of components, environments, interfaces, constraints, and technical decisions that matter after build.
 
 It should align with NIST planning guidance such as SP 800-18 by making system purpose, environment, roles, and controls understandable, and with ITIL 4 service configuration management intent by keeping component and dependency information reliable and accessible.
 
-## How Much Detail to Include
+## 5. How Much Detail to Include
 
 Include enough detail to explain the design clearly and support future operation and change. Do not turn it into step-by-step administration guidance or a project task plan.
 
-## Required Content or Minimum Structure
+## 6. Required Content or Minimum Structure
 
-### 1. Design scope and context
+### 6.1. Design scope and context
 
 Must include:
 
@@ -44,7 +44,7 @@ Must include:
 
 This section tells the reader what part of the solution the document covers.
 
-### 2. Architecture and structure overview
+### 6.2. Architecture and structure overview
 
 Must include:
 
@@ -54,7 +54,7 @@ Must include:
 
 This section gives the technical shape of the solution.
 
-### 3. Environment and hosting design
+### 6.3. Environment and hosting design
 
 Must include:
 
@@ -64,7 +64,7 @@ Must include:
 
 This section helps operations and support understand where the design lives and what it depends on.
 
-### 4. Integration and dependency design
+### 6.4. Integration and dependency design
 
 Must include:
 
@@ -74,7 +74,7 @@ Must include:
 
 This section supports traceability and later support.
 
-### 5. Data, configuration, and control considerations
+### 6.5. Data, configuration, and control considerations
 
 Must include where relevant:
 
@@ -85,7 +85,7 @@ Must include where relevant:
 
 This section helps reviewers understand what technical choices materially affect risk and supportability.
 
-### 6. Significant design decisions and constraints
+### 6.6. Significant design decisions and constraints
 
 Must include:
 
@@ -95,7 +95,7 @@ Must include:
 
 This section keeps critical design reasoning from being lost.
 
-## What to Keep Out
+## 7. What to Keep Out
 
 Keep the following out of this artifact:
 
@@ -105,21 +105,21 @@ Keep the following out of this artifact:
 - sprint plans and task assignments
 - business-case detail
 
-## Relationships to Other Artifacts
+## 8. Relationships to Other Artifacts
 
 This artifact should align with the Initiative Definition Document, Functional Capabilities, security and data artifacts, System Administration Guide, Operations & Support Model, and Backup, Restore & Recovery Plan.
 
-## Ownership, Review, and Acceptance Expectations
+## 9. Ownership, Review, and Acceptance Expectations
 
 The solution architect, technical lead, or implementation lead usually authors this artifact.
 
 It should be reviewed by operations, security, infrastructure, and support stakeholders where their domains are materially affected.
 
-## Maintenance Expectations
+## 10. Maintenance Expectations
 
 Update the document when architecture, environments, dependencies, or material technical assumptions change. Keep it current enough to support handover and major future change.
 
-## Validation Guide
+## 11. Validation Guide
 
 - Does it explain how the solution is built and what it depends on?
 - Are the key technical assumptions, constraints, and control-relevant choices visible?
@@ -129,9 +129,9 @@ Update the document when architecture, environments, dependencies, or material t
 
 If weak, improve the structure overview, add missing dependencies, and move operational procedure detail to the System Administration Guide.
 
-## Prompt Guide for Drafting the Artifact
+## 12. Prompt Guide for Drafting the Artifact
 
-### Starter prompt
+### 12.1. Starter prompt
 
 > Draft a Technical Design Document for this solution.
 > Explain the structure, components, environments, integrations, dependencies, design assumptions, and the security, resilience, and performance considerations that operations and future maintainers must understand.

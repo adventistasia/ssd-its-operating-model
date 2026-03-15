@@ -1,6 +1,6 @@
 # Backup, Restore & Recovery Plan Specification
 
-## Purpose and Intended Outcome
+## 1. Purpose and Intended Outcome
 
 The Backup, Restore & Recovery Plan defines how the solution can be backed up, restored, recovered, or rolled back after failure, error, disruption, or failed change.
 
@@ -8,30 +8,30 @@ It exists to make recovery realistic, owned, and reviewable rather than assumed.
 
 The intended outcome is that backup, restore, recovery, and rollback can be performed in a controlled way that protects service continuity, data integrity, and operational accountability.
 
-## When It Is Required
+## 2. When It Is Required
 
 This artifact is required for any initiative that introduces or changes data, services, integrations, or environments where loss, corruption, failed deployment, or outage would matter.
 
-## Intended Readers and Users
+## 3. Intended Readers and Users
 
 - IT Operations / Service Owner
 - system administrators
 - support and infrastructure teams
 - security and audit reviewers
 
-## Intended Project Context
+## 4. Intended Project Context
 
 Use this artifact before go-live and as part of readiness and resilience review. It is most useful where recovery obligations, dependency risks, and service continuity expectations must be understood before the solution is accepted into operation.
 
 It should align with NIST contingency-planning guidance, including planning for recovery roles, scenarios, and validation; with CIS Control 11 on data recovery; and with ITIL service continuity intent by making restore and rollback capability credible and governed.
 
-## How Much Detail to Include
+## 5. How Much Detail to Include
 
 Include enough detail to show backup scope, restore path, recovery responsibilities, dependencies, recovery constraints, and validation expectations. Do not turn it into a generic business continuity plan for the whole organization.
 
-## Required Content or Minimum Structure
+## 6. Required Content or Minimum Structure
 
-### 1. Recovery scope
+### 6.1. Recovery scope
 
 Must include:
 
@@ -42,7 +42,7 @@ Must include:
 
 This section defines what the plan actually protects.
 
-### 2. Recovery scenarios and approaches
+### 6.2. Recovery scenarios and approaches
 
 Must include:
 
@@ -53,7 +53,7 @@ Must include:
 
 This section explains how recovery is expected to happen.
 
-### 3. Roles, dependencies, and prerequisites
+### 6.3. Roles, dependencies, and prerequisites
 
 Must include:
 
@@ -64,7 +64,7 @@ Must include:
 
 This section makes the recovery path executable in practice.
 
-### 4. Validation expectations
+### 6.4. Validation expectations
 
 Must include:
 
@@ -74,7 +74,7 @@ Must include:
 
 This section prevents the plan from being purely theoretical.
 
-### 5. Template guide
+### 6.5. Template guide
 
 Recommended summary table:
 
@@ -83,7 +83,7 @@ Recommended summary table:
 
 Use references for detailed procedures rather than embedding every step in this plan.
 
-## What to Keep Out
+## 7. What to Keep Out
 
 Keep the following out of this artifact:
 
@@ -91,21 +91,21 @@ Keep the following out of this artifact:
 - full operating procedures already maintained elsewhere
 - vague assurances such as "vendor handles backup" without clarifying scope and dependency
 
-## Relationships to Other Artifacts
+## 8. Relationships to Other Artifacts
 
 This artifact should align with the Technical Design Document, System Administration Guide, Operations & Support Model, Data Asset Specification, and Operational Readiness Confirmation Record.
 
-## Ownership, Review, and Acceptance Expectations
+## 9. Ownership, Review, and Acceptance Expectations
 
 The Service Owner, infrastructure lead, or technical lead usually coordinates this artifact.
 
 It should be reviewed by operations and any team responsible for backup platforms, data stewardship, or security oversight.
 
-## Maintenance Expectations
+## 10. Maintenance Expectations
 
 Update when data scope, hosting, recovery tools, dependencies, or recovery objectives change. Revisit after significant incidents or recovery tests.
 
-## Validation Guide
+## 11. Validation Guide
 
 - Is it clear what can be restored and under what conditions?
 - Are recovery roles, dependencies, and constraints explicit?
@@ -115,9 +115,9 @@ Update when data scope, hosting, recovery tools, dependencies, or recovery objec
 
 If weak, define the recovery scope more clearly and make validation expectations explicit.
 
-## Prompt Guide for Drafting the Artifact
+## 12. Prompt Guide for Drafting the Artifact
 
-### Starter prompt
+### 12.1. Starter prompt
 
 > Draft a Backup, Restore & Recovery Plan for this solution.
 > Explain what is covered, what recovery scenarios are supported, who is responsible, what dependencies or constraints matter, and how the recovery path is validated.

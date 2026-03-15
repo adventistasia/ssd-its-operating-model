@@ -1,6 +1,6 @@
 # Operational Readiness Confirmation Record Specification
 
-## Purpose and Intended Outcome
+## 1. Purpose and Intended Outcome
 
 The Operational Readiness Confirmation Record provides formal confirmation that the solution is ready to be accepted into operational responsibility, or it records the explicit conditions under which that readiness is accepted.
 
@@ -8,30 +8,30 @@ It exists to make handover explicit, attributable, and reviewable. A useful read
 
 The intended outcome is that transfer into operational responsibility is a clear, evidence-based decision with named ownership, visible conditions, and no hidden assumptions about readiness.
 
-## When It Is Required
+## 2. When It Is Required
 
 This artifact is required when operational ownership is being assigned or confirmed before go-live or transition into steady state.
 
-## Intended Readers and Users
+## 3. Intended Readers and Users
 
 - IT Operations / Service Owner
 - Support Owner
 - Delivery Owner
 - governance and audit reviewers
 
-## Intended Project Context
+## 4. Intended Project Context
 
 Use this artifact near go-live, handover, or production transition. It is most useful where operational acceptance must be explicit and where readiness depends on documentation, support ownership, monitoring, and recovery arrangements being in place.
 
 It should align with ITIL 4 Change Enablement and service validation intent by making the readiness basis for operational acceptance visible and attributable.
 
-## How Much Detail to Include
+## 5. How Much Detail to Include
 
 Keep it short. Include enough detail to show ownership, readiness evidence, material gaps, and the formal operational decision. Link to detailed artifacts instead of copying them.
 
-## Required Content or Minimum Structure
+## 6. Required Content or Minimum Structure
 
-### 1. Record identity
+### 6.1. Record identity
 
 Must include:
 
@@ -43,7 +43,7 @@ Must include:
 
 This section identifies the formal readiness record.
 
-### 2. Ownership confirmation
+### 6.2. Ownership confirmation
 
 Must include:
 
@@ -53,7 +53,7 @@ Must include:
 
 This section makes the receiving ownership explicit.
 
-### 3. Readiness evidence summary
+### 6.3. Readiness evidence summary
 
 Must include:
 
@@ -63,7 +63,7 @@ Must include:
 
 This section shows the basis for readiness review.
 
-### 4. Required content for each readiness row
+### 6.4. Required content for each readiness row
 
 If a readiness table is used, each row must include:
 
@@ -87,7 +87,7 @@ Use controlled status values such as:
 
 This row structure keeps the readiness decision clear and reviewable.
 
-### 5. Operational decision
+### 6.5. Operational decision
 
 Must include:
 
@@ -99,7 +99,7 @@ Must include:
 
 This section is the formal handover decision.
 
-## What to Keep Out
+## 7. What to Keep Out
 
 Keep the following out of this artifact:
 
@@ -108,19 +108,19 @@ Keep the following out of this artifact:
 - raw test logs
 - repeated copies of every referenced artifact
 
-## Relationships to Other Artifacts
+## 8. Relationships to Other Artifacts
 
 This record should reference the Technical Design Document, System Administration Guide, Operations & Support Model, Backup, Restore & Recovery Plan, monitoring or audit designs, and relevant release evidence.
 
-## Ownership, Review, and Acceptance Expectations
+## 9. Ownership, Review, and Acceptance Expectations
 
 The Delivery Owner or operational readiness coordinator usually prepares the record. Formal operational acceptance is normally given by the IT Operations / Service Owner or delegated authority.
 
-## Maintenance Expectations
+## 10. Maintenance Expectations
 
 Update until the operational decision is final. If acceptance is conditional, track the conditions or issue a superseding version once closed.
 
-## Validation Guide
+## 11. Validation Guide
 
 - Does the record show clearly whether operational ownership is willing to accept the solution?
 - Are material readiness gaps or conditions explicit and owned?
@@ -130,9 +130,9 @@ Update until the operational decision is final. If acceptance is conditional, tr
 
 If weak, tighten the evidence references and make the operational decision statement more explicit.
 
-## Prompt Guide for Drafting the Artifact
+## 12. Prompt Guide for Drafting the Artifact
 
-### Starter prompt
+### 12.1. Starter prompt
 
 > Draft an Operational Readiness Confirmation Record for this solution.
 > Show named service and support ownership, what readiness evidence was reviewed, any gaps or conditions that remain, and the formal operational decision.
