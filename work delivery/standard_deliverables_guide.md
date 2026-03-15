@@ -126,15 +126,18 @@ This document establishes what the solution must be able to do.
 
 ### 7.5. Solution Modules
 
-Organizes the approved capabilities into coherent, testable segments that support controlled delivery and acceptance.
+Organizes the approved Functional Capabilities and related use case behavior into coherent, testable solution increments that support controlled delivery and acceptance.
 
-This document clarifies how approved capabilities are grouped for build, testing, deployment, and validation, without redefining scope.
+This document clarifies how approved Functional Capabilities and related Use Case Narratives are grouped into delivery and acceptance units for build, testing, deployment, validation, and formal acceptance, without redefining scope.
+
+For initiatives using modular delivery, the Solution Module is the primary unit of solution delivery, behavior validation, and business acceptance.
 
 #### Acceptance Criteria
 
 - Modules are defined with clear purpose and logical grouping of capabilities.
 - Module boundaries do not conflict with the approved functional scope.
-- The structure supports practical planning, testing, deployment, or acceptance tracking.
+- Related Use Case Narratives can be traced to each module.
+- The structure supports practical planning, testing, deployment, and module-level acceptance tracking.
 
 ### 7.6. Use Case Narratives
 
@@ -148,12 +151,13 @@ Use cases define:
 - What rules and validations apply
 - What must be true for the behavior to be accepted as correct
 
-This is the behavioral validation artifact.
+This is the behavioral validation artifact used to confirm that each Solution Module behaves correctly as a delivery and acceptance unit.
 
 #### Acceptance Criteria
 
 - Each priority use case identifies the actor, trigger, expected outcome, and major validation rules.
 - Narratives are specific enough to support walkthroughs, testing, or acceptance review.
+- Use cases are traceable to the relevant Solution Module and Functional Capabilities.
 - No use case introduces behavior outside approved scope without explicit approval.
 
 ### 7.7. User Roles, Personas & Access Model
@@ -180,9 +184,10 @@ This artifact ensures user behavior, access expectations, and governance assumpt
 
 Provides consolidated evidence that:
 
-- All approved capabilities are implemented
+- All approved Functional Capabilities are implemented
+- Solution Modules defined as delivery and acceptance units have been delivered and validated
 - No unapproved behavior has been introduced
-- Documented behaviors have been validated
+- Documented behaviors have been validated through the mapped Use Case Narratives
 - Acceptance decisions are formally recorded
 
 This artifact demonstrates that the delivered solution aligns with what was authorized.
@@ -190,6 +195,7 @@ This artifact demonstrates that the delivered solution aligns with what was auth
 #### Acceptance Criteria
 
 - The record references or attaches the evidence needed to support acceptance.
+- The record shows acceptance status by solution module where modules are being used as delivery and acceptance units.
 - Acceptance status, date, and Acceptance Authority are explicitly recorded.
 - Any conditions, exclusions, or follow-up actions affecting acceptance are documented.
 

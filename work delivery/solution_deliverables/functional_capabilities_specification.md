@@ -8,6 +8,8 @@ It exists to make scope clear before detailed design, build, testing, and accept
 
 The intended outcome is that the initiative has a stable, outcome-aligned functional scope baseline that downstream design, build, testing, and acceptance work can trace back to.
 
+This artifact defines what is in scope. It does not define the delivery unit or the detailed behavior to be tested for acceptance.
+
 ## 2. When It Is Required
 
 This artifact is required when functional scope must be approved, managed, or accepted explicitly.
@@ -57,22 +59,24 @@ Should include:
 
 This helps the reader understand how the scope is organized without changing the scope itself.
 
+These groupings are for readability only. They do not replace the formal Solution Module structure used for delivery and acceptance grouping.
+
 ### 6.3. Required content for each capability entry
 
-Each capability entry must include:
+Each Functional Capability entry must include:
 
-- stable Capability ID
+- stable Functional Capability ID
 - capability statement written as one business ability
 - business intent or value note
 
-Each capability entry should include when useful:
+Each Functional Capability entry should include when useful:
 
 - primary user role or beneficiary
 - linked outcome, success measure, or scope reference
 - acceptance-significant notes where a capability has material control, compliance, or operational importance
 - short clarification note where ambiguity would otherwise remain
 
-Each capability entry must not include:
+Each Functional Capability entry must not include:
 
 - workflow sequencing
 - detailed rule catalogs
@@ -99,6 +103,7 @@ Must include:
 - rule that downstream artifacts must remain consistent with the approved baseline
 - rule for stable IDs and non-reuse of retired IDs
 - statement that any new capability intent requires formal baseline revision
+- statement that Solution Modules may group capabilities for delivery and acceptance but may not redefine capability intent
 
 This section establishes how the baseline is governed.
 
@@ -117,7 +122,7 @@ This helps avoid false assumptions about completeness or timing.
 
 Recommended capability table columns:
 
-| Capability ID | Capability statement | Business intent / value | Primary role | Outcome or measure supported | Notes |
+| Functional Capability | Functional Capability statement | Business intent / value | Primary role | Outcome or measure supported | Notes |
 | --- | --- | --- | --- | --- | --- |
 
 Use short notes only. If a note starts to explain workflow, design, or detailed rules, move that content to a downstream artifact.
@@ -135,7 +140,7 @@ Keep the following out of this artifact:
 
 ## 8. Relationships to Other Artifacts
 
-This artifact should align with the Initiative Definition Document and should inform Solution Modules, Use Case Narratives, acceptance planning, and the final Acceptance Record.
+This artifact should align with the Initiative Definition Document and should inform Solution Modules, Use Case Narratives, module-level acceptance planning, and the final Acceptance Record.
 
 ## 9. Ownership, Review, and Acceptance Expectations
 
@@ -154,6 +159,7 @@ This is a controlled baseline. Update it only when approved scope changes or whe
 - Are document-level and per-entry requirements both clear?
 - Is the baseline governance rule explicit enough to prevent silent scope growth?
 - Does the baseline make the approval boundary and known exclusions visible enough for later acceptance review?
+- Could the capabilities be grouped into Solution Modules without inventing or splitting hidden scope?
 - Could a human or AI drafter derive downstream artifacts without major guessing?
 
 If weak, split combined capabilities, remove non-scope detail, and strengthen the baseline control rules.
@@ -163,7 +169,7 @@ If weak, split combined capabilities, remove non-scope detail, and strengthen th
 ### 12.1. Starter prompt
 
 > Draft a Functional Capabilities artifact for this initiative.
-> Define the approved business abilities the solution must provide, using stable capability IDs and short value statements.
+> Define the approved business abilities the solution must provide, using stable Functional Capability references and short value statements.
 > Keep the entries atomic, business-focused, and free of workflow, design, and implementation detail.
 
 ### 12.2. Section prompts
