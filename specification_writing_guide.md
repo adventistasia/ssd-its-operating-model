@@ -120,11 +120,11 @@ Use the principles below when writing any deliverable, artifact, or document spe
 
 They are intended to keep the specification practical, easy to apply, and usable by both human practitioners and AI agents.
 
-### 4.1 Start with purpose and real use
+### 4.1 Start with purpose, intended outcome, and real use
 
-Explain why the artifact exists before describing its structure.
+Explain why the artifact exists and what intended outcome a useful finished artifact should achieve before describing its structure.
 
-Make clear what problem it solves and how it supports review, delivery, operation, handover, acceptance, or control.
+Make clear what problem it solves, what successful use of the artifact should enable, and how it supports review, delivery, operation, handover, acceptance, or control.
 
 ### 4.2 Make context and audience visible
 
@@ -186,6 +186,26 @@ Where useful, include:
 - section prompts
 - validation prompts
 
+### 4.10 Recommend section numbering for usability
+
+Where a specification has multiple major sections or sub-sections, number them so they are easy to identify, reference, review, and discuss.
+
+Use numbering consistently in the visible headings, especially for:
+
+- major sections
+- sub-sections under a major section
+- prompt guide sub-sections
+- validation or checklist sub-sections where reviewers may need to cite a specific item
+
+For example:
+
+- `## 1. Purpose and Intended Outcome`
+- `## 7. Required Content or Minimum Structure`
+- `### 7.1. Baseline context`
+- `### 12.2. Section prompts`
+
+This improves traceability in review comments, governance discussions, change requests, and AI-assisted drafting.
+
 ## 5. Recommended Structure for a Specification
 
 The sections below are the recommended default structure for writing a specification for a deliverable, artifact, or document.
@@ -204,11 +224,16 @@ It may include:
 - last updated date
 - owner
 
-### 5.2 Purpose
+### 5.2 Purpose and Intended Outcome
 
-State why the artifact exists, what need it serves, and what a completed artifact should help people do.
+State why the artifact exists, what need it serves, and what intended outcome the completed artifact should achieve or enable.
 
 This section should make the artifact understandable in plain language.
+
+Where useful, distinguish between:
+
+- the purpose of the artifact
+- the intended outcome the artifact helps produce, protect, confirm, or sustain
 
 It should also make the intent of the specification obvious enough that an LLM can use it to produce a practical artifact rather than a generic template.
 
@@ -282,6 +307,8 @@ For each required section, content item, or information category, explain in sho
 - what it should help the reader understand, decide, do, validate, or accept
 
 When the artifact naturally has major parts, structure this section in a way that reflects those parts rather than using one flat list.
+
+Where practical, number the section and its sub-sections so reviewers and drafters can refer to them unambiguously.
 
 When the artifact is entry-based, record-based, log-based, or table-based, define the required fields for each entry or row, not only the overall document sections.
 
@@ -435,23 +462,26 @@ Common failure patterns to watch for during validation include:
 
 ### 6.1 Purpose and usefulness
 
-Check whether the specification clearly explains why the target artifact exists and what useful work it is meant to support.
+Check whether the specification clearly explains why the target artifact exists, what intended outcome it supports, and what useful work it is meant to support.
 
 Signs the specification is strong:
 
 - the purpose is easy to understand
+- the intended outcome is easy to understand
 - the intended use of the artifact is obvious
 - the document explains what a useful finished artifact helps people do
 
 If weak, improve it by:
 
 - rewriting the purpose in plain language
+- stating the intended outcome in plain language
 - stating what problem the artifact solves
 - explaining what decisions, work, review, handover, or acceptance the artifact should support
 
 Common failure patterns in this area:
 
 - the purpose is generic and could apply to almost any artifact
+- the intended outcome is missing or implied only indirectly
 - the purpose describes the document form but not its practical use
 - the purpose does not help a drafter understand what a good finished artifact should achieve
 
@@ -619,12 +649,13 @@ Use these questions before writing a new specification:
 2. When is the artifact needed?
 3. Who will read it, use it, review it, or rely on it?
 4. What project context or delivery situation is this artifact meant for?
-5. What is the minimum information that must be in it?
-6. What detail would overload the artifact and should go elsewhere?
-7. What related artifacts already exist around it?
-8. Does this artifact need named ownership, review, or acceptance?
-9. Is this artifact expected to change over time?
-10. How will someone know the artifact is complete and usable?
+5. What intended outcome should a good finished artifact help achieve, protect, confirm, or sustain?
+6. What is the minimum information that must be in it?
+7. What detail would overload the artifact and should go elsewhere?
+8. What related artifacts already exist around it?
+9. Does this artifact need named ownership, review, or acceptance?
+10. Is this artifact expected to change over time?
+11. How will someone know the artifact is complete and usable?
 
 ## 8. Recommended Prompt Template for Writing a New Specification
 
@@ -635,6 +666,7 @@ Use or adapt the following prompt when drafting a new specification:
 > The specification should explain:
 >
 > - why the artifact exists
+> - what intended outcome the finished artifact should achieve or enable
 > - when it is required or recommended
 > - who uses or reads it
 > - what project context or delivery situation it is meant for
@@ -652,7 +684,7 @@ Use or adapt the following prompt when drafting a new specification:
 Use this as a starting outline when writing a new deliverable, artifact, or document specification.
 
 1. Document Identity (if needed)
-2. Purpose
+2. Purpose and Intended Outcome
 3. When It Is Required
 4. Intended Readers and Users
 5. Intended Project Context
@@ -677,6 +709,7 @@ Where a specification includes a Prompt Guide for Drafting the Artifact, the fol
 > Use plain language.
 > Include all required sections.
 > Keep the amount of detail appropriate to the artifact's purpose.
+> Make the intended outcome explicit so the draft is useful, not just complete.
 > Make the draft fit the intended project context and intended audience.
 > Do not add content that the specification says should be handled in other artifacts.
 
@@ -686,7 +719,7 @@ Add short prompts for drafting major sections of the target artifact, especially
 
 Examples:
 
-> Draft the Purpose section for this artifact in simple language.
+> Draft the Purpose and Intended Outcome section for this artifact in simple language.
 
 > Draft the Required Content section for this artifact using the minimum structure defined in the specification.
 
@@ -704,6 +737,8 @@ Examples:
 
 > Check whether the amount of detail is appropriate for the artifact's intended use.
 
+> Check whether the draft makes the intended outcome explicit and keeps each major section aligned to that outcome.
+
 > Rewrite this draft to improve clarity, remove duplication, and keep the document within its defined boundary.
 
 ## Appendix A - Specification Self-Check
@@ -713,31 +748,32 @@ Use the questions below to review whether a specification is complete and usable
 ### Purpose and boundary
 
 1. Does the specification clearly explain why the target artifact exists?
-2. Does it clearly state what should be kept out of the artifact?
-3. Does it avoid overlapping unnecessarily with related artifacts?
+2. Does it clearly explain what intended outcome the artifact should help achieve or enable?
+3. Does it clearly state what should be kept out of the artifact?
+4. Does it avoid overlapping unnecessarily with related artifacts?
 
 ### Usability
 
-4. Could a practitioner draft the artifact from this specification without major guessing?
-5. Is the required content stated clearly?
-6. Are required, recommended, and optional elements clearly distinguished?
-7. Is the intended project context clear enough to guide useful drafting?
+5. Could a practitioner draft the artifact from this specification without major guessing?
+6. Is the required content stated clearly?
+7. Are required, recommended, and optional elements clearly distinguished?
+8. Is the intended project context clear enough to guide useful drafting?
 
 ### Proportion and clarity
 
-8. Does the specification explain how much detail is needed in plain language?
-9. Does it keep summary content separate from detailed supporting content?
-10. Is the language plain enough for mixed audiences?
+9. Does the specification explain how much detail is needed in plain language?
+10. Does it keep summary content separate from detailed supporting content?
+11. Is the language plain enough for mixed audiences?
 
 ### Control and lifecycle
 
-11. Does the specification explain how the artifact relates to other artifacts?
-12. Does it define ownership, review, or acceptance expectations where needed?
-13. Does it state whether the artifact is static or should be kept current over time?
+12. Does the specification explain how the artifact relates to other artifacts?
+13. Does it define ownership, review, or acceptance expectations where needed?
+14. Does it state whether the artifact is static or should be kept current over time?
 
 ### Quality
 
-14. Would the resulting artifact be understandable, reviewable, and maintainable by someone other than the original author?
-15. Would the resulting artifact support traceability, handover, and future review?
-16. Does the specification avoid making the artifact broader or heavier than it needs to be?
-17. Would an LLM using this specification likely produce an artifact that is practical for the intended project and audience rather than generic?
+15. Would the resulting artifact be understandable, reviewable, and maintainable by someone other than the original author?
+16. Would the resulting artifact support traceability, handover, and future review?
+17. Does the specification avoid making the artifact broader or heavier than it needs to be?
+18. Would an LLM using this specification likely produce an artifact that is practical for the intended project and audience rather than generic?

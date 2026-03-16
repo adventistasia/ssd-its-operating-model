@@ -1,164 +1,141 @@
 # Acceptance Record Specification
 
-## Purpose
+## 1. What This Artifact Is For
 
-The Acceptance Record provides the consolidated decision trail showing what solution deliverables were reviewed, what evidence supports acceptance, what conditions remain, and whether the named Acceptance Authority has formally accepted the result.
+The Acceptance Record is the decision-ready summary of what was reviewed, what evidence supports acceptance, what conditions remain, and what decision the named authority made.
 
-It exists to keep acceptance explicit and auditable. A useful Acceptance Record gives reviewers a concise and attributable basis for sign-off without forcing them to read every supporting artifact in full.
+This artifact answers one simple question:
 
-## When It Is Required
+**What exactly is being accepted, on what basis, and under what conditions?**
 
-This artifact is required whenever Solution Deliverables are formally accepted.
+Use it to keep acceptance explicit, attributable, and easy to review.
 
-It is especially important when acceptance involves phased delivery, conditions, deferred items, or multiple evidence sources.
+## 2. When to Use It
 
-## Intended Readers and Users
+Use this artifact in Stage 7 whenever Solution Deliverables are being formally accepted.
 
-- Business Owner / Process Owner
-- Acceptance Authorities
-- Delivery Owner
-- governance, audit, and future reviewers
+It is especially useful when:
 
-## Intended Project Context
+- acceptance is phased
+- some items are conditional or deferred
+- evidence comes from more than one source
 
-Use this artifact near acceptance time, after validation evidence exists and before or at formal sign-off. It is most useful where scope traceability and decision attribution matter.
+## 3. Before You Start
 
-It should align with PMI scope-validation and formal acceptance practice by linking sign-off to approved scope and evidence. It should also support the traceability and review discipline expected in controlled delivery and audit situations.
+Make sure you have:
 
-## How Much Detail to Include
+- the acceptance boundary
+- the items being reviewed
+- links to the supporting evidence
+- the named Acceptance Authority
+- visibility of any exclusions, conditions, deferred items, or unresolved issues
 
-Keep the artifact concise and decision-focused. Include enough detail to show what was reviewed, what evidence supports acceptance, what remains conditional, and who made the decision. Link to detailed evidence instead of copying it.
+## 4. How to Draft It
 
-## Required Content or Minimum Structure
+Follow these steps:
 
-This artifact should normally be a structured record with a table-driven core.
+1. State the acceptance boundary clearly.
+2. List each item being reviewed.
+3. Link each item to approved scope references and evidence.
+4. Use controlled status values for each row.
+5. Add a scope compliance statement.
+6. Record the decision, date, authority, and any follow-up actions.
 
-### 1. Record identity
-
-Must include:
-
-- initiative or solution name
-- record ID or version
-- acceptance scope or domain
-- preparation date
-- prepared by
-
-This section identifies the acceptance record unambiguously.
-
-### 2. Acceptance basis
-
-Must include:
-
-- reference to approved capabilities, modules, behaviors, or deliverables being accepted
-- reference to validation evidence
-- reference to any related Deployed Solution or release identifier
-
-This section shows what acceptance is based on.
-
-### 3. Required content for each acceptance row
-
-Each acceptance row must include:
-
-- item reviewed
-- what was reviewed
-- evidence reference
-- status
-- notes
-
-Recommended columns:
-
-| Item | What was reviewed | Evidence reference | Status | Notes |
-| --- | --- | --- | --- | --- |
-
-Use controlled status values such as:
+Recommended status values:
 
 - `accepted`
 - `accepted with conditions`
 - `deferred`
 - `not accepted`
 
-This row structure is the main control model of the artifact.
+## 5. Minimum Structure
 
-### 4. Scope compliance statement
+### 5.1. Record header
 
-Must include:
+Include:
 
-- statement on whether delivered behavior remains within approved scope
-- any approved exclusions, waivers, or phased items
-- any open items not yet accepted
+- initiative or solution name
+- record version or ID
+- preparation date
+- prepared by
+- acceptance scope or domain
 
-This section prevents acceptance decisions from hiding scope variance.
+### 5.2. Acceptance basis
 
-### 5. Decision and authority
+Include:
 
-Must include:
+- approved scope references being accepted
+- related Solution Module Definition reference where module-level documents are being used
+- evidence references
+- deployment or release reference if relevant
+- statement of whether this is full scope or partial scope acceptance
 
-- named Acceptance Authority
+### 5.3. Acceptance table
+
+Use a table like this:
+
+| Item reviewed | Scope reference | Evidence reference | Status | Notes |
+| --- | --- | --- | --- | --- |
+| Request submission module | `SM-001`, `FC-001`, `UC-001` | `TE-001`, pilot sign-off | accepted with conditions | One reporting issue tracked for follow-up |
+
+### 5.4. Scope compliance statement
+
+Include:
+
+- whether delivered behavior stayed within approved scope
+- whether any in-scope items are deferred or excluded
+- any approved waivers, exclusions, or conditions
+
+### 5.5. Decision section
+
+Include:
+
+- Acceptance Authority
 - decision date
 - formal decision outcome
-- any conditions, follow-up actions, and owners if acceptance is conditional
+- conditions, follow-up actions, and owners if needed
 
-This section makes the decision attributable and actionable.
+## 6. Writing Rules
 
-### 6. Template guide
+Keep this artifact concise.
 
-Use short entries:
-
-- `What was reviewed`: capability set, module, behavior area, or deliverable
-- `Evidence reference`: point to the evidence location, not the full evidence itself
-- `Status`: use the controlled status values only
-- `Notes`: use for conditions, exclusions, or clarifications, not hidden decisions
-
-## What to Keep Out
-
-Keep the following out of this artifact:
+Keep the following out:
 
 - full test scripts
 - raw defect logs
 - long design explanations
-- full operational procedures
-- meeting narrative that does not affect the acceptance decision
+- meeting narrative that does not affect the decision
 
-## Relationships to Other Artifacts
+Reference the evidence instead of copying it.
 
-This record should align with the Functional Capabilities Baseline, Solution Modules, Use Case Narratives, Deployed Solution artifact, and final closure records where applicable.
+## 7. Done When
 
-## Ownership, Review, and Acceptance Expectations
+This artifact is ready when:
 
-The record is usually assembled by the Delivery Owner or analyst supporting acceptance, then confirmed by the named Acceptance Authority.
+- a reviewer can understand the acceptance basis quickly
+- evidence is linked clearly
+- scope variance, exclusions, and conditions are visible
+- the named authority and decision are explicit
 
-The Business Owner / Process Owner usually provides the formal acceptance decision for Solution Deliverables.
+## 8. What Comes Next
 
-## Maintenance Expectations
+Use this artifact to support:
 
-Update the record until the decision is final. If acceptance is conditional or phased, keep the condition status current or issue a superseding version when conditions are closed.
+1. formal sign-off
+2. transition and closure records
+3. future audit or review of what was accepted
 
-## Validation Guide
+## 9. Prompt Guide
 
-- Can a reviewer understand what was accepted without reading every supporting artifact in full?
-- Is the acceptance basis traceable to approved scope and evidence?
-- Are conditions, exclusions, and deferred items explicit?
-- Is the decision attributable to a named authority and date?
-- Does the record rely on controlled statuses rather than ambiguous wording?
+Starter prompt:
 
-If weak, tighten the evidence references, clarify the scope compliance statement, and make the decision wording explicit.
+```text
+Draft a Solution Deliverables Acceptance Record for Stage 7.
+Show what was reviewed, what approved scope it maps to, what evidence supports acceptance, what conditions remain, and the formal decision of the named Acceptance Authority.
+```
 
-## Prompt Guide for Drafting the Artifact
+Validation prompt:
 
-### Starter prompt
-
-> Draft an Acceptance Record for the Solution Deliverables domain.
-> Summarize what was reviewed, what evidence supports acceptance, whether the delivered solution stayed within approved scope, what conditions remain, and the formal decision of the Acceptance Authority.
-> Keep the record concise, table-driven, and attributable.
-
-### Section prompts
-
-> Create the acceptance table using the required row fields and controlled status values in this specification.
-
-> Draft the scope compliance and decision sections so any exclusions, conditions, or deferrals are explicit.
-
-### Validation prompts
-
-> Check whether this Acceptance Record proves the basis for sign-off without duplicating the full evidence pack.
-
-> Check whether any open issue is hidden in notes instead of being stated clearly as a condition, deferral, or non-acceptance item.
+```text
+Check whether any open issue is hidden in notes instead of being stated clearly as a condition, deferral, or non-acceptance item.
+```
