@@ -30,7 +30,7 @@ This guide is mainly for:
 If you are new to the process, follow this order:
 
 1. In Stage 2, define the approved scope in [Functional Capabilities](solution_deliverables/functional_capabilities_specification.md).
-2. In Stage 4, clarify actors in the [User Roles, Personas & Access Model](solution_deliverables/user_roles_personas_and_access_model_specification.md), group the scope into [Solution Modules](solution_deliverables/solution_modules_specification.md), and describe behavior in [Use Case Narratives](solution_deliverables/use_case_narratives_specification.md).
+2. In Stage 4, clarify actors in the [User Roles, Personas & Access Model](solution_deliverables/user_roles_personas_and_access_model_specification.md), group the scope into behavior-centered [Solution Modules](solution_deliverables/solution_modules_specification.md), and describe behavior in [Use Case Narratives](solution_deliverables/use_case_narratives_specification.md).
 3. In Stage 6, record what is actually live in the [Deployed Solution](solution_deliverables/deployed_solution_specification.md) and gather evidence.
 4. In Stage 7, prepare the [Acceptance Record](solution_deliverables/acceptance_record_specification.md) and get an explicit acceptance decision.
 
@@ -66,7 +66,7 @@ The process can still be used outside strict Work Delivery Framework adoption. W
 | Stage | What solution design is doing |
 | --- | --- |
 | Stage 2 | Define the approval-level solution scope |
-| Stage 4 | Turn approved scope into delivery-ready structure and behavior |
+| Stage 4 | Turn approved scope into delivery-ready, behavior-centered structure and behavior |
 | Stage 5 | Use the Delivery Charter and Delivery Roadmap to mobilize controlled execution |
 | Stage 6 | Implement, validate, and record evidence |
 | Stage 7 | Present the acceptance package and get a clear decision |
@@ -116,7 +116,7 @@ Use this table as the day-to-day entry point.
 | Step | Minimum inputs | Required outputs | Completion check | Accountable owner |
 | --- | --- | --- | --- | --- |
 | 1. Define authorized scope | approved initiative intent, scope boundary, owner, reviewer, acceptance focus | Functional Capabilities | scope is clear, IDs are stable, no design detail added | Delivery Owner with Solution Lead / Analyst |
-| 2. Structure the solution | approved Functional Capabilities, user context, business rules, review inputs | User Roles, Personas & Access Model, Solution Modules, Use Case Narratives | every module and use case traces to approved capabilities, actors are clear, no new scope added | Delivery Owner with Solution Lead / Analyst |
+| 2. Structure the solution | approved Functional Capabilities, user context, business rules, review inputs | User Roles, Personas & Access Model, Solution Modules, Use Case Narratives | every module and use case traces to approved capabilities, actors are clear, modules reflect meaningful behaviors, no new scope added | Delivery Owner with Solution Lead / Analyst |
 | 3. Implement and evidence | approved design set, test and evidence approach, delivery roadmap, operational inputs | Deployed Solution, linked evidence, related delivery and operational records | delivered behavior can be traced back to approved scope and supported with evidence | Delivery Owner with delivery and operational leads |
 | 4. Prepare for formal acceptance | evidence, open issues, deployment status, operational handoff status | Acceptance Record and acceptance-ready package | acceptance authority can see what is being accepted, on what basis, and under what conditions | Delivery Owner with Acceptance Authority |
 
@@ -168,7 +168,7 @@ Step 1 is done when:
 Use this step in Stage 4.
 
 Goal:
-Turn approved scope into delivery-ready structure and reviewable behavior without expanding scope.
+Turn approved scope into delivery-ready, behavior-centered structure and reviewable behavior without expanding scope.
 
 Use these specs:
 
@@ -179,10 +179,11 @@ Use these specs:
 Do this in order:
 
 1. Confirm who the users are and what boundaries matter.
-2. Group approved capabilities into Solution Modules that can be explained, validated, and accepted as meaningful units.
-3. Write Use Case Narratives that show how each module behaves.
-4. Check that every use case references a module and approved capability IDs.
-5. Remove anything that introduces behavior not covered by the approved baseline.
+2. Identify meaningful user outcomes, behavior areas, or use case clusters.
+3. Group those behaviors into Solution Modules that can be explained, validated, and accepted as meaningful units.
+4. Write Use Case Narratives that show how each module behaves.
+5. Check that every use case references a module and approved capability IDs, and that every module maps back to approved capabilities.
+6. Remove anything that introduces behavior not covered by the approved baseline.
 
 Produce:
 
@@ -193,7 +194,7 @@ Produce:
 Do:
 
 - use actors and access expectations consistently
-- keep module boundaries easy to explain
+- keep module boundaries easy to explain in user terms
 - make acceptance criteria observable
 
 Do not:
@@ -201,10 +202,11 @@ Do not:
 - turn modules into task plans
 - turn use cases into UI scripts or technical specs
 - use personas to add hidden scope
+- let behavior grouping quietly replace capability traceability
 
 Step 2 is done when:
 
-- every module maps back to approved `FC-###` IDs
+- every module maps back to approved `FC-###` IDs even when the module is mainly defined by behaviors or use cases
 - every use case references one `SM-###` and one or more `FC-###` IDs
 - reviewers can understand expected behavior without guessing
 
@@ -298,7 +300,7 @@ Step 4 is done when:
 
 Use this traceability path throughout the process:
 
-`Initiative Definition -> Functional Capabilities -> User Roles / Solution Modules -> Use Case Narratives -> Delivery Evidence / Deployed Solution -> Acceptance Record`
+`Initiative Definition -> Functional Capabilities -> User Roles -> Behavior-Centered Solution Modules -> Use Case Narratives -> Delivery Evidence / Deployed Solution -> Acceptance Record`
 
 Practical reading order for first-time practitioners:
 
@@ -374,7 +376,7 @@ Use this checklist before asking for formal solution acceptance.
 Good signs:
 
 - approved capabilities stay stable through elaboration
-- modules organize the scope without changing it
+- modules organize the scope around meaningful user behaviors without changing it
 - use cases explain behavior in plain language
 - evidence is gathered during delivery, not reconstructed at the end
 - acceptance decisions are explicit and attributable
@@ -382,7 +384,7 @@ Good signs:
 Warning signs:
 
 - capabilities keep being renumbered or rewritten late
-- modules are grouped by team ownership only
+- modules are grouped by team ownership only or have no clear user-behavior focus
 - use cases introduce new behavior not found in approved scope
 - evidence is missing, unclear, or not traceable
 - acceptance is being prepared before readiness gaps are visible

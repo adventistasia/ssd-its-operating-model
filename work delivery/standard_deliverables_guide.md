@@ -105,7 +105,7 @@ If a team is new to solution design, use the deliverables in this order:
 | --- | --- | --- | --- |
 | Stage 2 | Functional Capabilities | Defines the approved solution scope baseline | [functional_capabilities_specification](solution_deliverables/functional_capabilities_specification.md) |
 | Stage 4 | User Roles, Personas & Access Model | Clarifies actors, boundaries, and control-sensitive roles | [user_roles_personas_and_access_model_specification](solution_deliverables/user_roles_personas_and_access_model_specification.md) |
-| Stage 4 | Solution Modules | Groups approved scope into delivery and acceptance units | [solution_modules_specification](solution_deliverables/solution_modules_specification.md) |
+| Stage 4 | Solution Modules | Groups approved scope into behavior-centered delivery and acceptance units | [solution_modules_specification](solution_deliverables/solution_modules_specification.md) |
 | Stage 4 | Use Case Narratives | Describes expected behavior in plain business language | [use_case_narratives_specification](solution_deliverables/use_case_narratives_specification.md) |
 | Stage 6 | Deployed Solution | Records what approved scope is actually live | [deployed_solution_specification](solution_deliverables/deployed_solution_specification.md) |
 | Stage 7 | Acceptance Record | Summarizes what was reviewed, what evidence was used, and what decision was made | [acceptance_record_specification](solution_deliverables/acceptance_record_specification.md) |
@@ -142,13 +142,13 @@ This deliverable establishes the solution scope baseline before detailed design 
 
 ### 7.5. Solution Modules
 
-The grouping of approved Functional Capabilities into meaningful delivery and acceptance units.
+The grouping of approved scope into meaningful, behavior-centered delivery and acceptance units.
 
-This deliverable helps teams organize scope for build, validation, and acceptance without changing the approved baseline.
+This deliverable helps teams organize scope around user behaviors and use cases for build, validation, and acceptance without changing the approved baseline.
 
 #### Acceptance Criteria
 
-- Modules group approved scope in a way reviewers can understand.
+- Modules group approved scope in a way reviewers can understand from a user-behavior point of view.
 - Module boundaries do not introduce new scope.
 - Each module can be traced to the relevant Functional Capabilities and Use Case Narratives.
 

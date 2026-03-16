@@ -76,6 +76,8 @@ Each use case must:
 - stay at business-behavior level
 - be complete enough that reviewers do not have to guess
 
+In a behavior-centered module model, use cases are the main content that gives the module its shape. They still must map back to approved capabilities.
+
 Keep the following out:
 
 - technical design

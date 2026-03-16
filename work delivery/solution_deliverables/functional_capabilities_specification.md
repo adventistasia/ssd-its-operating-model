@@ -10,6 +10,8 @@ This is the scope baseline for solution design. It answers one simple question:
 
 Use this artifact to make scope clear before the team starts detailed structuring, design, build, testing, and acceptance.
 
+Functional Capabilities remain the approved scope baseline even when later Solution Modules are grouped mainly around user behaviors and use cases.
+
 ## 2. When to Use It
 
 Use this artifact in Stage 2 when solution behavior is in scope and you need an approval-level baseline.
@@ -110,7 +112,7 @@ This artifact is ready when:
 After this baseline is approved:
 
 1. clarify the actor model in the [User Roles, Personas & Access Model Specification](user_roles_personas_and_access_model_specification.md)
-2. group the approved scope using the [Solution Modules Specification](solution_modules_specification.md)
+2. group the approved scope into behavior-centered modules using the [Solution Modules Specification](solution_modules_specification.md)
 3. describe behavior using the [Use Case Narratives Specification](use_case_narratives_specification.md)
 
 ## 9. Prompt Guide

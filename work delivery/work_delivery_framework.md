@@ -11,7 +11,6 @@ It puts the Define-Decide-Deliver (DDD) Work Management Model into practice by d
 - [Standard Deliverables Guide](standard_deliverables_guide.md)
 - [Deliverable Specifications Index](deliverable_specifications_index.md)
 - [Solution Design Process](solution_design_process.md)
-- [AI-Assisted Work Delivery Recommendations](ai_assisted_work_delivery_recommendations.md)
 
 ## 2. Intended Outcome
 
