@@ -8,7 +8,7 @@ This artifact answers one simple question:
 
 **What exactly will this module deliver, how will it behave, and what will be used to accept it?**
 
-Use this artifact when a module is large enough or important enough to need its own detailed document.
+Use this artifact when a module is large enough or important enough to need its own detailed document. It should help both future development work and later operational support.
 
 Practical naming recommendation:
 
@@ -39,6 +39,7 @@ Make sure you have:
 - the relevant user roles and access expectations
 - the use cases that belong to the module
 - the acceptance focus for the module
+- the known support, administration, monitoring, or recovery concerns where relevant
 
 ## 4. How to Draft It
 
@@ -49,8 +50,9 @@ Follow these steps:
 3. List the related roles and supporting `FC-###` IDs.
 4. Include the module's use cases or link to them if they sit elsewhere.
 5. Write the module-level acceptance criteria.
-6. Note dependencies, exclusions, assumptions, and open questions that matter.
-7. Check that the module stays inside approved scope.
+6. Note supportability, monitoring, administration, and recovery considerations where they matter.
+7. Note dependencies, exclusions, assumptions, and open questions that matter.
+8. Check that the module stays inside approved scope.
 
 ## 5. Minimum Structure
 
@@ -65,6 +67,7 @@ Use this structure:
 - Module scope notes and exclusions
 - Use case narratives for this module, or links to them
 - Module-level acceptance criteria
+- Operational and support notes where relevant
 - Dependencies and assumptions
 
 Example heading pattern:
@@ -79,6 +82,7 @@ This artifact should:
 - explain the behavior clearly enough for build, walkthrough, testing, and acceptance
 - keep capability traceability visible
 - keep module acceptance criteria visible
+- make support-sensitive design choices visible where operations will need them later
 
 Keep the following out:
 
@@ -103,7 +107,8 @@ Use this artifact to support:
 
 1. walkthroughs and reviews
 2. detailed validation and test planning
-3. delivery evidence and acceptance records
+3. technical and operational readiness documentation
+4. delivery evidence and acceptance records
 
 ## 9. Prompt Guide
 

@@ -4,7 +4,7 @@
 
 The System Administration Guide defines how the solution is deployed, configured, administered, monitored, and supported in day-to-day operation.
 
-It exists to convert technical and implementation knowledge into repeatable operating guidance that another competent administrator can follow without relying on the original implementer. A useful guide supports handover, continuity, supportability, and controlled day-to-day administration.
+It exists to convert technical and implementation knowledge into repeatable operating guidance that another competent administrator can follow without relying on the original implementer. A useful guide supports handover, continuity, supportability, controlled day-to-day administration, and future change carried out safely by operations teams.
 
 The intended outcome is that routine administration can be carried out consistently, safely, and independently by a competent administrator who was not part of the original implementation.
 
@@ -21,7 +21,7 @@ This artifact is required when a solution will be handed to operations or suppor
 
 ## 4. Intended Project Context
 
-Use this artifact during operational readiness and handover. It is most useful where another team must safely deploy, update, operate, and troubleshoot the solution after delivery.
+Use this artifact during detailed design, operational readiness, and handover. It is most useful where another team must safely deploy, update, operate, and troubleshoot the solution after delivery.
 
 It should align with ITIL 4 Service Configuration Management, Monitoring and Event Management, and Service Desk practices by making administration, monitoring, and support interactions clear. It should also reflect NIST planning discipline by making operational prerequisites, roles, and evidence expectations explicit.
 
@@ -124,13 +124,13 @@ Keep the following out of this artifact:
 
 ## 8. Relationships to Other Artifacts
 
-This artifact should align with the Technical Design Document, Operations & Support Model, Access Control guidance, and Backup, Restore & Recovery Plan.
+This artifact should align with the Technical Design Document, Solution Module Definitions, Operations & Support Model, Access Control guidance, and Backup, Restore & Recovery Plan.
 
 ## 9. Ownership, Review, and Acceptance Expectations
 
 The implementation lead, system administrator, or technical delivery owner usually authors the guide with operational input.
 
-It should be reviewed by the support team and Service Owner before handover.
+It should be reviewed by the support team and Service Owner before handover. For systems with meaningful operational impact, operational contributors should begin shaping this guidance during solution design.
 
 ## 10. Maintenance Expectations
 

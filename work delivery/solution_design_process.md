@@ -2,18 +2,34 @@
 
 ## Related Documents
 
+### Core Context
+
 - [Work Delivery Framework](work_delivery_framework.md)
 - [Standard Deliverables Guide](standard_deliverables_guide.md)
 - [AI-Assisted Authoring Standard](ai_assisted_authoring_standard.md)
+
+### Solution Deliverables
+
 - [Functional Capabilities Specification](solution_deliverables/functional_capabilities_specification.md)
+- [User Roles, Personas & Access Model Specification](solution_deliverables/user_roles_personas_and_access_model_specification.md)
 - [Solution Modules Specification](solution_deliverables/solution_modules_specification.md)
 - [Solution Module Definition Specification](solution_deliverables/solution_module_definition_specification.md)
 - [Use Case Narratives Specification](solution_deliverables/use_case_narratives_specification.md)
-- [User Roles, Personas & Access Model Specification](solution_deliverables/user_roles_personas_and_access_model_specification.md)
 - [Deployed Solution Specification](solution_deliverables/deployed_solution_specification.md)
 - [Acceptance Record Specification](solution_deliverables/acceptance_record_specification.md)
+
+### Governance and Mobilization
+
 - [Delivery Roadmap Specification](governance_and_control_deliverables/delivery_roadmap_specification.md)
 - [Delivery Charter Specification](governance_and_control_deliverables/delivery_charter_specification.md)
+
+### Operational Readiness
+
+- [Technical Design Document Specification](operational_readiness_deliverables/technical_design_document_specification.md)
+- [System Administration Guide Specification](operational_readiness_deliverables/system_administration_guide_specification.md)
+- [Operations & Support Model Specification](operational_readiness_deliverables/operations_and_support_model_specification.md)
+- [Backup, Restore & Recovery Plan Specification](operational_readiness_deliverables/backup_restore_and_recovery_plan_specification.md)
+- [Operational Readiness Confirmation Record Specification](operational_readiness_deliverables/operational_readiness_confirmation_record_specification.md)
 
 ## Quick Start
 
@@ -40,8 +56,8 @@ What to produce by stage:
 | Stage | Main solution deliverables |
 | --- | --- |
 | Stage 2 - Work Definition | Functional Capabilities |
-| Stage 4 - Work Definition Details | User Roles, Personas & Access Model, Solution Modules Register, Solution Module Definitions, Use Case Narratives |
-| Stage 6 - Work Delivery | Deployed Solution, linked evidence, related operational artifacts as needed |
+| Stage 4 - Work Definition Details | User Roles, Personas & Access Model, Solution Modules Register, Solution Module Definitions, Use Case Narratives, and identified operational-readiness needs where service impact exists |
+| Stage 6 - Work Delivery | Deployed Solution, linked evidence, and related operational artifacts as needed |
 | Stage 7 - Acceptance, Transition & Closure | Acceptance Record and final acceptance decision |
 
 What not to do:
@@ -60,7 +76,7 @@ It shows teams how to move from approved scope to structured behavior, delivery 
 
 ## 2. Where This Process Fits
 
-This process works inside the Work Delivery Framework. In this document, stage references refer to stages in the Work Delivery Framework. It does not replace stage decisions or governance controls.
+This process works inside the [work_delivery_framework](work_delivery_framework.md). In this document, stage references refer to stages in the Work Delivery Framework. It does not replace stage decisions or governance controls.
 
 The process can still be used outside strict Work Delivery Framework adoption. When teams use it that way, the stages should be read as practical checkpoints for scope, structure, evidence, and acceptance rather than as mandatory framework gates.
 
@@ -87,6 +103,7 @@ These artifacts support the process. They do not replace solution scope, behavio
 | Project Manager | Coordinate review cycles, version control, roadmap timing, follow-up actions, and evidence readiness |
 | Solution Lead / Analyst | Make scope, module boundaries, roles, and behavior clear enough to build and validate |
 | Developer / Tester | Build and validate only what traces back to approved scope and documented behavior |
+| IT Operations / Service Owner | Review supportability, administration, monitoring, recovery, and handover needs where operational impact exists |
 | Reviewer / SME | Check that the content is correct, practical, and still inside scope |
 | Acceptance Authority | Decide based on visible scope, evidence, open conditions, and readiness for use |
 
@@ -96,6 +113,7 @@ Simple usage guidance:
 - Delivery Owners and PMs should use it to keep drafting, review, evidence, and handoff in the right order.
 - Analysts and solution leads should use it to write the artifacts in sequence without mixing stages.
 - Developers and testers should use it to confirm what behavior is approved and what evidence is needed.
+- Operations teams should use it to surface supportability and handover needs early enough to influence the design.
 
 ## 4. Before You Start
 
@@ -107,6 +125,7 @@ Before drafting a governed solution artifact, make sure you have at least:
 - the named owner and reviewer
 - the IDs already assigned, or the ID pattern you will use
 - the acceptance focus or validation intent
+- the known operational, support, monitoring, or recovery constraints where relevant
 
 If any of these are missing, you can still draft a working document, but label it clearly as a working draft and do not treat it as controlled or decision-ready.
 
@@ -114,12 +133,12 @@ If any of these are missing, you can still draft a working document, but label i
 
 Use this table as the day-to-day entry point.
 
-| Step | Minimum inputs | Required outputs | Completion check | Accountable owner |
-| --- | --- | --- | --- | --- |
-| 1. Define authorized scope | approved initiative intent, scope boundary, owner, reviewer, acceptance focus | Functional Capabilities | scope is clear, IDs are stable, no design detail added | Delivery Owner with Solution Lead / Analyst |
-| 2. Structure the solution | approved Functional Capabilities, user context, business rules, review inputs | User Roles, Personas & Access Model, Solution Modules Register, Solution Module Definitions, Use Case Narratives | every module and use case traces to approved capabilities, actors are clear, modules reflect meaningful behaviors, module-level detail exists where needed, no new scope added | Delivery Owner with Solution Lead / Analyst |
-| 3. Implement and evidence | approved design set, test and evidence approach, delivery roadmap, operational inputs | Deployed Solution, linked evidence, related delivery and operational records | delivered behavior can be traced back to approved scope and supported with evidence | Delivery Owner with delivery and operational leads |
-| 4. Prepare for formal acceptance | evidence, open issues, deployment status, operational handoff status | Acceptance Record and acceptance-ready package | acceptance authority can see what is being accepted, on what basis, and under what conditions | Delivery Owner with Acceptance Authority |
+| Step                             | Minimum inputs                                                                                                        | Required outputs                                                                                                                                                | Completion check                                                                                                                                                                                              | Accountable owner                                  |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| 1. Define authorized scope       | approved initiative intent, scope boundary, owner, reviewer, acceptance focus                                         | Functional Capabilities                                                                                                                                         | scope is clear, IDs are stable, no design detail added                                                                                                                                                        | Delivery Owner with Solution Lead / Analyst        |
+| 2. Structure the solution        | approved Functional Capabilities, user context, business rules, review inputs, operational constraints where relevant | User Roles, Personas & Access Model, Solution Modules Register, Solution Module Definitions, Use Case Narratives, identified operational-readiness deliverables | every module and use case traces to approved capabilities, actors are clear, modules reflect meaningful behaviors, module-level detail exists where needed, operational needs are visible, no new scope added | Delivery Owner with Solution Lead / Analyst        |
+| 3. Implement and evidence        | approved design set, test and evidence approach, delivery roadmap, operational inputs                                 | Deployed Solution, linked evidence, related delivery records, and operational-readiness artifacts                                                               | delivered behavior can be traced back to approved scope and supported with evidence, and the solution is supportable beyond the delivery team                                                                 | Delivery Owner with delivery and operational leads |
+| 4. Prepare for formal acceptance | evidence, open issues, deployment status, operational handoff status                                                  | Acceptance Record and acceptance-ready package                                                                                                                  | acceptance authority can see what is being accepted, on what basis, and under what conditions                                                                                                                 | Delivery Owner with Acceptance Authority           |
 
 ## 6. Guided Workflow
 
@@ -177,6 +196,7 @@ Use these specs:
 - [Solution Modules Specification](solution_deliverables/solution_modules_specification.md)
 - [Solution Module Definition Specification](solution_deliverables/solution_module_definition_specification.md)
 - [Use Case Narratives Specification](solution_deliverables/use_case_narratives_specification.md)
+- operational readiness specs where supportability, administration, monitoring, or recovery will matter
 
 Do this in order:
 
@@ -185,8 +205,10 @@ Do this in order:
 3. Group those behaviors into Solution Modules that can be explained, validated, and accepted as meaningful units.
 4. Create one detailed Solution Module Definition for each non-trivial module.
 5. Write Use Case Narratives that show how each module behaves. These may be kept in one combined use case set or inside each Solution Module Definition.
-6. Check that every use case references a module and approved capability IDs, and that every module maps back to approved capabilities.
-7. Remove anything that introduces behavior not covered by the approved baseline.
+6. Bring operations or service ownership into review where the module affects live support, administration, monitoring, recovery, or handover.
+7. Identify which operational-readiness deliverables will be needed later and capture the supportability concerns early.
+8. Check that every use case references a module and approved capability IDs, and that every module maps back to approved capabilities.
+9. Remove anything that introduces behavior not covered by the approved baseline.
 
 Produce:
 
@@ -194,12 +216,14 @@ Produce:
 - Solution Modules Register
 - Solution Module Definitions
 - Use Case Narratives
+- identified operational-readiness needs where relevant
 
 Do:
 
 - use actors and access expectations consistently
 - keep module boundaries easy to explain in user terms
 - make acceptance criteria observable
+- surface supportability needs early enough to influence the design
 
 Do not:
 
@@ -207,12 +231,14 @@ Do not:
 - turn use cases into UI scripts or technical specs
 - use personas to add hidden scope
 - let behavior grouping quietly replace capability traceability
+- leave operations out until the handover stage when the solution clearly has operational impact
 
 Step 2 is done when:
 
 - every module maps back to approved `FC-###` IDs even when the module is mainly defined by behaviors or use cases
 - every use case references one `SM-###` and one or more `FC-###` IDs
 - each non-trivial module has a reviewable Solution Module Definition
+- operational reviewers have been involved where supportability matters
 - reviewers can understand expected behavior without guessing
 
 ### 6.3. Step 3 - Implement and Evidence
@@ -225,7 +251,11 @@ Show what was delivered, what is live, and what evidence proves the delivered be
 Use these specs:
 
 - [Deployed Solution Specification](solution_deliverables/deployed_solution_specification.md)
-- related operational and technical specs when design, support, deployment, or recovery records are required
+- [Technical Design Document Specification](operational_readiness_deliverables/technical_design_document_specification.md)
+- [System Administration Guide Specification](operational_readiness_deliverables/system_administration_guide_specification.md)
+- [Operations & Support Model Specification](operational_readiness_deliverables/operations_and_support_model_specification.md)
+- [Backup, Restore & Recovery Plan Specification](operational_readiness_deliverables/backup_restore_and_recovery_plan_specification.md)
+- [Operational Readiness Confirmation Record Specification](operational_readiness_deliverables/operational_readiness_confirmation_record_specification.md)
 
 Do this:
 
@@ -233,19 +263,21 @@ Do this:
 2. Collect evidence as work is completed.
 3. Record what is actually live, where it is live, and under what conditions.
 4. Link evidence back to capabilities, modules, and use cases where appropriate.
-5. Confirm operational ownership and support readiness for what is going live.
+5. Finalize the technical, administration, support, and recovery records needed for operations.
+6. Confirm operational ownership and support readiness for what is going live.
 
 Produce:
 
 - Deployed Solution
 - linked validation and deployment evidence
-- related technical or operational records where required
+- related technical and operational records where required
 
 Do:
 
 - keep evidence attributable and reviewable
 - note any phased, deferred, or conditional live scope
 - make support conditions visible
+- make sure operations can support the solution without relying on undocumented delivery-team knowledge
 
 Do not:
 
@@ -305,7 +337,7 @@ Step 4 is done when:
 
 Use this traceability path throughout the process:
 
-`Initiative Definition -> Functional Capabilities -> User Roles -> Solution Modules Register -> Solution Module Definitions / Use Case Narratives -> Delivery Evidence / Deployed Solution -> Acceptance Record`
+`Initiative Definition -> Functional Capabilities -> User Roles -> Solution Modules Register -> Solution Module Definitions / Use Case Narratives -> Technical / Operational Readiness Artifacts -> Delivery Evidence / Deployed Solution -> Acceptance Record`
 
 Practical reading order for first-time practitioners:
 
@@ -315,8 +347,9 @@ Practical reading order for first-time practitioners:
 4. Draft the [Solution Modules Register](solution_deliverables/solution_modules_specification.md).
 5. Draft one [Solution Module Definition](solution_deliverables/solution_module_definition_specification.md) per non-trivial module.
 6. Draft [Use Case Narratives](solution_deliverables/use_case_narratives_specification.md) as a combined set or inside the module definitions.
-7. During delivery, maintain the [Deployed Solution](solution_deliverables/deployed_solution_specification.md).
-8. At acceptance time, prepare the [Acceptance Record](solution_deliverables/acceptance_record_specification.md).
+7. If the solution affects live operations, involve operations during design and prepare the operational-readiness artifacts before go-live.
+8. During delivery, maintain the [Deployed Solution](solution_deliverables/deployed_solution_specification.md).
+9. At acceptance time, prepare the [Acceptance Record](solution_deliverables/acceptance_record_specification.md).
 
 ## 8. AI-Assisted Authoring Workflow
 
@@ -394,3 +427,4 @@ Warning signs:
 - use cases introduce new behavior not found in approved scope
 - evidence is missing, unclear, or not traceable
 - acceptance is being prepared before readiness gaps are visible
+The intent is not only to define what the solution will do. It is also to make the solution understandable for future enhancement and supportable by operations teams after delivery.

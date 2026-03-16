@@ -113,6 +113,8 @@ If a team is new to solution design, use the deliverables in this order:
 
 Use the [Solution Design Process](solution_design_process.md) as the operating guide that tells teams when to use each of these artifacts and how they fit together.
 
+Solution deliverables should make the solution understandable for both future enhancement work and operational support after delivery.
+
 For mobilization and coordination, pair the solution deliverables with:
 
 - [delivery_roadmap_specification](governance_and_control_deliverables/delivery_roadmap_specification.md)
@@ -356,6 +358,8 @@ This prevents informal completion without accountability.
 ### 9.1. Purpose
 
 Ensure the solution can be deployed, administered, operated, supported, restored, and sustained under clear operational ownership beyond the original delivery team.
+
+For solutions with operational impact, these deliverables should start being shaped during solution design, not only near go-live. They should be driven by the solution behaviors, module definitions, and technical choices that operations teams will need to support later.
 
 ### 9.2. Standard Deliverables (as applicable)
 

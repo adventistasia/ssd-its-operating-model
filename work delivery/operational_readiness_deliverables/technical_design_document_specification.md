@@ -2,7 +2,7 @@
 
 ## 1. Purpose and Intended Outcome
 
-The Technical Design Document explains how the solution is structured, what it depends on, and what technical decisions affect deployment, operation, security, resilience, and future change.
+The Technical Design Document explains how the solution is structured, what it depends on, and what technical decisions affect deployment, operation, security, resilience, future support, and future change.
 
 It exists to make the technical design understandable to people other than the original implementer. A useful Technical Design Document helps delivery, operations, support, security, and future maintainers understand how the solution is built without turning into a runbook.
 
@@ -23,7 +23,7 @@ This artifact is required for any solution with meaningful technical structure, 
 
 ## 4. Intended Project Context
 
-Use this artifact before deployment and operational handover. It is most useful where the organization needs a design-level explanation of components, environments, interfaces, constraints, and technical decisions that matter after build.
+Use this artifact during detailed solution design, before deployment, and through operational handover. It is most useful where the organization needs a design-level explanation of components, environments, interfaces, constraints, and technical decisions that matter after build.
 
 It should align with NIST planning guidance such as SP 800-18 by making system purpose, environment, roles, and controls understandable, and with ITIL 4 service configuration management intent by keeping component and dependency information reliable and accessible.
 
@@ -108,12 +108,13 @@ Keep the following out of this artifact:
 ## 8. Relationships to Other Artifacts
 
 This artifact should align with the Initiative Definition Document, Functional Capabilities, security and data artifacts, System Administration Guide, Operations & Support Model, and Backup, Restore & Recovery Plan.
+This artifact should also align with the Solution Modules Register, Solution Module Definitions, and Use Case Narratives so that the technical design clearly supports the intended solution behavior.
 
 ## 9. Ownership, Review, and Acceptance Expectations
 
 The solution architect, technical lead, or implementation lead usually authors this artifact.
 
-It should be reviewed by operations, security, infrastructure, and support stakeholders where their domains are materially affected.
+It should be reviewed by operations, security, infrastructure, and support stakeholders where their domains are materially affected. For solutions with operational impact, this review should start during solution design, not only near handover.
 
 ## 10. Maintenance Expectations
 

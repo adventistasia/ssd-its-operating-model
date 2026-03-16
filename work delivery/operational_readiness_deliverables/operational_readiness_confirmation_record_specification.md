@@ -110,7 +110,7 @@ Keep the following out of this artifact:
 
 ## 8. Relationships to Other Artifacts
 
-This record should reference the Technical Design Document, System Administration Guide, Operations & Support Model, Backup, Restore & Recovery Plan, monitoring or audit designs, and relevant release evidence.
+This record should reference the Solution Module Definitions, Technical Design Document, System Administration Guide, Operations & Support Model, Backup, Restore & Recovery Plan, monitoring or audit designs, and relevant release evidence.
 
 ## 9. Ownership, Review, and Acceptance Expectations
 

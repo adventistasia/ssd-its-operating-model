@@ -21,7 +21,7 @@ This artifact is required when the initiative creates or changes a service, appl
 
 ## 4. Intended Project Context
 
-Use this artifact before go-live or formal handover. It is most useful where support must continue beyond the delivery team and where boundaries between teams, vendors, or service tiers must be explicit.
+Use this artifact during solution design, before go-live, and at formal handover. It is most useful where support must continue beyond the delivery team and where boundaries between teams, vendors, or service tiers must be explicit.
 
 It should align with ITIL 4 Service Desk, Incident Management, Monitoring and Event Management, and Relationship Management practices by making service accountability, support channels, and escalation paths clear.
 
@@ -95,13 +95,13 @@ Keep the following out of this artifact:
 
 ## 8. Relationships to Other Artifacts
 
-This artifact should align with the Technical Design Document, System Administration Guide, Backup, Restore & Recovery Plan, Operational Readiness Confirmation Record, and monitoring or audit designs where applicable.
+This artifact should align with the Technical Design Document, Solution Module Definitions, System Administration Guide, Backup, Restore & Recovery Plan, Operational Readiness Confirmation Record, and monitoring or audit designs where applicable.
 
 ## 9. Ownership, Review, and Acceptance Expectations
 
 The Service Owner or operational lead usually owns this artifact with support from the Delivery Owner and support leads.
 
-It should be reviewed as part of operational readiness and handover.
+It should be reviewed as part of solution design where operational impact exists, and again as part of operational readiness and handover.
 
 ## 10. Maintenance Expectations
 

@@ -21,7 +21,7 @@ This artifact is required for any initiative that introduces or changes data, se
 
 ## 4. Intended Project Context
 
-Use this artifact before go-live and as part of readiness and resilience review. It is most useful where recovery obligations, dependency risks, and service continuity expectations must be understood before the solution is accepted into operation.
+Use this artifact during solution design, before go-live, and as part of readiness and resilience review. It is most useful where recovery obligations, dependency risks, and service continuity expectations must be understood before the solution is accepted into operation.
 
 It should align with NIST contingency-planning guidance, including planning for recovery roles, scenarios, and validation; with CIS Control 11 on data recovery; and with ITIL service continuity intent by making restore and rollback capability credible and governed.
 
@@ -93,13 +93,13 @@ Keep the following out of this artifact:
 
 ## 8. Relationships to Other Artifacts
 
-This artifact should align with the Technical Design Document, System Administration Guide, Operations & Support Model, Data Asset Specification, and Operational Readiness Confirmation Record.
+This artifact should align with the Technical Design Document, Solution Module Definitions, System Administration Guide, Operations & Support Model, Data Asset Specification, and Operational Readiness Confirmation Record.
 
 ## 9. Ownership, Review, and Acceptance Expectations
 
 The Service Owner, infrastructure lead, or technical lead usually coordinates this artifact.
 
-It should be reviewed by operations and any team responsible for backup platforms, data stewardship, or security oversight.
+It should be reviewed by operations and any team responsible for backup platforms, data stewardship, or security oversight. For solutions with material recovery risk, that review should start during solution design.
 
 ## 10. Maintenance Expectations
 
