@@ -1,11 +1,11 @@
 # Work Brief Form
 
-Use this form for a small standalone work item or for a controlled work item inside a larger initiative.
+Use this form for a small work item on its own or inside a larger initiative.
 
 Purpose:
-Capture what is being done, who owns it, what must be delivered, what decision was made, and how the work will be accepted and closed.
+Capture the problem, need, or outcome, who owns the work, what must be delivered, what decision was made, and how the work will be accepted and closed.
 
-Use this form like a lightweight work order when the work sits inside a parent initiative.
+Use this form like a simple work order when the work sits inside a parent initiative.
 
 Decision options:
 
@@ -16,11 +16,11 @@ Decision options:
 
 ---
 
-## 1. Work Identity and Control
+## 1. Work Details and Control
 
-**Work Brief Title:**  
+**Title:**  
 
-**Work Brief ID:**  
+**ID:**  
 
 **Current Status:**  
 
@@ -43,11 +43,11 @@ Decision options:
 
 **Date Raised:**  
 
-**Last Updated Date:**  
+**Last Updated:**  
 
 **Requester:**  
 
-**Work Classification:**  
+**Type:**  
 
 - [ ] Investigation / Research
 - [ ] Improvement / Enhancement
@@ -56,33 +56,33 @@ Decision options:
 - [ ] Deliverable Package
 - [ ] Other:
 
-**Parent Initiative / Parent Deliverable / Parent Work Reference (if applicable):**  
+**Parent Reference (if applicable):**  
 
-**Current Kanban Stage / Lane:**  
+**Board Stage / Lane:**  
 
-**Board / Ticket / Tracking Reference (if used):**  
+**Board / Ticket Reference (if used):**  
 
 ---
 
 ## 2. Outcome, Need, and Success
 
-**Problem / Request / Need:**  
+**Problem / Need / Request:**  
 
-**Why this work exists now:**  
+**Why now:**  
 
-**Intended outcome:**  
+**Intended Outcome:**  
 
-**Success criteria / acceptance focus:**  
+**Success / What Acceptance Will Check:**  
 
-**Consequence of not doing the work (if relevant):**  
+**If not done (if relevant):**  
 
 ---
 
 ## 3. Scope Boundaries
 
-**In scope:**  
+**In Scope:**  
 
-**Out of scope:**  
+**Out of Scope:**  
 
 **Assumptions:**  
 
@@ -90,7 +90,7 @@ Decision options:
 
 ---
 
-## 4. Roles and Accountability
+## 4. Roles and Owners
 
 **Requester:**  
 
@@ -98,11 +98,11 @@ Decision options:
 
 **Delivery Owner:**  
 
-**Acceptance Owner / Acceptance Authority:**  
+**Acceptance Owner / Authority:**  
 
 **Decision Authority:**  
 
-**Implementer / Contributors (if known):**  
+**Implementer / Contributors:**  
 
 **Operational Owner (if relevant):**  
 
@@ -120,77 +120,65 @@ Decision options:
 
 ---
 
-## 6. Risks, Dependencies, and Supportability
+## 6. Risks, Dependencies, and Support
 
-**Material risks / constraints:**  
+**Risks / Constraints:**  
 
-**Dependencies / prerequisites:**  
+**Dependencies / Prerequisites:**  
 
-**Security / privacy / compliance considerations:**  
+**Access Requirements:**  
 
-**Operational / support / sustainability considerations:**  
+**Security / Privacy / Compliance:**  
 
-**Recovery / rollback considerations (if relevant):**  
+**Operations / Support Needs:**  
 
-**Blocked / waiting on anything now?:**  
+**Recovery / Rollback (if relevant):**  
 
----
-
-## 7. Decision Record
-
-**Decision being requested:**  
-
-- [ ] Approve this work item
-- [ ] Defer this work item
-- [ ] Reject this work item
-- [ ] Convert this into an Initiative Definition
-
-**Decision Authority:**  
-
-**Decision taken:**  
-
-- [ ] Approved
-- [ ] Deferred
-- [ ] Rejected
-- [ ] Converted to Initiative Definition
-
-**Decision date:**  
-
-**Decision rationale:**  
-
-**Conditions / follow-up actions / risk acceptance:**  
+**Blocked / Waiting On:**  
 
 ---
 
-## 8. Delivery and Board Control
+## 7. Decision Log
 
-**Target completion date (if used):**  
+Record each important decision made for this work item.
 
-**Current summary of progress:**  
+| Date | Decision Needed / Made | Decision Taken | Decision Authority | Rationale | Conditions / Follow-Up / Accepted Risks |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
 
-**Linked child tasks / tickets / implementation records:**  
+---
 
-**Material scope, owner, or decision changes since the brief was first defined:**  
+## 8. Delivery and Board Tracking
+
+**Target Completion Date:**  
+
+**Current Progress:**  
+
+**Linked Tasks / Tickets / Records:**  
+
+**Material Changes Since First Defined:**  
 
 ---
 
 ## 9. Closure and Acceptance
 
-**Closure criteria:**  
+**Closure Criteria:**  
 
-**Outcome validation summary:**  
+**Outcome Check Summary:**  
 
-**Acceptance confirmation:**  
+**Acceptance Confirmation:**  
 
 **Accepted by:**  
 
-**Acceptance date:**  
+**Acceptance Date:**  
 
-**Post-delivery owner / ongoing owner:**  
+**Ongoing Owner:**  
 
-**References to resulting artifacts, evidence, or handover material:**  
+**References / Evidence / Handover:**  
 
-**Closure notes / lessons / unresolved follow-up items:**  
+**Closure Notes / Follow-Up:**  
 
 ---
 
@@ -198,7 +186,7 @@ Decision options:
 
 ### Definition exit
 
-- [ ] Work item is clear enough to explain without extra verbal clarification
+- [ ] The work is clear without extra verbal explanation
 - [ ] Scope boundaries are explicit
 - [ ] Requester, Outcome Owner, Delivery Owner, Acceptance Owner, and Decision Authority are named
 - [ ] Deliverables and acceptance evidence are defined
