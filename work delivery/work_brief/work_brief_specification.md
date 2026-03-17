@@ -12,6 +12,12 @@ It is lighter than an Initiative Definition Document but stronger than a task no
 
 Use a Work Brief when the work is small enough to manage as one item, but important enough that scope, ownership, decision, and closure need to be clear.
 
+Within the Work Delivery Framework, it is mainly used as:
+
+- a scaled Stage 2 Work Definition artifact for small governed work
+- a supporting Stage 3 authorization artifact for that same small work
+- a child work order under an approved initiative during delivery
+
 Common use cases:
 
 - a small standalone improvement, change, investigation, or correction
@@ -42,6 +48,13 @@ In that case, the Work Brief acts like a work order inside the parent initiative
 - stay within the parent scope and approval boundaries
 - define only the specific piece of work being controlled
 - avoid restating the full initiative case unless needed for local clarity
+
+In Work Delivery Framework terms:
+
+- use the Work Brief in Stage 2 when the work is small enough that a full Initiative Definition Document would be too heavy
+- use the Work Brief in Stage 3 as part of the approval basis for that small work
+- keep using the same Work Brief through delivery and closure as the live control record
+- use child Work Briefs under a parent initiative when one initiative contains multiple controlled work items
 
 ## 5. Minimum Content
 
@@ -185,7 +198,7 @@ A Work Brief is working properly if:
 
 Use this standard alongside:
 
-- [ITS Work Management Model](../its_work_management_model.md)
-- [Initiative Definition Document Specification](../work%20delivery/governance_and_control_deliverables/initiative_definition_document_specification.md)
-- [Work Delivery Framework](../work%20delivery/work_delivery_framework.md)
-- [Work Brief Form](./work_brief_form.md)
+- [ITS Work Management Model](../../its_work_management_model.md)
+- [Initiative Definition Document Specification](../governance_and_control_deliverables/initiative_definition_document_specification.md)
+- [Work Delivery Framework](../work_delivery_framework.md)
+- [Work Brief Form](work_brief_form.md)

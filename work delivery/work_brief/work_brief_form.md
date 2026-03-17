@@ -58,6 +58,8 @@ Decision options:
 
 **Parent Reference (if applicable):**  
 
+**Related Initiative Definition / Charter Reference (if applicable):**  
+
 **Board Stage / Lane:**  
 
 **Board / Ticket Reference (if used):**  

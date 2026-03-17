@@ -218,6 +218,10 @@ This artifact should normally be created from the completed Stage 1 assessment o
 
 This artifact anchors the Project Charter, Functional Capabilities, domain-specific deliverables, decision records, operational readiness artifacts, and final acceptance and closure records.
 
+Where delivery is broken into smaller controlled work items, the Initiative Definition Document may also anchor one or more Work Briefs used as child work orders under the approved initiative baseline.
+
+Those Work Briefs should stay within the initiative's approved scope, ownership, deliverable expectations, and authorization boundaries. They should define and control discrete pieces of work without replacing the Initiative Definition Document as the main governance baseline.
+
 The Project Charter should not contradict this document. If authorization, funding, scope, ownership, required deliverables, or major impacts change materially, the Initiative Definition Document should be updated first or in controlled parallel with the related governance decision.
 
 ## 9. Ownership, Review, and Acceptance Expectations
