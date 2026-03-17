@@ -30,7 +30,25 @@ It is especially useful when:
 
 Use cases may be stored in one combined use case document or inside the related `Solution Module Definition`. For non-trivial systems, module-by-module organization is often easier to review and maintain.
 
-## 3. Before You Start
+## 3. Stage Fit and Handoffs
+
+- Stage 4: define expected business behavior and acceptance-relevant flow detail.
+- Stage 6: use the use cases to validate delivered behavior and collect evidence.
+- Stage 7: use the use cases as part of the acceptance basis when mapping evidence to approved behavior.
+
+Upstream sources:
+
+- [Functional Capabilities Specification](functional_capabilities_specification.md)
+- [Solution Modules Specification](solution_modules_specification.md)
+- [User Roles, Personas & Access Model Specification](user_roles_personas_and_access_model_specification.md)
+
+Downstream artifacts:
+
+- [Deployed Solution Specification](deployed_solution_specification.md)
+- [Acceptance Record Specification](acceptance_record_specification.md)
+- [Training and Enablement Materials Specification](../user_adoption_and_change_enablement_deliverables/training_and_enablement_materials_specification.md)
+
+## 4. Before You Start
 
 Make sure you have:
 
@@ -41,7 +59,7 @@ Make sure you have:
 - important rules, controls, data sensitivity, and acceptance concerns
 - any known open questions that could affect behavior or scope
 
-## 4. How to Draft It
+## 5. How to Draft It
 
 Follow these steps:
 
@@ -62,11 +80,11 @@ Useful tests:
 - If an alternate path does not explain what happens next, finish it so the outcome is clear.
 - If it introduces behavior not found in the approved baseline, remove or escalate it.
 
-## 5. Minimum Structure
+## 6. Minimum Structure
 
 Use this structure for each use case.
 
-### 5.1. Identification and scope
+### 6.1. Identification and scope
 
 Must include:
 
@@ -90,7 +108,7 @@ Primary actor: Staff member
 Supporting actors or systems: Request management system, notification service
 ```
 
-### 5.2. Goal and starting conditions
+### 6.2. Goal and starting conditions
 
 Must include:
 
@@ -119,7 +137,7 @@ Minimum guarantee:
 - No incomplete request is treated as submitted
 ```
 
-### 5.3. Main flow
+### 6.3. Main flow
 
 Must include:
 
@@ -144,7 +162,7 @@ Main flow:
 5. The system routes the request to the correct queue.
 ```
 
-### 5.4. Alternate and exception paths
+### 6.4. Alternate and exception paths
 
 Must include:
 
@@ -167,7 +185,7 @@ Alternate and exception paths:
 - 5a. Routing fails. The system records the request, flags it for support follow-up, and ends the use case with manual routing required.
 ```
 
-### 5.5. Rules, controls, and special conditions
+### 6.5. Rules, controls, and special conditions
 
 Must include where relevant:
 
@@ -201,7 +219,7 @@ Open issues:
 - Confirm whether routing fallback should create a support alert automatically.
 ```
 
-### 5.6. Acceptance and traceability
+### 6.6. Acceptance and traceability
 
 Must include:
 
@@ -223,7 +241,7 @@ Acceptance criteria:
 - Submission activity is traceable in the system record.
 ```
 
-## 6. Writing Rules
+## 7. Writing Rules
 
 Each use case must:
 
@@ -253,7 +271,21 @@ Useful drafting cautions:
 - If a use case is so narrow that it describes only a single click or UI gesture, raise it back to a meaningful user outcome.
 - Use the same role names and access assumptions as the User Roles, Personas & Access Model artifact.
 
-## 7. Done When
+## 8. Traceability and Ownership Minimum
+
+Minimum traceability expectation:
+
+- each use case maps to one `SM-###` module and one or more `FC-###` IDs
+- acceptance criteria can be linked to evidence references during delivery
+- role names match the role and access artifact
+
+Minimum ownership expectation:
+
+- Solution lead or analyst owns behavioral clarity.
+- Delivery Owner confirms scope boundaries are respected.
+- Reviewers and testers confirm the narratives are usable for validation.
+
+## 9. Done When
 
 This artifact is ready when:
 
@@ -265,7 +297,7 @@ This artifact is ready when:
 - acceptance criteria are observable
 - the use case is traceable to one module and approved capabilities
 
-## 8. What Comes Next
+## 10. What Comes Next
 
 After use cases are ready:
 
@@ -275,7 +307,7 @@ After use cases are ready:
 4. keep the live record current in the [Deployed Solution Specification](deployed_solution_specification.md)
 5. use them as part of the basis for the [Acceptance Record Specification](acceptance_record_specification.md)
 
-## 9. Prompt Guide
+## 11. Prompt Guide
 
 Starter prompt:
 

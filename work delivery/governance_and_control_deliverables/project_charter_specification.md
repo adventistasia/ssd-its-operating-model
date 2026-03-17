@@ -2,15 +2,15 @@
 
 ## 1. Purpose and Intended Outcome
 
-The Project Charter formally records sponsorship, authority, priority, funding commitment, and the decision to proceed with delivery.
+The Project Charter formally records sponsorship, authority, priority, funding commitment, and the Stage 3 Work Authorization decision.
 
 It exists to confirm that the initiative has been intentionally authorized and that the Delivery Owner has clear authority to act within the approved boundary. A useful charter makes the authorization basis, key commitments, and accountability model easy to understand and audit.
 
-The intended outcome is that the initiative proceeds with explicit sponsorship, approved authority, and visible commitment of funding and accountability.
+The intended outcome is that delivery starts only when explicit authorization exists, with visible sponsorship, approved authority, and clear accountability.
 
 ## 2. When It Is Required
 
-This artifact is required when formal authorization, budget commitment, resource assignment, or named delivery authority is needed to start or continue the initiative.
+This artifact is required in Stage 3 - Work Authorization when formal authorization, budget commitment, resource assignment, or named delivery authority is needed before delivery starts.
 
 ## 3. Intended Readers and Users
 
@@ -50,11 +50,14 @@ This section identifies the formal authorization record.
 
 Must include:
 
-- formal statement that the initiative is authorized
+- formal statement of the decision outcome
 - decision authority or approving body
 - authorization date
+- decision outcome using one of: Approve, Defer, Reject, Approve with Conditions
 - authority granted to the Delivery Owner
 - any explicit conditions, limits, or decision assumptions attached to the authorization
+
+If the decision outcome is not `Approve` or `Approve with Conditions`, the charter must clearly state that delivery is not authorized to start.
 
 This section is the core control statement of the charter.
 
@@ -66,6 +69,7 @@ Must include:
 - approved scope summary
 - approved budget or funding commitment
 - key constraints and high-level risks
+- named owner for each authorization condition where applicable
 - reporting or acceptance expectations
 - reference to the authoritative Initiative Definition Document version that this authorization is based on
 
@@ -78,11 +82,13 @@ Recommended fields:
 | Field | What to record |
 | --- | --- |
 | Authorization basis | Resolution, signed decision, committee action, or delegated approval |
+| Decision outcome | Approve, Defer, Reject, or Approve with Conditions |
 | Purpose | Short statement of why the initiative is being authorized |
 | Scope summary | High-level only, with reference to the Initiative Definition Document |
 | Funding | Approved amount, funding source, and conditions if any |
 | Authority granted | What the Delivery Owner is empowered to do |
 | Constraints | Major limitations or conditions that shape delivery |
+| Condition owner | Who is accountable for each condition or follow-up action |
 | Acceptance expectations | Who must accept the outcome or domain-level deliverables before closure |
 
 Use short, decision-focused entries rather than narrative paragraphs where possible.
@@ -101,19 +107,23 @@ Keep the following out of this artifact:
 
 The charter should reference the Initiative Definition Document, relevant funding or governance approvals, and major decision records.
 
+Where authorization is conditional, it should also reference the tracked condition log or follow-up record used during delivery governance.
+
 ## 9. Ownership, Review, and Acceptance Expectations
 
 The charter is usually prepared by the Delivery Owner or governance lead and approved by the Sponsor or Decision Authority.
 
 ## 10. Maintenance Expectations
 
-The charter is normally stable once approved. Issue a new version or formal revision when sponsorship, funding, authority, or approved scope changes materially.
+The charter is normally stable once approved. Issue a new version or formal revision when sponsorship, funding, authority, decision conditions, or approved scope changes materially.
 
 ## 11. Validation Guide
 
 - Does the charter clearly show who authorized the work and what authority was granted?
+- Is the Stage 3 decision outcome explicit as Approve, Defer, Reject, or Approve with Conditions?
 - Is the approved purpose, funding, and scope summary clear without becoming a full project document?
 - Are any authorization conditions or decision limits explicit enough to prevent assumed authority?
+- If the decision was Defer or Reject, does the charter clearly prevent delivery start?
 - Could an auditor or new leader identify the decision basis quickly?
 - Does the artifact stay focused on authorization rather than delivery detail?
 

@@ -2,16 +2,34 @@
 
 ## 1. Purpose
 
-This framework governs planned work delivery initiatives, including projects, significant enhancements, and smaller governed initiatives.
+This framework is the main staged operating path for planned ITS work from intake to closure.
+
+It governs planned work delivery initiatives, including projects, significant enhancements, and smaller governed initiatives.
 
 It puts the Define-Decide-Deliver (DDD) Work Management Model into practice by defining the minimum decisions, documents, ownership, and controls needed to deliver work clearly, accountably, and sustainably.
 
 ## Related Documents
 
+- [Repository Start Here](../README.md)
+- [ITS Operating Model](../its_operating_model.md)
+- [ITS Work Management Model](../its_work_management_model.md)
 - [Work Assessment Process](work_assessment/work_assessment_process.md)
+- [Work Brief Specification](work_brief/work_brief_specification.md)
 - [Standard Deliverables Guide](standard_deliverables_guide.md)
 - [Deliverable Specifications Index](deliverable_specifications_index.md)
 - [Solution Design Process](solution_design_process.md)
+
+### 1.1. How This Framework Fits with the Other Core Documents
+
+Use the core repository documents in this order:
+
+- The [ITS Operating Model](../its_operating_model.md) explains the control intent and why ITS work must be visible, owned, traceable, and supportable.
+- The [ITS Work Management Model](../its_work_management_model.md) states the governing control logic in simple terms: define the work, decide whether to commit to it, then deliver and close it properly.
+- This Work Delivery Framework turns that control logic into the practical seven-stage operating path for planned work.
+- The [Standard Deliverables Guide](standard_deliverables_guide.md) helps teams decide which deliverables are needed.
+- The [Deliverable Specifications Index](deliverable_specifications_index.md) points to the detailed drafting specifications for those deliverables.
+
+If a reader only needs one document to understand how planned ITS work should move from intake to closure in practice, this is the anchor document.
 
 ## 2. Intended Outcome
 
@@ -50,6 +68,16 @@ The framework is intentionally control-light for low-complexity work and should 
 4. Measure progress by accepted deliverables and evidence.
 5. Transition to operations with named ownership.
 6. Keep artifacts practical, readable, and usable by both humans and AI.
+
+### 4.1. Relationship to the Define-Decide-Deliver Model
+
+The Define-Decide-Deliver model is the control logic underneath this framework.
+
+- **Define** happens across Stage 1 Work Assessment, Stage 2 Work Definition, and Stage 4 Work Definition Details.
+- **Decide** happens at the formal decision points, especially Stage 3 Work Authorization, major change decisions during delivery, and Stage 7 acceptance and closure decisions.
+- **Deliver** happens across Stage 5 Delivery Mobilization, Stage 6 Work Delivery, and Stage 7 Acceptance, Transition & Closure.
+
+This means the repository is not describing two competing models. The DDD model is the simple control rule. The Work Delivery Framework is the practical staged operating path that puts that rule into day-to-day use.
 
 ## 5. Core Roles
 
@@ -161,6 +189,10 @@ For small governed work, the Work Brief may be used as the scaled artifact acros
 
 Within a larger initiative, multiple Work Briefs may be used as child work orders under the approved initiative baseline.
 
+The practical reading path across the repository is:
+
+`README -> ITS Operating Model -> ITS Work Management Model -> Work Delivery Framework -> Work Assessment or Work Brief -> Initiative Definition and deliverable specifications -> Delivery evidence -> Acceptance and closure records`
+
 Accountable means accountable for moving the stage forward.
 
 | Stage                               | What it means in practice                                                          | Primary Decision                                      | Accountable                                      | Core artifacts                                                                                                      | Minimum outcome                                                                                                     |
@@ -200,9 +232,11 @@ The normal three-step sequence is:
 2. Validation Assessment
 3. Work Assessment Report
 
-The intended progression from Stage 1 into Stage 2 is:
+The normal progression from Stage 1 into Stage 2 is:
 
 `Work Assessment Report -> Initiative Definition Document`
+
+For smaller governed work, the Stage 1 handoff may instead move into a [Work Brief](work_brief/work_brief_specification.md) when that gives enough definition, ownership, and control for the size and risk of the work.
 
 ### 9.2. Minimum Outputs
 
@@ -299,6 +333,8 @@ AI must not:
 Stage 2 stays at authorization-level detail. It defines what the initiative is expected to deliver, why it matters, who owns it, what acceptance will focus on, and what level of cost and risk the organization is being asked to approve.
 
 Stage 2 should normally begin from the completed Work Assessment Report, not from raw intake notes or an unstructured rediscovery exercise.
+
+For small governed work using a Work Brief, the same rule still applies: the brief should be based on the completed Stage 1 assessment and should not restart definition from scratch.
 
 Deliverable domains may be used to organize the delivery view, but they do not replace visibility of the actual deliverables expected from the initiative.
 

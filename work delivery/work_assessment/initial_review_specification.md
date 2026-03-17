@@ -122,7 +122,9 @@ Must include:
 - decision authority
 - decision taken
 - decision date
+- evidence basis used for the decision
 - notes or conditions if applicable
+- owner for each follow-up action where conditions are set
 
 ## 7. What to Keep Out
 

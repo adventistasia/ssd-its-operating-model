@@ -30,7 +30,26 @@ It is especially useful when:
 - reviewers need a module-by-module acceptance view
 - development teams will work module by module
 
-## 3. Before You Start
+## 3. Stage Fit and Handoffs
+
+- Stage 4: create module detail that is ready for build, review, and validation.
+- Stage 6: use this artifact as one evidence anchor for what was delivered.
+- Stage 7: use this artifact to support the acceptance boundary and acceptance decision.
+
+Upstream sources:
+
+- [Solution Modules Specification](solution_modules_specification.md)
+- [Functional Capabilities Specification](functional_capabilities_specification.md)
+- [User Roles, Personas & Access Model Specification](user_roles_personas_and_access_model_specification.md)
+
+Downstream artifacts:
+
+- [Use Case Narratives Specification](use_case_narratives_specification.md)
+- [Deployed Solution Specification](deployed_solution_specification.md)
+- [Acceptance Record Specification](acceptance_record_specification.md)
+- [Technical Design Document Specification](../operational_readiness_deliverables/technical_design_document_specification.md)
+
+## 4. Before You Start
 
 Make sure you have:
 
@@ -41,7 +60,7 @@ Make sure you have:
 - the acceptance focus for the module
 - the known support, administration, monitoring, or recovery concerns where relevant
 
-## 4. How to Draft It
+## 5. How to Draft It
 
 Follow these steps:
 
@@ -54,7 +73,7 @@ Follow these steps:
 7. Note dependencies, exclusions, assumptions, and open questions that matter.
 8. Check that the module stays inside approved scope.
 
-## 5. Minimum Structure
+## 6. Minimum Structure
 
 Use this structure:
 
@@ -74,7 +93,7 @@ Example heading pattern:
 
 - `## SM-001 Request Submission`
 
-## 6. Writing Rules
+## 7. Writing Rules
 
 This artifact should:
 
@@ -91,7 +110,20 @@ Keep the following out:
 - detailed task planning
 - deep technical design that belongs elsewhere
 
-## 7. Done When
+## 8. Traceability and Ownership Minimum
+
+Minimum traceability expectation:
+
+- module detail references one `SM-###` ID, supporting `FC-###` IDs, and included `UC-###` IDs
+- module acceptance criteria are observable and can be linked to evidence in Stage 6 and Stage 7
+
+Minimum ownership expectation:
+
+- Solution lead or analyst owns this artifact's behavior clarity and traceability quality.
+- Delivery Owner confirms scope control and review readiness.
+- Operational reviewers provide input when module behavior affects supportability.
+
+## 9. Done When
 
 This artifact is ready when:
 
@@ -101,7 +133,7 @@ This artifact is ready when:
 - the module acceptance criteria are clear enough to review and test
 - reviewers can understand what this module will deliver without reading the whole solution set first
 
-## 8. What Comes Next
+## 10. What Comes Next
 
 Use this artifact to support:
 
@@ -110,7 +142,7 @@ Use this artifact to support:
 3. technical and operational readiness documentation
 4. delivery evidence and acceptance records
 
-## 9. Prompt Guide
+## 11. Prompt Guide
 
 Starter prompt:
 

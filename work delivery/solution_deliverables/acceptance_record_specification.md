@@ -20,7 +20,22 @@ It is especially useful when:
 - some items are conditional or deferred
 - evidence comes from more than one source
 
-## 3. Before You Start
+## 3. Stage Fit and Handoffs
+
+- Stage 7: use this record to produce an explicit acceptance decision for solution-domain deliverables.
+- Closure: provide this record as one acceptance input to initiative-level closure records.
+
+Upstream sources:
+
+- [Deployed Solution Specification](deployed_solution_specification.md)
+- [Solution Module Definition Specification](solution_module_definition_specification.md)
+- [Operational Readiness Confirmation Record Specification](../operational_readiness_deliverables/operational_readiness_confirmation_record_specification.md)
+
+Downstream artifacts:
+
+- [Formal Acceptance and Closure Record Specification](../governance_and_control_deliverables/formal_acceptance_and_closure_record_specification.md)
+
+## 4. Before You Start
 
 Make sure you have:
 
@@ -30,7 +45,7 @@ Make sure you have:
 - the named Acceptance Authority
 - visibility of any exclusions, conditions, deferred items, or unresolved issues
 
-## 4. How to Draft It
+## 5. How to Draft It
 
 Follow these steps:
 
@@ -48,9 +63,9 @@ Recommended status values:
 - `deferred`
 - `not accepted`
 
-## 5. Minimum Structure
+## 6. Minimum Structure
 
-### 5.1. Record header
+### 6.1. Record header
 
 Include:
 
@@ -60,7 +75,7 @@ Include:
 - prepared by
 - acceptance scope or domain
 
-### 5.2. Acceptance basis
+### 6.2. Acceptance basis
 
 Include:
 
@@ -70,7 +85,7 @@ Include:
 - deployment or release reference if relevant
 - statement of whether this is full scope or partial scope acceptance
 
-### 5.3. Acceptance table
+### 6.3. Acceptance table
 
 Use a table like this:
 
@@ -78,7 +93,7 @@ Use a table like this:
 | --- | --- | --- | --- | --- |
 | Request submission module | `SM-001`, `FC-001`, `UC-001` | `TE-001`, pilot sign-off | accepted with conditions | One reporting issue tracked for follow-up |
 
-### 5.4. Scope compliance statement
+### 6.4. Scope compliance statement
 
 Include:
 
@@ -86,7 +101,7 @@ Include:
 - whether any in-scope items are deferred or excluded
 - any approved waivers, exclusions, or conditions
 
-### 5.5. Decision section
+### 6.5. Decision section
 
 Include:
 
@@ -95,7 +110,7 @@ Include:
 - formal decision outcome
 - conditions, follow-up actions, and owners if needed
 
-## 6. Writing Rules
+## 7. Writing Rules
 
 Keep this artifact concise.
 
@@ -108,7 +123,21 @@ Keep the following out:
 
 Reference the evidence instead of copying it.
 
-## 7. Done When
+## 8. Traceability and Ownership Minimum
+
+Minimum traceability expectation:
+
+- each reviewed item maps to approved scope references and evidence references
+- acceptance status is explicit per item
+- conditions, exclusions, and deferred items are clearly differentiated
+
+Minimum ownership expectation:
+
+- Delivery Owner prepares a complete and accurate package.
+- Acceptance Authority makes and records the formal decision.
+- Follow-up owners are named for every condition or deferral.
+
+## 9. Done When
 
 This artifact is ready when:
 
@@ -117,7 +146,7 @@ This artifact is ready when:
 - scope variance, exclusions, and conditions are visible
 - the named authority and decision are explicit
 
-## 8. What Comes Next
+## 10. What Comes Next
 
 Use this artifact to support:
 
@@ -125,7 +154,7 @@ Use this artifact to support:
 2. transition and closure records
 3. future audit or review of what was accepted
 
-## 9. Prompt Guide
+## 11. Prompt Guide
 
 Starter prompt:
 

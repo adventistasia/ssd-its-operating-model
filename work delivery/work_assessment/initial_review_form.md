@@ -160,9 +160,13 @@ Very high-level view only.
 - [ ] Defer
 - [ ] Proceed to Validation Assessment
 
-**Decision Date:**  
+**Decision Date:**
 
-**Conditions / Notes:**  
+**Evidence basis for the decision:**
+
+**Conditions / Notes:**
+
+**Owner for each follow-up action (if conditions apply):**
 
 ---
 

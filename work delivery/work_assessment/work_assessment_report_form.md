@@ -145,6 +145,11 @@ If this proceeds, what must Work Definition clarify, confirm, or resolve next?
 
 **Questions that must be resolved before later authorization:**  
 
+**Recommended Stage 2 starting artifact:**
+
+- [ ] Initiative Definition Document
+- [ ] Work Brief (scaled governed work)
+
 ---
 
 ## 10. Work Assessment Recommendation
@@ -174,6 +179,8 @@ If this proceeds, what must Work Definition clarify, confirm, or resolve next?
 - [ ] Proceed to Work Definition
 
 **Decision Date:**  
+
+**Evidence basis for the decision:**
 
 **Conditions / follow-up actions:**  
 

@@ -6,7 +6,7 @@ The Delivery Charter formally charters and mobilizes the delivery team after wor
 
 It defines how the team will operate, communicate, govern execution, and prepare for acceptance readiness.
 
-The intended outcome is a shared operating agreement that makes delivery expectations explicit before execution begins.
+The intended outcome is a shared operating agreement that makes delivery expectations explicit before execution begins and keeps execution visible, governed, and acceptance-ready.
 
 ## 2. When It Is Required
 
@@ -79,8 +79,20 @@ Must include:
 - decision logging expectations
 - issue/risk/dependency handling expectations
 - acceptance-readiness management expectations
+- requirement to keep status visibility based on deliverables, evidence, and decision needs
 
-### 6.6. Kickoff meeting record (where used)
+### 6.6. Tracker and control setup
+
+Must include:
+
+- RAID and dependency log setup expectation
+- decision log setup expectation
+- acceptance tracker setup expectation
+- owner for maintaining each control record
+
+These controls should be practical and light, but they must be active before controlled execution begins.
+
+### 6.7. Kickoff meeting record (where used)
 
 If used as kickoff artifact, include:
 
@@ -88,7 +100,7 @@ If used as kickoff artifact, include:
 - decisions made at kickoff
 - open actions, owners, and due windows
 
-### 6.7. Template guide
+### 6.8. Template guide
 
 Recommended fields:
 
@@ -99,6 +111,7 @@ Recommended fields:
 | Meeting rhythm | Recurring ceremonies and participants |
 | Communication method | Channels, escalation path, and reporting expectations |
 | Control rules | Change, risk, decision, and acceptance-readiness controls |
+| Tracker ownership | Who maintains RAID/dependency, decision, and acceptance trackers |
 | Kickoff outcomes | Confirmed decisions and follow-up actions |
 
 ## 7. What to Keep Out
@@ -138,6 +151,7 @@ Keep revision history concise and attributable.
 
 - Does this charter clearly mobilize the team for controlled execution?
 - Are team expectations, communication methods, and governance controls explicit?
+- Are the minimum Stage 5 controls active (RAID/dependency, decision, and acceptance tracking)?
 - Can a new team member understand how delivery operates from this artifact?
 - Is the artifact aligned with authorized scope and related governance records?
 - If used for kickoff, are decisions and actions clearly captured?

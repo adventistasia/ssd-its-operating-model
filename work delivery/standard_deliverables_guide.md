@@ -6,6 +6,8 @@ Provide a practical reference list of common deliverables used in initiatives go
 
 This document helps teams think through what artifacts may be needed across different areas of an initiative (such as solution design, data, operations, security, governance, and user adoption).
 
+It is not the starting point for deciding whether work should proceed. Start with Stage 1 Work Assessment or, for small governed work, the Work Brief path. Use this guide once the work is being defined and the team needs to decide which deliverables must exist for the work to stay clear, visible, accountable, traceable, and supportable.
+
 ## Related Documents
 
 - [Work Assessment Process](work_assessment/work_assessment_process.md)
@@ -37,6 +39,8 @@ Use this document as a **selection and control guide**, not as a requirement to 
 
 Deliverables not needed for authorization may still be listed at summary level during Work Definition so the likely delivery footprint remains visible, even if they will only be elaborated later.
 
+For small governed work using a [Work Brief](work_brief/work_brief_specification.md), use this guide in the same way. Select only the deliverables the work actually needs, then make the owner, Acceptance Authority, and evidence basis visible in the Work Brief or linked supporting artifacts.
+
 ## 4. Operational Use Model
 
 Use this reference differently at each stage:
@@ -50,6 +54,10 @@ Use this reference differently at each stage:
 - **Stage 7 - Acceptance, Transition & Closure:** confirm that each in-scope domain has evidence and explicit acceptance.
 
 For smaller initiatives, use the minimum viable deliverable depth. The framework does not require every listed deliverable; it requires deliberate choices, explicit ownership, and acceptance-ready outputs.
+
+The practical operating sequence is:
+
+`Assess the work -> define the approved scope -> select the needed deliverables -> authorize the work -> elaborate only what is needed -> deliver with evidence -> accept, hand over, and close`
 
 ## 5. Minimum Viable Deliverable Depth
 

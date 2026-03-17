@@ -33,11 +33,13 @@ Follow this order:
 2. Complete the [Validation Assessment](validation_assessment_specification.md) with the requester's subject matter experts and immediate team to decide whether full business analysis is justified.
 3. Complete the [Work Assessment Report](work_assessment_report_specification.md) as the culmination of that full business analysis to decide whether the initiative should enter Work Definition.
 
-The handoff is intentional:
+The normal handoff is:
 
 `Work Assessment Report -> Initiative Definition Document`
 
 The report is the final Stage 1 decision basis. The Initiative Definition Document then becomes the formal Stage 2 governance baseline.
+
+For appropriately small governed work, the Stage 2 artifact may be a [Work Brief](../work_brief/work_brief_specification.md) instead of a full Initiative Definition Document.
 
 What this process is for:
 
@@ -73,11 +75,13 @@ Use it before:
 - seeking Work Authorization
 - producing detailed solution or operational design artifacts
 
-The full progression is:
+The normal progression is:
 
 `Initial Review -> Validation Assessment -> Work Assessment Report -> Initiative Definition Document`
 
 Stage 1 decides whether the work is worth defining. Stage 2 defines what should actually be authorized.
+
+Proceeding from Stage 1 is not delivery authorization.
 
 ## 3. Who Does What
 
@@ -110,7 +114,7 @@ If these are missing, you can still create a working draft, but label it clearly
 | --- | --- | --- | --- | --- |
 | 1. Initial Review | request summary, source, problem signal, basic stakeholder context | Initial Review, initial decision record | the need is understandable, obvious dealbreakers are checked, and the recommendation is explicit | IT Assessment Owner |
 | 2. Validation Assessment | approved Initial Review, requester SME input, basic current-state facts | Validation Assessment, recommendation on whether to do full business analysis | the need is validated, sponsorship is tested, outcomes and scope boundaries are clearer, and the case for full business analysis is explicit | IT Assessment Owner with requester SMEs and sponsor candidate |
-| 3. Work Assessment Report | completed business analysis, validated scope and outcome context, stakeholder position, risk and feasibility view, preferred path | Work Assessment Report, final Stage 1 decision record, Stage 2 handoff notes | decision-makers can see whether Work Definition is justified, under what conditions, and what Stage 2 must clarify next | Business analysis lead with sponsor and ITS leadership |
+| 3. Work Assessment Report | completed business analysis, validated scope and outcome context, stakeholder position, risk and feasibility view, preferred path | Work Assessment Report, final Stage 1 decision record, Stage 2 handoff notes, recommended Stage 2 starting artifact (Initiative Definition Document or Work Brief) | decision-makers can see whether Work Definition is justified, under what conditions, and what Stage 2 must clarify next | Business analysis lead with sponsor and ITS leadership |
 
 ## 6. Guided Workflow
 
@@ -236,7 +240,7 @@ At minimum, the handoff should carry forward:
 - major constraints, dependencies, and unresolved questions
 - the specific issues Stage 2 must define before authorization
 
-Stage 2 then produces the Initiative Definition Document and supporting authorization-level artifacts.
+Stage 2 then produces the Initiative Definition Document and supporting authorization-level artifacts, or uses a Work Brief where the work is intentionally scaled and still governed.
 
 ## 10. AI-Assisted Authoring Workflow
 

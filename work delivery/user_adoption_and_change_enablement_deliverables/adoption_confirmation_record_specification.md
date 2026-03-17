@@ -25,6 +25,8 @@ Use this artifact near rollout or go-live, after communications and enablement a
 
 It should align with PMI stakeholder-readiness and acceptance discipline by linking user preparation to evidence and ownership. It should also align with ITIL organizational change management by making readiness acknowledgement explicit.
 
+In the Work Delivery Framework lifecycle, this artifact is primarily a Stage 7 acceptance and closure input, supported by evidence collected during Stage 5 and Stage 6.
+
 ## 5. How Much Detail to Include
 
 Keep it concise. Include enough detail to show what readiness actions occurred, what evidence exists, what risks remain, and who confirmed readiness.
@@ -81,13 +83,23 @@ Keep the following out of this artifact:
 
 ## 8. Relationships to Other Artifacts
 
-This record should align with the User Impact Assessment, Change & Communication Plan, Training & Enablement Materials, and Adoption Support Model.
+This record should align with:
+
+- [Work Delivery Framework](../work_delivery_framework.md)
+- [User Impact Assessment Specification](user_impact_assessment_specification.md)
+- [Change & Communication Plan Specification](change_and_communication_plan_specification.md)
+- [Training & Enablement Materials Specification](training_and_enablement_materials_specification.md)
+- [Adoption Support Model Specification](adoption_support_model_specification.md)
+- [Acceptance Record Specification](../solution_deliverables/acceptance_record_specification.md)
+- [Formal Acceptance & Closure Record Specification](../governance_and_control_deliverables/formal_acceptance_and_closure_record_specification.md)
 
 ## 9. Ownership, Review, and Acceptance Expectations
 
 The Change or Communications Lead or Business Owner representative usually prepares the record.
 
-The Business Owner normally confirms the readiness acknowledgment.
+The Business Owner normally confirms the readiness acknowledgment and acts as the normal Acceptance Authority for adoption readiness unless a formal delegation is recorded.
+
+The Delivery Owner is accountable for ensuring this readiness record is available as part of the Stage 7 acceptance package.
 
 ## 10. Maintenance Expectations
 

@@ -26,6 +26,8 @@ Use this artifact before implementation is finalized and before access is provis
 
 It should align with NIST SP 800-53 access-control expectations, NIST SP 800-63 identity guidance where relevant, and CIS Control 6 on access control management.
 
+In the Work Delivery Framework lifecycle, this artifact is usually identified in Stage 2 where access boundaries affect authorization decisions, elaborated in Stage 4, validated in Stage 6, and referenced during Stage 7 acceptance and operational handover.
+
 ## 5. How Much Detail to Include
 
 Include enough detail to explain access roles, authorization rules, privileged access treatment, account lifecycle expectations, and review controls. Do not turn it into a directory configuration manual.
@@ -95,13 +97,24 @@ Keep the following out of this artifact:
 
 ## 8. Relationships to Other Artifacts
 
-This artifact should align with the User Roles, Personas & Access Model, Use Case Narratives, Security & Privacy Risk Assessment, Audit & Monitoring Design Summary, and System Administration Guide.
+This artifact should align with:
+
+- [Work Delivery Framework](../work_delivery_framework.md)
+- [Functional Capabilities Specification](../solution_deliverables/functional_capabilities_specification.md)
+- [User Roles, Personas & Access Model Specification](../solution_deliverables/user_roles_personas_and_access_model_specification.md)
+- [Use Case Narratives Specification](../solution_deliverables/use_case_narratives_specification.md)
+- [Security & Privacy Risk Assessment Specification](security_and_privacy_risk_assessment_specification.md)
+- [Audit & Monitoring Design Summary Specification](audit_and_monitoring_design_summary_specification.md)
+- [System Administration Guide Specification](../operational_readiness_deliverables/system_administration_guide_specification.md)
+- [Operations & Support Model Specification](../operational_readiness_deliverables/operations_and_support_model_specification.md)
 
 ## 9. Ownership, Review, and Acceptance Expectations
 
 The security lead, identity lead, or solution lead usually prepares this artifact with business owner input.
 
 It should be reviewed by the Security / Data Protection Officer and relevant role owners.
+
+The Delivery Owner is accountable for making sure the approved access model is reflected in delivery outputs and support handover. The relevant Acceptance Authority should confirm that high-risk access controls are in place before final acceptance.
 
 ## 10. Maintenance Expectations
 

@@ -26,6 +26,8 @@ Use this artifact after user impacts and core behaviors are known but before ado
 
 It should align with PMI stakeholder-readiness practice and with ITIL organizational change management and knowledge-sharing intent by making user guidance role-specific, practical, and supportable.
 
+In the Work Delivery Framework lifecycle, these materials are usually elaborated in Stage 4, prepared and scheduled in Stage 5, and delivered and refined during Stage 6 based on readiness and feedback.
+
 ## 5. How Much Detail to Include
 
 Include enough detail that the intended user can complete the relevant task correctly. Keep the content role-specific and task-focused. Do not turn it into a full system design or policy manual.
@@ -74,11 +76,21 @@ Keep the following out of this artifact:
 
 ## 8. Relationships to Other Artifacts
 
-This artifact should align with the User Impact Assessment, Use Case Narratives, User Roles, Personas & Access Model, Change & Communication Plan, and Adoption Support Model.
+This artifact should align with:
+
+- [Work Delivery Framework](../work_delivery_framework.md)
+- [User Impact Assessment Specification](user_impact_assessment_specification.md)
+- [Use Case Narratives Specification](../solution_deliverables/use_case_narratives_specification.md)
+- [User Roles, Personas & Access Model Specification](../solution_deliverables/user_roles_personas_and_access_model_specification.md)
+- [Change & Communication Plan Specification](change_and_communication_plan_specification.md)
+- [Adoption Support Model Specification](adoption_support_model_specification.md)
+- [Adoption Confirmation Record Specification](adoption_confirmation_record_specification.md)
 
 ## 9. Ownership, Review, and Acceptance Expectations
 
 The training lead, change lead, or business subject matter expert usually prepares these materials with input from process owners and support teams.
+
+The Delivery Owner is accountable for ensuring training and enablement outputs stay aligned with approved scope and rollout sequencing. The Business Owner or delegated Acceptance Authority should confirm that required user groups received fit-for-purpose enablement before final acceptance.
 
 ## 10. Maintenance Expectations
 

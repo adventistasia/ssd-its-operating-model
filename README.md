@@ -1,97 +1,62 @@
 # ITS Operating Model - Start Here
 
-This repository holds the ITS Operating Model, the Work Delivery Framework, and the supporting specifications used to plan, authorize, and close IT work.
+This repository is meant to read as one operating system for planned ITS work.
 
----
+Use it to understand how work should move from intake to closure so that it is clear before it starts, visible while in progress, accountable in ownership and decisions, traceable across artifacts and changes, and supportable beyond the original implementer.
 
-## Which artifact do I write first?
+## Read in This Order
 
-**Start with the Work Assessment Process if the work has not yet been screened.**
+1. [ITS Operating Model](its_operating_model.md) for the overall control intent.
+2. [ITS Work Management Model](its_work_management_model.md) for the simple Define-Decide-Deliver control logic.
+3. [Work Delivery Framework](work%20delivery/work_delivery_framework.md) for the practical seven-stage operating path.
+4. [Deliverable Specifications Index](work%20delivery/deliverable_specifications_index.md) for the detailed drafting guides.
 
-Use the [Work Assessment Process](work%20delivery/work_assessment/work_assessment_process.md) to decide whether the request is worth defining at all. Stage 1 now uses three screening artifacts:
+## The Intake-to-Closure Path
 
-- [Initial Review](work%20delivery/work_assessment/initial_review_specification.md)
-- [Validation Assessment](work%20delivery/work_assessment/validation_assessment_specification.md)
-- [Work Assessment Report](work%20delivery/work_assessment/work_assessment_report_specification.md)
+For normal planned work, the path is:
 
-The intended progression is:
+`Work Assessment -> Work Definition -> Work Authorization -> Work Definition Details -> Delivery Mobilization -> Work Delivery -> Acceptance, Transition & Closure`
 
-`Work Assessment Report -> Initiative Definition Document`
+Start here based on where the work is:
 
-If the work has already passed assessment and is approved to enter definition, then start with the [Initiative Definition Document specification](work%20delivery/governance_and_control_deliverables/initiative_definition_document_specification.md).
+- If the work has not yet been screened, use the [Work Assessment Process](work%20delivery/work_assessment/work_assessment_process.md).
+- If the work is small but still needs visible scope, ownership, decision, and closure, use the [Work Brief Specification](work%20delivery/work_brief/work_brief_specification.md).
+- If the work has passed assessment and needs a formal definition baseline, use the [Initiative Definition Document Specification](work%20delivery/governance_and_control_deliverables/initiative_definition_document_specification.md).
 
-The Initiative Definition Document is the primary governance baseline for an initiative that has already passed Work Assessment. It records:
+## Small Governed Work
 
-- what the initiative is and why it exists
-- what outcomes it is expected to achieve
-- who owns it and who will accept the result
-- what deliverables are required and who is accountable for each
+Not all governed work needs a full initiative pack.
 
-Everything else-solution design, data, security, operational readiness-is elaborated after this baseline exists.
+For small work, use the lightest control set that still makes the work understandable, controllable, and supportable. The [Work Brief Specification](work%20delivery/work_brief/work_brief_specification.md) is the scaled path for that.
 
-> If you are working on solution design specifically, use the [Deliverable Specifications Index](work%20delivery/deliverable_specifications_index.md) for the recommended reading and drafting order.
+Use a Work Brief when one controlled record can reasonably hold:
 
----
+- the problem or need
+- intended outcome
+- scope boundaries
+- named owners
+- the decision record
+- deliverables and evidence basis
+- acceptance and closure
 
-## What is the minimum acceptable spec for small work?
+Escalate to an Initiative Definition Document when the work becomes too broad, too risky, or too dependent to manage clearly in one brief.
 
-Apply the lightest level of detail that still makes the work understandable, controllable, and supportable.
+## Main Navigation
 
-| Initiative profile | Minimum acceptable |
-|---|---|
-| Low complexity / low risk | One concise Initiative Definition Document, possibly combined with a Project Charter in a single controlled document |
-| Medium complexity / cross-team | Separate Initiative Definition Document and Project Charter; core domain artifacts for in-scope areas with named owners and acceptance evidence |
-| High complexity / high risk / regulated | Full domain-specific artifacts, traceability, and formal review and evidence |
+| If you want to...                                   | Start here                                                                              |
+| --------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Understand the full planned-work lifecycle          | [Work Delivery Framework](work%20delivery/work_delivery_framework.md)                   |
+| Screen whether work should proceed at all           | [Work Assessment Process](work%20delivery/work_assessment/work_assessment_process.md)   |
+| Find the right deliverable specification            | [Deliverable Specifications Index](work%20delivery/deliverable_specifications_index.md) |
+| Choose which deliverables are needed                | [Standard Deliverables Guide](work%20delivery/standard_deliverables_guide.md)           |
+| Follow the solution-design path                     | [Solution Design Process](work%20delivery/solution_design_process.md)                   |
+| Draft a small governed work record                  | [Work Brief Specification](work%20delivery/work_brief/work_brief_specification.md)      |
+| Use AI to draft controlled artifacts                | [AI-Assisted Authoring Standard](work%20delivery/ai_assisted_authoring_standard.md)     |
+| Understand the control intent behind the repository | [ITS Operating Model](its_operating_model.md)                                           |
 
-For small work, a single combined document is acceptable **if**:
 
-- the outcome, scope, and ownership are explicit
-- required deliverables are listed with Acceptance Authorities named
-- the decision to proceed is recorded
+## Practical Rule
 
-Do not skip the decision record, ownership, or acceptance-even for small initiatives.
+Planned ITS work should not move forward because people are busy, because effort has already started, or because the request feels urgent.
 
-> See [Work Delivery Framework Section 3 - Applicability and Scaling](work%20delivery/work_delivery_framework.md) and [Standard Deliverables Guide Section 5 - Minimum Viable Deliverable Depth](work%20delivery/standard_deliverables_guide.md) for full guidance.
-
----
-
-## What are the required review gates before build and before deploy?
-
-### Before build: Work Authorization (Stage 3)
-
-No delivery work may start without explicit Work Authorization.
-
-The gate requires:
-
-- an approved Initiative Definition Document
-- a signed-off Project Charter confirming scope, ownership, and accountability
-- a funding confirmation or explicit funding condition
-- a decision record from the Decision Authority (approve / defer / reject / approve with conditions)
-
-> See [Work Delivery Framework Section 11 - Stage 3 Work Authorization](work%20delivery/work_delivery_framework.md).
-
-### Before deploy: Acceptance, Transition & Closure (Stage 7)
-
-Work is not complete until it is formally accepted.
-
-The gate requires:
-
-- acceptance records from the named Acceptance Authorities for each in-scope domain
-- operational handover confirmation where operational ownership is impacted
-- a closure record confirming final status, any remaining conditions, and assigned follow-up actions
-
-> See [Work Delivery Framework Section 15 - Stage 7 Acceptance, Transition & Closure](work%20delivery/work_delivery_framework.md).
-
----
-
-## Where to go next
-
-| I want to... | Start here |
-|---|---|
-| Understand the full staged delivery process | [Work Delivery Framework](work%20delivery/work_delivery_framework.md) |
-| Screen whether work should proceed at all | [Work Assessment Process](work%20delivery/work_assessment/work_assessment_process.md) |
-| Find the right deliverable spec | [Deliverable Specifications Index](work%20delivery/deliverable_specifications_index.md) |
-| Browse all standard deliverables by domain | [Standard Deliverables Guide](work%20delivery/standard_deliverables_guide.md) |
-| Write a well-structured specification | [Specification Writing Guide](specification_writing_guide.md) |
-| Use AI to draft a deliverable | [AI-Assisted Authoring Standard](work%20delivery/ai_assisted_authoring_standard.md) |
-| Understand the broader operating model | [ITS Operating Model](its_operating_model.md) |
+It should move forward because the work has been assessed, defined, authorized, delivered with evidence, accepted explicitly, handed over where needed, and closed formally.

@@ -142,7 +142,9 @@ Must include:
 - decision authority
 - decision taken
 - decision date
+- evidence basis used for the decision
 - notes or conditions where applicable
+- owner for each follow-up action where conditions are set
 
 ### 6.13. Handoff notes
 
@@ -154,6 +156,7 @@ Must include:
 - assumptions that need testing
 - priority risks or constraints
 - stakeholder sensitivities or history that the later business analysis should not rediscover
+- likely sponsor, Outcome Owner candidate, and Delivery Owner candidate signals where known
 
 ## 7. What to Keep Out
 

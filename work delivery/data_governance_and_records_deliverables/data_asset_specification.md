@@ -27,6 +27,8 @@ Use this artifact when the organization needs a practical, authoritative view of
 
 It should align with NIST planning and privacy-management guidance by making inventory, stewardship, storage, and lifecycle expectations visible. It should also support recovery and control planning by showing what data exists and where it is authoritative.
 
+In the Work Delivery Framework lifecycle, this artifact is usually identified at summary level in Stage 2, elaborated in Stage 4, and validated as delivery evidence in Stage 6. It supports Stage 7 by providing a clear, supportable record of data ownership and lifecycle treatment.
+
 ## 5. How Much Detail to Include
 
 Include enough detail to describe the key entities, attributes, ownership, storage, system of record, retention, and recovery relevance. Do not try to replace a full enterprise data catalog or every physical schema artifact.
@@ -97,13 +99,24 @@ Keep the following out of this artifact:
 
 ## 8. Relationships to Other Artifacts
 
-This artifact should align with the Data Governance & Impact Assessment, Technical Design Document, Backup, Restore & Recovery Plan, Security & Privacy Risk Assessment, and Data Migration Record where applicable.
+This artifact should align with:
+
+- [Work Delivery Framework](../work_delivery_framework.md)
+- [Initiative Definition Document Specification](../governance_and_control_deliverables/initiative_definition_document_specification.md)
+- [Data Governance & Impact Assessment Specification](data_governance_and_impact_assessment_specification.md)
+- [Technical Design Document Specification](../operational_readiness_deliverables/technical_design_document_specification.md)
+- [Backup, Restore & Recovery Plan Specification](../operational_readiness_deliverables/backup_restore_and_recovery_plan_specification.md)
+- [Security & Privacy Risk Assessment Specification](../security_privacy_and_compliance_deliverables/security_and_privacy_risk_assessment_specification.md)
+- [Data Migration Record Specification](data_migration_record_specification.md)
+- [Operational Readiness Confirmation Record Specification](../operational_readiness_deliverables/operational_readiness_confirmation_record_specification.md)
 
 ## 9. Ownership, Review, and Acceptance Expectations
 
 The Data Steward or data design lead usually owns this artifact with delivery and operations input.
 
 Review should include relevant governance, security, and support stakeholders.
+
+The Delivery Owner is accountable for ensuring this artifact stays aligned with authorized scope and implemented behavior. The relevant Acceptance Authority should confirm the data-asset record is complete enough for ongoing support and governance before closure.
 
 ## 10. Maintenance Expectations
 

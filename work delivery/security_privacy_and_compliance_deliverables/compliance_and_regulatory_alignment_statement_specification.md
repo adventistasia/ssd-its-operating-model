@@ -26,6 +26,8 @@ Use this artifact when the initiative needs a formal statement of how obligation
 
 It should align with NIST CSF governance outcomes and the NIST Privacy Framework by translating obligations into accountable controls, decisions, and actions.
 
+In the Work Delivery Framework lifecycle, this artifact is typically outlined in Stage 2 when obligations materially affect authorization decisions, elaborated in Stage 4, updated through Stage 6 as controls are implemented, and used in Stage 7 acceptance and closure reviews.
+
 ## 5. How Much Detail to Include
 
 Include enough detail to identify the applicable obligation, what it means for the initiative, how it is addressed, and what remains open. Do not turn it into a legal treatise.
@@ -84,13 +86,24 @@ Keep the following out of this artifact:
 
 ## 8. Relationships to Other Artifacts
 
-This artifact should align with the Security & Privacy Risk Assessment, Data Governance & Impact Assessment, Access Control & Authorization Model, Audit & Monitoring Design Summary, and Residual Risk Acceptance Record where applicable.
+This artifact should align with:
+
+- [Work Delivery Framework](../work_delivery_framework.md)
+- [Initiative Definition Document Specification](../governance_and_control_deliverables/initiative_definition_document_specification.md)
+- [Security & Privacy Risk Assessment Specification](security_and_privacy_risk_assessment_specification.md)
+- [Data Governance & Impact Assessment Specification](../data_governance_and_records_deliverables/data_governance_and_impact_assessment_specification.md)
+- [Access Control & Authorization Model Specification](access_control_and_authorization_model_specification.md)
+- [Audit & Monitoring Design Summary Specification](audit_and_monitoring_design_summary_specification.md)
+- [Residual Risk Acceptance Record Specification](residual_risk_acceptance_record_specification.md)
+- [Formal Acceptance & Closure Record Specification](../governance_and_control_deliverables/formal_acceptance_and_closure_record_specification.md)
 
 ## 9. Ownership, Review, and Acceptance Expectations
 
 The compliance lead, security lead, or governance reviewer usually coordinates this artifact with business and legal or privacy input where needed.
 
 Formal review should be completed by the relevant compliance or protection authority.
+
+The Delivery Owner is accountable for ensuring open compliance gaps are visible and tracked to decision or treatment. The relevant Acceptance Authority should confirm that material obligations are addressed or explicitly conditionally accepted.
 
 ## 10. Maintenance Expectations
 

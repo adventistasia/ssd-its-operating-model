@@ -12,10 +12,13 @@ It is lighter than an Initiative Definition Document but stronger than a task no
 
 Use a Work Brief when the work is small enough to manage as one item, but important enough that scope, ownership, decision, and closure need to be clear.
 
+For standalone governed work, the brief should normally be created from the completed Stage 1 assessment output rather than from raw intake notes.
+
 Within the Work Delivery Framework, it is mainly used as:
 
 - a scaled Stage 2 Work Definition artifact for small governed work
 - a supporting Stage 3 authorization artifact for that same small work
+- a live control record through Stage 6 and Stage 7 for that same small work
 - a child work order under an approved initiative during delivery
 
 Common use cases:
@@ -53,7 +56,7 @@ In Work Delivery Framework terms:
 
 - use the Work Brief in Stage 2 when the work is small enough that a full Initiative Definition Document would be too heavy
 - use the Work Brief in Stage 3 as part of the approval basis for that small work
-- keep using the same Work Brief through delivery and closure as the live control record
+- keep using the same Work Brief through Stage 6 and Stage 7 as the live control record
 - use child Work Briefs under a parent initiative when one initiative contains multiple controlled work items
 
 ## 5. Minimum Content
@@ -90,10 +93,10 @@ Every Work Brief must include the following.
 - requester
 - Outcome Owner
 - Delivery Owner
-- Acceptance Owner or Acceptance Authority
+- Acceptance Authority
 - Decision Authority
 
-Acceptance ownership must be named before delivery starts.
+Acceptance Authority must be named before delivery starts.
 
 ### 5.5. Deliverables and acceptance
 
@@ -121,8 +124,10 @@ At minimum, each decision log entry should include:
 - decision taken
 - Decision Authority
 - decision date
+- artifact or evidence basis used for the decision
 - rationale
 - conditions or risk acceptance where applicable
+- owner for each follow-up action
 
 No delivery work starts without a recorded approval decision.
 
@@ -150,12 +155,26 @@ Suggested status values:
 - Rejected
 - Converted
 
-Suggested stage values:
+Suggested decision values for the work-level authorization entry:
+
+- Approve
+- Approve with Conditions
+- Defer
+- Reject
+
+Suggested stage values for the Work Brief operating view:
 
 - Define
 - Decide
 - Deliver
 - Close
+
+Practical stage mapping to the Work Delivery Framework:
+
+- Define -> Stage 2 (Work Definition)
+- Decide -> Stage 3 (Work Authorization)
+- Deliver -> Stage 6 (Work Delivery)
+- Close -> Stage 7 (Acceptance, Transition & Closure)
 
 ## 7. What to Keep Out
 
@@ -189,7 +208,7 @@ A Work Brief is working properly if:
 
 - a team member can understand the work quickly without extra verbal explanation
 - management can see what the work is, who owns it, and what stage it is in
-- acceptance ownership is explicit
+- Acceptance Authority is explicit
 - delivery does not start on assumed approval
 - the brief is short enough to stay current
 - the work can be escalated cleanly if it grows beyond work-brief level

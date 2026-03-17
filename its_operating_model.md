@@ -1,224 +1,153 @@
 # ITS Operating Model
 
-# A Risk-Managed Operating Framework
-
 ## 1. Purpose
-The ITS Operating Model exists to systematically reduce operational, security, compliance, and continuity risk while delivering reliable, auditable, and mission-aligned IT outcomes.
-From a risk management perspective, the model ensures that:
 
-- IT work does not introduce unmanaged technical or organizational risk
-- Failures are predictable, recoverable, and explainable
-- Accountability is explicit, not implied
-- Systems and services remain operable beyond individual staff members
+The ITS Operating Model explains how ITS is expected to operate so services and planned work remain reliable, governable, and supportable over time.
 
-This is not a strategy document. It is the control system that ensures IT strategy can be executed safely, repeatedly, and defensibly.
+It exists to reduce avoidable operational, security, compliance, continuity, and delivery risk by making control expectations part of normal work, not something added at the end.
 
-## 2. Operating Model Principles
+This document explains the operating intent. It does not replace the detailed work stages in the [Work Delivery Framework](work%20delivery/work_delivery_framework.md).
 
-1. **Visibility Reduces Risk**  
-   Work that cannot be seen cannot be governed, prioritized, or audited.
-2. **Explicit Ownership Prevents Failure**  
-   Every service, system, and work item must have a clearly accountable owner.
-3. **Traceability Enables Recovery and Audit**  
-   Decisions, changes, and actions must leave an understandable trail.
-4. **Control Before Speed**  
-   Preventing avoidable failure is more valuable than delivering quickly.
-5. **Closure Is a Risk Control**  
-   Work that does not formally close leaves residual operational and support risk.
-6. **Systems Must Outlast People**  
-   Individual dependency is a critical organizational risk and must be actively reduced.
+## 2. Intended Outcome
 
-## 3. Operating Model Shift
+When this operating model is applied consistently:
 
-### Before: Informal, Person-Dependent IT
-- Work initiated through conversations or urgency
-- Knowledge held in individuals’ heads
-- Changes made without records or rollback plans
-- Projects fade out instead of closing
-- Firefighting normalized as "how IT works"
+- work starts from a clear need and defined outcome
+- ownership and decisions are explicit
+- work is visible while it is in progress
+- changes and approvals are traceable
+- services and solutions are supportable beyond the original implementer
+- closure is formal rather than assumed
 
-### After: Controlled, Risk-Aware IT Operations
-- All work is visible, logged, and governed
-- Ownership, decisions, and outcomes are explicit
-- Systems are documented and processes shareable
-- Changes are traceable and recoverable
-- Projects formally close with evidence
-- Incidents lead to learning and risk reduction
+## 3. How the Core Documents Work Together
 
-This shift replaces heroics with reliability.
+Use the repository documents as one operating system:
 
-## 4. Focus Areas
+1. This document explains the control intent and the expected operating discipline.
+2. The [ITS Work Management Model](its_work_management_model.md) states the simple control rule for planned work: define, decide, and deliver properly.
+3. The [Work Delivery Framework](work%20delivery/work_delivery_framework.md) is the practical stage-by-stage operating path for planned work from intake to closure.
+4. The [Standard Deliverables Guide](work%20delivery/standard_deliverables_guide.md) and [Deliverable Specifications Index](work%20delivery/deliverable_specifications_index.md) help teams select and draft the right artifacts for that path.
 
-### A. Services — Controlled Value Delivery
-**Objective:** Ensure IT delivers value through defined services with clear ownership, not ad-hoc effort, reducing service failure and stakeholder risk.
+If two documents appear to overlap, use this rule:
 
-**Core Service Groups**
-1. User Support (Incidents & Requests)
-2. Infrastructure & Accounts
-3. Applications & Systems
-4. Projects & Improvements
+- this document explains why the controls exist
+- the ITS Work Management Model explains the simple control logic
+- the Work Delivery Framework explains how planned work operates in practice
 
-**Risk Mitigated**
-- Service failure due to unclear ownership
-- Inconsistent support quality
-- Hidden workload and unmanaged demand
-- Dependency on informal or "who you know" support
+## 4. Core Control Expectations
 
-**Warning Signs**
-- “Everything is urgent”
-- Users bypassing the helpdesk
-- No agreed service metrics or targets
-- The same issues recurring without improvement
-- Staff responding based on who asked, not service priority
+ITS work should always be:
 
-**Practical Application**
-*Staff are expected to:*
-- Treat work as part of a service, not a personal task
-- Log incidents and requests through the agreed intake
-- Route work to the correct service category
-- Escalate when demand exceeds service capacity
-- Use service metrics to identify weak points
+- clear and well defined before it starts
+- tied to understood outcomes
+- visible while in progress
+- accountable in ownership and decisions
+- traceable across artifacts and changes
+- supportable and well documented
 
-*Managers are expected to:*
-- Reinforce service ownership
-- Protect service capacity from uncontrolled work
-- Address systemic service failures, not just symptoms
+These are not optional preferences. They are the minimum conditions for controlled ITS work.
 
-### B. Work — Flow, Visibility, and Decision Control
-**Objective:** Ensure all work is visible, prioritized, and finishable to prevent scope creep, stalled projects, and decision ambiguity.
+## 5. Operating Principles
 
-**Key Controls**
-- Single intake mechanism
-- Visible work board
-- Clear ownership and status
-- Work-in-progress limits
-- Explicit definitions of done
+1. Visibility comes before control. Work that cannot be seen cannot be governed properly.
+2. Explicit ownership comes before execution. Accountability must be named, not assumed.
+3. Defined scope comes before commitment. The organization should know what it is agreeing to.
+4. Traceability protects delivery, operations, and auditability. Decisions and changes must leave a usable trail.
+5. Supportability is part of completion. A solution is not complete if only one person can run or support it.
+6. Formal closure reduces residual risk. Work that fades out leaves ownership, support, and decision gaps behind.
 
-**Risk Mitigated**
-- Work starting without approval
-- Silent scope expansion without accountability
-- Projects or work that never finish (abandoned)
-- Teams absorbing decision risk
-- Inability to explain priorities or outcomes
+## 6. Operating Areas
 
-**Warning Signs**
-- Work starts without being logged or approved
-- Too many items “in progress,” little finishing
-- Work stalls waiting for decisions with no escalation
-- Scope changes happen silently during execution
-- “Almost done” work that never formally closes
-- Team members cannot explain current priorities
-- Urgent work repeatedly interrupts planned work
+### 6.1. Services
 
-**Practical Application**
-*Staff are expected to:*
-- Log all planned work before starting
-- Keep ownership and status current on the work board
-- Limit work-in-progress and focus on finishing
-- Escalate blockers instead of working around them
-- Avoid starting new work without capacity or approval
-- Close work explicitly when completion criteria are met
+ITS should deliver through defined services, not informal personal channels.
 
-*Managers are expected to:*
-- Enforce visibility and single intake
-- Set and communicate priorities explicitly
-- Enforce WIP limits and stop uncontrolled starts
-- Make decisions visible and timely
-- Ensure work reaches formal closure, not fade-out
-- Intervene when teams absorb decision or scope risk
+This means:
 
-### C. Stability — Operational Risk & Audit Control
-**Objective:** Prevent avoidable outages, data loss, and audit findings by enforcing basic operational discipline.
+- requests and incidents use the agreed intake path
+- service ownership is visible
+- support demand is routed and prioritized deliberately
+- recurring issues lead to improvement, not repeated workarounds
 
-**Key Controls**
-- Logged changes and configurations
-- Individual accounts and approved access
-- Backup and recovery awareness
-- Minimum documentation standards
-- Elimination of undocumented shortcuts
+### 6.2. Planned Work
 
-**Risk Mitigated**
-- Security breaches from shared or unmanaged access
-- Prolonged outages due to unknown changes
-- Audit failures and compliance findings
-- Single-person operational dependency
-- Irreversible or unrecoverable changes
+Planned work should move through a governed path from intake to closure.
 
-**Warning Signs**
-- High work-in-progress with little completion
-- Verbal requests or “quick favors”
-- Work that stays open indefinitely
-- Blocked work with no escalation
-- Unclear ownership or status
+This means:
 
-**Practical Application**
-*Staff are expected to:*
-- Log all planned work before starting
-- Keep work status current on the shared board
-- Avoid starting new work without capacity
-- Escalate blockers instead of working around them
-- Close work explicitly when done
+- work is assessed before definition effort grows
+- scope, outcomes, owners, and deliverables are clear before authorization
+- progress is visible through deliverables, evidence, decisions, and current status
+- scope change is explicit and controlled
+- acceptance, handover, and closure are formal
 
-*Managers are expected to:*
-- Enforce WIP limits
-- Make prioritization decisions visible
-- Stop work that bypasses governance
-- Ensure work is finished, not just started
+Planned work follows the [Work Delivery Framework](work%20delivery/work_delivery_framework.md).
 
-### D. Sustainability — Organizational and Capability Risk
-**Objective:** Ensure IT capability is sustainable over time and not dependent on specific individuals.
+### 6.3. Stability and Control
 
-**Key Controls**
-- Knowledge sharing and documentation
-- Explicit role accountability
-- Clear boundaries with collaboration
-- Continuous improvement from incidents
+ITS should operate in a way that keeps changes understandable, recoverable, and reviewable.
 
-**Risk Mitigated**
-- Key-person dependency
-- Burnout and staff attrition risk
-- Loss of system knowledge during turnover
-- Fragile services that cannot scale
-- Chronic firefighting replacing improvement
+This means:
 
-**Warning Signs**
-- Shared or generic admin accounts
-- Changes made “quickly” without records
-- “I’ll remember how this works”
-- No one else able to support a system
-- Backups assumed but never tested
+- changes are logged and explainable
+- access is governed and attributable
+- recovery and rollback are considered before material change
+- operational shortcuts do not quietly replace controlled practice
 
-**Practical Application**
-*Staff are expected to:*
-- Log changes, fixes, and configuration updates
-- Use individual accounts and approved access methods
-- Consider rollback and recovery before making changes
-- Document systems sufficiently for handover
-- Avoid undocumented shortcuts
+### 6.4. Sustainability
 
-*Managers are expected to:*
-- Introduce lightweight controls early
-- Normalize documentation as part of work
-- Intervene when shortcuts become patterns
-- Treat control violations as risk issues, not style differences
+ITS should reduce dependency on individual memory or heroics.
 
-## 5. How This Model Manages Risk End-to-End
-| Risk Category | How the Operating Model Responds |
-| --- | --- |
-| Operational Risk | Defined services, ownership, documented changes |
-| Security Risk | Traceability, access control, recovery awareness |
-| Delivery Risk | Visibility, decision gates, closure discipline |
-| Audit & Compliance Risk | Logged work, explainable decisions, evidence |
-| Continuity Risk | Documentation, handover, reduced single points of failure |
+This means:
 
-## 6. Summary
-This Operating Model embeds risk management into daily behavior, not policy documents. It ensures that:
+- systems and work are documented enough for handover
+- run and support ownership are explicit
+- knowledge is shared
+- operational responsibility can continue through staff change, absence, or turnover
 
-- Work is intentional, not accidental
-- Staff know exactly what "good" looks like
-- Managers intervene before failure becomes normal
-- Change is controlled, not chaotic
-- Systems are supportable, not fragile
-- IT outcomes are defensible to leadership, auditors, and successors
+## 7. Planned Work Lifecycle View
 
-If work cannot be seen, owned, recovered, or explained, it does not meet the ITS Operating Model.
+Planned work should follow this path:
+
+1. assess whether the work is worth defining
+2. define the work clearly enough for an authorization decision
+3. authorize the work explicitly
+4. elaborate only the detail needed to deliver what was approved
+5. mobilize the delivery team and controls
+6. deliver visibly and collect evidence as the work progresses
+7. accept, hand over, and close formally
+
+This lifecycle is implemented through the [Work Delivery Framework](work%20delivery/work_delivery_framework.md).
+
+## 8. What Good Operation Looks Like
+
+Good signs:
+
+- people can explain what work is active, who owns it, and what decision it is waiting for
+- scope and deliverables are understandable without long verbal reconstruction
+- decisions and changes can be traced back to records
+- services and solutions can be supported by someone other than the original implementer
+- work closes with visible acceptance and handover
+
+Warning signs:
+
+- work starts from conversations or urgency alone
+- scope changes without a visible decision
+- ownership is unclear or shared informally
+- evidence is reconstructed at the end instead of collected during delivery
+- live services depend on undocumented personal knowledge
+- work is treated as complete without acceptance or closure
+
+## 9. Practical Implication
+
+The practical implication is simple:
+
+ITS should not rely on heroics, memory, or informal agreement to run services or deliver change. The expected operating pattern is controlled work, visible ownership, traceable decisions, and supportable outcomes.
+
+## 10. Related Documents
+
+- [README](README.md)
+- [ITS Work Management Model](its_work_management_model.md)
+- [Work Delivery Framework](work%20delivery/work_delivery_framework.md)
+- [Work Assessment Process](work%20delivery/work_assessment/work_assessment_process.md)
+- [Work Brief Specification](work%20delivery/work_brief/work_brief_specification.md)

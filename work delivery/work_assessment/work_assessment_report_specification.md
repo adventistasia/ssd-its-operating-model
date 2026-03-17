@@ -127,6 +127,7 @@ Must include:
 - what Work Definition must clarify or confirm next
 - likely owner or stakeholder involvement needed in Stage 2
 - any gating questions that must be resolved before Work Authorization could be considered later
+- recommended Stage 2 starting artifact: Initiative Definition Document or Work Brief for appropriately small governed work
 
 This section is the bridge into the Initiative Definition Document.
 
@@ -149,6 +150,7 @@ Must include:
 - decision authority
 - decision taken
 - decision date
+- evidence basis used for the decision
 - conditions, follow-up actions, or required owners where applicable
 
 ### 6.12. Handoff references

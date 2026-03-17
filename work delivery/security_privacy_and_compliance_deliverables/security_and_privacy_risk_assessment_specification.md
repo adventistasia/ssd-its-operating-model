@@ -26,6 +26,8 @@ Use this artifact during design, before deployment, and whenever risk posture ch
 
 It should align with NIST SP 800-30 risk-assessment practice, NIST CSF 2.0, the NIST Privacy Framework, and ITIL 4 information security management thinking by framing risks, impacts, control needs, and residual exposure clearly.
 
+In the Work Delivery Framework lifecycle, this artifact is usually initiated in Stage 2 at summary level, elaborated in Stage 4, updated during Stage 6 as risk conditions change, and used as evidence for Stage 7 acceptance and closure decisions.
+
 ## 5. How Much Detail to Include
 
 Include enough detail to describe the asset or process at risk, the threat or misuse scenario, the likely impact, existing or planned controls, and the residual exposure. Do not turn it into a generic policy restatement.
@@ -93,13 +95,24 @@ Keep the following out of this artifact:
 
 ## 8. Relationships to Other Artifacts
 
-This artifact should align with the Access Control & Authorization Model, Audit & Monitoring Design Summary, Compliance & Regulatory Alignment Statement, Data Governance & Impact Assessment, and Residual Risk Acceptance Record where needed.
+This artifact should align with:
+
+- [Work Delivery Framework](../work_delivery_framework.md)
+- [Initiative Definition Document Specification](../governance_and_control_deliverables/initiative_definition_document_specification.md)
+- [Access Control & Authorization Model Specification](access_control_and_authorization_model_specification.md)
+- [Audit & Monitoring Design Summary Specification](audit_and_monitoring_design_summary_specification.md)
+- [Compliance & Regulatory Alignment Statement Specification](compliance_and_regulatory_alignment_statement_specification.md)
+- [Data Governance & Impact Assessment Specification](../data_governance_and_records_deliverables/data_governance_and_impact_assessment_specification.md)
+- [Residual Risk Acceptance Record Specification](residual_risk_acceptance_record_specification.md)
+- [Decision Record Log Specification](../governance_and_control_deliverables/decision_record_log_specification.md)
 
 ## 9. Ownership, Review, and Acceptance Expectations
 
 The security lead or reviewer usually coordinates the assessment with business, delivery, privacy, and technical stakeholders.
 
 Material risks should be reviewed by the Security / Data Protection Officer and relevant decision authorities.
+
+The Delivery Owner is accountable for ensuring this artifact is kept current through design and delivery. Where residual risk remains material, a named risk acceptance authority must make an explicit acceptance decision before closure.
 
 ## 10. Maintenance Expectations
 

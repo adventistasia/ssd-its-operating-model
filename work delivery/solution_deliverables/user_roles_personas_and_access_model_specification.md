@@ -32,7 +32,24 @@ Use this artifact when:
 
 This artifact is usually drafted in Stage 4 before or alongside modules and use cases.
 
-## 3. Before You Start
+## 3. Stage Fit and Handoffs
+
+- Stage 4: define actor, role, and access boundaries for delivery-ready behavior design.
+- Stage 6: use this model to validate live-role behavior and access expectations.
+- Stage 7: use this model as part of the evidence basis for acceptance and operational handover.
+
+Upstream source:
+
+- [Functional Capabilities Specification](functional_capabilities_specification.md)
+
+Downstream artifacts:
+
+- [Solution Modules Specification](solution_modules_specification.md)
+- [Use Case Narratives Specification](use_case_narratives_specification.md)
+- [Access Control and Authorization Model Specification](../security_privacy_and_compliance_deliverables/access_control_and_authorization_model_specification.md)
+- [Training and Enablement Materials Specification](../user_adoption_and_change_enablement_deliverables/training_and_enablement_materials_specification.md)
+
+## 4. Before You Start
 
 Make sure you have:
 
@@ -45,7 +62,7 @@ Make sure you have:
 
 If evidence is weak, keep personas light and treat assumptions as assumptions rather than facts.
 
-## 4. How to Draft It
+## 5. How to Draft It
 
 Follow these steps:
 
@@ -66,9 +83,9 @@ Useful tests:
 - If access is written only as broad statements such as "has normal access," rewrite it as role plus action plus resource plus restriction.
 - If a permission exists only "just in case," remove it unless there is a named reason and owner.
 
-## 5. Minimum Structure
+## 6. Minimum Structure
 
-### 5.1. Document header and scope note
+### 6.1. Document header and scope note
 
 Include:
 
@@ -78,7 +95,7 @@ Include:
 - short note on why the role, persona, and access model matters for this initiative
 - short note on the scope covered by the model
 
-### 5.2. Role catalog
+### 6.2. Role catalog
 
 Use a table like this:
 
@@ -88,7 +105,7 @@ Use a table like this:
 
 Role entries should be stable enough that downstream use cases can reuse them without reinterpretation.
 
-### 5.3. Relationship and control notes
+### 6.3. Relationship and control notes
 
 Add short notes for:
 
@@ -101,7 +118,7 @@ Add short notes for:
 
 This section makes important role relationships visible without turning the document into an org chart.
 
-### 5.4. Optional personas
+### 6.4. Optional personas
 
 If personas are used, keep them short, evidence-based, and tied to a role.
 
@@ -185,7 +202,7 @@ Enablement or support note:
 - Make review criteria, statuses, and exception handling explicit in use cases and support material
 ```
 
-### 5.5. Access model
+### 6.5. Access model
 
 Use a table like this:
 
@@ -200,7 +217,7 @@ The access model should:
 - show where role hierarchy, ownership, time, location, training, case assignment, or other attributes change the rule
 - call out privileged actions, temporary elevation, or break-glass access where relevant
 
-### 5.6. Access governance notes
+### 6.6. Access governance notes
 
 Add short notes for:
 
@@ -211,7 +228,7 @@ Add short notes for:
 
 Keep this section governance-focused and light. Do not turn it into platform configuration detail.
 
-## 6. Writing Rules
+## 7. Writing Rules
 
 This artifact should define role boundaries, user context, and access expectations clearly enough that downstream artifacts stay consistent.
 
@@ -237,7 +254,20 @@ Keep the following out:
 
 For detailed authorization logic, use the formal access-control spec in the security domain.
 
-## 7. Done When
+## 8. Traceability and Ownership Minimum
+
+Minimum traceability expectation:
+
+- each role should map to related `FC-###`, `SM-###`, and `UC-###` references where relevant
+- role and access terms should match the same terms used in modules and use cases
+
+Minimum ownership expectation:
+
+- Delivery Owner ensures this artifact stays aligned to approved scope.
+- Solution lead or analyst owns drafting quality and cross-artifact consistency.
+- Security reviewer validates control-sensitive role boundaries where needed.
+
+## 9. Done When
 
 This artifact is ready when:
 
@@ -248,16 +278,16 @@ This artifact is ready when:
 - privileged, supervisory, or separated duties are called out where they matter
 - downstream use cases can use the same actor model and access assumptions without guessing
 
-## 8. What Comes Next
+## 10. What Comes Next
 
 Use this artifact to support:
 
 1. [Solution Modules](solution_modules_specification.md)
 2. [Use Case Narratives](use_case_narratives_specification.md)
 3. security, training, adoption, and support artifacts where role boundaries matter
-4. the detailed [Access Control & Authorization Model Specification](..\security_privacy_and_compliance_deliverables\access_control_and_authorization_model_specification.md) when deeper security design is required
+4. the detailed [Access Control & Authorization Model Specification](../security_privacy_and_compliance_deliverables/access_control_and_authorization_model_specification.md) when deeper security design is required
 
-## 9. Prompt Guide
+## 11. Prompt Guide
 
 Starter prompt:
 

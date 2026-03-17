@@ -12,7 +12,9 @@ The intended outcome is that the initiative has a single authoritative baseline 
 
 ## 2. When It Is Required
 
-This artifact is required for projects, major enhancements, and planned initiatives that change systems, services, data, security posture, support load, or cost in a material way.
+This artifact is the default Stage 2 - Work Definition baseline for projects, major enhancements, and planned initiatives that change systems, services, data, security posture, support load, or cost in a material way.
+
+For appropriately small governed work, a Work Brief may be used as the scaled Stage 2 artifact instead.
 
 ## 3. Intended Readers and Users
 
@@ -215,6 +217,8 @@ Keep the following out of this artifact:
 ## 8. Relationships to Other Artifacts
 
 This artifact should normally be created from the completed Stage 1 assessment outputs, especially the [Work Assessment Report](../work_assessment/work_assessment_report_specification.md), plus any other initiation inputs that materially affect scope, ownership, risk, or deliverables.
+
+For work that is intentionally scaled and can be governed as one small work item, use the [Work Brief Specification](../work_brief/work_brief_specification.md) instead of forcing a full Initiative Definition Document.
 
 This artifact anchors the Project Charter, Functional Capabilities, domain-specific deliverables, decision records, operational readiness artifacts, and final acceptance and closure records.
 

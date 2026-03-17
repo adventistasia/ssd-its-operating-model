@@ -26,6 +26,8 @@ Use this artifact before go-live and during control review. It is most useful wh
 
 It should align with NIST SP 800-53 audit and accountability expectations, NIST CSF Detect and Respond outcomes, CIS Control 8 on audit log management, and ITIL 4 Monitoring and Event Management practice.
 
+In the Work Delivery Framework lifecycle, this artifact is usually elaborated in Stage 4, operationalized in Stage 5 and Stage 6, and referenced in Stage 7 to confirm traceability and supportability controls are in place.
+
 ## 5. How Much Detail to Include
 
 Include enough detail to explain which events matter, what must be logged, how alerts or reviews happen, who responds, and how traceability is maintained. Do not turn it into a full tool configuration manual.
@@ -93,13 +95,23 @@ Keep the following out of this artifact:
 
 ## 8. Relationships to Other Artifacts
 
-This artifact should align with the Access Control & Authorization Model, Security & Privacy Risk Assessment, Technical Design Document, Operations & Support Model, and Compliance & Regulatory Alignment Statement.
+This artifact should align with:
+
+- [Work Delivery Framework](../work_delivery_framework.md)
+- [Access Control & Authorization Model Specification](access_control_and_authorization_model_specification.md)
+- [Security & Privacy Risk Assessment Specification](security_and_privacy_risk_assessment_specification.md)
+- [Technical Design Document Specification](../operational_readiness_deliverables/technical_design_document_specification.md)
+- [Operations & Support Model Specification](../operational_readiness_deliverables/operations_and_support_model_specification.md)
+- [Compliance & Regulatory Alignment Statement Specification](compliance_and_regulatory_alignment_statement_specification.md)
+- [Operational Readiness Confirmation Record Specification](../operational_readiness_deliverables/operational_readiness_confirmation_record_specification.md)
 
 ## 9. Ownership, Review, and Acceptance Expectations
 
 The security lead, monitoring lead, or solution lead usually authors the summary.
 
 Review should include operations and any team that will receive or respond to alerts.
+
+The Delivery Owner is accountable for ensuring monitoring and alert-response responsibilities are explicit before go-live. The relevant Acceptance Authority should confirm that monitoring coverage and ownership are sufficient for operational support and auditability.
 
 ## 10. Maintenance Expectations
 

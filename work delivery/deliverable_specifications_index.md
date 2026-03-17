@@ -1,121 +1,133 @@
 # Deliverable Specifications Index
 
-## Purpose
+## 1. Purpose
 
-This index points to the active deliverable specifications in this repository.
+This index points to the active drafting specifications in the repository.
 
-Use the specification in the relevant domain folder as the primary drafting guide for that deliverable.
+Use it after you understand where the work sits in the [Work Delivery Framework](work_delivery_framework.md). The framework tells you what stage the work is in. This index tells you which specification to open next.
 
-## Work Assessment Reading Order
+## 2. How to Use This Index
 
-If you are screening whether proposed work should proceed into definition, read and use these in this order:
+Read the repository in this order:
 
-1. [work_assessment_process](work_assessment/work_assessment_process.md)
-2. [initial_review_specification](work_assessment/initial_review_specification.md)
-3. [validation_assessment_specification](work_assessment/validation_assessment_specification.md)
-4. [work_assessment_report_specification](work_assessment/work_assessment_report_specification.md)
+1. [ITS Operating Model](../its_operating_model.md)
+2. [ITS Work Management Model](../its_work_management_model.md)
+3. [Work Delivery Framework](work_delivery_framework.md)
+4. The relevant process guide or specification from this index
 
-Use the [work_delivery_framework](work_delivery_framework.md) when you need the stage-governance view and the [standard_deliverables_guide](standard_deliverables_guide.md) when the work has passed assessment and you need the downstream deliverable-domain view.
+Use the [Standard Deliverables Guide](standard_deliverables_guide.md) when you need help deciding which deliverables are in scope.
 
-## Solution Design Reading Order
+Use the [Work Brief Specification](work_brief/work_brief_specification.md) when the work is small enough to be controlled as one governed work item instead of a full initiative document set.
 
-If you are working on solution design, read and use these in this order:
+## 3. Stage-Based Reading Paths
 
-1. [solution_design_process](solution_design_process.md)
-2. [functional_capabilities_specification](solution_deliverables/functional_capabilities_specification.md)
-3. [user_roles_personas_and_access_model_specification](solution_deliverables/user_roles_personas_and_access_model_specification.md)
-4. [solution_modules_specification](solution_deliverables/solution_modules_specification.md)
-5. [solution_module_definition_specification](solution_deliverables/solution_module_definition_specification.md)
-6. [use_case_narratives_specification](solution_deliverables/use_case_narratives_specification.md)
-7. [deployed_solution_specification](solution_deliverables/deployed_solution_specification.md)
-8. [acceptance_record_specification](solution_deliverables/acceptance_record_specification.md)
+### 3.1. Stage 1 - Work Assessment
 
-Use the [standard_deliverables_guide](standard_deliverables_guide.md) when you need the wider domain view, and use the [work_delivery_framework](work_delivery_framework.md) when you need the stage-governance view.
+Use these in order when screening whether work should proceed:
 
-## Work Assessment
+1. [Work Assessment Process](work_assessment/work_assessment_process.md)
+2. [Initial Review Specification](work_assessment/initial_review_specification.md)
+3. [Validation Assessment Specification](work_assessment/validation_assessment_specification.md)
+4. [Work Assessment Report Specification](work_assessment/work_assessment_report_specification.md)
+
+### 3.2. Stage 2 to Stage 3 - Definition and Authorization
+
+Use these when defining governed work and getting approval:
+
+1. [Initiative Definition Document Specification](governance_and_control_deliverables/initiative_definition_document_specification.md)
+2. [Work Brief Specification](work_brief/work_brief_specification.md) for small governed work
+3. [Project Charter Specification](governance_and_control_deliverables/project_charter_specification.md)
+4. [Decision Record Log Specification](governance_and_control_deliverables/decision_record_log_specification.md)
+5. [Delivery Roadmap Specification](governance_and_control_deliverables/delivery_roadmap_specification.md) for authorization-level delivery visibility
+
+### 3.3. Stage 4 to Stage 7 - Design, Delivery, Acceptance, and Closure
+
+Use the process guides first, then the relevant domain specifications:
+
+1. [Solution Design Process](solution_design_process.md)
+2. [Standard Deliverables Guide](standard_deliverables_guide.md)
+3. The domain specifications listed below
+
+## 4. Work Assessment Folder
 
 Folder: [work_assessment](work_assessment)
 
-- [work_assessment_process](work_assessment/work_assessment_process.md)
-- [initial_review_specification](work_assessment/initial_review_specification.md)
-- [initial_review_form](work_assessment/initial_review_form.md)
-- [validation_assessment_specification](work_assessment/validation_assessment_specification.md)
-- [validation_assessment_form](work_assessment/validation_assessment_form.md)
-- [work_assessment_report_specification](work_assessment/work_assessment_report_specification.md)
-- [work_assessment_report_form](work_assessment/work_assessment_report_form.md)
+- [Work Assessment Process](work_assessment/work_assessment_process.md)
+- [Initial Review Specification](work_assessment/initial_review_specification.md)
+- [Initial Review Form](work_assessment/initial_review_form.md)
+- [Validation Assessment Specification](work_assessment/validation_assessment_specification.md)
+- [Validation Assessment Form](work_assessment/validation_assessment_form.md)
+- [Work Assessment Report Specification](work_assessment/work_assessment_report_specification.md)
+- [Work Assessment Report Form](work_assessment/work_assessment_report_form.md)
 
-## Solution Deliverables
+## 5. Work Brief Folder
 
-Folder: [solution_deliverables](solution_deliverables)
+Folder: [work_brief](work_brief)
 
-- [acceptance_record_specification](solution_deliverables/acceptance_record_specification.md)
-- [deployed_solution_specification](solution_deliverables/deployed_solution_specification.md)
-- [functional_capabilities_specification](solution_deliverables/functional_capabilities_specification.md)
-- [solution_module_definition_specification](solution_deliverables/solution_module_definition_specification.md)
-- [solution_modules_specification](solution_deliverables/solution_modules_specification.md)
-- [use_case_narratives_specification](solution_deliverables/use_case_narratives_specification.md)
-- [user_roles_personas_and_access_model_specification](solution_deliverables/user_roles_personas_and_access_model_specification.md)
+- [Work Brief Specification](work_brief/work_brief_specification.md)
+- [Work Brief Form](work_brief/work_brief_form.md)
 
-## Governance & Control Deliverables
+## 6. Governance and Control Deliverables
 
 Folder: [governance_and_control_deliverables](governance_and_control_deliverables)
 
-- [initiative_definition_document_specification](governance_and_control_deliverables/initiative_definition_document_specification.md)
-- [project_charter_specification](governance_and_control_deliverables/project_charter_specification.md)
-- [delivery_charter_specification](governance_and_control_deliverables/delivery_charter_specification.md)
-- [delivery_roadmap_specification](governance_and_control_deliverables/delivery_roadmap_specification.md)
-- [decision_record_log_specification](governance_and_control_deliverables/decision_record_log_specification.md)
-- [formal_acceptance_and_closure_record_specification](governance_and_control_deliverables/formal_acceptance_and_closure_record_specification.md)
+- [Initiative Definition Document Specification](governance_and_control_deliverables/initiative_definition_document_specification.md)
+- [Project Charter Specification](governance_and_control_deliverables/project_charter_specification.md)
+- [Delivery Charter Specification](governance_and_control_deliverables/delivery_charter_specification.md)
+- [Delivery Roadmap Specification](governance_and_control_deliverables/delivery_roadmap_specification.md)
+- [Decision Record Log Specification](governance_and_control_deliverables/decision_record_log_specification.md)
+- [Formal Acceptance and Closure Record Specification](governance_and_control_deliverables/formal_acceptance_and_closure_record_specification.md)
 
-## Operational Readiness Deliverables
+## 7. Solution Deliverables
+
+Folder: [solution_deliverables](solution_deliverables)
+
+- [Functional Capabilities Specification](solution_deliverables/functional_capabilities_specification.md)
+- [User Roles, Personas and Access Model Specification](solution_deliverables/user_roles_personas_and_access_model_specification.md)
+- [Solution Modules Specification](solution_deliverables/solution_modules_specification.md)
+- [Solution Module Definition Specification](solution_deliverables/solution_module_definition_specification.md)
+- [Use Case Narratives Specification](solution_deliverables/use_case_narratives_specification.md)
+- [Deployed Solution Specification](solution_deliverables/deployed_solution_specification.md)
+- [Acceptance Record Specification](solution_deliverables/acceptance_record_specification.md)
+
+## 8. Operational Readiness Deliverables
 
 Folder: [operational_readiness_deliverables](operational_readiness_deliverables)
 
-- [technical_design_document_specification](operational_readiness_deliverables/technical_design_document_specification.md)
-- [system_administration_guide_specification](operational_readiness_deliverables/system_administration_guide_specification.md)
-- [operations_and_support_model_specification](operational_readiness_deliverables/operations_and_support_model_specification.md)
-- [backup_restore_and_recovery_plan_specification](operational_readiness_deliverables/backup_restore_and_recovery_plan_specification.md)
-- [operational_readiness_confirmation_record_specification](operational_readiness_deliverables/operational_readiness_confirmation_record_specification.md)
+- [Technical Design Document Specification](operational_readiness_deliverables/technical_design_document_specification.md)
+- [System Administration Guide Specification](operational_readiness_deliverables/system_administration_guide_specification.md)
+- [Operations and Support Model Specification](operational_readiness_deliverables/operations_and_support_model_specification.md)
+- [Backup, Restore and Recovery Plan Specification](operational_readiness_deliverables/backup_restore_and_recovery_plan_specification.md)
+- [Operational Readiness Confirmation Record Specification](operational_readiness_deliverables/operational_readiness_confirmation_record_specification.md)
 
-## Data Governance & Records Deliverables
+## 9. Data Governance and Records Deliverables
 
 Folder: [data_governance_and_records_deliverables](data_governance_and_records_deliverables)
 
-- [data_governance_and_impact_assessment_specification](data_governance_and_records_deliverables/data_governance_and_impact_assessment_specification.md)
-- [data_asset_specification](data_governance_and_records_deliverables/data_asset_specification.md)
-- [data_migration_record_specification](data_governance_and_records_deliverables/data_migration_record_specification.md)
+- [Data Governance and Impact Assessment Specification](data_governance_and_records_deliverables/data_governance_and_impact_assessment_specification.md)
+- [Data Asset Specification](data_governance_and_records_deliverables/data_asset_specification.md)
+- [Data Migration Record Specification](data_governance_and_records_deliverables/data_migration_record_specification.md)
 
-## Security, Privacy & Compliance Deliverables
+## 10. Security, Privacy and Compliance Deliverables
 
 Folder: [security_privacy_and_compliance_deliverables](security_privacy_and_compliance_deliverables)
 
-- [security_and_privacy_risk_assessment_specification](security_privacy_and_compliance_deliverables/security_and_privacy_risk_assessment_specification.md)
-- [access_control_and_authorization_model_specification](security_privacy_and_compliance_deliverables/access_control_and_authorization_model_specification.md)
-- [audit_and_monitoring_design_summary_specification](security_privacy_and_compliance_deliverables/audit_and_monitoring_design_summary_specification.md)
-- [compliance_and_regulatory_alignment_statement_specification](security_privacy_and_compliance_deliverables/compliance_and_regulatory_alignment_statement_specification.md)
-- [residual_risk_acceptance_record_specification](security_privacy_and_compliance_deliverables/residual_risk_acceptance_record_specification.md)
+- [Security and Privacy Risk Assessment Specification](security_privacy_and_compliance_deliverables/security_and_privacy_risk_assessment_specification.md)
+- [Access Control and Authorization Model Specification](security_privacy_and_compliance_deliverables/access_control_and_authorization_model_specification.md)
+- [Audit and Monitoring Design Summary Specification](security_privacy_and_compliance_deliverables/audit_and_monitoring_design_summary_specification.md)
+- [Compliance and Regulatory Alignment Statement Specification](security_privacy_and_compliance_deliverables/compliance_and_regulatory_alignment_statement_specification.md)
+- [Residual Risk Acceptance Record Specification](security_privacy_and_compliance_deliverables/residual_risk_acceptance_record_specification.md)
 
-## User Adoption & Change Enablement Deliverables
+## 11. User Adoption and Change Enablement Deliverables
 
 Folder: [user_adoption_and_change_enablement_deliverables](user_adoption_and_change_enablement_deliverables)
 
-- [user_impact_assessment_specification](user_adoption_and_change_enablement_deliverables/user_impact_assessment_specification.md)
-- [change_and_communication_plan_specification](user_adoption_and_change_enablement_deliverables/change_and_communication_plan_specification.md)
-- [training_and_enablement_materials_specification](user_adoption_and_change_enablement_deliverables/training_and_enablement_materials_specification.md)
-- [adoption_support_model_specification](user_adoption_and_change_enablement_deliverables/adoption_support_model_specification.md)
-- [adoption_confirmation_record_specification](user_adoption_and_change_enablement_deliverables/adoption_confirmation_record_specification.md)
+- [User Impact Assessment Specification](user_adoption_and_change_enablement_deliverables/user_impact_assessment_specification.md)
+- [Change and Communication Plan Specification](user_adoption_and_change_enablement_deliverables/change_and_communication_plan_specification.md)
+- [Training and Enablement Materials Specification](user_adoption_and_change_enablement_deliverables/training_and_enablement_materials_specification.md)
+- [Adoption Support Model Specification](user_adoption_and_change_enablement_deliverables/adoption_support_model_specification.md)
+- [Adoption Confirmation Record Specification](user_adoption_and_change_enablement_deliverables/adoption_confirmation_record_specification.md)
 
-## Research Basis
+## 12. Shared Reference
 
-Shared research reference:
-
-- [specification_best_practice_reference](specification_best_practice_reference.md)
-
-## Legacy Material
-
-Older draft material remains in:
-
-- [orig solution deliverables](orig%20solution%20deliverables)
-- [orig operational readiness deliverables](orig%20operational%20readiness%20deliverables)
-
-These folders are reference material only and are not the active output structure.
+- [Specification Best Practice Reference](specification_best_practice_reference.md)

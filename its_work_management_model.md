@@ -1,171 +1,148 @@
-# ITS Work Management Model  
-## Define–Decide–Deliver (DDD) for Managing Planned Work  
+# ITS Work Management Model
 
+## Define-Decide-Deliver for Planned ITS Work
 
 ## 1. Purpose
 
-Define the governing execution control for planned work at SSD IT Services so that outcomes are clear, ownership is explicit, risk is managed before commitment, and work closes formally.
+This model states the simple control logic for planned ITS work.
 
-This model applies to:
+It exists to make sure planned work is:
 
-- Projects  
-- Normal (non-emergency) changes  
-- Planned improvements and initiatives  
+- clear before it starts
+- tied to understood outcomes
+- visible while in progress
+- accountable in ownership and decisions
+- traceable across artifacts and changes
+- supportable beyond the original implementer
 
-Incidents and emergencies are excluded and follow restoration-first controls.
+This is the governing work-control model for planned ITS work. It is not the detailed operating procedure.
 
+## 2. Where This Model Fits
 
-## 2. Governance Position
+Use the repository documents in this order:
 
-This model is the governing execution control for all planned work at SSD IT Services.
+1. The [ITS Operating Model](its_operating_model.md) explains why ITS uses these controls.
+2. This document states the simple work-control logic.
+3. The [Work Delivery Framework](work%20delivery/work_delivery_framework.md) turns that logic into the practical seven-stage operating path from intake to closure.
+4. The [Standard Deliverables Guide](work%20delivery/standard_deliverables_guide.md) and [Deliverable Specifications Index](work%20delivery/deliverable_specifications_index.md) help teams choose and draft the right artifacts.
 
-It operationalizes the execution control intent of the ITS Operating Model and enforces visibility, ownership, decision traceability, supportability, and closure.
+If there is any doubt about how planned work should move in practice, the [Work Delivery Framework](work%20delivery/work_delivery_framework.md) is the operating anchor.
 
-All structured methodologies, procedures, standards, boards, templates, and governance processes must operate within this model. They may elaborate implementation but may not override its control logic.
+## 3. The Control Logic
 
+Planned ITS work is governed by three simple control states:
 
-## 3. Scope Boundary
+1. **Define** the work clearly enough to govern it.
+2. **Decide** explicitly whether the organization will commit to it.
+3. **Deliver** the authorized work, accept it formally, and close it properly.
 
-This model governs execution control logic only.
+These three states do not replace the Work Delivery Framework. They sit underneath it.
 
-It does not define:
+### 3.1. Define
 
-- Intake screening  
-- Strategic prioritization  
-- Detailed execution artifacts  
-- Tooling or board configuration  
+Define means the work is clear enough to understand before commitment and clear enough to control while it is being elaborated.
 
-Separate mechanisms may exist for those purposes but must comply with this model.
+In practice this happens across:
 
+- Stage 1 - Work Assessment
+- Stage 2 - Work Definition
+- Stage 4 - Work Definition Details
 
-## 4. Alignment to the ITS Operating Model
+At minimum, defined work has:
 
-This model enforces the Work, Stability, and Sustainability controls of the ITS Operating Model.
+- a clear problem or need
+- intended outcomes
+- scope boundaries
+- named owners
+- known deliverables or expected outputs
+- known major risks, constraints, and dependencies
+- a visible basis for later acceptance
 
-Planned work is compliant only when:
+### 3.2. Decide
 
-- It is visible and tracked  
-- Decisions are recorded and attributable  
-- Systems and outcomes have named ownership  
-- Closure is formal and documented  
-- Outcomes are operable beyond the original implementer  
+Decide means there is an explicit, attributable decision to proceed, defer, reject, accept conditions, or close.
 
-Failure to meet these conditions constitutes a control breach.
+In practice this happens at:
 
+- Stage 3 - Work Authorization
+- material change decisions during delivery
+- Stage 7 - Acceptance, Transition & Closure
 
-## 5. Core Execution Rules
+No planned work is compliant if approval is assumed, verbal only, or inferred from effort already started.
 
-The following rules govern all planned work:
+### 3.3. Deliver
 
-1. No planned work starts without defined outcome, scope boundaries, and named ownership.  
-2. No delivery begins without an explicit, recorded authorization decision.  
-3. No scope expansion occurs without returning to Definition and Decision.  
-4. No work is complete without formal acceptance and operational readiness.  
-5. No work bypasses visibility and tracking controls.  
+Deliver means the organization executes only authorized work, keeps it visible, manages change openly, prepares support ownership, proves what was done, and closes the work formally.
 
-If these conditions are not met, the work is non-compliant.
+In practice this happens across:
 
+- Stage 5 - Delivery Mobilization
+- Stage 6 - Work Delivery
+- Stage 7 - Acceptance, Transition & Closure
 
-## 6. Accountability
+Delivered work is not complete until it is accepted or explicitly conditionally accepted by the named authority and handed over to the named operational owner where needed.
 
-- The **Outcome Owner** is accountable for defining and accepting business value.  
-- The **Decision Authority** is accountable for commitment clarity and risk acceptance.  
-- The **Delivery Owner** is accountable for maintaining stage discipline and execution control.  
+## 4. Minimum Control Rules
 
-Accountability must be explicit and may not be implied or transferred informally.
+The following rules apply to all planned ITS work:
 
+1. Work must not start informally. It must have a clear purpose, visible owner, and visible control path.
+2. Work must be defined before authorization and authorized before delivery.
+3. Scope must not expand silently during design or delivery.
+4. Progress must be visible through deliverables, evidence, decisions, risks, and current status.
+5. Material decisions and changes must be recorded and attributable.
+6. Work must not be treated as complete until acceptance, handover, and closure are explicit.
+7. Work that cannot be supported after delivery is not complete.
 
-## 7. Major Stages (Conceptual Control States)
+## 5. Role Accountability
 
-The stages below are conceptual control states, not implementation procedures.  
-They define minimum logical conditions required for work to advance.  
-Templates, meetings, artifacts, and tools may operationalize these stages but may not redefine them.
+The core roles align to the [Work Delivery Framework](work%20delivery/work_delivery_framework.md):
 
-Planned work progresses through three governing states:
+- **Sponsor** keeps the work sponsored, prioritized, and supported.
+- **Decision Authority** makes or formally holds the decision right for go / no-go and major governance decisions.
+- **Outcome Owner** is accountable for the intended business outcome and success measures.
+- **Delivery Owner** is accountable for stage discipline, coordination, and delivery control.
+- **Acceptance Authority** formally accepts the deliverable or deliverable domain.
+- **Support Owner / Operational Owner** takes ongoing ownership once the work becomes live or operational.
 
-### 1. Define  
-Establish:
+Accountability must be explicit. It must not be implied, assumed, or transferred informally.
 
-- Clear outcome and success criteria  
-- Scope boundaries (in / out)  
-- Named Outcome Owner, Delivery Owner, Decision Authority  
-- Support and operational considerations  
-- Explicit closure criteria  
+## 6. Compliance Test
 
-Work does not advance until these elements are defined and agreed.
+Planned work fails this model if any of the following are true:
 
+- the work is not visible
+- the intended outcome is unclear
+- scope boundaries are unclear
+- the accountable owner is unclear
+- the decision basis is missing
+- delivery started without explicit authorization
+- material changes are not recorded
+- acceptance is assumed rather than confirmed
+- the work cannot be supported beyond the original implementer
+- closure is missing
 
-### 2. Decide  
-Record an explicit decision:
+## 7. Response to Non-Compliance
 
-- Approve  
-- Defer  
-- Reject  
+If planned work fails the compliance test, the work should not quietly continue.
 
-Decision must consider priority, capacity, risk exposure, and lifecycle impact.
+The responsible owner should:
 
-Verbal, assumed, or implied approval is non-compliant.  
-No delivery work begins without a recorded decision.
+1. stop or contain the uncontrolled activity as appropriate
+2. make the control gap visible
+3. route the work back to the right stage or decision point
+4. record the required decision, owner, artifact, or corrective action before proceeding
 
+## 8. Practical Meaning
 
-### 3. Deliver  
-Execute approved work to defined acceptance criteria and formally close.
+This model is deliberately simple.
 
-Completion requires:
+It means ITS should not move work forward because someone is busy, because effort has already started, or because a request feels urgent. Planned work should move forward only when the work is clear enough to govern, the decision to proceed is explicit, and the result can be delivered, accepted, supported, and closed properly.
 
-- Deliverables meeting defined acceptance criteria  
-- Operational readiness confirmed  
-- Ownership activated  
-- Closure formally recorded  
+## 9. Related Documents
 
-Partial completion or informal handover is non-compliant.
-
-Work may not advance unless the control conditions of the current stage are satisfied.
-
-
-## 8. Supportability Requirement
-
-Planned work is complete only when it is operable, supportable, recoverable, and sustainable.
-
-Completion requires:
-
-- Named Operational Owner  
-- Named Support Owner  
-- Documented recovery or rollback path  
-- Sufficient documentation for independent operation  
-- No dependency on a single individual  
-
-If any of these conditions are unmet, the work is not complete.
-
-
-## 9. Practitioner Obligations
-
-All staff must:
-
-- Demand clarity before starting work  
-- Refuse to begin delivery without a recorded decision  
-- Maintain visibility of work  
-- Escalate ambiguity, risk, or scope drift  
-- Close work formally  
-
-The following behaviors are non-compliant:
-
-- Starting work without authorization  
-- Absorbing silent scope changes  
-- Performing undocumented changes  
-- Leaving work open without closure  
-
-
-## 10. Compliance Test
-
-A work item, change, or initiative fails this model if any of the following are true:
-
-- It cannot be seen  
-- It has no named owner  
-- It lacks a recorded decision  
-- It cannot be recovered  
-- It has not formally closed  
-
-
-
-
+- [ITS Operating Model](its_operating_model.md)
+- [Work Delivery Framework](work%20delivery/work_delivery_framework.md)
+- [Work Assessment Process](work%20delivery/work_assessment/work_assessment_process.md)
+- [Work Brief Specification](work%20delivery/work_brief/work_brief_specification.md)
+- [Standard Deliverables Guide](work%20delivery/standard_deliverables_guide.md)

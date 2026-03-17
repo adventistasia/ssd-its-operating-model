@@ -27,6 +27,8 @@ Use this artifact during design and governance review before implementation is f
 
 It should align with the NIST Privacy Framework by identifying data categories, privacy implications, and governance actions early. It should also align with NIST CSF governance and identification outcomes by making stewardship, sensitivity, and obligations explicit.
 
+In the Work Delivery Framework lifecycle, this artifact is usually identified at summary level in Stage 2, elaborated in Stage 4, and kept current through Stage 6 when data-handling decisions change. It supports Stage 7 acceptance and closure by showing that data obligations were identified and handled.
+
 ## 5. How Much Detail to Include
 
 Include enough detail to explain data categories, sensitivity, obligations, stewardship, and material impacts. Do not turn it into a full data model or a legal opinion.
@@ -97,13 +99,24 @@ Keep the following out of this artifact:
 
 ## 8. Relationships to Other Artifacts
 
-This artifact should inform the Data Asset Specification, Security & Privacy Risk Assessment, Compliance & Regulatory Alignment Statement, Backup, Restore & Recovery Plan, and operational support planning.
+This artifact should align with and inform:
+
+- [Work Delivery Framework](../work_delivery_framework.md)
+- [Initiative Definition Document Specification](../governance_and_control_deliverables/initiative_definition_document_specification.md)
+- [Data Asset Specification](data_asset_specification.md)
+- [Security & Privacy Risk Assessment Specification](../security_privacy_and_compliance_deliverables/security_and_privacy_risk_assessment_specification.md)
+- [Compliance & Regulatory Alignment Statement Specification](../security_privacy_and_compliance_deliverables/compliance_and_regulatory_alignment_statement_specification.md)
+- [Backup, Restore & Recovery Plan Specification](../operational_readiness_deliverables/backup_restore_and_recovery_plan_specification.md)
+- [Operations & Support Model Specification](../operational_readiness_deliverables/operations_and_support_model_specification.md)
+- [Operational Readiness Confirmation Record Specification](../operational_readiness_deliverables/operational_readiness_confirmation_record_specification.md)
 
 ## 9. Ownership, Review, and Acceptance Expectations
 
 The Data Steward or analyst responsible for data governance usually coordinates this artifact with security, privacy, and business input.
 
 Review should include the Data Governance Officer where governance exposure is material.
+
+The Delivery Owner is accountable for ensuring this artifact is produced and kept aligned with scope and design decisions. The relevant Acceptance Authority for data-governance outcomes should confirm that material data obligations and actions are visible before acceptance and closure.
 
 ## 10. Maintenance Expectations
 

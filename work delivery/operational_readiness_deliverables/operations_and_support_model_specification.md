@@ -12,26 +12,43 @@ The intended outcome is that the live service remains supportable beyond the del
 
 This artifact is required when the initiative creates or changes a service, application, integration, or platform component that must be operated after delivery.
 
-## 3. Intended Readers and Users
+## 3. Stage Fit and Handoffs
+
+- Stage 4: define the target support model and ownership boundaries early enough to influence design.
+- Stage 6: confirm the model against real deployment and support arrangements.
+- Stage 7: use this model as part of operational acceptance and transition evidence.
+
+Upstream sources:
+
+- [Technical Design Document Specification](technical_design_document_specification.md)
+- [System Administration Guide Specification](system_administration_guide_specification.md)
+- [Deployed Solution Specification](../solution_deliverables/deployed_solution_specification.md)
+
+Downstream artifacts:
+
+- [Operational Readiness Confirmation Record Specification](operational_readiness_confirmation_record_specification.md)
+- [Formal Acceptance and Closure Record Specification](../governance_and_control_deliverables/formal_acceptance_and_closure_record_specification.md)
+
+## 4. Intended Readers and Users
 
 - IT Operations / Service Owner
 - Support Owner and support teams
 - Delivery Owner
 - Business Owner where service outcomes matter
 
-## 4. Intended Project Context
+## 5. Intended Project Context
 
 Use this artifact during solution design, before go-live, and at formal handover. It is most useful where support must continue beyond the delivery team and where boundaries between teams, vendors, or service tiers must be explicit.
 
 It should align with ITIL 4 Service Desk, Incident Management, Monitoring and Event Management, and Relationship Management practices by making service accountability, support channels, and escalation paths clear.
 
-## 5. How Much Detail to Include
+## 6. How Much Detail to Include
 
 Include enough detail to show ownership, support boundaries, escalation paths, monitoring expectations, and transition assumptions. Do not turn it into a full runbook.
 
-## 6. Required Content or Minimum Structure
+## 7. Required Content or Minimum Structure
 
-### 6.1. Service ownership
+### 7.1. Service ownership
 
 Must include:
 
@@ -41,7 +58,7 @@ Must include:
 
 This section shows who is responsible for the live service.
 
-### 6.2. Support structure
+### 7.2. Support structure
 
 Must include:
 
@@ -52,7 +69,7 @@ Must include:
 
 This section defines how support is organized.
 
-### 6.3. Escalation and response model
+### 7.3. Escalation and response model
 
 Must include:
 
@@ -63,7 +80,7 @@ Must include:
 
 This section shows how issues move when they cannot be resolved at the first point of contact.
 
-### 6.4. Monitoring and operating assumptions
+### 7.4. Monitoring and operating assumptions
 
 Must include:
 
@@ -75,7 +92,7 @@ Must include:
 
 This section connects support ownership to the real operating model.
 
-### 6.5. Template guide
+### 7.5. Template guide
 
 Recommended summary table:
 
@@ -84,7 +101,7 @@ Recommended summary table:
 
 Use short entries and point to detailed procedures elsewhere.
 
-## 7. What to Keep Out
+## 8. What to Keep Out
 
 Keep the following out of this artifact:
 
@@ -93,21 +110,37 @@ Keep the following out of this artifact:
 - deep technical design
 - project task assignments
 
-## 8. Relationships to Other Artifacts
+## 9. Relationships to Other Artifacts
 
 This artifact should align with the Technical Design Document, Solution Module Definitions, System Administration Guide, Backup, Restore & Recovery Plan, Operational Readiness Confirmation Record, and monitoring or audit designs where applicable.
 
-## 9. Ownership, Review, and Acceptance Expectations
+It should also align with the Initiative Definition Document or Work Brief so the named run/support ownership in operations matches the ownership model approved earlier in the work lifecycle.
+
+## 10. Ownership, Review, and Acceptance Expectations
 
 The Service Owner or operational lead usually owns this artifact with support from the Delivery Owner and support leads.
 
 It should be reviewed as part of solution design where operational impact exists, and again as part of operational readiness and handover.
 
-## 10. Maintenance Expectations
+## 11. Maintenance Expectations
 
 Keep it current when ownership, support coverage, escalation, vendor dependencies, or operating assumptions change.
 
-## 11. Validation Guide
+## 12. Traceability and Ownership Minimum
+
+Minimum traceability expectation:
+
+- support boundaries and escalation paths align with the deployed scope
+- ownership fields are consistent with readiness and acceptance records
+- known support risks and constraints are visible and assigned
+
+Minimum ownership expectation:
+
+- Service Owner is accountable for live-service continuity.
+- Support Owner is accountable for support execution clarity.
+- Delivery Owner ensures the transition is complete before closure.
+
+## 13. Validation Guide
 
 - Are service and support ownership explicit?
 - Can a reviewer see who supports what and when escalation happens?
@@ -117,9 +150,9 @@ Keep it current when ownership, support coverage, escalation, vendor dependencie
 
 If weak, clarify the responsibility split and make escalation routes easier to follow.
 
-## 12. Prompt Guide for Drafting the Artifact
+## 14. Prompt Guide for Drafting the Artifact
 
-### 12.1. Starter prompt
+### 14.1. Starter prompt
 
 > Draft an Operations & Support Model for this solution.
 > Define service ownership, support ownership, support tiers or boundaries, escalation paths, monitoring expectations, support coverage, and the transition or steady-state assumptions that matter after go-live.

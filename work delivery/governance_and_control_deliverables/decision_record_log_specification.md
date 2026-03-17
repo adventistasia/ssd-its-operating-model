@@ -54,25 +54,27 @@ Each decision row must include:
 - decision date
 - decision title
 - decision category
-- decision summary
+- decision taken
 - decision maker or approving authority
+- artifact or evidence basis used for the decision
 - rationale or basis
 - impacted artifacts or deliverables
 - baseline impact or change implication where the decision alters approved scope, cost, authority, risk position, or acceptance approach
+- conditions or follow-up actions where applicable
 - follow-up owner where action is required
 - current status
 
 Recommended columns:
 
-| Decision ID | Date | Title | Category | Decision | Authority | Rationale | Impacted artifacts | Baseline impact | Follow-up owner | Status |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Decision ID | Date | Title | Category | Decision Taken | Authority | Evidence Basis | Rationale | Impacted Artifacts | Baseline Impact | Conditions / Follow-Up | Follow-Up Owner | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 Use controlled status values such as:
 
-- `proposed`
-- `approved`
-- `superseded`
-- `withdrawn`
+- `Proposed`
+- `Approved`
+- `Superseded`
+- `Withdrawn`
 
 This row structure is the main information model of the log.
 
@@ -84,6 +86,7 @@ Must include:
 - rule that superseded decisions remain visible rather than deleted
 - rule that routine low-impact operational choices should not overload the log
 - rule that decisions requiring artifact updates, re-approval, or new acceptance conditions must identify the affected baseline or record explicitly
+- rule that each decision with conditions records a named owner for each follow-up action
 
 This section keeps the log useful and governable.
 
@@ -93,6 +96,7 @@ Use short entries:
 
 - `Category`: scope, funding, risk, architecture, privacy, acceptance, or other defined category
 - `Decision`: the conclusion, not the meeting discussion
+- `Evidence basis`: the artifact, analysis, or record used to support the decision
 - `Rationale`: a short reason, not full minutes
 - `Impacted artifacts`: name the records or specifications that must align to the decision
 - `Baseline impact`: state whether the decision confirms the current baseline, changes it, or creates a follow-up action to revise it

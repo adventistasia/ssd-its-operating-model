@@ -42,23 +42,25 @@ This guide is mainly for:
 - Delivery Owners and project managers
 - analysts and solution leads
 - developers and testers
+- Service Owners and Support Owners
 - reviewers and Acceptance Authorities
 
 If you are new to the process, follow this order:
 
-1. In Stage 2, define the approved scope in [Functional Capabilities](solution_deliverables/functional_capabilities_specification.md).
-2. In Stage 4, clarify actors in the [User Roles, Personas & Access Model](solution_deliverables/user_roles_personas_and_access_model_specification.md), group the scope into behavior-centered [Solution Modules](solution_deliverables/solution_modules_specification.md), create a detailed [Solution Module Definition](solution_deliverables/solution_module_definition_specification.md) for each non-trivial module, and describe behavior in [Use Case Narratives](solution_deliverables/use_case_narratives_specification.md).
-3. In Stage 6, record what is actually live in the [Deployed Solution](solution_deliverables/deployed_solution_specification.md) and gather evidence.
-4. In Stage 7, prepare the [Acceptance Record](solution_deliverables/acceptance_record_specification.md) and get an explicit acceptance decision.
+1. Start from the approved Stage 2 baseline, normally the [Initiative Definition Document](governance_and_control_deliverables/initiative_definition_document_specification.md) or the [Work Brief](work_brief/work_brief_specification.md) for small governed work.
+2. In Stage 2, define the approved scope in [Functional Capabilities](solution_deliverables/functional_capabilities_specification.md) when solution behavior is in scope.
+3. In Stage 4, clarify actors in the [User Roles, Personas & Access Model](solution_deliverables/user_roles_personas_and_access_model_specification.md), group the scope into behavior-centered [Solution Modules](solution_deliverables/solution_modules_specification.md), create a detailed [Solution Module Definition](solution_deliverables/solution_module_definition_specification.md) for each non-trivial module, and describe behavior in [Use Case Narratives](solution_deliverables/use_case_narratives_specification.md).
+4. In Stage 6, record what is actually live in the [Deployed Solution](solution_deliverables/deployed_solution_specification.md) and gather evidence.
+5. In Stage 7, prepare the [Acceptance Record](solution_deliverables/acceptance_record_specification.md) and get an explicit acceptance decision.
 
 What to produce by stage:
 
 | Stage | Main solution deliverables |
 | --- | --- |
 | Stage 2 - Work Definition | Functional Capabilities |
-| Stage 4 - Work Definition Details | User Roles, Personas & Access Model, Solution Modules Register, Solution Module Definitions, Use Case Narratives, and identified operational-readiness needs where service impact exists |
+| Stage 4 - Work Definition Details | User Roles, Personas & Access Model, Solution Modules Register, Solution Module Definitions, Use Case Narratives, Technical Design Document, and draft operational-readiness artifacts where service impact exists |
 | Stage 6 - Work Delivery | Deployed Solution, linked evidence, and related operational artifacts as needed |
-| Stage 7 - Acceptance, Transition & Closure | Acceptance Record and final acceptance decision |
+| Stage 7 - Acceptance, Transition & Closure | Acceptance Record, Operational Readiness Confirmation Record, and final acceptance decision |
 
 What not to do:
 
@@ -99,11 +101,13 @@ These artifacts support the process. They do not replace solution scope, behavio
 
 | Role | What to focus on in this guide |
 | --- | --- |
+| Outcome Owner | Confirm that designed behavior still supports the intended outcomes and approved scope intent |
 | Delivery Owner | Keep the artifact set moving, controlled, owned, and ready for stage reviews |
 | Project Manager | Coordinate review cycles, version control, roadmap timing, follow-up actions, and evidence readiness |
 | Solution Lead / Analyst | Make scope, module boundaries, roles, and behavior clear enough to build and validate |
 | Developer / Tester | Build and validate only what traces back to approved scope and documented behavior |
 | IT Operations / Service Owner | Review supportability, administration, monitoring, recovery, and handover needs where operational impact exists |
+| Support Owner | Confirm support model, escalation path, and readiness conditions for live operation |
 | Reviewer / SME | Check that the content is correct, practical, and still inside scope |
 | Acceptance Authority | Decide based on visible scope, evidence, open conditions, and readiness for use |
 
@@ -337,7 +341,7 @@ Step 4 is done when:
 
 Use this traceability path throughout the process:
 
-`Initiative Definition -> Functional Capabilities -> User Roles -> Solution Modules Register -> Solution Module Definitions / Use Case Narratives -> Technical / Operational Readiness Artifacts -> Delivery Evidence / Deployed Solution -> Acceptance Record`
+`Work Assessment -> Initiative Definition or Work Brief -> Functional Capabilities -> User Roles -> Solution Modules Register -> Solution Module Definitions / Use Case Narratives -> Technical / Operational Readiness Artifacts -> Delivery Evidence / Deployed Solution -> Operational Readiness Confirmation Record -> Acceptance Record`
 
 Practical reading order for first-time practitioners:
 
@@ -349,7 +353,8 @@ Practical reading order for first-time practitioners:
 6. Draft [Use Case Narratives](solution_deliverables/use_case_narratives_specification.md) as a combined set or inside the module definitions.
 7. If the solution affects live operations, involve operations during design and prepare the operational-readiness artifacts before go-live.
 8. During delivery, maintain the [Deployed Solution](solution_deliverables/deployed_solution_specification.md).
-9. At acceptance time, prepare the [Acceptance Record](solution_deliverables/acceptance_record_specification.md).
+9. Prepare the [Operational Readiness Confirmation Record](operational_readiness_deliverables/operational_readiness_confirmation_record_specification.md) for operational acceptance.
+10. At acceptance time, prepare the [Acceptance Record](solution_deliverables/acceptance_record_specification.md).
 
 ## 8. AI-Assisted Authoring Workflow
 

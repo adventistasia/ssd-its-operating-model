@@ -2,11 +2,11 @@
 
 ## 1. Purpose and Intended Outcome
 
-The Formal Acceptance & Closure Record confirms that required deliverables or deliverable domains have been accepted, that the relevant authorities have signed off, and that the initiative is formally closed or conditionally closed.
+The Formal Acceptance & Closure Record confirms that required deliverables or deliverable domains have been accepted, that the relevant authorities have signed off, that operational handover has been confirmed where needed, and that the initiative is formally closed or conditionally closed.
 
 It exists to prevent informal completion and to preserve a clear decision trail at the end of the initiative. A useful record shows what was accepted, what remains open, and who authorized closure.
 
-The intended outcome is that initiative completion or conditional closure is explicit, attributable, and supported by a clear record of accepted results, remaining actions, and accountable sign-off.
+The intended outcome is that initiative completion or conditional closure is explicit, attributable, and supported by a clear record of accepted results, transition status, remaining actions, and accountable sign-off.
 
 ## 2. When It Is Required
 
@@ -76,7 +76,30 @@ Must include:
 
 This section makes it clear what closure does and does not mean.
 
-### 6.4. Closure decision
+### 6.4. Operational handover confirmation
+
+Required when operational ownership is impacted.
+
+Must include:
+
+- operational owner or support owner receiving responsibility
+- handover status and date
+- reference to handover or operational readiness evidence
+- any operational conditions remaining at closure
+
+This section confirms that closure does not leave support ownership ambiguous.
+
+### 6.5. Final financial and delivery summary
+
+Must include:
+
+- approved versus actual delivery position at an appropriate level
+- notable variance or condition affecting closure
+- reference to the source financial or delivery summary where detailed values are maintained
+
+This section keeps closure attributable to what was committed and what was actually delivered.
+
+### 6.6. Closure decision
 
 Must include:
 
@@ -88,7 +111,7 @@ Must include:
 
 This section is the formal act of closure.
 
-### 6.5. Template guide
+### 6.7. Template guide
 
 Keep entries short:
 
@@ -96,6 +119,7 @@ Keep entries short:
 - `Open conditions`: record only what still matters after closure
 - `Closed by exception`: use only when formal authority has approved closure despite outstanding items
 - Residual obligations should remain actionable, with clear owners and due dates rather than general comments
+- Handover confirmation should identify who is now accountable for running and supporting the outcome
 
 ## 7. What to Keep Out
 
@@ -120,8 +144,10 @@ The record is normally finalized once closure is approved. If closure is conditi
 ## 11. Validation Guide
 
 - Does the record show clearly that required acceptance happened before closure?
+- Where operations are impacted, does the record clearly confirm handover and receiving ownership?
 - Are residual obligations or exceptions explicit?
 - Does the record make it obvious whether closure is full, phased, or exception-based?
+- Is there a concise final financial and delivery summary or reference?
 - Is the closing decision attributable to a named authority and date?
 - Does the artifact avoid becoming a full narrative history of the initiative?
 

@@ -241,9 +241,13 @@ What gets worse, remains weak, or is lost if this is not pursued in the next 12 
 - [ ] Defer
 - [ ] Proceed to Full Business Analysis
 
-**Decision Date:**  
+**Decision Date:**
 
-**Conditions / Notes:**  
+**Evidence basis for the decision:**
+
+**Conditions / Notes:**
+
+**Owner for each follow-up action (if conditions apply):**
 
 ---
 
@@ -256,3 +260,5 @@ What gets worse, remains weak, or is lost if this is not pursued in the next 12 
 **Priority risks or constraints to analyze:**  
 
 **Stakeholder sensitivities / history:**  
+
+**Likely sponsor, Outcome Owner candidate, and Delivery Owner candidate signals (if known):**

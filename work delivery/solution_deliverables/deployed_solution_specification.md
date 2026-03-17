@@ -21,7 +21,23 @@ It is especially useful for:
 - limited releases
 - any release where ownership, evidence, or live boundary must be explicit
 
-## 3. Before You Start
+## 3. Stage Fit and Handoffs
+
+- Stage 6: maintain a clear record of what approved scope is live, where, and under what conditions.
+- Stage 7: use this artifact as one primary acceptance and closure evidence source.
+
+Upstream sources:
+
+- [Solution Module Definition Specification](solution_module_definition_specification.md)
+- [Use Case Narratives Specification](use_case_narratives_specification.md)
+- [Operational Readiness Confirmation Record Specification](../operational_readiness_deliverables/operational_readiness_confirmation_record_specification.md)
+
+Downstream artifacts:
+
+- [Acceptance Record Specification](acceptance_record_specification.md)
+- [Formal Acceptance and Closure Record Specification](../governance_and_control_deliverables/formal_acceptance_and_closure_record_specification.md)
+
+## 4. Before You Start
 
 Make sure you have:
 
@@ -31,7 +47,7 @@ Make sure you have:
 - the named deployment, service, and support owners
 - links to the evidence that supports the release
 
-## 4. How to Draft It
+## 5. How to Draft It
 
 Follow these steps:
 
@@ -48,9 +64,9 @@ Useful test:
 
 - If a reader asks "what is live?" or "what is still limited?" the answer should be visible immediately.
 
-## 5. Minimum Structure
+## 6. Minimum Structure
 
-### 5.1. Release header
+### 6.1. Release header
 
 Include:
 
@@ -61,14 +77,14 @@ Include:
 - deployment owner
 - live status such as `pilot`, `limited release`, `live`, `rolled back`, or `retired`
 
-### 5.2. Live boundary
+### 6.2. Live boundary
 
 Include:
 
 - which users, sites, business units, or channels are included
 - whether this is full scope or partial scope
 
-### 5.3. Scope delivered
+### 6.3. Scope delivered
 
 Use a table like this:
 
@@ -76,7 +92,7 @@ Use a table like this:
 | --- | --- | --- | --- | --- |
 | Request submission | `FC-001`, `SM-001` | `TE-001`, release note 1 | live | Staff only in pilot sites |
 
-### 5.4. Operational status
+### 6.4. Operational status
 
 Include:
 
@@ -85,7 +101,7 @@ Include:
 - monitoring/support/recovery status
 - temporary operating conditions
 
-### 5.5. Open conditions
+### 6.5. Open conditions
 
 Include:
 
@@ -93,7 +109,7 @@ Include:
 - temporary workarounds
 - follow-up owners and due dates where useful
 
-## 6. Writing Rules
+## 7. Writing Rules
 
 Keep this artifact concise and evidence-based.
 
@@ -106,7 +122,20 @@ Keep the following out:
 
 Reference the authoritative technical and operational artifacts instead.
 
-## 7. Done When
+## 8. Traceability and Ownership Minimum
+
+Minimum traceability expectation:
+
+- each live area links back to approved scope references (`FC-###`, `SM-###`, and `UC-###` where relevant)
+- each live area links to supporting evidence and release references
+- partial scope, deferred scope, and open conditions are explicit
+
+Minimum ownership expectation:
+
+- Delivery Owner maintains scope-to-live clarity.
+- Service Owner and Support Owner confirm live ownership and operating conditions.
+
+## 9. Done When
 
 This artifact is ready when:
 
@@ -116,7 +145,7 @@ This artifact is ready when:
 - evidence links are present
 - open conditions are not hidden
 
-## 8. What Comes Next
+## 10. What Comes Next
 
 Use this artifact as part of the basis for:
 
@@ -124,7 +153,7 @@ Use this artifact as part of the basis for:
 2. operational handover and service readiness reviews
 3. closure and formal acceptance records where needed
 
-## 9. Prompt Guide
+## 11. Prompt Guide
 
 Starter prompt:
 

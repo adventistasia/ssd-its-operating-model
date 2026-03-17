@@ -26,6 +26,8 @@ Use this artifact when migration correctness, reconciliation, cutover, rollback,
 
 It should align with NIST planning and integrity expectations by making migration scope, validation, and rollback thinking explicit. It should also align with practical governance expectations for stewardship sign-off and exception handling.
 
+In the Work Delivery Framework lifecycle, migration planning is typically prepared in Stage 4, executed and evidenced in Stage 6, and finalized as acceptance input in Stage 7.
+
 ## 5. How Much Detail to Include
 
 Keep the record focused on migration logic, validation basis, exceptions, and sign-off. Reference detailed scripts or mapping files instead of copying them wholesale.
@@ -80,13 +82,24 @@ Keep the following out of this artifact:
 
 ## 8. Relationships to Other Artifacts
 
-This artifact should align with the Data Asset Specification, Technical Design Document, Backup, Restore & Recovery Plan, Acceptance Record, and decision or risk records where migration risk is material.
+This artifact should align with:
+
+- [Work Delivery Framework](../work_delivery_framework.md)
+- [Delivery Roadmap Specification](../governance_and_control_deliverables/delivery_roadmap_specification.md)
+- [Data Asset Specification](data_asset_specification.md)
+- [Technical Design Document Specification](../operational_readiness_deliverables/technical_design_document_specification.md)
+- [Backup, Restore & Recovery Plan Specification](../operational_readiness_deliverables/backup_restore_and_recovery_plan_specification.md)
+- [Decision Record Log Specification](../governance_and_control_deliverables/decision_record_log_specification.md)
+- [Acceptance Record Specification](../solution_deliverables/acceptance_record_specification.md)
+- [Formal Acceptance & Closure Record Specification](../governance_and_control_deliverables/formal_acceptance_and_closure_record_specification.md)
 
 ## 9. Ownership, Review, and Acceptance Expectations
 
 The migration lead or data lead usually prepares the record with steward involvement.
 
 The Data Steward and other relevant Acceptance Authorities should review and confirm the validation outcome.
+
+The Delivery Owner is accountable for ensuring migration evidence is complete, attributable, and available for acceptance and closure decisions.
 
 ## 10. Maintenance Expectations
 

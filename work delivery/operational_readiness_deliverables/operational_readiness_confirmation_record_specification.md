@@ -12,26 +12,44 @@ The intended outcome is that transfer into operational responsibility is a clear
 
 This artifact is required when operational ownership is being assigned or confirmed before go-live or transition into steady state.
 
-## 3. Intended Readers and Users
+## 3. Stage Fit and Handoffs
+
+- Stage 6: prepare and update this record as readiness evidence becomes available.
+- Stage 7: finalize this record to support operational acceptance, transition, and closure.
+
+Upstream sources:
+
+- [Technical Design Document Specification](technical_design_document_specification.md)
+- [System Administration Guide Specification](system_administration_guide_specification.md)
+- [Operations & Support Model Specification](operations_and_support_model_specification.md)
+- [Backup, Restore & Recovery Plan Specification](backup_restore_and_recovery_plan_specification.md)
+- [Deployed Solution Specification](../solution_deliverables/deployed_solution_specification.md)
+
+Downstream artifacts:
+
+- [Acceptance Record Specification](../solution_deliverables/acceptance_record_specification.md)
+- [Formal Acceptance and Closure Record Specification](../governance_and_control_deliverables/formal_acceptance_and_closure_record_specification.md)
+
+## 4. Intended Readers and Users
 
 - IT Operations / Service Owner
 - Support Owner
 - Delivery Owner
 - governance and audit reviewers
 
-## 4. Intended Project Context
+## 5. Intended Project Context
 
 Use this artifact near go-live, handover, or production transition. It is most useful where operational acceptance must be explicit and where readiness depends on documentation, support ownership, monitoring, and recovery arrangements being in place.
 
 It should align with ITIL 4 Change Enablement and service validation intent by making the readiness basis for operational acceptance visible and attributable.
 
-## 5. How Much Detail to Include
+## 6. How Much Detail to Include
 
 Keep it short. Include enough detail to show ownership, readiness evidence, material gaps, and the formal operational decision. Link to detailed artifacts instead of copying them.
 
-## 6. Required Content or Minimum Structure
+## 7. Required Content or Minimum Structure
 
-### 6.1. Record identity
+### 7.1. Record identity
 
 Must include:
 
@@ -43,7 +61,7 @@ Must include:
 
 This section identifies the formal readiness record.
 
-### 6.2. Ownership confirmation
+### 7.2. Ownership confirmation
 
 Must include:
 
@@ -53,7 +71,7 @@ Must include:
 
 This section makes the receiving ownership explicit.
 
-### 6.3. Readiness evidence summary
+### 7.3. Readiness evidence summary
 
 Must include:
 
@@ -63,7 +81,7 @@ Must include:
 
 This section shows the basis for readiness review.
 
-### 6.4. Required content for each readiness row
+### 7.4. Required content for each readiness row
 
 If a readiness table is used, each row must include:
 
@@ -87,7 +105,7 @@ Use controlled status values such as:
 
 This row structure keeps the readiness decision clear and reviewable.
 
-### 6.5. Operational decision
+### 7.5. Operational decision
 
 Must include:
 
@@ -99,7 +117,7 @@ Must include:
 
 This section is the formal handover decision.
 
-## 7. What to Keep Out
+## 8. What to Keep Out
 
 Keep the following out of this artifact:
 
@@ -108,19 +126,33 @@ Keep the following out of this artifact:
 - raw test logs
 - repeated copies of every referenced artifact
 
-## 8. Relationships to Other Artifacts
+## 9. Relationships to Other Artifacts
 
 This record should reference the Solution Module Definitions, Technical Design Document, System Administration Guide, Operations & Support Model, Backup, Restore & Recovery Plan, monitoring or audit designs, and relevant release evidence.
 
-## 9. Ownership, Review, and Acceptance Expectations
+## 10. Ownership, Review, and Acceptance Expectations
 
 The Delivery Owner or operational readiness coordinator usually prepares the record. Formal operational acceptance is normally given by the IT Operations / Service Owner or delegated authority.
 
-## 10. Maintenance Expectations
+## 11. Maintenance Expectations
 
 Update until the operational decision is final. If acceptance is conditional, track the conditions or issue a superseding version once closed.
 
-## 11. Validation Guide
+## 12. Traceability and Ownership Minimum
+
+Minimum traceability expectation:
+
+- readiness rows link to the underlying evidence artifacts
+- readiness status values are controlled and consistent
+- conditions and follow-up ownership are explicit and visible
+
+Minimum ownership expectation:
+
+- Delivery Owner prepares the record and tracks completion of open conditions.
+- Service Owner and Support Owner confirm readiness and operational responsibilities.
+- Approving operational authority records the formal decision.
+
+## 13. Validation Guide
 
 - Does the record show clearly whether operational ownership is willing to accept the solution?
 - Are material readiness gaps or conditions explicit and owned?
@@ -130,9 +162,9 @@ Update until the operational decision is final. If acceptance is conditional, tr
 
 If weak, tighten the evidence references and make the operational decision statement more explicit.
 
-## 12. Prompt Guide for Drafting the Artifact
+## 14. Prompt Guide for Drafting the Artifact
 
-### 12.1. Starter prompt
+### 14.1. Starter prompt
 
 > Draft an Operational Readiness Confirmation Record for this solution.
 > Show named service and support ownership, what readiness evidence was reviewed, any gaps or conditions that remain, and the formal operational decision.

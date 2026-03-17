@@ -12,7 +12,26 @@ The intended outcome is that the solution's technical design can be reviewed, su
 
 This artifact is required for any solution with meaningful technical structure, dependencies, integration points, infrastructure, security controls, or operational impact.
 
-## 3. Intended Readers and Users
+## 3. Stage Fit and Handoffs
+
+- Stage 4: establish the delivery-ready technical design baseline.
+- Stage 6: confirm the implemented technical state and highlight material variances.
+- Stage 7: provide technical evidence support for readiness, acceptance, and closure.
+
+Upstream sources:
+
+- [Functional Capabilities Specification](../solution_deliverables/functional_capabilities_specification.md)
+- [Solution Module Definition Specification](../solution_deliverables/solution_module_definition_specification.md)
+- [Use Case Narratives Specification](../solution_deliverables/use_case_narratives_specification.md)
+
+Downstream artifacts:
+
+- [System Administration Guide Specification](system_administration_guide_specification.md)
+- [Operations & Support Model Specification](operations_and_support_model_specification.md)
+- [Backup, Restore & Recovery Plan Specification](backup_restore_and_recovery_plan_specification.md)
+- [Operational Readiness Confirmation Record Specification](operational_readiness_confirmation_record_specification.md)
+
+## 4. Intended Readers and Users
 
 - solution and infrastructure engineers
 - Delivery Owner
@@ -21,19 +40,19 @@ This artifact is required for any solution with meaningful technical structure, 
 - security reviewers
 - future maintainers
 
-## 4. Intended Project Context
+## 5. Intended Project Context
 
 Use this artifact during detailed solution design, before deployment, and through operational handover. It is most useful where the organization needs a design-level explanation of components, environments, interfaces, constraints, and technical decisions that matter after build.
 
 It should align with NIST planning guidance such as SP 800-18 by making system purpose, environment, roles, and controls understandable, and with ITIL 4 service configuration management intent by keeping component and dependency information reliable and accessible.
 
-## 5. How Much Detail to Include
+## 6. How Much Detail to Include
 
 Include enough detail to explain the design clearly and support future operation and change. Do not turn it into step-by-step administration guidance or a project task plan.
 
-## 6. Required Content or Minimum Structure
+## 7. Required Content or Minimum Structure
 
-### 6.1. Design scope and context
+### 7.1. Design scope and context
 
 Must include:
 
@@ -44,7 +63,7 @@ Must include:
 
 This section tells the reader what part of the solution the document covers.
 
-### 6.2. Architecture and structure overview
+### 7.2. Architecture and structure overview
 
 Must include:
 
@@ -54,7 +73,7 @@ Must include:
 
 This section gives the technical shape of the solution.
 
-### 6.3. Environment and hosting design
+### 7.3. Environment and hosting design
 
 Must include:
 
@@ -64,7 +83,7 @@ Must include:
 
 This section helps operations and support understand where the design lives and what it depends on.
 
-### 6.4. Integration and dependency design
+### 7.4. Integration and dependency design
 
 Must include:
 
@@ -74,7 +93,7 @@ Must include:
 
 This section supports traceability and later support.
 
-### 6.5. Data, configuration, and control considerations
+### 7.5. Data, configuration, and control considerations
 
 Must include where relevant:
 
@@ -85,7 +104,7 @@ Must include where relevant:
 
 This section helps reviewers understand what technical choices materially affect risk and supportability.
 
-### 6.6. Significant design decisions and constraints
+### 7.6. Significant design decisions and constraints
 
 Must include:
 
@@ -95,7 +114,7 @@ Must include:
 
 This section keeps critical design reasoning from being lost.
 
-## 7. What to Keep Out
+## 8. What to Keep Out
 
 Keep the following out of this artifact:
 
@@ -105,22 +124,36 @@ Keep the following out of this artifact:
 - sprint plans and task assignments
 - business-case detail
 
-## 8. Relationships to Other Artifacts
+## 9. Relationships to Other Artifacts
 
 This artifact should align with the Initiative Definition Document, Functional Capabilities, security and data artifacts, System Administration Guide, Operations & Support Model, and Backup, Restore & Recovery Plan.
 This artifact should also align with the Solution Modules Register, Solution Module Definitions, and Use Case Narratives so that the technical design clearly supports the intended solution behavior.
 
-## 9. Ownership, Review, and Acceptance Expectations
+## 10. Ownership, Review, and Acceptance Expectations
 
 The solution architect, technical lead, or implementation lead usually authors this artifact.
 
 It should be reviewed by operations, security, infrastructure, and support stakeholders where their domains are materially affected. For solutions with operational impact, this review should start during solution design, not only near handover.
 
-## 10. Maintenance Expectations
+## 11. Maintenance Expectations
 
 Update the document when architecture, environments, dependencies, or material technical assumptions change. Keep it current enough to support handover and major future change.
 
-## 11. Validation Guide
+## 12. Traceability and Ownership Minimum
+
+Minimum traceability expectation:
+
+- technical components and behaviors can be traced back to approved scope references
+- material dependencies and constraints are visible to operations and support teams
+- material technical changes are reflected in related operational-readiness artifacts
+
+Minimum ownership expectation:
+
+- Technical lead owns design accuracy.
+- Delivery Owner ensures alignment to authorized scope and stage controls.
+- Operations and support reviewers validate supportability implications.
+
+## 13. Validation Guide
 
 - Does it explain how the solution is built and what it depends on?
 - Are the key technical assumptions, constraints, and control-relevant choices visible?
@@ -130,9 +163,9 @@ Update the document when architecture, environments, dependencies, or material t
 
 If weak, improve the structure overview, add missing dependencies, and move operational procedure detail to the System Administration Guide.
 
-## 12. Prompt Guide for Drafting the Artifact
+## 14. Prompt Guide for Drafting the Artifact
 
-### 12.1. Starter prompt
+### 14.1. Starter prompt
 
 > Draft a Technical Design Document for this solution.
 > Explain the structure, components, environments, integrations, dependencies, design assumptions, and the security, resilience, and performance considerations that operations and future maintainers must understand.

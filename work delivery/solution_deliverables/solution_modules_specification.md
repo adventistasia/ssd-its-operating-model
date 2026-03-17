@@ -32,7 +32,25 @@ It is especially useful when:
 
 For non-trivial systems, use this as the register that lists all modules, then create one `Solution Module Definition` for each module.
 
-## 3. Before You Start
+## 3. Stage Fit and Handoffs
+
+- Stage 4: create the module register as the behavior-centered structure for approved scope.
+- Stage 5: use modules to organize delivery sequencing and acceptance-readiness tracking.
+- Stage 6 and Stage 7: use modules as the evidence and acceptance grouping reference.
+
+Upstream sources:
+
+- [Functional Capabilities Specification](functional_capabilities_specification.md)
+- [User Roles, Personas & Access Model Specification](user_roles_personas_and_access_model_specification.md)
+
+Downstream artifacts:
+
+- [Solution Module Definition Specification](solution_module_definition_specification.md)
+- [Use Case Narratives Specification](use_case_narratives_specification.md)
+- [Deployed Solution Specification](deployed_solution_specification.md)
+- [Acceptance Record Specification](acceptance_record_specification.md)
+
+## 4. Before You Start
 
 Make sure you have:
 
@@ -42,7 +60,7 @@ Make sure you have:
 - a clear idea of how delivery and acceptance will be grouped
 - named owner and reviewer
 
-## 4. How to Draft It
+## 5. How to Draft It
 
 Follow these steps:
 
@@ -63,9 +81,9 @@ Useful test:
 - If the grouping reflects a recognizable user outcome or behavior area, it is probably stronger.
 - If the grouping can be explained, demonstrated, and accepted as one unit, it is probably a strong module.
 
-## 5. Minimum Structure
+## 6. Minimum Structure
 
-### 5.1. Document header
+### 6.1. Document header
 
 Include:
 
@@ -77,7 +95,7 @@ Include:
 - short note confirming that modules are behavior-centered groupings and not new scope definitions
 - short note confirming whether detailed module content will be held in separate `Solution Module Definition` documents
 
-### 5.2. Module summary table
+### 6.2. Module summary table
 
 Use a table like this:
 
@@ -87,7 +105,7 @@ Use a table like this:
 
 The `Behavior focus` field is important. When drafting the module list, the team should decide and state the behavior focus of each module clearly enough that readers can understand what kind of user outcome or activity the module is meant to cover.
 
-### 5.3. Coverage check
+### 6.3. Coverage check
 
 Add a simple mapping table:
 
@@ -95,7 +113,7 @@ Add a simple mapping table:
 | --- | --- | --- | --- |
 | `SM-001` | Request submission | `FC-001`, `FC-002` |  |
 
-### 5.4. Linked module detail set
+### 6.4. Linked module detail set
 
 For non-trivial systems, include or reference a detail set such as:
 
@@ -103,7 +121,7 @@ For non-trivial systems, include or reference a detail set such as:
 | --- | --- | --- | --- |
 | `SM-001` | `solution_module_sm_001_request_submission.md` | draft | Holds use cases and module acceptance criteria |
 
-## 6. Writing Rules
+## 7. Writing Rules
 
 Each module should:
 
@@ -122,7 +140,21 @@ Keep the following out:
 - sprint plans
 - technical design detail
 
-## 7. Done When
+## 8. Traceability and Ownership Minimum
+
+Minimum traceability expectation:
+
+- every `SM-###` entry maps to one or more `FC-###` IDs
+- planned `UC-###` IDs are visible for each module
+- each non-trivial module links to one detailed module definition
+
+Minimum ownership expectation:
+
+- Delivery Owner is accountable for scope alignment and stage-control use.
+- Solution lead or analyst owns module quality and behavior clarity.
+- Acceptance Authority should be known for each module or module grouping before delivery starts.
+
+## 9. Done When
 
 This artifact is ready when:
 
@@ -134,7 +166,7 @@ This artifact is ready when:
 - the set supports straightforward use case drafting
 - each non-trivial module has a linked `Solution Module Definition`
 
-## 8. What Comes Next
+## 10. What Comes Next
 
 After the modules are stable:
 
@@ -143,7 +175,7 @@ After the modules are stable:
 3. keep the actor model aligned using the [User Roles, Personas & Access Model Specification](user_roles_personas_and_access_model_specification.md)
 4. use the module structure to plan evidence and acceptance
 
-## 9. Prompt Guide
+## 11. Prompt Guide
 
 Starter prompt:
 

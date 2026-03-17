@@ -26,6 +26,8 @@ Use this artifact after user impacts are understood and before launch or rollout
 
 It should align with PMI communications and stakeholder-engagement practice by making audience, message, timing, and sender explicit. It should also align with ITIL organizational change management by supporting adoption through deliberate communication rather than assumption.
 
+In the Work Delivery Framework lifecycle, this artifact is usually elaborated in Stage 4, activated during Stage 5 mobilization, and executed and maintained through Stage 6 delivery and rollout.
+
 ## 5. How Much Detail to Include
 
 Include enough detail to show audience, message, timing, channel, sender, and feedback path. Do not turn it into a copy repository for every message or campaign asset.
@@ -90,13 +92,24 @@ Keep the following out of this artifact:
 
 ## 8. Relationships to Other Artifacts
 
-This artifact should align with the User Impact Assessment, Training & Enablement Materials, Adoption Support Model, Initiative Definition Document, and Business Owner expectations.
+This artifact should align with:
+
+- [Work Delivery Framework](../work_delivery_framework.md)
+- [Initiative Definition Document Specification](../governance_and_control_deliverables/initiative_definition_document_specification.md)
+- [Delivery Charter Specification](../governance_and_control_deliverables/delivery_charter_specification.md)
+- [Delivery Roadmap Specification](../governance_and_control_deliverables/delivery_roadmap_specification.md)
+- [User Impact Assessment Specification](user_impact_assessment_specification.md)
+- [Training & Enablement Materials Specification](training_and_enablement_materials_specification.md)
+- [Adoption Support Model Specification](adoption_support_model_specification.md)
+- [Adoption Confirmation Record Specification](adoption_confirmation_record_specification.md)
 
 ## 9. Ownership, Review, and Acceptance Expectations
 
 The Change or Communications Lead usually owns this artifact with Business Owner input.
 
 Review should include sponsors or leaders expected to send or reinforce key messages.
+
+The Delivery Owner is accountable for ensuring communication actions are integrated into mobilization and delivery control rhythm. The Business Owner, as the usual Acceptance Authority for adoption outcomes, should confirm that critical communication commitments are met before closure.
 
 ## 10. Maintenance Expectations
 

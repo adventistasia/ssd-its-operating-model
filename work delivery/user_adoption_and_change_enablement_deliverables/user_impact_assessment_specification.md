@@ -26,6 +26,8 @@ Use this artifact during planning and elaboration, before launch communications 
 
 It should align with PMI stakeholder engagement and communications practice by identifying affected groups and the significance of change for each. It should also align with ITIL organizational change management intent by making readiness and resistance factors visible early.
 
+In the Work Delivery Framework lifecycle, this artifact is commonly identified in Stage 2 when user impact shapes authorization discussions, elaborated in Stage 4, and used in Stage 5 and Stage 6 to drive communication, enablement, and support priorities.
+
 ## 5. How Much Detail to Include
 
 Include enough detail to show who is affected, what changes for them, and where adoption risk exists. Do not turn it into a full communication plan or training catalog.
@@ -85,13 +87,24 @@ Keep the following out of this artifact:
 
 ## 8. Relationships to Other Artifacts
 
-This artifact should align with the User Roles, Personas & Access Model, Change & Communication Plan, Training & Enablement Materials, Adoption Support Model, and Use Case Narratives where user behavior matters.
+This artifact should align with:
+
+- [Work Delivery Framework](../work_delivery_framework.md)
+- [Initiative Definition Document Specification](../governance_and_control_deliverables/initiative_definition_document_specification.md)
+- [User Roles, Personas & Access Model Specification](../solution_deliverables/user_roles_personas_and_access_model_specification.md)
+- [Use Case Narratives Specification](../solution_deliverables/use_case_narratives_specification.md)
+- [Change & Communication Plan Specification](change_and_communication_plan_specification.md)
+- [Training & Enablement Materials Specification](training_and_enablement_materials_specification.md)
+- [Adoption Support Model Specification](adoption_support_model_specification.md)
+- [Adoption Confirmation Record Specification](adoption_confirmation_record_specification.md)
 
 ## 9. Ownership, Review, and Acceptance Expectations
 
 The change lead, business analyst, or Business Owner usually coordinates this artifact.
 
 Review should include process owners and teams representing affected users.
+
+The Delivery Owner is accountable for ensuring this assessment is reflected in delivery planning and mobilization decisions. The Business Owner, as the usual Acceptance Authority for adoption outcomes, should confirm that high-impact groups are addressed before final acceptance.
 
 ## 10. Maintenance Expectations
 

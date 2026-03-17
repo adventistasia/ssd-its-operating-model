@@ -26,6 +26,8 @@ Use this artifact after risk treatment decisions are understood and before the r
 
 It should align with NIST risk-management practice by making residual exposure, approving authority, review timing, and acceptance conditions explicit and reviewable.
 
+In the Work Delivery Framework lifecycle, this artifact is typically prepared in late Stage 6 or Stage 7 when unresolved material risk requires an explicit human decision before final acceptance and closure.
+
 ## 5. How Much Detail to Include
 
 Keep it concise and decision-focused. Include enough detail to identify the residual risk, why it remains, what controls exist, the impact if realized, and who accepted it.
@@ -83,11 +85,20 @@ Keep the following out of this artifact:
 
 ## 8. Relationships to Other Artifacts
 
-This record should reference the Security & Privacy Risk Assessment, Compliance & Regulatory Alignment Statement, Decision Record Log, and closure or acceptance records where applicable.
+This record should reference:
+
+- [Work Delivery Framework](../work_delivery_framework.md)
+- [Security & Privacy Risk Assessment Specification](security_and_privacy_risk_assessment_specification.md)
+- [Compliance & Regulatory Alignment Statement Specification](compliance_and_regulatory_alignment_statement_specification.md)
+- [Decision Record Log Specification](../governance_and_control_deliverables/decision_record_log_specification.md)
+- [Acceptance Record Specification](../solution_deliverables/acceptance_record_specification.md)
+- [Formal Acceptance & Closure Record Specification](../governance_and_control_deliverables/formal_acceptance_and_closure_record_specification.md)
 
 ## 9. Ownership, Review, and Acceptance Expectations
 
 The security or governance lead usually prepares the record. The accepting authority must be the person or body empowered to accept the specific class of risk.
+
+The Delivery Owner is accountable for ensuring residual risk decisions are visible, attributable, and reflected in acceptance and closure records. Risk acceptance authority must not be assumed or delegated informally.
 
 ## 10. Maintenance Expectations
 

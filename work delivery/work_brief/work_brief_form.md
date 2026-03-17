@@ -10,6 +10,7 @@ Use this form like a simple work order when the work sits inside a parent initia
 Decision options:
 
 - Approve
+- Approve with Conditions
 - Defer
 - Reject
 - Convert to Initiative Definition
@@ -40,6 +41,13 @@ Decision options:
 - [ ] Decide
 - [ ] Deliver
 - [ ] Close
+
+Stage mapping:
+
+- Define = Stage 2 (Work Definition)
+- Decide = Stage 3 (Work Authorization)
+- Deliver = Stage 6 (Work Delivery)
+- Close = Stage 7 (Acceptance, Transition & Closure)
 
 **Date Raised:**  
 
@@ -100,7 +108,9 @@ Decision options:
 
 **Delivery Owner:**  
 
-**Acceptance Owner / Authority:**  
+**Acceptance Authority:**
+
+**Acceptance Delegate (if applicable):**
 
 **Decision Authority:**  
 
@@ -114,7 +124,7 @@ Decision options:
 
 ## 5. Deliverables and Acceptance Evidence
 
-| Deliverable | Description | Delivery Owner | Acceptance Owner | Acceptance Evidence / Focus | Status | Reference |
+| Deliverable | Description | Delivery Owner | Acceptance Authority | Acceptance Evidence / Focus | Status | Reference |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1. |  |  |  |  |  |  |
 | 2. |  |  |  |  |  |  |
@@ -144,11 +154,11 @@ Decision options:
 
 Record each important decision made for this work item.
 
-| Date | Decision Needed / Made | Decision Taken | Decision Authority | Rationale | Conditions / Follow-Up / Accepted Risks |
-| --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |
-|  |  |  |  |  |  |
-|  |  |  |  |  |  |
+| Date | Decision Needed / Made | Decision Taken | Decision Authority | Evidence / Artifact Basis | Rationale | Conditions / Follow-Up / Accepted Risks | Follow-Up Owner |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
 
 ---
 
@@ -190,7 +200,7 @@ Record each important decision made for this work item.
 
 - [ ] The work is clear without extra verbal explanation
 - [ ] Scope boundaries are explicit
-- [ ] Requester, Outcome Owner, Delivery Owner, Acceptance Owner, and Decision Authority are named
+- [ ] Requester, Outcome Owner, Delivery Owner, Acceptance Authority, and Decision Authority are named
 - [ ] Deliverables and acceptance evidence are defined
 - [ ] Risks and dependencies are visible
 - [ ] Parent initiative or parent deliverable is referenced where applicable

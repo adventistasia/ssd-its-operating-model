@@ -26,6 +26,8 @@ Use this artifact before go-live and during transition. It is most useful where 
 
 It should align with ITIL 4 Service Desk, Incident Management, and organizational change management practice by making user-facing support entry points, escalation paths, and transition support explicit.
 
+In the Work Delivery Framework lifecycle, this artifact is usually defined in Stage 4, activated during Stage 5 mobilization, operated in Stage 6, and confirmed as part of Stage 7 transition and closure.
+
 ## 5. How Much Detail to Include
 
 Include enough detail to explain support channels, hypercare assumptions, escalation routes, and ownership of adoption issues. Do not turn it into a full incident management process.
@@ -84,13 +86,23 @@ Keep the following out of this artifact:
 
 ## 8. Relationships to Other Artifacts
 
-This artifact should align with the Change & Communication Plan, Training & Enablement Materials, User Impact Assessment, Operations & Support Model, and Operational Readiness Confirmation Record where support responsibilities intersect.
+This artifact should align with:
+
+- [Work Delivery Framework](../work_delivery_framework.md)
+- [Change & Communication Plan Specification](change_and_communication_plan_specification.md)
+- [Training & Enablement Materials Specification](training_and_enablement_materials_specification.md)
+- [User Impact Assessment Specification](user_impact_assessment_specification.md)
+- [Operations & Support Model Specification](../operational_readiness_deliverables/operations_and_support_model_specification.md)
+- [Operational Readiness Confirmation Record Specification](../operational_readiness_deliverables/operational_readiness_confirmation_record_specification.md)
+- [Formal Acceptance & Closure Record Specification](../governance_and_control_deliverables/formal_acceptance_and_closure_record_specification.md)
 
 ## 9. Ownership, Review, and Acceptance Expectations
 
 The change lead or Business Owner usually coordinates this artifact with support and operations teams.
 
 Review should include the teams expected to receive user issues.
+
+The Delivery Owner is accountable for ensuring adoption support arrangements are explicit before go-live and handover. The Support Owner and Business Owner should confirm that support responsibilities are clear before closure.
 
 ## 10. Maintenance Expectations
 
