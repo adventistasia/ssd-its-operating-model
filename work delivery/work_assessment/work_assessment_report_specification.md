@@ -196,6 +196,12 @@ Keep the following out of this artifact:
 
 This artifact builds on the [Initial Review](initial_review_specification.md), the [Validation Assessment](validation_assessment_specification.md), and the focused analysis completed after validation.
 
+Where used, it should also carry forward the material findings from:
+
+- [Work Request Challenges and Needs](work_request_challenges_and_needs_specification.md)
+- [Current State Analysis Report](current_state_analysis_report_specification.md)
+- [Business Process Stage Analysis](business_process_stage_analysis_specification.md)
+
 If the final decision is to proceed, it becomes a primary input to:
 
 - [Work Delivery Framework](../work_delivery_framework.md)

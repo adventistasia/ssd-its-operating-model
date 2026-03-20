@@ -179,6 +179,12 @@ Keep the following out of this artifact:
 
 This artifact builds on the [Initial Review](initial_review_specification.md).
 
+It may also use supporting assessment inputs such as:
+
+- [Work Request Challenges and Needs](work_request_challenges_and_needs_specification.md)
+- [Current State Analysis Report](current_state_analysis_report_specification.md)
+- [Business Process Stage Analysis](business_process_stage_analysis_specification.md) where stage-by-stage process flow materially shapes the assessment
+
 If the item proceeds, it justifies focused analysis and provides input to the later [Work Assessment Report](work_assessment_report_specification.md).
 
 ## 9. Ownership, Review, and Acceptance Expectations

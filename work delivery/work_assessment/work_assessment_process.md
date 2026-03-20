@@ -15,6 +15,12 @@
 - [Validation Assessment Specification](validation_assessment_specification.md)
 - [Work Assessment Report Specification](work_assessment_report_specification.md)
 
+### Supporting Assessment Specifications
+
+- [Work Request Challenges and Needs Specification](work_request_challenges_and_needs_specification.md)
+- [Current State Analysis Report Specification](current_state_analysis_report_specification.md)
+- [Business Process Stage Analysis Specification](business_process_stage_analysis_specification.md)
+
 ### Practitioner Forms
 
 - [Initial Review Form](initial_review_form.md)
@@ -33,6 +39,12 @@ Follow this order:
 2. Complete the [Validation Assessment](validation_assessment_specification.md) with the requester's subject matter experts and immediate team to decide whether focused analysis is justified and what minimum questions it must answer.
 3. Complete the [Work Assessment Report](work_assessment_report_specification.md) as the culmination of that right-sized analysis to decide whether the initiative should enter Work Definition.
 
+Use the following supporting artifacts only where they make the assessment clearer and more reusable without turning Work Assessment into Work Definition:
+
+- [Work Request Challenges and Needs Specification](work_request_challenges_and_needs_specification.md) - optional early problem-framing support when the request is still solution-shaped or unclear
+- [Current State Analysis Report Specification](current_state_analysis_report_specification.md) - situational current-state evidence artifact when a brief snapshot is not enough
+- [Business Process Stage Analysis Specification](business_process_stage_analysis_specification.md) - situational process-flow support artifact when stage-by-stage flow, handoffs, or control points materially shape the assessment
+
 The normal handoff is:
 
 `Work Assessment Report -> Initiative Definition Document`
@@ -48,6 +60,7 @@ What this process is for:
 - making sponsorship, risk, and timing concerns visible before commitment
 - giving definition a clean, practical starting point
 - capturing a small definition-ready baseline so definition does not need to rediscover basic need, current-state, stakeholder, and requirement context
+- making deeper problem, current-state, and business-process understanding reusable when supporting artifacts are needed
 
 What this process is not for:
 
@@ -114,9 +127,9 @@ If these are missing, you can still create a working draft, but label it clearly
 
 | Step | Minimum inputs | Required outputs | Completion check | Accountable owner |
 | --- | --- | --- | --- | --- |
-| 1. Initial Review | request summary, source, problem signal, basic stakeholder context | Initial Review, initial decision record | the need is understandable, obvious dealbreakers are checked, and the recommendation is explicit | IT Assessment Owner |
-| 2. Validation Assessment | approved Initial Review, requester SME input, basic current-state facts | Validation Assessment, recommendation on whether to do focused analysis | the need is validated, sponsorship is tested, outcomes and scope boundaries are clearer, and the case for focused analysis is explicit | IT Assessment Owner with requester SMEs and sponsor candidate |
-| 3. Work Assessment Report | completed focused analysis, validated scope and outcome context, stakeholder position, risk and feasibility view, preferred path | Work Assessment Report, final work assessment decision record, handoff notes, recommended next definition artifact (Initiative Definition Document or Work Brief) | decision-makers can see whether Work Definition is justified, under what conditions, and what must be clarified next | Analysis lead with sponsor and ITS leadership |
+| 1. Initial Review | request summary, source, problem signal, basic stakeholder context, optional problem-framing notes where needed | Initial Review, initial decision record, optional Work Request Challenges and Needs artifact | the need is understandable, obvious dealbreakers are checked, and the recommendation is explicit | IT Assessment Owner |
+| 2. Validation Assessment | approved Initial Review, requester SME input, basic current-state facts, optional Work Request Challenges and Needs artifact | Validation Assessment, recommendation on whether to do focused analysis, situational Current State Analysis Report and Business Process Stage Analysis where needed | the need is validated, sponsorship is tested, outcomes and scope boundaries are clearer, and the case for focused analysis is explicit | IT Assessment Owner with requester SMEs and sponsor candidate |
+| 3. Work Assessment Report | completed focused analysis, validated scope and outcome context, stakeholder position, risk and feasibility view, preferred path, any supporting assessment artifacts used | Work Assessment Report, final work assessment decision record, handoff notes, recommended next definition artifact (Initiative Definition Document or Work Brief) | decision-makers can see whether Work Definition is justified, under what conditions, and what must be clarified next | Analysis lead with sponsor and ITS leadership |
 
 ## 6. Guided Workflow
 
@@ -136,6 +149,10 @@ Do this:
 3. Note who is affected, why it matters, and what happens if nothing changes.
 4. Check for obvious dealbreakers such as no mandate, no value, clear misalignment, or impossible constraints.
 5. Record one of three recommendations: stop, defer, or proceed to Validation Assessment.
+
+Use this supporting artifact only when the request needs clearer problem framing before triage is trustworthy:
+
+- [Work Request Challenges and Needs Specification](work_request_challenges_and_needs_specification.md)
 
 Produce:
 
@@ -165,6 +182,12 @@ Do this:
 4. Surface major risk and feasibility signals across sponsorship, strategy, security, operations, delivery capability, and funding.
 5. Decide whether focused analysis is justified and record what that analysis must answer if the work proceeds.
 
+Use these supporting artifacts only where they materially improve the assessment:
+
+- [Work Request Challenges and Needs Specification](work_request_challenges_and_needs_specification.md) when the business problem basis still needs sharpening
+- [Current State Analysis Report Specification](current_state_analysis_report_specification.md) when a brief current-state snapshot is not enough
+- [Business Process Stage Analysis Specification](business_process_stage_analysis_specification.md) when process stages, handoffs, actors, or control points materially shape the work
+
 Produce:
 
 - Validation Assessment
@@ -193,6 +216,12 @@ Do this:
 4. Describe the recommended definition starting boundary without trying to define the full initiative yet.
 5. Record what the next definition step must confirm, define, or resolve if work proceeds.
 6. Record the final work assessment decision and handoff basis.
+
+Carry forward any material findings from supporting artifacts so definition does not need to rediscover:
+
+- the core problem basis from the Work Request Challenges and Needs artifact where used
+- the accepted current-state facts from the Current State Analysis Report where used
+- the process-stage, handoff, and control findings from the Business Process Stage Analysis where used
 
 Produce:
 
@@ -236,6 +265,7 @@ If the final assessment decision is to proceed, Work Definition should start fro
 At minimum, the handoff should carry forward:
 
 - validated statement of need
+- underlying business challenges and unmet needs that materially shaped the assessment
 - desired outcomes
 - success measures
 - sponsor and owner candidates
@@ -252,7 +282,9 @@ Work Assessment should not try to complete the full definition artifact. It shou
 For work that proceeds, the handoff package should be explicit enough that definition can immediately carry forward:
 
 - the approved problem statement and intended outcome
+- the accepted problem-framing view of who is affected, what the issue is, and why it matters now where a Work Request Challenges and Needs artifact was used
 - a concise current-state summary covering the systems, workflows, constraints, or prior attempts that materially shape definition
+- any accepted Current State Analysis Report findings or Business Process Stage Analysis findings that materially shape the work
 - the success measures to preserve
 - the key stakeholder groups and their material needs or requirements
 - the high-level requirements or capabilities any viable solution must address
