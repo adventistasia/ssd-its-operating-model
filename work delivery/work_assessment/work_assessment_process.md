@@ -21,6 +21,10 @@
 - [Current State Analysis Report Specification](current_state_analysis_report_specification.md)
 - [Business Process Stage Analysis Specification](business_process_stage_analysis_specification.md)
 
+### Reference Guides
+
+- [Types of Diagrams Guide](types_of_diagrams_guide.md)
+
 ### Practitioner Forms
 
 - [Initial Review Form](initial_review_form.md)

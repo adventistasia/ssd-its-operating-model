@@ -36,6 +36,10 @@ Use these supporting assessment specifications only where the work needs clearer
 - [Current State Analysis Report Specification](work_assessment/current_state_analysis_report_specification.md)
 - [Business Process Stage Analysis Specification](work_assessment/business_process_stage_analysis_specification.md)
 
+Use this reference guide when a supporting assessment artifact needs a diagram:
+
+- [Types of Diagrams Guide](work_assessment/types_of_diagrams_guide.md)
+
 ### 3.2. Stage 2 to Stage 3 - Definition and Authorization
 
 Use these when defining governed work and getting approval:
@@ -66,6 +70,7 @@ Folder: [work_assessment](work_assessment)
 - [Validation Assessment Form](work_assessment/validation_assessment_form.md)
 - [Current State Analysis Report Specification](work_assessment/current_state_analysis_report_specification.md)
 - [Business Process Stage Analysis Specification](work_assessment/business_process_stage_analysis_specification.md)
+- [Types of Diagrams Guide](work_assessment/types_of_diagrams_guide.md)
 - [Work Assessment Report Specification](work_assessment/work_assessment_report_specification.md)
 - [Work Assessment Report Form](work_assessment/work_assessment_report_form.md)
 

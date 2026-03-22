@@ -108,6 +108,8 @@ Must include:
 - the key findings from the focused analysis
 - the important assumptions, evidence points, or conclusions that shape the recommendation
 
+Where supporting assessment artifacts were used, make clear which material findings come from the [Work Request Challenges and Needs](work_request_challenges_and_needs_specification.md), the [Current State Analysis Report](current_state_analysis_report_specification.md), or the [Business Process Stage Analysis](business_process_stage_analysis_specification.md).
+
 ### 6.7. High-level requirements, capabilities, and work profile summary
 
 Must include:

@@ -46,6 +46,8 @@ At minimum, the analysis should make visible:
 - what inputs, data, and outputs matter
 - what decisions, controls, handoffs, dependencies, or exceptions shape flow
 
+If a diagram is used, choose the lightest one that answers the assessment question clearly and pair it with short text or a companion table. Use the [Types of Diagrams Guide](types_of_diagrams_guide.md) when deciding which diagram style fits.
+
 The governing principle is:
 
 > Show how the work flows today in enough detail to support assessment and later definition, but stop before redesigning the process or prescribing the future solution.
