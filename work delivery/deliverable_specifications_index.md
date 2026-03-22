@@ -27,8 +27,11 @@ Use these in order when screening whether work should proceed:
 
 1. [Work Assessment Process](work_assessment/work_assessment_process.md)
 2. [Initial Review Specification](work_assessment/initial_review_specification.md)
-3. [Validation Assessment Specification](work_assessment/validation_assessment_specification.md)
-4. [Work Assessment Report Specification](work_assessment/work_assessment_report_specification.md)
+3. [Challenges and Needs Specification](work_assessment/challenges_and_needs_specification.md)
+4. [Validation Assessment Specification](work_assessment/validation_assessment_specification.md)
+5. [Current State Analysis Report Specification](work_assessment/current_state_analysis_report_specification.md) where current-state evidence needs to be more explicit
+6. [Business Process Stage Analysis Specification](work_assessment/business_process_stage_analysis_specification.md) where workflow stages, handoffs, or controls materially shape the work
+7. [Work Assessment Report Specification](work_assessment/work_assessment_report_specification.md)
 
 ### 3.2. Stage 2 to Stage 3 - Definition and Authorization
 
@@ -55,8 +58,11 @@ Folder: [work_assessment](work_assessment)
 - [Work Assessment Process](work_assessment/work_assessment_process.md)
 - [Initial Review Specification](work_assessment/initial_review_specification.md)
 - [Initial Review Form](work_assessment/initial_review_form.md)
+- [Challenges and Needs Specification](work_assessment/challenges_and_needs_specification.md)
 - [Validation Assessment Specification](work_assessment/validation_assessment_specification.md)
 - [Validation Assessment Form](work_assessment/validation_assessment_form.md)
+- [Current State Analysis Report Specification](work_assessment/current_state_analysis_report_specification.md)
+- [Business Process Stage Analysis Specification](work_assessment/business_process_stage_analysis_specification.md)
 - [Work Assessment Report Specification](work_assessment/work_assessment_report_specification.md)
 - [Work Assessment Report Form](work_assessment/work_assessment_report_form.md)
 

@@ -139,6 +139,8 @@ Keep the following out of this artifact:
 
 ## 8. Relationships to Other Artifacts
 
+The [Challenges and Needs](challenges_and_needs_specification.md) may be used before or alongside this artifact where the request needs clearer problem framing.
+
 If the item proceeds, this artifact feeds the [Validation Assessment](validation_assessment_specification.md).
 
 ## 9. Ownership, Review, and Acceptance Expectations

@@ -12,8 +12,15 @@
 ### Work Assessment Specifications
 
 - [Initial Review Specification](initial_review_specification.md)
+- [Challenges and Needs Specification](challenges_and_needs_specification.md)
 - [Validation Assessment Specification](validation_assessment_specification.md)
+- [Current State Analysis Report Specification](current_state_analysis_report_specification.md)
+- [Business Process Stage Analysis Specification](business_process_stage_analysis_specification.md)
 - [Work Assessment Report Specification](work_assessment_report_specification.md)
+
+### Reference Guides
+
+- [Types of Diagrams Guide](types_of_diagrams_guide.md)
 
 ### Practitioner Forms
 
@@ -27,11 +34,15 @@ Use this guide when a request, problem, risk, or opportunity needs to be screene
 
 This process gives practitioners a practical way to stop weak work early, deepen scrutiny only where justified, and pass forward only the work that is worth defining.
 
-Follow this order:
+Follow this core flow, using the supporting artifacts inside the relevant step:
 
 1. Complete the [Initial Review](initial_review_specification.md) as a quick IT-side sanity check on whether the request is worth more time and broadly aligns with what the organization does.
-2. Complete the [Validation Assessment](validation_assessment_specification.md) with the requester's subject matter experts and immediate team to decide whether focused analysis is justified and what minimum questions it must answer.
-3. Complete the [Work Assessment Report](work_assessment_report_specification.md) as the culmination of that right-sized analysis to decide whether the initiative should enter Work Definition.
+2. Optionally prepare the [Challenges and Needs](challenges_and_needs_specification.md) artifact to sharpen the problem basis before deeper validation starts, where doing so would help.
+3. Complete the [Validation Assessment](validation_assessment_specification.md) with the requester's subject matter experts and immediate team to decide whether focused analysis is justified and what minimum questions it must answer.
+4. Use the [Current State Analysis Report](current_state_analysis_report_specification.md) and the [Business Process Stage Analysis](business_process_stage_analysis_specification.md) only where the current state, workflow stages, handoffs, controls, or operational realities need to be captured more explicitly.
+5. Complete the [Work Assessment Report](work_assessment_report_specification.md) as the culmination of that right-sized analysis to decide whether the initiative should enter Work Definition.
+
+Use the supporting artifacts only where they make the assessment clearer and more reusable without turning Work Assessment into Work Definition. This includes the [Challenges and Needs](challenges_and_needs_specification.md) artifact, which is optional but useful for work where early capture of challenges and unmet needs would sharpen the problem basis for Validation Assessment.
 
 The normal handoff is:
 
@@ -47,7 +58,8 @@ What this process is for:
 - identifying whether deeper definition effort is justified
 - making sponsorship, risk, and timing concerns visible before commitment
 - giving definition a clean, practical starting point
-- capturing a small definition-ready baseline so definition does not need to rediscover basic need, current-state, stakeholder, and requirement context
+- establishing a reliable assessment reference base so definition does not need to rediscover basic need, current-state, stakeholder, and requirement context
+- making business challenges, unmet needs, and current-state realities explicit enough that later definition can reuse them rather than restating them from scratch
 
 What this process is not for:
 
@@ -81,6 +93,12 @@ The normal progression is:
 
 `Initial Review -> Validation Assessment -> Work Assessment Report -> Initiative Definition Document`
 
+Supporting assessment artifacts can be used around that core flow without replacing it:
+
+- [Challenges and Needs](challenges_and_needs_specification.md) is an optional supporting artifact that can be used when work enters Validation Assessment.
+- [Current State Analysis Report](current_state_analysis_report_specification.md) is situational and is used when current-state evidence needs to be more explicit than the gate artifacts can hold cleanly.
+- [Business Process Stage Analysis](business_process_stage_analysis_specification.md) is situational and is used when stage-by-stage process flow, handoffs, actors, data, or control points materially shape the assessment.
+
 This process decides whether the work is worth defining. Work Definition then defines what should actually be authorized.
 
 Proceeding from Work Assessment is not delivery authorization.
@@ -95,7 +113,7 @@ Proceeding from Work Assessment is not delivery authorization.
 | Outcome Owner Candidate | Clarify what meaningful improvement is being sought |
 | ITS Leadership / Intake Governance | Decide whether to stop, defer, or let the work advance |
 | Requester SMEs and Immediate Team | Contribute business context, boundaries, outcomes, and practical constraints during Validation |
-| Analysis Lead / Business Analysis Lead | Produce the right-sized analysis that culminates in the Work Assessment Report |
+| Analysis Lead / Business Analysis Lead | Produce the right-sized analysis and any situational current-state or process-stage artifacts that culminate in the Work Assessment Report |
 | Subject Matter Leads | Contribute targeted evidence where risk, support, security, data, operations, or compliance matter |
 
 ## 4. Before You Start
@@ -114,9 +132,9 @@ If these are missing, you can still create a working draft, but label it clearly
 
 | Step | Minimum inputs | Required outputs | Completion check | Accountable owner |
 | --- | --- | --- | --- | --- |
-| 1. Initial Review | request summary, source, problem signal, basic stakeholder context | Initial Review, initial decision record | the need is understandable, obvious dealbreakers are checked, and the recommendation is explicit | IT Assessment Owner |
-| 2. Validation Assessment | approved Initial Review, requester SME input, basic current-state facts | Validation Assessment, recommendation on whether to do focused analysis | the need is validated, sponsorship is tested, outcomes and scope boundaries are clearer, and the case for focused analysis is explicit | IT Assessment Owner with requester SMEs and sponsor candidate |
-| 3. Work Assessment Report | completed focused analysis, validated scope and outcome context, stakeholder position, risk and feasibility view, preferred path | Work Assessment Report, final work assessment decision record, handoff notes, recommended next definition artifact (Initiative Definition Document or Work Brief) | decision-makers can see whether Work Definition is justified, under what conditions, and what must be clarified next | Analysis lead with sponsor and ITS leadership |
+| 1. Initial Review | request summary, source, problem signal, basic stakeholder context, optional problem-framing notes where needed | Initial Review, initial decision record, optional early-draft Challenges and Needs notes (for Step 2) | the need is understandable, obvious dealbreakers are checked, and the recommendation is explicit | IT Assessment Owner |
+| 2. Validation Assessment | approved Initial Review, requester SME input, and basic current-state facts | Validation Assessment, optional Challenges and Needs, recommendation on whether to do focused analysis | the need is validated, the problem basis is clearer, sponsorship is tested, outcomes and scope boundaries are clearer, and the case for focused analysis is explicit | IT Assessment Owner with requester SMEs and sponsor candidate |
+| 3. Work Assessment Report | approved Validation Assessment, completed focused analysis, validated scope and outcome context, stakeholder position, risk and feasibility view, preferred path, and any situational supporting analysis | Work Assessment Report, final work assessment decision record, reference notes to the supporting assessment artifacts, recommended next definition artifact (Initiative Definition Document or Work Brief) | decision-makers can see whether Work Definition is justified, under what conditions, what current-state facts shape it, and what must be clarified next | Analysis lead with sponsor and ITS leadership |
 
 ## 6. Guided Workflow
 
@@ -141,6 +159,7 @@ Produce:
 
 - Initial Review
 - decision record
+- Challenges and Needs (optional, when early problem framing is useful for Step 2)
 
 Do not:
 
@@ -156,25 +175,35 @@ Validate that the opportunity is strong enough to justify focused analysis and n
 Use this spec:
 
 - [Validation Assessment Specification](validation_assessment_specification.md)
+- [Challenges and Needs Specification](challenges_and_needs_specification.md) (optional)
 
 Do this:
 
-1. Refine the problem statement using input from the requester's subject matter experts and immediate team.
-2. Confirm organizational alignment, primary beneficiary, desired outcomes, success measures, current-state constraints, key stakeholder needs, and scope boundaries.
-3. Describe high-level requirements or capabilities and compare credible conceptual options, including doing nothing.
-4. Surface major risk and feasibility signals across sponsorship, strategy, security, operations, delivery capability, and funding.
-5. Decide whether focused analysis is justified and record what that analysis must answer if the work proceeds.
+1. Where using the Challenges and Needs artifact: capture the work request challenges, unmet needs, affected parties, impacts, and consequence of inaction in a short structured way before the deeper validation narrative is finalized.
+2. Refine the problem statement using input from the requester's subject matter experts and immediate team.
+3. Confirm organizational alignment, primary beneficiary, desired outcomes, success measures, current-state constraints, key stakeholder needs, and scope boundaries.
+4. Describe high-level requirements or capabilities and compare credible conceptual options, including doing nothing.
+5. Surface major risk and feasibility signals across sponsorship, strategy, security, operations, delivery capability, and funding.
+6. Decide whether focused analysis is justified and record what that analysis must answer if the work proceeds.
 
 Produce:
 
+- Challenges and Needs (optional)
 - Validation Assessment
 - recommendation to stop, defer, or proceed to focused analysis
 
 Do not:
 
 - turn capabilities into detailed requirements
+- turn challenge statements into solution proposals
 - write vendor comparisons
 - begin delivery planning
+
+Supporting artifact status in this step:
+
+- [Challenges and Needs](challenges_and_needs_specification.md): optional
+- [Current State Analysis Report](current_state_analysis_report_specification.md): situational, start here if the current state is too complex or disputed for a short Validation Assessment summary
+- [Business Process Stage Analysis](business_process_stage_analysis_specification.md): situational, use where stage-by-stage business flow, handoffs, actors, inputs, or controls materially shape the work request
 
 ### 6.3. Step 3 - Work Assessment Report
 
@@ -183,28 +212,32 @@ Produce the final work assessment and recommendation on whether the work should 
 
 Use this spec:
 
+- [Current State Analysis Report Specification](current_state_analysis_report_specification.md) where needed
+- [Business Process Stage Analysis Specification](business_process_stage_analysis_specification.md) where needed
 - [Work Assessment Report Specification](work_assessment_report_specification.md)
 
 Do this:
 
-1. Synthesize the analysis findings, validated need, current state, stakeholder needs, high-level requirements, options, risks, timing, and likely value.
-2. State the preferred direction clearly, including why that path is better than the alternatives.
-3. Show that there is enough information to make an informed decision to define the initiative and move it toward authorization.
-4. Describe the recommended definition starting boundary without trying to define the full initiative yet.
-5. Record what the next definition step must confirm, define, or resolve if work proceeds.
-6. Record the final work assessment decision and handoff basis.
+1. Complete any situational current-state or process-stage analysis needed to make the recommendation credible and reusable.
+2. Synthesize the analysis findings, validated need, current state, stakeholder needs, high-level requirements, options, risks, timing, and likely value.
+3. State the preferred direction clearly, including why that path is better than the alternatives.
+4. Show that there is enough information to make an informed decision to define the initiative and move it toward authorization.
+5. Describe the recommended definition starting boundary without trying to define the full initiative yet.
+6. Record what the next definition step must confirm, define, or resolve if work proceeds.
+7. Record the final work assessment decision and handoff basis.
 
 Produce:
 
 - Work Assessment Report
 - final work assessment decision record
-- definition handoff notes
+- clear references to any supporting assessment artifacts used
 
 Do not:
 
 - treat the report as an Initiative Definition Document
 - treat a recommendation to proceed as delivery approval
 - bury unresolved issues in narrative text
+- create supporting analysis that is more detailed than the assessment decision and handoff need justify
 
 ## 7. Practical Timebox Guidance
 
@@ -231,11 +264,12 @@ This is optional support material. It is not one of the three core gating artifa
 
 ## 9. Handoff to Work Definition
 
-If the final assessment decision is to proceed, Work Definition should start from the Work Assessment Report and not re-discover the same basics.
+If the final assessment decision is to proceed, Work Definition should start from the Work Assessment Report and the referenced assessment artifacts, and should not re-discover the same basics.
 
-At minimum, the handoff should carry forward:
+At minimum, definition should be able to reference:
 
 - validated statement of need
+- confirmed business challenges and unmet needs that still shape the work
 - desired outcomes
 - success measures
 - sponsor and owner candidates
@@ -247,11 +281,12 @@ At minimum, the handoff should carry forward:
 - any ownership or authority gaps that definition must close early
 - the specific issues definition must clarify before authorization
 
-Work Assessment should not try to complete the full definition artifact. It should, however, hand over a small definition-ready baseline so definition starts from accepted assessment conclusions rather than rediscovering them.
+Work Assessment should not try to complete the full definition artifact. It should, however, leave behind a usable assessment reference base and a small definition-ready baseline so definition starts from accepted assessment conclusions rather than rediscovering them.
 
-For work that proceeds, the handoff package should be explicit enough that definition can immediately carry forward:
+For work that proceeds, the assessment set should be explicit enough that definition can immediately reference:
 
 - the approved problem statement and intended outcome
+- the practical challenge and unmet-need basis already established during assessment
 - a concise current-state summary covering the systems, workflows, constraints, or prior attempts that materially shape definition
 - the success measures to preserve
 - the key stakeholder groups and their material needs or requirements
@@ -263,30 +298,31 @@ For work that proceeds, the handoff package should be explicit enough that defin
 - the assumptions definition must either preserve, validate, or resolve explicitly
 - operational, support, security, privacy, compliance, funding, or dependency concerns that materially shape definition work
 
-### 9.1. Standard definition-ready baseline
+### 9.1. Standard assessment reference set
 
-Use the following core outputs when a work item is being handed from Work Assessment into Initiative Definition or a Work Brief.
+Use the following core assessment outputs when a work item moves from Work Assessment into Initiative Definition or a Work Brief.
 
-| Core work assessment handoff output | Minimum content | Primary use in definition |
+| Core work assessment reference output | Minimum content | Primary use in definition |
 | --- | --- | --- |
 | Problem / Opportunity Statement | validated need, why it matters now, consequence of inaction | becomes the basis for the Initiative Definition business need and executive summary |
+| Challenges and Needs Summary | affected parties, visible pain points, underlying unmet needs, and why action matters now | helps definition preserve the problem basis and avoid slipping back into solution-first framing |
 | Current State Summary | relevant systems, workflows, pain points, constraints, dependencies, or prior attempts | gives definition the current-state context needed for scope, risk, and support discussions |
 | Stakeholders | sponsor and owner signals, affected stakeholder groups, and their material needs | helps definition confirm ownership, acceptance involvement, and change impact early |
 | High-Level Requirements | what any viable answer must achieve, without design detail | gives definition a concise baseline before detailed elaboration starts |
 | Risks / Constraints | material delivery, security, support, funding, compliance, or timing concerns | informs the Initiative Definition risk, dependency, and major-impact view |
 | Assumptions | working assumptions that shape the recommendation and still need confirmation | shows definition what must be validated rather than silently carried forward |
 
-Keep these outputs concise. They are not six separate large documents. In normal use they should be captured inside the Work Assessment Report as the definition-ready baseline.
+Keep these outputs concise. They are not seven separate large documents. In normal use they should be captured in the existing assessment artifacts, with the Work Assessment Report pointing to them where extra clarity is materially useful.
 
 ### 9.2. Deliverable selection guide
 
 Scale the handoff depth to the work, not to a fixed template burden.
 
-| Work profile | Typical signals | Handoff expectation | Normal next definition path |
+| Work profile | Typical signals | Reference expectation | Normal next definition path |
 | --- | --- | --- | --- |
-| Small / low risk | one team or a narrow change, limited integration, low support or compliance impact, ownership is straightforward | capture the six core outputs briefly inside the Work Assessment Report and keep the recommendation concise | usually a Work Brief |
-| Medium | cross-team coordination, moderate dependency or service impact, some unresolved ownership or acceptance detail | use the standard six-output set in full, with a clear preferred path and explicit open questions for definition | Initiative Definition Document or Work Brief if the work still behaves like one clear governed item |
-| Large / complex | multiple teams, significant data, security, operational, funding, or regulatory impact, or materially uncertain ownership or scope | use the standard six-output set plus expanded analysis only where it changes the decision, definition boundary, or required deliverable domains | Initiative Definition Document |
+| Small / low risk | one team or a narrow change, limited integration, low support or compliance impact, ownership is straightforward | keep the seven core outputs brief and easy to reference from the existing assessment artifacts | usually a Work Brief |
+| Medium | cross-team coordination, moderate dependency or service impact, some unresolved ownership or acceptance detail | make the standard seven-output set explicit across the assessment artifacts, with a clear preferred path and explicit open questions for definition | Initiative Definition Document or Work Brief if the work still behaves like one clear governed item |
+| Large / complex | multiple teams, significant data, security, operational, funding, or regulatory impact, or materially uncertain ownership or scope | deepen only the parts of the standard seven-output set that materially change the decision, definition boundary, or required deliverable domains | Initiative Definition Document |
 
 If additional analysis does not change the recommendation, the definition boundary, the ownership model, or the likely deliverable domains, do not add it just for completeness.
 

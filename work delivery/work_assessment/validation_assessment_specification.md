@@ -60,6 +60,8 @@ Must include:
 - a concise validated summary of the problem, risk, or opportunity
 - why the matter is important now
 
+This section should be informed by the [Challenges and Needs](challenges_and_needs_specification.md) artifact so the validated need remains traceable to the original challenge, visible impacts, and underlying unmet need.
+
 ### 6.3. Business alignment, outcome, and success measures
 
 Must include:
@@ -75,6 +77,8 @@ Where no sponsor is willing to own and advocate for the initiative, treat this a
 Must include:
 
 - the relevant current systems, workflows, constraints, dependencies, or prior attempts that shape the opportunity
+
+Where current-state understanding cannot be captured reliably in a short summary, reference a supporting [Current State Analysis Report](current_state_analysis_report_specification.md) and, where relevant, a [Business Process Stage Analysis](business_process_stage_analysis_specification.md).
 
 ### 6.5. Scope boundaries
 
@@ -178,6 +182,13 @@ Keep the following out of this artifact:
 ## 8. Relationships to Other Artifacts
 
 This artifact builds on the [Initial Review](initial_review_specification.md).
+
+It should normally be informed by the [Challenges and Needs](challenges_and_needs_specification.md) artifact.
+
+It may also use supporting assessment inputs such as:
+
+- [Current State Analysis Report](current_state_analysis_report_specification.md)
+- [Business Process Stage Analysis](business_process_stage_analysis_specification.md) where stage-by-stage process flow materially shapes the assessment
 
 If the item proceeds, it justifies focused analysis and provides input to the later [Work Assessment Report](work_assessment_report_specification.md).
 
