@@ -12,7 +12,7 @@
 ### Work Assessment Specifications
 
 - [Initial Review Specification](initial_review_specification.md)
-- [Work Request Challenges and Needs Specification](work_request_challenges_and_needs_specification.md)
+- [Challenges and Needs Specification](challenges_and_needs_specification.md)
 - [Validation Assessment Specification](validation_assessment_specification.md)
 - [Current State Analysis Report Specification](current_state_analysis_report_specification.md)
 - [Business Process Stage Analysis Specification](business_process_stage_analysis_specification.md)
@@ -37,10 +37,12 @@ This process gives practitioners a practical way to stop weak work early, deepen
 Follow this core flow, using the supporting artifacts inside the relevant step:
 
 1. Complete the [Initial Review](initial_review_specification.md) as a quick IT-side sanity check on whether the request is worth more time and broadly aligns with what the organization does.
-2. Prepare the [Work Request Challenges and Needs](work_request_challenges_and_needs_specification.md) artifact to sharpen the problem basis before deeper validation starts.
+2. Prepare the [Challenges and Needs](challenges_and_needs_specification.md) artifact to sharpen the problem basis before deeper validation starts.
 3. Complete the [Validation Assessment](validation_assessment_specification.md) with the requester's subject matter experts and immediate team to decide whether focused analysis is justified and what minimum questions it must answer.
 4. Use the [Current State Analysis Report](current_state_analysis_report_specification.md) and the [Business Process Stage Analysis](business_process_stage_analysis_specification.md) only where the current state, workflow stages, handoffs, controls, or operational realities need to be captured more explicitly.
 5. Complete the [Work Assessment Report](work_assessment_report_specification.md) as the culmination of that right-sized analysis to decide whether the initiative should enter Work Definition.
+
+Use the supporting artifacts only where they make the assessment clearer and more reusable without turning Work Assessment into Work Definition. The exception is the [Challenges and Needs Specification](challenges_and_needs_specification.md), which this branch treats as a normal supporting artifact for work that reaches Validation Assessment.
 
 The normal handoff is:
 
@@ -93,7 +95,7 @@ The normal progression is:
 
 Supporting assessment artifacts can be used around that core flow without replacing it:
 
-- [Work Request Challenges and Needs](work_request_challenges_and_needs_specification.md) is a required supporting artifact when work enters Validation Assessment.
+- [Challenges and Needs](challenges_and_needs_specification.md) is a required supporting artifact when work enters Validation Assessment.
 - [Current State Analysis Report](current_state_analysis_report_specification.md) is situational and is used when current-state evidence needs to be more explicit than the gate artifacts can hold cleanly.
 - [Business Process Stage Analysis](business_process_stage_analysis_specification.md) is situational and is used when stage-by-stage process flow, handoffs, actors, data, or control points materially shape the assessment.
 
@@ -130,8 +132,8 @@ If these are missing, you can still create a working draft, but label it clearly
 
 | Step | Minimum inputs | Required outputs | Completion check | Accountable owner |
 | --- | --- | --- | --- | --- |
-| 1. Initial Review | request summary, source, problem signal, basic stakeholder context | Initial Review, initial decision record | the need is understandable, obvious dealbreakers are checked, and the recommendation is explicit | IT Assessment Owner |
-| 2. Validation Assessment | approved Initial Review, requester SME input, and basic current-state facts | Validation Assessment, Work Request Challenges and Needs, recommendation on whether to do focused analysis | the need is validated, the problem basis is clearer, sponsorship is tested, outcomes and scope boundaries are clearer, and the case for focused analysis is explicit | IT Assessment Owner with requester SMEs and sponsor candidate |
+| 1. Initial Review | request summary, source, problem signal, basic stakeholder context, optional problem-framing notes where needed | Initial Review, initial decision record, optional Challenges and Needs artifact | the need is understandable, obvious dealbreakers are checked, and the recommendation is explicit | IT Assessment Owner |
+| 2. Validation Assessment | approved Initial Review, requester SME input, and basic current-state facts | Validation Assessment, Challenges and Needs, recommendation on whether to do focused analysis | the need is validated, the problem basis is clearer, sponsorship is tested, outcomes and scope boundaries are clearer, and the case for focused analysis is explicit | IT Assessment Owner with requester SMEs and sponsor candidate |
 | 3. Work Assessment Report | approved Validation Assessment, completed focused analysis, validated scope and outcome context, stakeholder position, risk and feasibility view, preferred path, and any situational supporting analysis | Work Assessment Report, final work assessment decision record, reference notes to the supporting assessment artifacts, recommended next definition artifact (Initiative Definition Document or Work Brief) | decision-makers can see whether Work Definition is justified, under what conditions, what current-state facts shape it, and what must be clarified next | Analysis lead with sponsor and ITS leadership |
 
 ## 6. Guided Workflow
@@ -171,7 +173,7 @@ Validate that the opportunity is strong enough to justify focused analysis and n
 
 Use this spec:
 
-- [Work Request Challenges and Needs Specification](work_request_challenges_and_needs_specification.md)
+- [Challenges and Needs Specification](challenges_and_needs_specification.md)
 - [Validation Assessment Specification](validation_assessment_specification.md)
 
 Do this:
@@ -185,7 +187,7 @@ Do this:
 
 Produce:
 
-- Work Request Challenges and Needs
+- Challenges and Needs
 - Validation Assessment
 - recommendation to stop, defer, or proceed to focused analysis
 
@@ -198,7 +200,7 @@ Do not:
 
 Supporting artifact status in this step:
 
-- [Work Request Challenges and Needs](work_request_challenges_and_needs_specification.md): required
+- [Challenges and Needs](challenges_and_needs_specification.md): required
 - [Current State Analysis Report](current_state_analysis_report_specification.md): situational, start here if the current state is too complex or disputed for a short Validation Assessment summary
 - [Business Process Stage Analysis](business_process_stage_analysis_specification.md): situational, use where stage-by-stage business flow, handoffs, actors, inputs, or controls materially shape the work request
 
@@ -278,7 +280,7 @@ At minimum, definition should be able to reference:
 - any ownership or authority gaps that definition must close early
 - the specific issues definition must clarify before authorization
 
-Work Assessment should not try to complete the full definition artifact. It should, however, leave behind a usable assessment reference base so definition starts from accepted assessment conclusions rather than rediscovering them.
+Work Assessment should not try to complete the full definition artifact. It should, however, leave behind a usable assessment reference base and a small definition-ready baseline so definition starts from accepted assessment conclusions rather than rediscovering them.
 
 For work that proceeds, the assessment set should be explicit enough that definition can immediately reference:
 

@@ -4,7 +4,7 @@
 
 The Business Process Stage Analysis makes the current business process visible stage by stage so later assessment and definition do not have to guess how the work actually flows today.
 
-It exists to show the real flow of work, who does what, what inputs and records are used, where decisions or controls happen, and what outcomes or handoffs each stage produces. A useful Business Process Stage Analysis helps the team understand the present business process without drifting into process redesign, solution design, or implementation planning.
+It exists to show the real flow of work, who does what, what inputs and records are used, where decisions or controls happen, and what outcomes or handoffs each stage produces. A useful Business Process Stage Analysis helps the team understand the present business process without drifting into process redesign, solution design, or implementation planning. It should also make cross-stage handoffs, dependencies, and exception paths visible enough that later assessment does not have to rediscover them.
 
 The intended outcome is that Work Assessment can reference a clear stage-by-stage view of the current business process where that understanding materially affects the recommendation, scope boundary, supportability view, or later definition work.
 
@@ -51,6 +51,8 @@ This is an assessment artifact. It should describe the current process as it ope
 Include enough detail to let a reader understand how the process moves from one stage to the next and where the important actors, inputs, records, decisions, outputs, and handoffs sit.
 
 Do not try to document every edge case, every task instruction, or every exception path. Focus on the stages that materially shape the work request, the visible pain points, and the facts that later assessment or definition should not need to rediscover.
+
+Keep the stage fields explicit. Do not collapse purpose, actors, inputs, activities, outputs, and handoffs into vague narrative if that would hide how the process actually operates.
 
 If a diagram is used, choose the lightest diagram type that answers the assessment question clearly and pair it with short text or a companion table so the meaning stays explicit. Use the [Types of Diagrams Guide](types_of_diagrams_guide.md) when choosing between diagram styles.
 
@@ -113,7 +115,17 @@ Must include:
 
 This section should point to what is happening today. It should not propose the future solution.
 
-### 6.5. Assessment-use summary
+### 6.5. Cross-stage handoffs, dependencies, and exceptions
+
+Must include:
+
+- the handoffs most likely to create delay, misunderstanding, duplication, or loss of control
+- any cross-team, cross-system, or external dependency that materially shapes the overall flow
+- any known exception path important enough to affect the assessment recommendation or later definition
+
+This section may summarize the most important cross-stage points already visible in the stage entries, but it should bring them together so they are easy to assess as a whole.
+
+### 6.6. Assessment-use summary
 
 Must include:
 
@@ -154,7 +166,13 @@ Example only. Adapt to the real work request.
 - the same documents are checked again during final confirmation because earlier checks are not always visible
 - status is tracked in email and spreadsheets rather than one clear record
 
-**6.5. Assessment-use summary**
+**6.5. Cross-stage handoffs, dependencies, and exceptions**
+
+- the handoff from intake to local review is the main waiting point
+- the process depends on local office approver availability and complete supporting documents
+- incomplete applications create a repeat loop back to intake
+
+**6.6. Assessment-use summary**
 
 - current flow depends heavily on mission administrators manually chasing approvers
 - status visibility and repeated document checking are likely material causes of delay
@@ -192,6 +210,8 @@ Where the process materially affects operations, controls, compliance, service d
 
 Formal acceptance is not normally required, but the artifact should be reliable enough to support assessment decisions and later handoff.
 
+Reviewers should check that stage fields remain explicit and that important handoffs or exceptions are not lost inside a simplified diagram or summary.
+
 ## 10. Maintenance Expectations
 
 This artifact is usually a point-in-time assessment record.
@@ -206,6 +226,7 @@ If the work is deferred and later revisited, refresh the analysis if the underly
 - Are the stages, actors, inputs, outputs, and handoffs clear enough that another practitioner can understand the flow without major guessing?
 - Are the stage entries consistent and complete enough to support later assessment work?
 - Are material decisions, controls, dependencies, or exception points visible where they matter?
+- Are the most important cross-stage handoffs, dependencies, and exceptions easy to identify without reconstructing them manually?
 - Does the artifact stop short of becoming process redesign, requirements, or delivery planning?
 - Does it identify which current-process facts should remain easy to reference in later assessment or definition?
 
@@ -215,6 +236,7 @@ If the work is deferred and later revisited, refresh the analysis if the underly
 
 > Draft a Business Process Stage Analysis for the current-state process relevant to this work request.
 > Break the process into stages and show the stage purpose, primary actor, supporting roles where relevant, required input, usual source, data used, activity description, decision or control point where relevant, output produced, and notable handoff, dependency, or exception.
+> Then summarize the cross-stage handoffs, dependencies, and exceptions that matter most to the assessment.
 > Keep it practical, evidence-based, and focused on the current process rather than future design.
 
 ### 12.2. Section prompts
@@ -223,8 +245,10 @@ If the work is deferred and later revisited, refresh the analysis if the underly
 
 > Summarize the cross-stage issues that materially affect the work request without proposing solutions.
 
+> Check whether any important dependency or exception is only implied inside a stage description and make it explicit.
+
 ### 12.3. Validation prompts
 
 > Check whether this Business Process Stage Analysis is detailed enough to support assessment and later handoff without becoming a redesign document or operating procedure.
 
-> Rewrite any stage description that assumes a future state, names a solution, or hides the real current handoff, control, or record issue.
+> Rewrite any stage description that assumes a future state, names a solution, or hides the real current handoff, dependency, control, or record issue.

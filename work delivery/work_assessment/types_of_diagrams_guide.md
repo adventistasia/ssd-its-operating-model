@@ -40,7 +40,7 @@ Less helpful when:
 
 Why it fits our context:
 
-- good for Work Request Challenges and Needs and early Validation Assessment
+- good for Challenges and Needs and early Validation Assessment
 - keeps assessment light while making the process boundary explicit
 
 References:

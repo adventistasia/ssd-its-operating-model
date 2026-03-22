@@ -108,7 +108,7 @@ Must include:
 - the key findings from the focused analysis
 - the important assumptions, evidence points, or conclusions that shape the recommendation
 
-Where supporting assessment artifacts were used, this section should make clear which findings come from the [Current State Analysis Report](current_state_analysis_report_specification.md), the [Business Process Stage Analysis](business_process_stage_analysis_specification.md), or the [Work Request Challenges and Needs](work_request_challenges_and_needs_specification.md).
+Where supporting assessment artifacts were used, this section should make clear which findings come from the [Current State Analysis Report](current_state_analysis_report_specification.md), the [Business Process Stage Analysis](business_process_stage_analysis_specification.md), or the [Challenges and Needs](challenges_and_needs_specification.md).
 
 ### 6.7. High-level requirements, capabilities, and work profile summary
 
@@ -145,15 +145,17 @@ Must include:
   - preferred path to define
   - major risks, dependencies, and constraints already visible
   - assumptions that definition must validate or resolve explicitly
-- the likely deliverable domains that appear to be in scope for definition, with a short reason for each
-- which of those domains appear material enough to require authorization-level visibility in definition, and which can likely remain summary-level until later elaboration
-- likely Acceptance Authority signals for the relevant deliverable domains or deliverable groupings where visible
+- the deliverables that appear to be needed in definition, with a short reason for each
+- which of those deliverables appear material enough to require authorization-level visibility in definition, and which can likely remain summary-level until later elaboration
+- likely Acceptance Authority signals for the relevant deliverables or deliverable groupings where visible
 - named sponsor, Outcome Owner, Delivery Owner, Decision Authority, and Acceptance Authority signals where known, or an explicit statement of which of these still remain unresolved
 - any operational, support, financial, or service-ownership implications that definition must treat as established assessment inputs rather than rediscovering from scratch
 
 This section is the bridge into Initiative Definition or a Work Brief.
 
-The goal is not to finish definition inside Work Assessment. The goal is to point definition to the established assessment reference base and make the open definition decisions explicit.
+The goal is not to finish definition inside Work Assessment. The goal is to point definition to the established assessment reference base, preserve the carry-forward baseline clearly, and make the open definition decisions explicit.
+
+The deliverables named here are not limited to the current [Standard Deliverables Guide](../standard_deliverables_guide.md). If the work clearly needs another deliverable to define, govern, accept, operate, or support the initiative responsibly, name it explicitly rather than forcing the work into an incomplete standard list.
 
 ### 6.10. Work assessment recommendation
 
@@ -198,7 +200,7 @@ Keep the following out of this artifact:
 
 This artifact builds on the [Initial Review](initial_review_specification.md), the [Validation Assessment](validation_assessment_specification.md), and the focused analysis completed after validation.
 
-Where used, it should also draw on the supporting assessment artifacts created during Work Assessment, especially the [Work Request Challenges and Needs](work_request_challenges_and_needs_specification.md), the [Current State Analysis Report](current_state_analysis_report_specification.md), and the [Business Process Stage Analysis](business_process_stage_analysis_specification.md).
+Where used, it should also carry forward the material findings from the supporting assessment artifacts created during Work Assessment, especially the [Challenges and Needs](challenges_and_needs_specification.md), the [Current State Analysis Report](current_state_analysis_report_specification.md), and the [Business Process Stage Analysis](business_process_stage_analysis_specification.md).
 
 If the final decision is to proceed, it becomes a primary input to:
 
@@ -238,7 +240,7 @@ This artifact is normally stable once the assessment decision is recorded. If th
 
 > Write the preferred-path section so it explains why the recommended option is better than the alternatives at this stage, including the do-nothing option.
 
-> Draft the definition-focus section so the next team can see what assessment artifacts and findings to reference, what still must be clarified, who needs to be involved, and what questions remain open.
+> Draft the definition-focus section so the next team can see what assessment artifacts and findings to reference, what carry-forward baseline should remain stable, who needs to be involved, and what questions remain open.
 
 ### 12.3. Validation prompts
 

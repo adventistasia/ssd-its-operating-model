@@ -4,7 +4,7 @@
 
 The Current State Analysis Report gives a structured, evidence-based view of the current operating reality relevant to the work request.
 
-It exists to document what actually happens today, what systems, workflows, handoffs, records, constraints, and workarounds shape that reality, and which current-state facts matter enough to remain available as reference for later work. A useful Current State Analysis Report makes the present state visible without turning into future-state design, a transformation roadmap, or a full business architecture study.
+It exists to document what actually happens today, what systems, workflows, handoffs, records, constraints, and workarounds shape that reality, and which current-state facts matter enough to remain available as reference for later work. A useful Current State Analysis Report makes the present state visible without turning into future-state design, a transformation roadmap, or a full business architecture study. It should be explicit about what has been observed or validated, what is inferred, and where confidence is limited.
 
 The intended outcome is that Work Assessment can rely on a practical current-state baseline that is strong enough to support recommendation, boundary setting, ownership visibility, supportability thinking, and later handoff into Work Definition.
 
@@ -55,6 +55,8 @@ Include enough detail to show what is happening today, what materially shapes it
 
 Focus on the current-state facts that influence assessment decisions, scope boundaries, supportability, ownership, risk, or the likely definition path. Keep supporting detail practical and selective rather than encyclopedic.
 
+Make the evidence basis visible enough that a reviewer can understand how the current-state picture was formed and where it is still incomplete.
+
 The governing principle is:
 
 > Document the current reality clearly enough to support assessment and handoff. Do not turn the artifact into a future-state design pack or enterprise-wide diagnostic.
@@ -71,6 +73,8 @@ Must include:
 - date or version
 - stated boundary of the current-state view, including what is inside and outside this analysis
 - source basis used, such as interviews, observations, records, reports, incident history, or existing documentation
+
+This opening section should make the report boundary and evidence basis easy to find without reading the whole document.
 
 ### 6.2. Current-state overview
 
@@ -126,7 +130,7 @@ Must include:
 - the facts that materially affect scope, requirements framing, supportability, risk, ownership, or deliverable selection
 - any important uncertainty, assumption, or disputed point that still needs confirmation
 
-This section should separate observed current-state facts from later recommendations.
+This section should separate observed current-state facts from later recommendations. It should be clear which points are carry-forward facts for later definition and which questions still need validation before design or delivery decisions are made.
 
 ### 6.8. Evidence basis and confidence notes
 
@@ -135,6 +139,7 @@ Must include:
 - the main evidence sources used
 - where the current-state picture is well supported
 - where evidence is partial, outdated, anecdotal, or still needs validation
+- any material inference, assumption, or confidence limit that affects how findings should be read
 
 ### 6.9. Example content showing the minimum structure
 
@@ -227,6 +232,8 @@ Where the current state materially affects ownership, supportability, service co
 
 Formal acceptance is not normally required, but the report should be reliable enough to support the assessment recommendation and later handoff.
 
+Reviewers should challenge any section that reads like a recommendation without a clear current-state basis behind it.
+
 ## 10. Maintenance Expectations
 
 This artifact may be a living assessment document while Validation Assessment or focused analysis is underway.
@@ -242,6 +249,7 @@ Once the Work Assessment recommendation is finalized, the report normally become
 - Are the roles, business units, records, and systems that shape the work request clear enough for assessment use?
 - Are supportability, ownership, and control implications visible where they matter?
 - Does the report clearly distinguish observed current-state facts from later recommendations or design choices?
+- Is the evidence basis visible enough to show what was observed or validated and where confidence is limited?
 - Does it identify which current-state facts should remain easy to reference from the Work Assessment Report or later definition?
 - Is the detail practical and bounded rather than drifting into a full redesign or architecture pack?
 
@@ -252,6 +260,7 @@ Once the Work Assessment recommendation is finalized, the report normally become
 > Draft a Current State Analysis Report for this work request.
 > Describe what actually happens today, the relevant systems, workflows, handoffs, dependencies, constraints, workarounds, bottlenecks, duplication, rework, ownership realities, support implications, and prior attempts where relevant.
 > Make clear which current-state facts later definition should be able to reference directly.
+> Show the main evidence sources and note any assumption, inference, evidence gap, or confidence limit that materially affects the picture.
 > Keep the report evidence-based, practical, and free of future-state design or implementation planning.
 
 ### 12.2. Section prompts
@@ -260,8 +269,10 @@ Once the Work Assessment recommendation is finalized, the report normally become
 
 > Summarize the most important current-state facts that later definition should reference without converting them into future-state recommendations.
 
+> Identify any sentence that sounds like a recommendation and rewrite it as an observed current-state fact or a clearly marked open question.
+
 ### 12.3. Validation prompts
 
 > Check whether this Current State Analysis Report describes the actual current state clearly enough to support assessment and later handoff without drifting into solution design or roadmap content.
 
-> Rewrite any section that treats assumptions as facts, hides workarounds or ownership gaps, or starts describing the target state instead of the current state.
+> Rewrite any section that treats assumptions as facts, hides workarounds or ownership gaps, obscures confidence limits, or starts describing the target state instead of the current state.

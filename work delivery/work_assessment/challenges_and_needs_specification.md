@@ -1,10 +1,10 @@
-# Work Request Challenges and Needs Specification
+# Challenges and Needs Specification
 
 ## 1. Purpose and Intended Outcome
 
-The Work Request Challenges and Needs artifact captures the practical problem basis behind a work request before deeper analysis begins.
+The Challenges and Needs artifact captures the practical problem basis behind a work request before deeper analysis begins.
 
-It exists to make visible who is affected, what is happening today, where the issue appears, why it matters now, what business pain or unmet need exists, what likely causes are already visible, and what consequence follows if nothing changes. A useful Work Request Challenges and Needs artifact shows the primary challenge or need clearly, while also surfacing the related secondary challenges and needs that materially contribute to it. It gives Validation Assessment a clearer problem basis without turning into solutioning, detailed requirements, or a full business case.
+It exists to make visible who is affected, what is happening today, where the issue appears, why it matters now, what business pain or unmet need exists, what likely causes are already visible, and what consequence follows if nothing changes. A useful Challenges and Needs artifact shows the primary challenge or need clearly, while also surfacing the related secondary challenges and needs that materially contribute to it. It gives Validation Assessment a clearer, more evidence-aware problem basis without turning into solutioning, detailed requirements, or a full business case.
 
 The intended outcome is that the work request enters Validation Assessment with a clearer, more traceable statement of challenge, impact, and need so later analysis does not have to rediscover the basic problem framing.
 
@@ -44,6 +44,8 @@ Include enough detail to show what the current challenge is, who is affected, wh
 
 Keep it lightweight. The goal is a clear, evidence-aware framing of the problem and needs, not a deep root-cause study or a recommendation pack.
 
+Where evidence is thin, anecdotal, or still forming, say so plainly rather than implying more certainty than the assessment currently has.
+
 The governing principle is:
 
 > Clarify the challenge, impact, and unmet need early enough to guide assessment. Do not rush into solution definition, requirements, or business case detail.
@@ -74,6 +76,7 @@ Must include:
 
 - what is happening today
 - the triggering condition, event, or reason the issue is now receiving attention
+- why the timing matters now rather than later
 - where the issue appears or is most visible
 
 The statement should describe the main present challenge in plain language rather than naming a preferred solution.
@@ -95,8 +98,9 @@ Must include:
 - the unmet business, service, operational, control, or user need underneath the visible symptoms
 - any secondary or supporting needs that materially sit under the main need
 - the practical improvement that stakeholders are seeking
+- any visible solution assumption that should remain treated as an assumption rather than an accepted need
 
-Where possible, distinguish the main underlying need from the symptom that triggered attention, and distinguish supporting needs from preferred solutions.
+Where possible, distinguish the main underlying need from the symptom that triggered attention, and distinguish supporting needs from preferred solutions. Do not let a requested tool, feature, vendor, or delivery approach silently become the accepted statement of need.
 
 ### 6.6. Likely causes or contributing factors
 
@@ -104,6 +108,7 @@ Must include:
 
 - the likely causes, drivers, or contributing factors already visible
 - a clear note where these are still assumptions rather than validated findings
+- any notable evidence gap or confidence limit that affects how strongly the causes can be stated
 
 This section should frame likely causes lightly. It should not become a full root-cause analysis exercise unless that is separately justified later.
 
@@ -121,6 +126,7 @@ Must include:
 
 - what Validation Assessment should test, confirm, or clarify next
 - any key assumption, boundary note, or open question that should stay visible
+- the concise problem basis and cautions that later assessment should carry forward rather than rediscover
 
 ### 6.9. Example content showing the minimum structure
 
@@ -213,6 +219,8 @@ Because this artifact frames the problem basis for later assessment, the request
 
 Formal acceptance is not normally required, but the artifact should be credible enough to guide Validation Assessment.
 
+Where the request began in solution-shaped language, reviewers should check that the documented need still reads as a business or operational problem rather than a disguised implementation ask.
+
 ## 10. Maintenance Expectations
 
 This artifact may be updated during Validation Assessment if the challenge, impact, or underlying need is materially clarified.
@@ -226,15 +234,18 @@ Once the Validation Assessment recommendation is recorded, the artifact normally
 - Does it describe the challenge and unmet need without jumping straight to a preferred solution?
 - Are visible pain points and likely impacts explained in practical language?
 - Does it distinguish symptoms from underlying needs where that distinction matters?
+- Does it make clear why the issue matters now rather than later?
 - Are likely causes or contributing factors framed carefully rather than treated as already proven?
+- Are important solution assumptions, evidence gaps, or confidence limits still visible?
 - Does it give Validation Assessment a clearer problem basis and set of questions to test next?
 
 ## 12. Prompt Guide for Drafting the Artifact
 
 ### 12.1. Starter prompt
 
-> Draft a Work Request Challenges and Needs artifact for a work item that has passed initial triage.
+> Draft a Challenges and Needs artifact for a work item that has passed initial triage.
 > Explain who is affected, what is happening today, where the issue appears, why it matters now, what the primary challenge or need is, what related secondary challenges or needs also materially contribute, what likely causes are already visible, what impact is being felt, and what consequence may follow if nothing changes.
+> Note any evidence gap, confidence limit, or solution assumption that still needs validation.
 > Keep it practical, lightweight, and free of solution design or detailed requirements.
 
 ### 12.2. Section prompts
@@ -243,8 +254,10 @@ Once the Validation Assessment recommendation is recorded, the artifact normally
 
 > Distinguish the visible symptoms from the underlying business or operational needs in plain language, and make the primary need clear without hiding the supporting needs.
 
+> Identify any requested solution idea that should remain visible as an assumption to test rather than as accepted need.
+
 ### 12.3. Validation prompts
 
 > Check whether this artifact gives Validation Assessment a clear problem basis without becoming a business case, requirement set, or solution brief.
 
-> Rewrite any section that turns a likely cause into a confirmed fact or turns an unmet need into a premature solution statement.
+> Rewrite any section that turns a likely cause into a confirmed fact, hides an evidence gap, or turns an unmet need into a premature solution statement.

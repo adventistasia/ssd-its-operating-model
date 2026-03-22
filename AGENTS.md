@@ -16,7 +16,7 @@ Improve governance, initiative, and solution documents so that IT work is:
 
 ## How to Work
 
-- Favor plain language, practical structure, and operational usefulness over theory.
+- Favor concise, plain language, practical structure, and operational usefulness over theory.
 - When drafting or reviewing, clarify the operating intent.
 - Make ownership and decision points explicit.
 - Preserve scope boundaries.
@@ -24,4 +24,7 @@ Improve governance, initiative, and solution documents so that IT work is:
 ## File Naming
 
 When creating files, use **lowercase letters with underscores between words** for file names.
+
+## Guides
+[specification_writing_guide](specification_writing_guide.md)
 
