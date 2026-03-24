@@ -21,7 +21,7 @@ This artifact is required when the initiative creates or changes a service, appl
 Upstream sources:
 
 - [Technical Design Document Specification](technical_design_document_specification.md)
-- [System Administration Guide Specification](system_administration_guide_specification.md)
+- [DevOps Guide Specification](devops_guide_specification.md)
 - [Deployed Solution Specification](../solution_deliverables/deployed_solution_specification.md)
 
 Downstream artifacts:
@@ -112,7 +112,7 @@ Keep the following out of this artifact:
 
 ## 9. Relationships to Other Artifacts
 
-This artifact should align with the Technical Design Document, Solution Module Definitions, System Administration Guide, Backup, Restore & Recovery Plan, Operational Readiness Confirmation Record, and monitoring or audit designs where applicable.
+This artifact should align with the Technical Design Document, Solution Module Definitions, DevOps Guide, Backup, Restore & Recovery Plan, Operational Readiness Confirmation Record, and monitoring or audit designs where applicable.
 
 It should also align with the Initiative Definition Document or Work Brief so the named run/support ownership in operations matches the ownership model approved earlier in the work lifecycle.
 
@@ -156,3 +156,4 @@ If weak, clarify the responsibility split and make escalation routes easier to f
 
 > Draft an Operations & Support Model for this solution.
 > Define service ownership, support ownership, support tiers or boundaries, escalation paths, monitoring expectations, support coverage, and the transition or steady-state assumptions that matter after go-live.
+

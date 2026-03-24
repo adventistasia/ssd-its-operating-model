@@ -20,7 +20,7 @@ This artifact is required when operational ownership is being assigned or confir
 Upstream sources:
 
 - [Technical Design Document Specification](technical_design_document_specification.md)
-- [System Administration Guide Specification](system_administration_guide_specification.md)
+- [DevOps Guide Specification](devops_guide_specification.md)
 - [Operations & Support Model Specification](operations_and_support_model_specification.md)
 - [Backup, Restore & Recovery Plan Specification](backup_restore_and_recovery_plan_specification.md)
 - [Deployed Solution Specification](../solution_deliverables/deployed_solution_specification.md)
@@ -128,7 +128,7 @@ Keep the following out of this artifact:
 
 ## 9. Relationships to Other Artifacts
 
-This record should reference the Solution Module Definitions, Technical Design Document, System Administration Guide, Operations & Support Model, Backup, Restore & Recovery Plan, monitoring or audit designs, and relevant release evidence.
+This record should reference the Solution Module Definitions, Technical Design Document, DevOps Guide, Operations & Support Model, Backup, Restore & Recovery Plan, monitoring or audit designs, and relevant release evidence.
 
 ## 10. Ownership, Review, and Acceptance Expectations
 
@@ -169,3 +169,4 @@ If weak, tighten the evidence references and make the operational decision state
 > Draft an Operational Readiness Confirmation Record for this solution.
 > Show named service and support ownership, what readiness evidence was reviewed, any gaps or conditions that remain, and the formal operational decision.
 > Keep it concise and table-driven.
+

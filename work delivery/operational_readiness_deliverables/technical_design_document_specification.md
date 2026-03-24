@@ -32,7 +32,7 @@ Upstream sources:
 
 Downstream artifacts:
 
-- [System Administration Guide Specification](system_administration_guide_specification.md)
+- [DevOps Guide Specification](devops_guide_specification.md)
 - [Operations & Support Model Specification](operations_and_support_model_specification.md)
 - [Backup, Restore & Recovery Plan Specification](backup_restore_and_recovery_plan_specification.md)
 - [Operational Readiness Confirmation Record Specification](operational_readiness_confirmation_record_specification.md)
@@ -160,9 +160,9 @@ This section keeps critical design reasoning from being lost.
 Must include where relevant:
 
 - design characteristics that materially affect support, monitoring, maintenance, restore, troubleshooting, or handover
-- references to related operational artifacts where detailed procedure sits, especially the [System Administration Guide Specification](system_administration_guide_specification.md)
+- references to related operational artifacts where detailed procedure sits, especially the [DevOps Guide Specification](devops_guide_specification.md)
 
-Keep this at design level, not procedure level. Operational steps, administration detail, and execution guidance should sit in the [System Administration Guide Specification](system_administration_guide_specification.md) and related operational-readiness artifacts.
+Keep this at design level, not procedure level. Operational steps, administration detail, and execution guidance should sit in the [DevOps Guide Specification](devops_guide_specification.md) and related operational-readiness artifacts.
 
 ### 6.11. Open issues, unresolved decisions, or known limitations
 
@@ -204,7 +204,7 @@ It should also align with:
 - [Solution Modules Specification](../solution_deliverables/solution_modules_specification.md) and [Solution Module Definition Specification](../solution_deliverables/solution_module_definition_specification.md), which break the approved scope into solution structure and module detail
 - [Use Case Narratives Specification](../solution_deliverables/use_case_narratives_specification.md), which explain the behavior that the technical design needs to support
 - relevant security and data artifacts, which hold deeper control, risk, privacy, or data-governance detail where needed
-- [System Administration Guide Specification](system_administration_guide_specification.md), which carries execution-level administration guidance
+- [DevOps Guide Specification](devops_guide_specification.md), which carries execution-level administration guidance
 - [Operations & Support Model Specification](operations_and_support_model_specification.md), which defines long-term ownership, support boundaries, and escalation
 - [Backup, Restore & Recovery Plan Specification](backup_restore_and_recovery_plan_specification.md), which defines the recovery path and validation expectations
 
@@ -263,7 +263,7 @@ Before treating this artifact as ready, confirm that it is:
 - Does it stay at design level rather than drifting into operational procedure?
 - Could another technical team understand the solution without relying on the original implementer?
 
-If weak, tighten the scope boundary, strengthen the structure overview and dependency sections, make decisions and limitations more explicit, and move procedural detail to the System Administration Guide or other operational artifacts.
+If weak, tighten the scope boundary, strengthen the structure overview and dependency sections, make decisions and limitations more explicit, and move procedural detail to the DevOps Guide or other operational artifacts.
 
 ## 14. Prompt Guide for Drafting the Artifact
 
@@ -273,3 +273,4 @@ If weak, tighten the scope boundary, strengthen the structure overview and depen
 > Explain the design scope, document information, structure, environments, integrations, dependencies, data and configuration considerations, security, resilience, performance, major design decisions, operationally significant design characteristics, and open issues or limitations.
 > Keep it concise, design-level, and suitable for review, support, handover, and future change.
 > Do not turn it into an administration guide, project plan, or test script repository.
+

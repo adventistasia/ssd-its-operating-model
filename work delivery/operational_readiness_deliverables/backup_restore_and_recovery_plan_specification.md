@@ -22,7 +22,7 @@ Upstream sources:
 
 - [Technical Design Document Specification](technical_design_document_specification.md)
 - [Data Asset Specification](../data_governance_and_records_deliverables/data_asset_specification.md)
-- [System Administration Guide Specification](system_administration_guide_specification.md)
+- [DevOps Guide Specification](devops_guide_specification.md)
 
 Downstream artifacts:
 
@@ -32,7 +32,7 @@ Downstream artifacts:
 ## 4. Intended Readers and Users
 
 - IT Operations / Service Owner
-- system administrators
+- DevOps teams
 - support and infrastructure teams
 - security and audit reviewers
 
@@ -110,7 +110,7 @@ Keep the following out of this artifact:
 
 ## 9. Relationships to Other Artifacts
 
-This artifact should align with the Technical Design Document, Solution Module Definitions, System Administration Guide, Operations & Support Model, Data Asset Specification, and Operational Readiness Confirmation Record.
+This artifact should align with the Technical Design Document, Solution Module Definitions, DevOps Guide, Operations & Support Model, Data Asset Specification, and Operational Readiness Confirmation Record.
 
 ## 10. Ownership, Review, and Acceptance Expectations
 
@@ -153,3 +153,5 @@ If weak, define the recovery scope more clearly and make validation expectations
 > Draft a Backup, Restore & Recovery Plan for this solution.
 > Explain what is covered, what recovery scenarios are supported, who is responsible, what dependencies or constraints matter, and how the recovery path is validated.
 > Keep it solution-focused and operationally credible.
+
+

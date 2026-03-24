@@ -105,7 +105,7 @@ This artifact should align with:
 - [Use Case Narratives Specification](../solution_deliverables/use_case_narratives_specification.md)
 - [Security & Privacy Risk Assessment Specification](security_and_privacy_risk_assessment_specification.md)
 - [Audit & Monitoring Design Summary Specification](audit_and_monitoring_design_summary_specification.md)
-- [System Administration Guide Specification](../operational_readiness_deliverables/system_administration_guide_specification.md)
+- [DevOps Guide Specification](../operational_readiness_deliverables/devops_guide_specification.md)
 - [Operations & Support Model Specification](../operational_readiness_deliverables/operations_and_support_model_specification.md)
 
 ## 9. Ownership, Review, and Acceptance Expectations
@@ -137,3 +137,4 @@ If weak, clarify the permission model and make lifecycle controls more explicit.
 > Draft an Access Control & Authorization Model for this solution.
 > Define roles, permissions, restricted actions, privileged access rules, separation-of-duties assumptions, and how access is approved, reviewed, and revoked.
 > Keep it governance-focused and implementation-light.
+

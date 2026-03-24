@@ -26,7 +26,7 @@
 ### Operational Readiness
 
 - [Technical Design Document Specification](operational_readiness_deliverables/technical_design_document_specification.md)
-- [System Administration Guide Specification](operational_readiness_deliverables/system_administration_guide_specification.md)
+- [DevOps Guide Specification](operational_readiness_deliverables/devops_guide_specification.md)
 - [Operations & Support Model Specification](operational_readiness_deliverables/operations_and_support_model_specification.md)
 - [Backup, Restore & Recovery Plan Specification](operational_readiness_deliverables/backup_restore_and_recovery_plan_specification.md)
 - [Operational Readiness Confirmation Record Specification](operational_readiness_deliverables/operational_readiness_confirmation_record_specification.md)
@@ -256,7 +256,7 @@ Use these specs:
 
 - [Deployed Solution Specification](solution_deliverables/deployed_solution_specification.md)
 - [Technical Design Document Specification](operational_readiness_deliverables/technical_design_document_specification.md)
-- [System Administration Guide Specification](operational_readiness_deliverables/system_administration_guide_specification.md)
+- [DevOps Guide Specification](operational_readiness_deliverables/devops_guide_specification.md)
 - [Operations & Support Model Specification](operational_readiness_deliverables/operations_and_support_model_specification.md)
 - [Backup, Restore & Recovery Plan Specification](operational_readiness_deliverables/backup_restore_and_recovery_plan_specification.md)
 - [Operational Readiness Confirmation Record Specification](operational_readiness_deliverables/operational_readiness_confirmation_record_specification.md)
@@ -267,7 +267,7 @@ Do this:
 2. Collect evidence as work is completed.
 3. Record what is actually live, where it is live, and under what conditions.
 4. Link evidence back to capabilities, modules, and use cases where appropriate.
-5. Finalize the technical, administration, support, and recovery records needed for operations.
+5. Finalize the technical, DevOps, support, and recovery records needed for operations.
 6. Confirm operational ownership and support readiness for what is going live.
 
 Produce:
@@ -433,3 +433,5 @@ Warning signs:
 - evidence is missing, unclear, or not traceable
 - acceptance is being prepared before readiness gaps are visible
 The intent is not only to define what the solution will do. It is also to make the solution understandable for future enhancement and supportable by operations teams after delivery.
+
+

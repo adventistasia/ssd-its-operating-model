@@ -101,7 +101,7 @@ Folder: [solution_deliverables](solution_deliverables)
 Folder: [operational_readiness_deliverables](operational_readiness_deliverables)
 
 - [Technical Design Document Specification](operational_readiness_deliverables/technical_design_document_specification.md)
-- [System Administration Guide Specification](operational_readiness_deliverables/system_administration_guide_specification.md)
+- [DevOps Guide Specification](operational_readiness_deliverables/devops_guide_specification.md)
 - [Operations and Support Model Specification](operational_readiness_deliverables/operations_and_support_model_specification.md)
 - [Backup, Restore and Recovery Plan Specification](operational_readiness_deliverables/backup_restore_and_recovery_plan_specification.md)
 - [Operational Readiness Confirmation Record Specification](operational_readiness_deliverables/operational_readiness_confirmation_record_specification.md)
@@ -137,3 +137,4 @@ Folder: [user_adoption_and_change_enablement_deliverables](user_adoption_and_cha
 ## 12. Shared Reference
 
 - [Specification Best Practice Reference](specification_best_practice_reference.md)
+

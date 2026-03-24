@@ -374,7 +374,7 @@ For solutions with operational impact, these deliverables should start being sha
 ### 9.2. Standard Deliverables (as applicable)
 
 - **[Technical Design Document](#9.3.%20Technical%20Design%20Document)**
-- **[System Administration Guide](#9.4.%20System%20Administration%20Guide)**
+- **[DevOps Guide](#9.4.%20DevOps%20Guide)**
 - **[Operations & Support Model](#9.5.%20Operations%20&%20Support%20Model)**
 - **[Backup, Restore & Recovery Plan](#9.6.%20Backup,%20Restore%20&%20Recovery%20Plan)**
 - **[Operational Readiness Confirmation Record](#9.7.%20Operational%20Readiness%20Confirmation%20Record)**
@@ -401,7 +401,7 @@ This artifact explains how the solution is built. It does not replace operating 
 - Important assumptions, constraints, and operationally significant design decisions are recorded.
 - The document is sufficient to inform support and future technical change.
 
-### 9.4. System Administration Guide
+### 9.4. DevOps Guide
 
 Provides the practical instructions and reference information needed to deploy, configure, maintain, troubleshoot, and support the solution in day-to-day operations.
 
@@ -483,7 +483,7 @@ This artifact prevents informal or unsupported handover.
 ### 9.8. Recommended Acceptance Evidence
 
 - Approved Technical Design Document
-- Approved System Administration Guide
+- Approved DevOps Guide
 - Approved Operations & Support Model
 - Approved Backup, Restore & Recovery Plan
 - Completed Operational Readiness Confirmation Record
@@ -919,3 +919,5 @@ Deliverable domains mainly organize the deliverables view. The team should still
 - Record formal acceptance by the named Acceptance Authorities and formally close the initiative.
 
 Completion requires acceptance across all applicable deliverable domains.
+
+
