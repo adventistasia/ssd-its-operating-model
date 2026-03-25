@@ -16,9 +16,9 @@ A Work Brief is the ITS standard tool for defining work. It gives each piece of 
 
 Replace the existing Work Brief bullet in the scaling section with the following points:
 
-- the Work Brief is the ITS standard tool for defining work and may be used where a full Initiative Definition Document would be too heavy
-- for standalone planned work, a Work Brief may replace a simple task description when the work still needs clear purpose, scope, ownership, delivery basis, traceability, and closure
-- a Work Brief may also support physical Kanban boards by acting as the corresponding digital record where the detail, owners, decisions, and acceptance basis are stored
+- Use the Work Brief as the ITS standard tool for defining work where a full Initiative Definition Document would be too heavy.
+- For standalone planned work, use a Work Brief instead of a simple task description when the work still needs clear purpose, scope, ownership, delivery basis, traceability, and closure.
+- Use a Work Brief to support physical Kanban boards by acting as the corresponding digital record where the detail, owners, decisions, and acceptance basis are stored.
 
 ### 2. Practical TL;DR
 
