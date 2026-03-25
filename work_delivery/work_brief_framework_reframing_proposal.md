@@ -38,7 +38,7 @@ Where physical Kanban boards are used, the card may represent the work visually 
 
 Replace the Stage 1 handoff sentence with the following:
 
-For smaller governed work, the Stage 1 handoff may instead move into a Work Brief when that gives enough definition, purpose, scope, ownership, and delivery basis for the size and risk of the work.
+For smaller governed work, the Stage 1 handoff may instead move into a [Work Brief](work_brief/work_brief_specification.md) when that gives enough definition, purpose, scope, ownership, and delivery basis for the size and risk of the work.
 
 ### 4. Stage 2 Work Definition Wording
 
