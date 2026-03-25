@@ -56,7 +56,9 @@ To keep the framework practical:
 - use the minimum viable level of detail needed for the work's size, risk, and impact
 - one document may satisfy multiple outputs if the required information is explicit and traceable
 - smaller initiatives may use concise versions of artifacts, but they must not skip decision points, ownership, or acceptance controls
-- small governed work items may use a Work Brief as the scaled definition and control artifact where a full Initiative Definition Document would be too heavy
+- use the Work Brief as the ITS standard tool for defining work where a full Initiative Definition Document would be too heavy
+- for standalone planned work, use a Work Brief instead of a simple task description when the work still needs clear purpose, scope, ownership, delivery control, traceability, and closure
+- use a Work Brief to support physical Kanban boards by acting as the corresponding digital record where the detail, owners, decisions, and acceptance basis are stored
 
 The framework is intentionally control-light for low-complexity work and should scale up only where risk, cost, impact, or cross-team coordination require it.
 
@@ -185,9 +187,15 @@ In practice, the framework works like this:
 - Stage 6 Work Delivery - delivers the approved outputs and gathers evidence as the work progresses
 - Stage 7 Acceptance, Transition & Closure - formally accepts the result, transfers operational responsibility, and closes the work
 
-For small governed work, the Work Brief may be used as the scaled artifact across Stages 2 and 3 and may continue as the live control record through delivery and closure.
+A Work Brief is the ITS standard tool for defining work. It gives each piece of work a clear purpose, scope, ownership, and delivery control, whether the work is completed on its own or as part of a larger delivery framework.
 
-Within a larger initiative, multiple Work Briefs may be used as child work orders under the approved initiative baseline.
+For standalone planned work, the Work Brief may replace a simple task description when the work still needs clear scope, ownership, traceability, and formal closure.
+
+For small governed work, the Work Brief may be used across Stages 2 and 3 and may continue as the live control record through delivery and closure.
+
+Within a larger initiative, Work Briefs may be used as work orders for the delivery of specific initiative deliverables. In that role, they sit under the parent initiative baseline without replacing it.
+
+Where physical Kanban boards are used, the card may represent the work visually while the corresponding digital Work Brief holds the governing detail, owners, decisions, status, and acceptance basis.
 
 The practical reading path across the repository is:
 
@@ -198,8 +206,8 @@ Accountable means accountable for moving the stage forward.
 | Stage                               | What it means in practice                                                                          | Primary Decision                                      | Accountable                                      | Core artifacts                                                                                                                                                                                                                                                             | Minimum outcome                                                                                                  |
 | ----------------------------------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | 1. Work Assessment                  | Screen the request through initial triage, validation, and final assessment before Work Definition | Proceed / Defer / Reject                              | ITS with Assessment Owner and sponsor candidate  | Initial Review, Validation Assessment, Work Assessment Report, decision record                                                                                                                                                                                             | Clear recommendation on whether the work should enter Work Definition, with Stage 2 handoff basis if proceeding  |
-| 2. Work Definition                  | Define the initiative clearly enough for an authorization decision                                 | Ready / Not ready for authorization                   | Delivery Owner with Outcome Owner                | Initiative Definition Document, or Work Brief for small governed work, required deliverables and Acceptance Authority map, supporting authorization artifacts as needed, Functional Capabilities (if applicable), draft Project Charter, Stage 2 readiness decision record | Decision-ready definition baseline with required deliverables and supporting detail appropriate to the work size |
-| 3. Work Authorization               | Formally approve the work, funding, and accountability before delivery starts                      | Approve / Defer / Reject / Approve with conditions    | Sponsor with Decision Authority                  | Decision record or decision log, approved Project Charter where applicable, funding confirmation, Work Brief where used for small governed work                                                                                                                            | Work formally authorized with funding and accountability.<br><br>Appropriate committee approval may be necessary |
+| 2. Work Definition                  | Define the initiative clearly enough for an authorization decision                                 | Ready / Not ready for authorization                   | Delivery Owner with Outcome Owner                | Initiative Definition Document, or Work Brief for standalone planned work or small governed work, or Work Brief as a work order for a specific deliverable within a larger initiative; required deliverables and Acceptance Authority map, supporting authorization artifacts as needed, Functional Capabilities (if applicable), draft Project Charter, Stage 2 readiness decision record | Decision-ready definition baseline with required deliverables and supporting detail appropriate to the work size |
+| 3. Work Authorization               | Formally approve the work, funding, and accountability before delivery starts                      | Approve / Defer / Reject / Approve with conditions    | Sponsor with Decision Authority                  | Decision record or decision log, approved Project Charter where applicable, funding confirmation, Work Brief where used as the control record for standalone planned work or small governed work, or as a work order under a parent initiative for a specific deliverable   | Work formally authorized with funding and accountability.<br><br>Appropriate committee approval may be necessary |
 | 4. Work Definition Details          | Elaborate the approved work into the detail needed to build, test, and transition                  | Ready to mobilize / Rework / Return to Stage 2        | Delivery Owner with design leads                 | Delivery-ready elaboration set, additional definition deliverables as needed, detailed domain artifacts, acceptance test approach                                                                                                                                          | Detailed design, elaborated roadmap, and delivery-ready artifact set                                             |
 | 5. Delivery Mobilization            | Put delivery controls, roles, cadence, roadmap, and trackers in place                              | Ready to execute                                      | Delivery Owner                                   | Delivery Charter, team-confirmed Delivery Roadmap, communication plan, change and escalation rules, delivery plan, trackers                                                                                                                                                | Delivery rhythm, controls, and team-aligned roadmap and setup in place                                           |
 | 6. Work Delivery                    | Produce the approved deliverables, manage change visibly, and collect evidence                     | Continue / Escalate / Change / Prepare for acceptance | Delivery Owner                                   | Deliverables, evidence, status reports, decision and change records                                                                                                                                                                                                        | Authorized deliverables produced with evidence                                                                   |
@@ -236,7 +244,7 @@ The normal progression from Stage 1 into Stage 2 is:
 
 `Work Assessment Report -> Initiative Definition Document`
 
-For smaller governed work, the Stage 1 handoff may instead move into a [Work Brief](work_brief/work_brief_specification.md) when that gives enough definition, ownership, and control for the size and risk of the work.
+For smaller governed work, the Stage 1 handoff may instead move into a [Work Brief](work_brief/work_brief_specification.md) when that gives enough definition, purpose, scope, ownership, and delivery control for the size and risk of the work.
 
 ### 9.2. Minimum Outputs
 
@@ -334,7 +342,7 @@ Stage 2 stays at authorization-level detail. It defines what the initiative is e
 
 Stage 2 should normally begin from the completed Work Assessment Report, not from raw intake notes or an unstructured rediscovery exercise.
 
-For small governed work using a Work Brief, the same rule still applies: the brief should be based on the completed Stage 1 assessment and should not restart definition from scratch.
+For small governed work using a Work Brief, the same rule still applies: the brief should be based on the completed Stage 1 assessment and should not restart definition from scratch. Where the work is standalone, the Work Brief may replace a simple task description. Where the work sits inside a larger initiative, the Work Brief may define a specific deliverable or controlled work item under the parent baseline.
 
 Deliverable domains may be used to organize the delivery view, but they do not replace visibility of the actual deliverables expected from the initiative.
 

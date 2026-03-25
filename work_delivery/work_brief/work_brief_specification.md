@@ -2,7 +2,7 @@
 
 ## 1. Purpose
 
-The Work Brief is a short record for a small piece of work.
+The Work Brief is the ITS standard tool for defining work. It gives each piece of work a clear purpose, scope, ownership, and delivery control, whether the work stands alone or sits inside a larger initiative.
 
 Use it to show the problem, need, or intended outcome, make the work clear before delivery starts, keep it visible while it is in progress, and confirm who owns delivery, acceptance, and decisions.
 

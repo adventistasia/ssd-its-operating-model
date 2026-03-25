@@ -30,7 +30,7 @@ For standalone planned work, the Work Brief may replace a simple task descriptio
 
 For small governed work, the Work Brief may be used across Stages 2 and 3 and may continue as the live control record through delivery and closure.
 
-Within a larger initiative, Work Briefs may be used to define individual deliverables or other discrete controlled work items under the approved initiative baseline. In that role, they act like work orders under the parent initiative without replacing the parent initiative baseline.
+Within a larger initiative, Work Briefs may be used as work orders for the delivery of specific initiative deliverables. In that role, they sit under the parent initiative baseline without replacing it.
 
 Where physical Kanban boards are used, the card may represent the work visually while the corresponding digital Work Brief holds the governing detail, owners, decisions, status, and acceptance basis.
 
@@ -48,11 +48,15 @@ For small governed work using a Work Brief, the same rule still applies: the bri
 
 ### 5. Stage Table Wording
 
-Update the Stage 2 and Stage 3 table rows so that Work Brief use is described as applying to:
+Replace the Stage 2 and Stage 3 rows in the stage summary table to make plain that Work Briefs serve two main uses: as the standard control record for standalone planned work and small governed work, and within a larger initiative as work orders for delivering specific initiative deliverables.
 
-- standalone planned work
-- small governed work
-- deliverable-level work within a larger initiative
+Replace the Stage 2 Core artifacts cell with:
+
+> Initiative Definition Document, or Work Brief for standalone planned work or small governed work, or Work Brief as a work order for a specific deliverable within a larger initiative; required deliverables and Acceptance Authority map, supporting authorization artifacts as needed, Functional Capabilities (if applicable), draft Project Charter, Stage 2 readiness decision record
+
+Replace the Stage 3 Core artifacts cell with:
+
+> Decision record or decision log, approved Project Charter where applicable, funding confirmation, Work Brief where used as the control record for standalone planned work or small governed work, or as a work order under a parent initiative for a specific deliverable
 
 ## Notes
 
