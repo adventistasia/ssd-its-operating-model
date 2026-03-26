@@ -56,11 +56,19 @@ To keep the framework practical:
 - use the minimum viable level of detail needed for the work's size, risk, and impact
 - one document may satisfy multiple outputs if the required information is explicit and traceable
 - smaller initiatives may use concise versions of artifacts, but they must not skip decision points, ownership, or acceptance controls
-- use the Work Brief as the ITS standard tool for defining work where a full Initiative Definition Document would be too heavy
+- use a Work Brief as the lighter alternative to an Initiative Definition Document — it carries the same essential controls without the full initiative structure
 - for standalone planned work, use a Work Brief instead of a simple task description when the work still needs clear purpose, scope, ownership, delivery basis, traceability, and closure
 - use a Work Brief to support physical Kanban boards by acting as the corresponding digital record where the detail, owners, decisions, and acceptance basis are stored
 
 The framework is intentionally control-light for low-complexity work and should scale up only where risk, cost, impact, or cross-team coordination require it.
+
+### 3.1. Work Brief
+
+A Work Brief is the standard tool for defining any planned work so that the work is understood before it is executed and delivered. It gives the work a clear purpose, scope, ownership, delivery basis, and acceptance criteria, whatever the size or complexity of the work.
+
+The Work Brief can be used to partially implement this framework — concentrating on the definition, decision, delivery, and closure elements without requiring the full staged structure a larger initiative would need.
+
+For larger planned work, multiple Work Briefs may be used to define the individual deliverables or discrete work items that together make up the whole. Each brief carries its own definition, ownership, and acceptance controls, while staying traceable to the broader purpose of the work.
 
 ## 4. Operating Principles
 
@@ -189,9 +197,7 @@ In practice, the framework works like this:
 
 A Work Brief is the ITS standard tool for defining work. It makes every piece of work clear to all stakeholders — why it is needed, what must be delivered, what the delivery basis is, and what evidence confirms the work is done.
 
-For standalone planned work, the Work Brief may replace a simple task description when the work still needs clear scope, ownership, traceability, and formal closure.
-
-For small governed work, the Work Brief may be used across Stages 2 and 3 and may continue as the live control record through delivery and closure.
+A Work Brief can be used to partially implement this framework, applying the definition, decision, delivery, and closure elements as a focused operating path without requiring the full staged structure a larger initiative would need.
 
 Within a larger initiative, Work Briefs may be used as work orders for the delivery of specific initiative deliverables. In that role, they sit under the parent initiative baseline without replacing it.
 
