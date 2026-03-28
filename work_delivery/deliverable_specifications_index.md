@@ -41,7 +41,9 @@ Use these when defining governed work and getting approval:
 2. [Work Brief Specification](work_brief/work_brief_specification.md) for small governed work
 3. [Project Charter Specification](governance_and_control_deliverables/project_charter_specification.md)
 4. [Decision Record Log Specification](governance_and_control_deliverables/decision_record_log_specification.md)
-5. [Delivery Roadmap Specification](governance_and_control_deliverables/delivery_roadmap_specification.md) for authorization-level delivery visibility
+5. [Solution Assumptions & Issues Register Specification](governance_and_control_deliverables/solution_assumptions_and_issues_register_specification.md) to track design assumptions and open issues
+6. [Problem & Outcome Validation Brief Specification](solution_deliverables/problem_and_outcome_validation_brief_specification.md) to confirm the problem and outcomes before scope is defined
+7. [Delivery Roadmap Specification](governance_and_control_deliverables/delivery_roadmap_specification.md) for authorization-level delivery visibility
 
 ### 3.3. Stage 4 to Stage 7 - Design, Delivery, Acceptance, and Closure
 
@@ -82,17 +84,23 @@ Folder: [governance_and_control_deliverables](governance_and_control_deliverable
 - [Delivery Charter Specification](governance_and_control_deliverables/delivery_charter_specification.md)
 - [Delivery Roadmap Specification](governance_and_control_deliverables/delivery_roadmap_specification.md)
 - [Decision Record Log Specification](governance_and_control_deliverables/decision_record_log_specification.md)
+- [Solution Assumptions & Issues Register Specification](governance_and_control_deliverables/solution_assumptions_and_issues_register_specification.md)
+- [Validation & Evidence Matrix Specification](governance_and_control_deliverables/validation_and_evidence_matrix_specification.md)
 - [Formal Acceptance and Closure Record Specification](governance_and_control_deliverables/formal_acceptance_and_closure_record_specification.md)
 
 ## 7. Solution Deliverables
 
 Folder: [solution_deliverables](solution_deliverables)
 
+- [Problem & Outcome Validation Brief Specification](solution_deliverables/problem_and_outcome_validation_brief_specification.md)
 - [Functional Capabilities Specification](solution_deliverables/functional_capabilities_specification.md)
 - [User Roles, Personas and Access Model Specification](solution_deliverables/user_roles_personas_and_access_model_specification.md)
 - [Solution Modules Specification](solution_deliverables/solution_modules_specification.md)
 - [Solution Module Definition Specification](solution_deliverables/solution_module_definition_specification.md)
 - [Use Case Narratives Specification](solution_deliverables/use_case_narratives_specification.md)
+- [Business Rules Catalog Specification](solution_deliverables/business_rules_catalog_specification.md)
+- [Quality Attributes / NFR Specification](solution_deliverables/quality_attributes_specification.md)
+- [Integration & External Dependency Specification](solution_deliverables/integration_and_external_dependency_specification.md)
 - [Deployed Solution Specification](solution_deliverables/deployed_solution_specification.md)
 - [Acceptance Record Specification](solution_deliverables/acceptance_record_specification.md)
 

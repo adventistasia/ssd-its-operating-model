@@ -134,15 +134,34 @@ These governance artifacts support timing, coordination, and operating rhythm. T
 
 ### 7.3. Standard Deliverables (as applicable)
 
-- **[Functional Capabilities](#7.4.%20Functional%20Capabilities)**
-- **[Solution Modules Register](#7.5.%20Solution%20Modules%20Register)**
-- **[Solution Module Definition](#7.6.%20Solution%20Module%20Definition)**
-- **[Use Case Narratives](#7.7.%20Use%20Case%20Narratives)**
-- **[User Roles, Personas & Access Model](#7.8.%20User%20Roles,%20Personas%20&%20Access%20Model)**
-- **[Deployed Solution](#7.9.%20Deployed%20Solution)**
-- **[Acceptance Record](#7.10.%20Acceptance%20Record)**
+- **[Problem & Outcome Validation Brief](#7.4.%20Problem%20%26%20Outcome%20Validation%20Brief)**
+- **[Functional Capabilities](#7.5.%20Functional%20Capabilities)**
+- **[Solution Modules Register](#7.6.%20Solution%20Modules%20Register)**
+- **[Solution Module Definition](#7.7.%20Solution%20Module%20Definition)**
+- **[Use Case Narratives](#7.8.%20Use%20Case%20Narratives)**
+- **[Business Rules Catalog](#7.9.%20Business%20Rules%20Catalog)**
+- **[Quality Attributes / NFR Specification](#7.10.%20Quality%20Attributes%20%2F%20NFR%20Specification)**
+- **[Integration & External Dependency Specification](#7.11.%20Integration%20%26%20External%20Dependency%20Specification)**
+- **[User Roles, Personas & Access Model](#7.12.%20User%20Roles,%20Personas%20&%20Access%20Model)**
+- **[Deployed Solution](#7.13.%20Deployed%20Solution)**
+- **[Acceptance Record](#7.14.%20Acceptance%20Record)**
 
-### 7.4. Functional Capabilities
+### 7.4. Problem & Outcome Validation Brief
+
+Specification: [problem_and_outcome_validation_brief_specification](solution_deliverables/problem_and_outcome_validation_brief_specification.md)
+
+A lightweight document that confirms the team is solving the right problem before scope and design work begins. It records the problem statement, affected stakeholders, intended outcomes, success measures, assumptions, exclusions, and dependencies.
+
+Use this at the start of Stage 2 whenever the problem statement is vague, contested, or not yet documented in the Initiative Definition Document.
+
+#### Acceptance Criteria
+
+- The problem statement describes the underlying problem, not a proposed solution.
+- Intended outcomes reflect business results rather than features.
+- Success measures are defined and, where possible, quantified.
+- Assumptions, exclusions and dependencies are visible.
+
+### 7.5. Functional Capabilities
 
 The approval-level list of business abilities the solution must provide.
 
@@ -154,7 +173,7 @@ This deliverable establishes the solution scope baseline before detailed design 
 - Capability statements stay at business ability level.
 - Exclusions, assumptions, or dependencies that affect scope understanding are visible.
 
-### 7.5. Solution Modules Register
+### 7.6. Solution Modules Register
 
 The overview document that lists all approved modules and shows how they relate to roles, use cases, and approved scope.
 
@@ -166,7 +185,7 @@ This deliverable helps teams organize scope around user behaviors and use cases 
 - Module boundaries do not introduce new scope.
 - Each module can be traced to the relevant Functional Capabilities and module detail.
 
-### 7.6. Solution Module Definition
+### 7.7. Solution Module Definition
 
 The detailed document for one module, including what it will deliver, the related use cases, and the module-level acceptance criteria.
 
@@ -178,7 +197,7 @@ This deliverable gives reviewers and delivery teams a one-module-at-a-time view 
 - Included use cases and supporting capabilities are visible.
 - Module-level acceptance criteria are reviewable and testable.
 
-### 7.7. Use Case Narratives
+### 7.8. Use Case Narratives
 
 The business-behavior view of how users achieve outcomes using the solution.
 
@@ -190,7 +209,48 @@ This deliverable gives developers, testers, reviewers, and Acceptance Authoritie
 - Rules, exceptions, and acceptance criteria are visible where they matter.
 - Each use case traces back to a Solution Module and approved Functional Capabilities.
 
-### 7.8. User Roles, Personas & Access Model
+### 7.9. Business Rules Catalog
+
+Specification: [business_rules_catalog_specification](solution_deliverables/business_rules_catalog_specification.md)
+
+A centralized record of the policy, regulatory, and operational rules that apply across modules and use cases. Each rule is assigned a `BR-###` identifier for traceability.
+
+Use this when rules recur across multiple modules or use cases, audit or compliance requires explicit rule documentation, or inconsistent rule interpretation is a risk.
+
+#### Acceptance Criteria
+
+- Each rule has a unique `BR-###` ID, a clear statement, and a rationale or policy basis.
+- Affected modules and use cases are identified for each rule.
+- The catalog does not introduce new scope — it consolidates and clarifies existing rules.
+
+### 7.10. Quality Attributes / NFR Specification
+
+Specification: [quality_attributes_specification](solution_deliverables/quality_attributes_specification.md)
+
+Defines the non-functional qualities the solution must exhibit — performance, availability, reliability, scalability, usability, accessibility, security, privacy, compliance, and others. Each attribute is assigned a `QA-###` identifier.
+
+Use this when performance, reliability, compliance, or service-level commitments materially affect design, cost, or acceptance.
+
+#### Acceptance Criteria
+
+- Each quality attribute has a `QA-###` ID, a measurable target, and a measurement or verification method.
+- Attributes are linked to relevant functional scope where applicable.
+- Constraints, dependencies and assumptions affecting quality are documented.
+
+### 7.11. Integration & External Dependency Specification
+
+Specification: [integration_and_external_dependency_specification](solution_deliverables/integration_and_external_dependency_specification.md)
+
+Documents the solution's interactions with external systems, services, vendors, or other dependencies. Each integration is assigned an `INT-###` identifier covering purpose, contract, data flows, error handling, fallback, monitoring, and operational ownership.
+
+Use this when multiple material integrations exist or when external dependencies materially affect reliability, compliance, or operational ownership.
+
+#### Acceptance Criteria
+
+- Each integration has an `INT-###` ID and documents its purpose, contract summary, timing, error handling, fallback, and ownership.
+- Operational and security considerations are addressed for each integration.
+
+### 7.12. User Roles, Personas & Access Model
 
 The actor model for the solution, including role purpose, access boundaries, and control-sensitive responsibilities.
 
@@ -202,7 +262,7 @@ This deliverable keeps role assumptions consistent across modules, use cases, se
 - Approval, stewardship, or sensitive-role responsibilities are visible where relevant.
 - Persona content, if used, adds context without expanding scope.
 
-### 7.9. Deployed Solution
+### 7.13. Deployed Solution
 
 The record of what approved scope is actually live, where it is live, and under what operational conditions.
 
@@ -214,7 +274,7 @@ This deliverable makes the live state visible and traceable to approved scope an
 - Delivered behavior matches approved scope or accepted changes.
 - Operational ownership and open live conditions are visible.
 
-### 7.10. Acceptance Record
+### 7.14. Acceptance Record
 
 The formal summary of what was reviewed, what evidence supports acceptance, what conditions remain, and what decision was made.
 
@@ -226,13 +286,13 @@ This deliverable keeps sign-off explicit and attributable.
 - Acceptance status and decision authority are explicit.
 - Conditions, exclusions, or deferred items are visible.
 
-### 7.11. Recommended Acceptance Evidence
+### 7.15. Recommended Acceptance Evidence
 
 - Completed Acceptance Record
 - linked validation and deployment evidence
 - visible traceability from approved scope to delivered behavior
 
-### 7.12. Recommended Acceptance Authority
+### 7.16. Recommended Acceptance Authority
 
 - Business Owner / Process Owner
 
@@ -249,7 +309,9 @@ Ensure that intent, scope, authority, funding, risk acceptance, and closure deci
 - **[Delivery Charter](#8.5.%20Delivery%20Charter)**
 - **[Delivery Roadmap](#8.6.%20Delivery%20Roadmap)**
 - **[Decision Record Log](#8.7.%20Decision%20Record%20Log)**
-- **[Formal Acceptance & Closure Record](#8.8.%20Formal%20Acceptance%20&%20Closure%20Record)**
+- **[Solution Assumptions & Issues Register](#8.8.%20Solution%20Assumptions%20%26%20Issues%20Register)**
+- **[Validation & Evidence Matrix](#8.9.%20Validation%20%26%20Evidence%20Matrix)**
+- **[Formal Acceptance & Closure Record](#8.10.%20Formal%20Acceptance%20%26%20Closure%20Record)**
 
 ### 8.3. Initiative Definition Document
 
@@ -324,17 +386,49 @@ The roadmap should remain aligned to approved scope and should be revised throug
 
 ### 8.7. Decision Record Log
 
-Maintains a clear record of material decisions affecting scope, funding, risk, sequencing, or acceptance.
+Maintains a clear record of material decisions affecting scope, funding, risk, sequencing, or acceptance. Each entry carries a `DR-###` ID and links to related assumptions (`AI-###`), quality attributes (`QA-###`), business rules (`BR-###`), and integration entries (`INT-###`) where the decision materially affects them.
 
-This ensures that governance decisions are attributable and reviewable.
+Specification: [decision_record_log_specification](governance_and_control_deliverables/decision_record_log_specification.md)
+
+This ensures that governance decisions are attributable, cross-referenced, and reviewable.
 
 #### Acceptance Criteria
 
-- Material decisions are logged with decision statement, date, and decision authority.
+- Material decisions are logged with DR-### IDs, decision statement, date, and decision authority.
 - The log distinguishes decisions from unresolved issues or discussion notes.
+- Cross-domain references (AI-###, QA-###, BR-###, INT-###) are included where the decision affects those areas.
 - Decision entries are maintained as the initiative progresses.
 
-### 8.8. Formal Acceptance & Closure Record
+### 8.8. Solution Assumptions & Issues Register
+
+Specification: [solution_assumptions_and_issues_register_specification](governance_and_control_deliverables/solution_assumptions_and_issues_register_specification.md)
+
+Tracks live design assumptions, open questions, issues, and risks that emerge during solution definition and delivery. Each item carries an `AI-###` identifier. Items that are resolved into formal decisions are promoted to the Decision Record Log.
+
+Use this from Stage 2 onwards whenever there are multiple unknowns or design uncertainties that could affect scope, cost, timeline, or acceptance if not addressed.
+
+#### Acceptance Criteria
+
+- All material assumptions and issues are logged with AI-### IDs and a description of potential impact.
+- Owners and target resolution timelines are defined.
+- Resolved items reference decisions or outcomes in the Decision Record Log.
+
+### 8.9. Validation & Evidence Matrix
+
+Specification: [validation_and_evidence_matrix_specification](governance_and_control_deliverables/validation_and_evidence_matrix_specification.md)
+
+Maps each approved scope item (FC, SM, UC) to its validation method and the evidence required for acceptance. Created in Stage 4 as a validation planning tool and maintained in Stage 6 as an evidence tracker. Used in Stage 7 as part of the acceptance package.
+
+Use this when the initiative has multiple modules or capabilities needing explicit evidence for acceptance.
+
+#### Acceptance Criteria
+
+- All approved FCs, SMs and UCs have a defined validation method and evidence type.
+- The matrix is maintained current throughout delivery.
+- Evidence references are recorded for completed items.
+- Deferred or conditional items are clearly marked.
+
+### 8.10. Formal Acceptance & Closure Record
 
 Provides documented confirmation that:
 
@@ -350,16 +444,18 @@ This prevents informal completion without accountability.
 - Acceptance status for the initiative or relevant deliverables is explicitly recorded.
 - Any open items, conditions, or post-closure responsibilities are documented.
 
-### 8.9. Recommended Acceptance Evidence
+### 8.11. Recommended Acceptance Evidence
 
 - Approved Initiative Definition Document
 - Approved Project Charter
 - Approved Delivery Charter where controlled mobilization is required
 - Delivery Roadmap (drafted in Stage 2, elaborated in Stage 4, and confirmed in Stage 5)
 - Maintained Decision Record Log
+- Maintained Solution Assumptions & Issues Register (all critical items resolved or deferred with rationale)
+- Completed Validation & Evidence Matrix
 - Completed Formal Acceptance & Closure Record
 
-### 8.10. Recommended Acceptance Authority
+### 8.12. Recommended Acceptance Authority
 
 - Sponsor or Delegated Decision Authority
 
