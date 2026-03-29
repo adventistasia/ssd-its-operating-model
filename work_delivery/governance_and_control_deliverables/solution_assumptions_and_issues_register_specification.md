@@ -90,7 +90,13 @@ This artifact traces back to the solution definition artifacts (functional capab
 
 Acceptance evidence: completed register showing all open and resolved items, with resolution summaries and references to the Decision Record Log, plus endorsement from the Delivery Owner that all critical assumptions and issues have been managed appropriately.
 
-## 9. Done When
+## 9. Maintenance Expectations
+
+This is a living document. Update the register throughout delivery as new assumptions are identified, new issues arise, and existing items are resolved.
+
+Keep item status, owners, and resolution summaries current. Do not close the register until all critical items are resolved or explicitly carried into closure records.
+
+## 10. Done When
 
 The register is ready for acceptance review when:
 
@@ -101,14 +107,12 @@ The register is ready for acceptance review when:
 - decisions arising from resolved items are captured in the [Decision Record Log](decision_record_log_specification.md)
 - remaining open items at acceptance are explicitly flagged with handling instructions
 
-## 10. What Comes Next
-
-1. Keep the register current during Stage 6 — Work Delivery as new assumptions and issues emerge.
+## 11. What Comes Next
 2. Link resolved items to their corresponding `DR-###` entries in the [Decision Record Log](decision_record_log_specification.md).
 3. Include the register in the acceptance package for Stage 7 — Acceptance, Transition & Closure.
 4. Flag any items that remain open at closure in the [Formal Acceptance & Closure Record](formal_acceptance_and_closure_record_specification.md).
 
-## 11. Prompt Guide
+## 12. Prompt Guide
 
 ### Starter prompt
 

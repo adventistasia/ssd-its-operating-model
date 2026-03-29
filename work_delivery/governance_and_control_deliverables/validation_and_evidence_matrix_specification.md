@@ -93,7 +93,13 @@ This artifact traces back to the functional capabilities, modules, and use case 
 
 Acceptance evidence: completed Validation & Evidence Matrix with references to evidence for each scope item, plus sign-off from the Delivery Owner and Acceptance Authority confirming adequacy of evidence.
 
-## 9. Done When
+## 9. Maintenance Expectations
+
+This is a living document. Update the matrix as validation is completed, evidence is collected, and item statuses change during Stage 6 — Work Delivery.
+
+Keep evidence references and status current so the matrix remains an accurate view of validated and outstanding scope items through to acceptance.
+
+## 10. Done When
 
 The matrix is ready for acceptance review when:
 
@@ -104,14 +110,12 @@ The matrix is ready for acceptance review when:
 - deferred or conditional items are clearly marked with rationale and handling instructions
 - the Delivery Owner and Acceptance Authority have reviewed and confirmed it
 
-## 10. What Comes Next
-
-1. Keep the matrix current during Stage 6 — Work Delivery as evidence is collected and statuses update.
+## 11. What Comes Next
 2. Resolve any deferred or N/A items with explicit rationale before acceptance.
 3. Include the completed matrix in the acceptance package for Stage 7.
 4. Reference it in the [Acceptance Record](../solution_deliverables/acceptance_record_specification.md) as evidence of validated scope coverage.
 
-## 11. Prompt Guide
+## 12. Prompt Guide
 
 ### Starter prompt
 

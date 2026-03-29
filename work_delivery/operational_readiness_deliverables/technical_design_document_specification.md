@@ -188,7 +188,18 @@ During active delivery, keep it current enough to remain the usable design basel
 
 Minor administrative edits or inconsequential wording changes do not require formal maintenance activity.
 
-## 10. Done When
+## 10. Validation Guide
+
+- Does the document explain how the solution is built and what major technical decisions were made?
+- Are architecture, environments, integrations, and interfaces described clearly enough for a reviewer, incoming support team, or future maintainer?
+- Are operational characteristics, resilience design, and critical dependencies visible?
+- Are major design decisions and their rationale explicit and traceable?
+- Are known limitations and open technical issues stated?
+- Does the document stay at design level rather than drifting into operational procedures or test scripts?
+
+If weak, add missing design context, make assumptions and decisions traceable, and move operational or procedural content to the [DevOps Guide](devops_guide_specification.md).
+
+## 11. Done When
 
 This artifact is ready when it is:
 
@@ -199,7 +210,7 @@ This artifact is ready when it is:
 - aligned to related artifacts and approved scope references
 - free from procedural overload, with detailed procedures kept in the right downstream artifacts
 
-## 11. What Comes Next
+## 12. What Comes Next
 
 After this baseline is confirmed:
 
@@ -208,7 +219,7 @@ After this baseline is confirmed:
 3. define the recovery path in the [Backup, Restore & Recovery Plan Specification](backup_restore_and_recovery_plan_specification.md)
 4. confirm readiness in the [Operational Readiness Confirmation Record Specification](operational_readiness_confirmation_record_specification.md)
 
-## 12. Prompt Guide
+## 13. Prompt Guide
 
 Starter prompt:
 

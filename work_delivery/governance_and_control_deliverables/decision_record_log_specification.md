@@ -132,7 +132,13 @@ Decisions may affect and should link to:
 
 Acceptance evidence: updated Decision Record Log showing all material decisions with authority, rationale, and current status, plus confirmation by the Delivery Owner that the log is complete up to the acceptance point.
 
-## 9. Done When
+## 9. Maintenance Expectations
+
+This is a living document. Update the log as decisions are made throughout delivery. Add each new material decision promptly so the log remains the authoritative record for the initiative.
+
+Do not archive or stop maintaining the log until the initiative reaches formal closure.
+
+## 10. Done When
 
 The log is ready for review or acceptance when:
 
@@ -142,14 +148,12 @@ The log is ready for review or acceptance when:
 - any decision affecting scope, funding, or acceptance is included
 - the log owner has confirmed it is current and complete
 
-## 10. What Comes Next
-
-1. Keep the log current throughout Stage 6 — Work Delivery as implementation decisions arise.
+## 11. What Comes Next
 2. Reference decision IDs in affected domain artifacts (NFRs, business rules, integrations) for traceability.
 3. Include the completed log in the acceptance package for Stage 7 — Acceptance, Transition & Closure.
 4. Reference the log in the [Formal Acceptance & Closure Record](formal_acceptance_and_closure_record_specification.md) for any conditions or exceptions.
 
-## 11. Prompt Guide
+## 12. Prompt Guide
 
 ### Starter prompt
 

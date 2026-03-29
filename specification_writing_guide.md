@@ -74,33 +74,6 @@ Use the **extended pattern** when the artifact is one or more of the following:
 - a **formal governance baseline** that an approver will sign off on and later compare against delivery outcomes (add Validation Guide)
 - a **complex operational or technical control document** where "done when" bullets alone are not sufficient to assess readiness
 
-### Light Pattern — Applies To
-
-- All solution deliverables
-- Work assessment specifications
-- Work Brief
-- Decision Record Log, Solution Assumptions & Issues Register, Validation & Evidence Matrix
-- Security and privacy specifications (assessment, compliance statement, residual risk)
-- Data governance specifications
-- User adoption specifications
-- Audit and monitoring design summary
-
-### Extended Pattern — Applies To
-
-- Initiative Definition Document
-- Project Charter
-- Formal Acceptance and Closure Record
-- Technical Design Document
-- Operations and Support Model
-- DevOps Guide
-- Backup, Restore and Recovery Plan
-- Delivery Charter
-- Delivery Roadmap
-- Operational Readiness Confirmation Record
-- Access Control and Authorization Model
-
-For extended-pattern specifications, only add the optional sections where they truly add value. Do not add them by default.
-
 ---
 
 ## 4. Standard Light Pattern — Section-by-Section Guide
