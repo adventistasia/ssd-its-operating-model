@@ -45,7 +45,7 @@ For small governed work using a [Work Brief](work_brief/work_brief_specification
 
 Use this reference differently at each stage:
 
-- **Stage 1 - Work Assessment:** use the [Work Assessment Process](work_assessment/work_assessment_process.md) and its three assessment artifacts to decide whether the work should proceed into definition. This guide mainly becomes active after that decision, except for the Work Assessment Deliverables domain, which can be used after Initial Review and Validation Assessment are complete and the decision is to continue with fuller work assessment.
+- **Stage 1 - Work Assessment:** use the [Work Assessment Process](work_assessment/work_assessment_process.md) and its three assessment artifacts to decide whether the work should proceed into definition.
 - **Stage 2 - Work Definition:** identify the required deliverables for the initiative, use domains to organize them where helpful, identify Acceptance Authorities, and define the minimum authorization-level output needed for a sound decision.
 - **Stage 3 - Work Authorization:** confirm that selected deliverables, owners, acceptance approach, and major cost/risk implications are decision-ready.
 - **Work Definition Details (Stage 4):** elaborate the required deliverables and any additional definition deliverables needed to build, test, transition, and accept the work.
