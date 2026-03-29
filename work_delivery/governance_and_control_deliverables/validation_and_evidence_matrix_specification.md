@@ -75,25 +75,47 @@ Use a table like this as a starting point:
 
 You may include additional columns for priority, risk, or notes as needed.
 
-## 7. Acceptance Criteria
+## 7. Writing Rules
 
-* All approved Functional Capabilities, modules and use cases have a defined validation method and evidence type.
-* The matrix is maintained and kept current throughout delivery.
-* Evidence references are recorded for completed items.
-* Deferred or conditional items are clearly marked with rationale.
-* The matrix is reviewed and accepted by the Delivery Owner and Acceptance Authority.
+- Keep evidence types specific. "Test report" or "UAT sign-off email" is useful; "document" is not. The acceptance authority needs to know exactly what to look for.
+- Do not preemptively defer items without stating a reason. Mark deferred items with a rationale and a target date or condition for resolution.
+- Align the validation method with acceptance authority expectations. If the acceptance authority expects a formal UAT sign-off, a developer unit test alone is not sufficient — agree early and make the expectation explicit in the matrix.
+- Make status visible to both delivery and acceptance teams. The matrix should be readable by non-technical reviewers, not only the QA lead or developer.
+- Evidence references should point to the actual stored artifact — a path, ticket ID, or repository link — not just say "TBD." Items marked complete with no evidence reference are not complete.
 
-## 8. Recommended Acceptance Evidence
+## 8. Traceability and Ownership Minimum
 
-* Completed Validation & Evidence Matrix with references to evidence for each scope item.
-* Sign-off from the Delivery Owner and Acceptance Authority confirming adequacy of evidence.
+The Delivery Owner is accountable for ensuring the matrix is maintained and reflects current evidence status throughout delivery.
 
-## 9. Recommended Acceptance Authority
+The Acceptance Authority is accountable for confirming that evidence is adequate at the acceptance stage.
 
-* Delivery Owner for completeness of validation planning.
-* Acceptance Authority for adequacy of evidence.
+This matrix links directly to:
 
-## 10. Prompt Guide
+* [Functional Capabilities Specification](../solution_deliverables/functional_capabilities_specification.md), [Solution Module Definition Specification](../solution_deliverables/solution_module_definition_specification.md), and [Use Case Narratives Specification](../solution_deliverables/use_case_narratives_specification.md) — the scope items that require validation
+* [Acceptance Record Specification](../solution_deliverables/acceptance_record_specification.md) — the matrix is included as part of the acceptance evidence package
+
+Acceptance evidence: the completed matrix with references to evidence for each scope item, plus sign-off from the Delivery Owner and Acceptance Authority confirming adequacy of evidence.
+
+## 9. Done When
+
+The matrix is adequate when:
+
+- all approved Functional Capabilities, modules and use cases have a defined validation method and evidence type
+- each row has a named owner responsible for validation and evidence collection
+- completed items have an evidence reference pointing to the actual stored artifact, not a placeholder
+- deferred or conditional items are explicitly marked with a rationale and a target resolution condition or date
+- the Delivery Owner and Acceptance Authority have reviewed and confirmed that the evidence is sufficient for acceptance
+
+## 10. What Comes Next
+
+After the matrix is complete and evidence is collected:
+
+1. include the matrix as part of the acceptance evidence package in the [Acceptance Record](../solution_deliverables/acceptance_record_specification.md) to confirm that each scope item has evidence
+2. carry any deferred or conditional items forward into the closure record with explicit conditions for resolution
+3. use the evidence references to support post-implementation audits, compliance reviews, or operational handover documentation
+4. archive the completed matrix as part of the permanent initiative record alongside the deployed solution artifacts
+
+## 11. Prompt Guide
 
 Starter prompt:
 

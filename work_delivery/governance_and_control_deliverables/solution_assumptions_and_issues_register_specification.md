@@ -71,25 +71,45 @@ Use a table like this:
 | AI-001 | Assumption | API provider will deliver v2 endpoints by Q3 | Could delay integration if API is late | SM-003, UC-010 | Delivery owner | Open | Delivery Mobilization (Stage 5) | |
 | AI-002 | Issue | Unclear whether finance approval is needed for small purchases | Could change approval flow in UC-003 | BR-002, UC-003 | SME for Finance | Under investigation | Work Definition Details (Stage 4) | |
 
-## 7. Acceptance Criteria
+## 7. Writing Rules
 
-* All material assumptions and issues identified during design and delivery are logged.
-* Each entry describes the potential impact and references related artifacts.
-* Owners and target resolution timelines are defined.
-* Status updates and resolution summaries are maintained.
-* Decisions arising from resolved items are captured in the Decision Record Log.
+- Use `AI-###` IDs immediately — assign them at the time of entry so that cross-references in other artifacts remain stable and do not need to be updated later.
+- State the impact, not just the assumption. "Assumes vendor delivers API by Q3" is incomplete; "if delivery slips, integration with SM-003 is blocked and Phase 1 go-live is at risk" makes the consequence visible.
+- Distinguish clearly between assumptions (things we are relying on to be true and have not yet confirmed) and issues (things we know are unclear, wrong, or unresolved). The type column should always reflect this distinction.
+- Keep resolution summaries brief but specific. Record what was confirmed, what changed, and the reference to any resulting `DR-###` entry. Do not leave resolutions blank when items are closed.
+- Link to `DR-###` when an item becomes a decision. If an assumption is confirmed or an issue is resolved through a formal decision, reference the Decision Record Log entry in the resolution summary column.
 
-## 8. Recommended Acceptance Evidence
+## 8. Traceability and Ownership Minimum
 
-* Completed register showing all open and resolved items, with resolution summaries and references to the Decision Record Log.
-* Endorsement from the Delivery Owner that all critical assumptions and issues have been managed appropriately.
+The Delivery Owner is accountable for ensuring the register is maintained and that all critical assumptions and issues are managed appropriately. A named reviewer should be identified for each governance stage review.
 
-## 9. Recommended Acceptance Authority
+This register links directly to:
 
-* Delivery Owner for completeness and management oversight.
-* Outcome Owner or sponsor where assumptions or issues materially affect business outcomes.
+* [Decision Record Log](decision_record_log_specification.md) — resolved items that resulted in a formal decision should reference the `DR-###` entry
+* [Acceptance Record Specification](../solution_deliverables/acceptance_record_specification.md) — remaining open or deferred items at closure must be visible to the acceptance authority
 
-## 10. Prompt Guide
+Acceptance evidence: the completed register showing all open and resolved items, with resolution summaries and decision references, plus endorsement from the Delivery Owner confirming that critical items have been managed. Where assumptions or issues materially affect business outcomes, the Outcome Owner or sponsor should also confirm adequacy.
+
+## 9. Done When
+
+The register is adequate when:
+
+- all material assumptions and issues identified during design and delivery are logged with `AI-###` IDs
+- each entry states the potential impact on scope, cost, timeline, quality, or compliance
+- each entry has a named owner and a target resolution stage or date
+- resolved items have a resolution summary and, where applicable, a `DR-###` reference
+- remaining open or deferred items at closure are explicitly noted and the acceptance authority has confirmed they are acceptable to carry forward
+
+## 10. What Comes Next
+
+After the register is established and current:
+
+1. carry resolved items with decision implications into the [Decision Record Log](decision_record_log_specification.md) as formal `DR-###` entries
+2. include open and deferred items in the [Acceptance Record](../solution_deliverables/acceptance_record_specification.md) so conditions and residual risks are visible at closure
+3. use unresolved risk items to inform post-acceptance management or a formal risk register where one exists
+4. archive the completed register as part of the permanent initiative record for post-implementation review
+
+## 11. Prompt Guide
 
 Starter prompt:
 
