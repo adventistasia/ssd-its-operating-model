@@ -809,12 +809,12 @@ This domain is for focused assessment work after the earlier screening steps. Do
 
 ### 13.2. Standard Deliverables (as applicable)
 
-- **[Challenges & Needs Summary](#13.3.%20Challenges%20&%20Needs%20Summary)**
+- **[Challenges and Needs](#13.3.%20Challenges%20and%20Needs)**
 - **[Current State Analysis Report](#13.4.%20Current%20State%20Analysis%20Report)**
 - **[Business Process Stage Analysis](#13.5.%20Business%20Process%20Stage%20Analysis)**
 - **[Work Assessment Report](#13.6.%20Work%20Assessment%20Report)**
 
-### 13.3. Challenges & Needs Summary
+### 13.3. Challenges and Needs
 
 Keeps the validated problem basis, unmet needs, and business opportunity context visible while fuller work assessment is underway.
 
@@ -867,7 +867,7 @@ This is the main decision-ready deliverable in the domain.
 - Completed Work Assessment Report
 - Current State Analysis Report where used
 - Business Process Stage Analysis where used
-- Challenges & Needs Summary where used or carried forward
+- Challenges and Needs where used or carried forward
 - visible references to the assessment decision basis and next-step recommendation
 
 ### 13.8. Recommended Acceptance Authority
@@ -1006,4 +1006,3 @@ Deliverable domains mainly organize the deliverables view. The team should still
 - Record formal acceptance by the named Acceptance Authorities and formally close the initiative.
 
 Completion requires acceptance across all applicable deliverable domains.
-
