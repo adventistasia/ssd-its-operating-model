@@ -1,6 +1,6 @@
 # Current State Analysis Report Specification
 
-## 1. Purpose and Intended Outcome
+## 1. What This Artifact Is For
 
 The Current State Analysis Report gives a structured, evidence-based view of the current operating reality relevant to the work request.
 
@@ -8,7 +8,7 @@ It exists to document what actually happens today, what systems, workflows, hand
 
 The intended outcome is that Work Assessment can rely on a practical current-state baseline that is strong enough to support recommendation, boundary setting, ownership visibility, supportability thinking, and later handoff into Work Definition.
 
-## 2. When It Is Required
+## 2. When to Use It
 
 This artifact is situational within Work Assessment.
 
@@ -24,8 +24,7 @@ It is most commonly justified when:
 
 For simple work, a concise current-state summary inside any of the work assessment forms i.e. initial, validation or full report is usually sufficient.
 
-## 3. Intended Readers and Users
-
+**Intended readers:** 
 - Assessment Owner
 - analysis lead or business analyst
 - sponsor or sponsor candidate
@@ -33,8 +32,8 @@ For simple work, a concise current-state summary inside any of the work assessme
 - ITS leadership or governance reviewers
 - practitioners preparing the Work Assessment Report or later definition artifacts
 
-## 4. Intended Project Context
 
+**Project context:** 
 Use this artifact during Validation Assessment or focused analysis when the work request depends on a reliable picture of the current environment.
 
 It is especially useful where the request is shaped by:
@@ -49,7 +48,9 @@ It is especially useful where the request is shaped by:
 
 This artifact should reflect the current state that actually exists. It should not normalize broken practices and it should not quietly replace current-state evidence with future-state recommendations.
 
-## 5. How Much Detail to Include
+
+**How much detail to include:**
+
 
 Include enough detail to show what is happening today, what materially shapes it, and why that matters to the work request.
 
@@ -61,7 +62,44 @@ The governing principle is:
 
 > Document the current reality clearly enough to support assessment and handoff. Do not turn the artifact into a future-state design pack or enterprise-wide diagnostic.
 
-## 6. Required Content or Minimum Structure
+
+## 3. Stage Fit and Handoffs
+
+This artifact can support the:
+
+- [Validation Assessment](validation_assessment_specification.md)
+- [Work Assessment Report](work_assessment_report_specification.md)
+- [Business Process Stage Analysis](business_process_stage_analysis_specification.md)
+
+It should help make the current-state summary in those gate artifacts more reliable and more reusable.
+
+If the work proceeds, later definition artifacts should reference this current-state analysis rather than rediscovering the same facts from scratch.
+
+
+## 4. Before You Start
+
+Make sure you have:
+
+- the relevant upstream assessment artifacts
+- access to subject matter experts and the requester
+- a named Assessment Owner
+- awareness of any material constraints or prior work on this topic
+
+If key inputs are missing, treat the output as a working draft only.
+
+
+## 5. How to Draft It
+
+Follow these steps:
+
+1. Read the relevant upstream assessment artifacts and context.
+2. Gather the required inputs listed in section 6.
+3. Complete each section in order, working from existing assessment inputs.
+4. Identify material gaps and note them explicitly rather than guessing.
+5. Record the decision and any conditions or follow-up actions clearly.
+
+
+## 6. Minimum Structure
 
 ### 6.1. Report Identity and Assessment Boundary
 
@@ -201,7 +239,8 @@ Example only. Adapt to the real work request.
 - Medium evidence: local office variation, based on a limited sample of offices
 - Open point: whether all offices use the same review criteria
 
-## 7. What to Keep Out
+
+## 7. Writing Rules
 
 Keep the following out of this artifact:
 
@@ -212,19 +251,8 @@ Keep the following out of this artifact:
 - detailed vendor analysis
 - enterprise-wide architecture content that does not materially affect this request
 
-## 8. Relationships to Other Artifacts
 
-This artifact can support the:
-
-- [Validation Assessment](validation_assessment_specification.md)
-- [Work Assessment Report](work_assessment_report_specification.md)
-- [Business Process Stage Analysis](business_process_stage_analysis_specification.md)
-
-It should help make the current-state summary in those gate artifacts more reliable and more reusable.
-
-If the work proceeds, later definition artifacts should reference this current-state analysis rather than rediscovering the same facts from scratch.
-
-## 9. Ownership, Review, and Acceptance Expectations
+## 8. Traceability, Ownership, and Review
 
 The Assessment Owner or analysis lead usually prepares this artifact with input from operational stakeholders, subject matter experts, and any relevant service, support, data, security, or compliance contributors.
 
@@ -234,15 +262,8 @@ Formal acceptance is not normally required, but the report should be reliable en
 
 Reviewers should challenge any section that reads like a recommendation without a clear current-state basis behind it.
 
-## 10. Maintenance Expectations
 
-This artifact may be a living assessment document while Validation Assessment or focused analysis is underway.
-
-Update it when material current-state facts change, when major evidence gaps are closed, or when previously assumed ownership, workflow, or dependency information turns out to be wrong.
-
-Once the Work Assessment recommendation is finalized, the report normally becomes a point-in-time assessment record.
-
-## 11. Validation Guide
+## 9. Done When
 
 - Does the report describe what actually happens today rather than an idealized or recommended future state?
 - Are the material workflows, handoffs, workarounds, bottlenecks, duplication, constraints, and dependencies visible?
@@ -253,7 +274,17 @@ Once the Work Assessment recommendation is finalized, the report normally become
 - Does it identify which current-state facts should remain easy to reference from the Work Assessment Report or later definition?
 - Is the detail practical and bounded rather than drifting into a full redesign or architecture pack?
 
-## 12. Prompt Guide
+
+## 10. What Comes Next
+
+After this artifact is complete:
+
+1. carry forward key findings to the next assessment stage
+2. reference relevant upstream artifacts to avoid rediscovering established facts
+3. use outputs to inform the [Work Assessment Report](work_assessment_report_specification.md) where applicable
+
+
+## 11. Prompt Guide
 
 ### 12.1. Starter Prompt
 

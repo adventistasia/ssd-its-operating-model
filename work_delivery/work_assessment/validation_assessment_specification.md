@@ -1,6 +1,6 @@
 # Validation Assessment Specification
 
-## 1. Purpose and Intended Outcome
+## 1. What This Artifact Is For
 
 The Validation Assessment tests whether a screened opportunity is strong enough to justify focused analysis.
 
@@ -8,12 +8,11 @@ It exists to validate business alignment, test sponsorship, confirm the primary 
 
 The intended outcome is that only opportunities with credible need, plausible sponsorship, clear organizational value, and manageable risk move into focused analysis.
 
-## 2. When It Is Required
+## 2. When to Use It
 
 This artifact is required for work that passes the Initial Review and needs a stronger evidence base before deciding whether to invest in focused analysis.
 
-## 3. Intended Readers and Users
-
+**Intended readers:** 
 - Assessment Owner
 - sponsor or sponsor candidate
 - outcome owner candidate
@@ -21,11 +20,13 @@ This artifact is required for work that passes the Initial Review and needs a st
 - ITS leadership or governance reviewers
 - subject matter contributors needed to test risk or feasibility
 
-## 4. Intended Project Context
 
+**Project context:** 
 Use this artifact in the middle of Work Assessment after the request survives initial triage but before the organization decides whether to do focused analysis.
 
-## 5. How Much Detail to Include
+
+**How much detail to include:**
+
 
 Include enough detail to answer five practical questions:
 
@@ -41,7 +42,45 @@ The governing principle is:
 
 > Add enough evidence to decide whether focused analysis should happen, but stop short of detailed definition, design, or planning.
 
-## 6. Required Content or Minimum Structure
+
+## 3. Stage Fit and Handoffs
+
+This artifact builds on the [Initial Review](initial_review_specification.md).
+
+It should normally be informed by the [Challenges and Needs](challenges_and_needs_specification.md) artifact.
+
+It may also use supporting assessment inputs such as:
+
+- [Current State Analysis Report](current_state_analysis_report_specification.md)
+- [Business Process Stage Analysis](business_process_stage_analysis_specification.md) where stage-by-stage process flow materially shapes the assessment
+
+If the item proceeds, it justifies focused analysis and provides input to the later [Work Assessment Report](work_assessment_report_specification.md).
+
+
+## 4. Before You Start
+
+Make sure you have:
+
+- the relevant upstream assessment artifacts
+- access to subject matter experts and the requester
+- a named Assessment Owner
+- awareness of any material constraints or prior work on this topic
+
+If key inputs are missing, treat the output as a working draft only.
+
+
+## 5. How to Draft It
+
+Follow these steps:
+
+1. Read the relevant upstream assessment artifacts and context.
+2. Gather the required inputs listed in section 6.
+3. Complete each section in order, working from existing assessment inputs.
+4. Identify material gaps and note them explicitly rather than guessing.
+5. Record the decision and any conditions or follow-up actions clearly.
+
+
+## 6. Minimum Structure
 
 ### 6.1. Assessment Identity
 
@@ -168,7 +207,8 @@ Must include:
 - likely Acceptance Authority or a clear note that acceptance ownership is still unresolved
 - operational or support ownership signals where service impact already appears likely
 
-## 7. What to Keep Out
+
+## 7. Writing Rules
 
 Keep the following out of this artifact:
 
@@ -179,30 +219,15 @@ Keep the following out of this artifact:
 - vendor evaluation packs
 - full mitigation plans or full business cases
 
-## 8. Relationships to Other Artifacts
 
-This artifact builds on the [Initial Review](initial_review_specification.md).
-
-It should normally be informed by the [Challenges and Needs](challenges_and_needs_specification.md) artifact.
-
-It may also use supporting assessment inputs such as:
-
-- [Current State Analysis Report](current_state_analysis_report_specification.md)
-- [Business Process Stage Analysis](business_process_stage_analysis_specification.md) where stage-by-stage process flow materially shapes the assessment
-
-If the item proceeds, it justifies focused analysis and provides input to the later [Work Assessment Report](work_assessment_report_specification.md).
-
-## 9. Ownership, Review, and Acceptance Expectations
+## 8. Traceability, Ownership, and Review
 
 The Assessment Owner usually prepares this artifact with focused input from the requester's subject matter experts, immediate team, sponsor candidate, affected stakeholders, and any subject matter leads needed to test obvious risks or feasibility concerns.
 
 The proceed/defer/stop decision should be confirmed by the relevant ITS leadership or delegated governance authority.
 
-## 10. Maintenance Expectations
 
-This artifact is usually stable once the recommendation and decision are recorded. If significant new information changes the opportunity materially before the final assessment is completed, update the artifact or issue a new version so the change is visible.
-
-## 11. Validation Guide
+## 9. Done When
 
 - Is the need validated enough to justify or reject focused analysis?
 - Is business alignment clear?
@@ -213,7 +238,17 @@ This artifact is usually stable once the recommendation and decision are recorde
 - Are major risk and feasibility concerns visible?
 - Does the recommendation clearly state whether the item should stop, defer, or proceed?
 
-## 12. Prompt Guide
+
+## 10. What Comes Next
+
+After this artifact is complete:
+
+1. carry forward key findings to the next assessment stage
+2. reference relevant upstream artifacts to avoid rediscovering established facts
+3. use outputs to inform the [Work Assessment Report](work_assessment_report_specification.md) where applicable
+
+
+## 11. Prompt Guide
 
 ### 12.1. Starter Prompt
 

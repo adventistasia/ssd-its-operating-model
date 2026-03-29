@@ -1,47 +1,57 @@
 # Initial Review Specification
 
-## 1. Purpose and Intended Outcome
+## 1. What This Artifact Is For
 
 The Initial Review makes a fast, disciplined IT-side decision on whether a request, problem, risk, or opportunity is worth any further assessment effort.
 
 It exists to stop weak, unsupported, misaligned, or low-value work early before the organization spends time on deeper validation. It is also a quick sanity check on whether the request broadly aligns with what the organization does. A useful Initial Review is short, practical, and explicit about why the work should stop, defer, or proceed.
 
-The intended outcome is that every new work idea receives an early triage decision and only credible items move into Validation Assessment.
+Intended readers include the Assessment Owner, requestor or submitter, sponsor candidate, ITS intake or governance leads, and decision-makers who need a quick triage view.
 
-## 2. When It Is Required
+## 2. When to Use It
 
 This artifact is required at the start of Work Assessment for any proposed planned work that may need governance, definition, or later authorization.
 
-## 3. Intended Readers and Users
-
-- Assessment Owner
-- requestor or submitter
-- sponsor candidate
-- ITS intake or governance leads
-- decision-makers who need a quick triage view
-
-## 4. Intended Project Context
-
-Use this artifact as the front-door screening record for potential planned work. It is most useful when the IT team needs to decide quickly whether a request is worth the time to assess further and whether it broadly fits organizational mandate and direction.
+Use it as the front-door screening record for potential planned work when the IT team needs to decide quickly whether a request is worth the time to assess further and whether it broadly fits organizational mandate and direction.
 
 This document should be understandable in minutes. It is not a mini business case and not a project approval document.
 
-## 5. How Much Detail to Include
+## 3. Stage Fit and Handoffs
 
-Keep it brief. Include only enough detail to understand:
+This artifact is used in **Stage 1 (Work Assessment)** as the first gate in the assessment process.
 
-- what the need is
-- why it matters
-- who is affected
-- whether it broadly aligns with organizational direction and mandate
-- whether obvious stop signals exist
-- what should happen next
+Upstream sources:
 
-The governing principle is:
+- Work request, problem report, risk escalation, or manager instruction that triggered the intake.
 
-> Capture enough to support a clear triage decision. Do not deepen analysis unless the item earns the right to move forward.
+Downstream artifacts:
 
-## 6. Required Content or Minimum Structure
+- [Challenges and Needs Specification](challenges_and_needs_specification.md) — may be used before or alongside this artifact where the request needs clearer problem framing.
+- [Validation Assessment Specification](validation_assessment_specification.md) — receives this artifact if the item proceeds.
+
+## 4. Before You Start
+
+Make sure you have:
+
+- a description of the request, problem, risk, or opportunity
+- the name or role of the requestor or source
+- a named Assessment Owner
+- enough context to check basic organizational fit and obvious stop signals
+
+If these inputs are absent or unclear, treat the output as a working draft only.
+
+## 5. How to Draft It
+
+1. Record the review identity: title, requestor, date, and Assessment Owner.
+2. Write the statement of need in plain language — what the problem or opportunity is and why it surfaced now.
+3. State the desired outcome as an improvement, not as a solution.
+4. List the current challenges or friction points visible at this stage.
+5. Identify the affected parties and explain why the issue matters if left unresolved.
+6. Assess the cost of inaction directionally: low, moderate, or high, with a brief rationale.
+7. Check strategic and organizational fit and flag any obvious stop signals or dealbreakers.
+8. Make an explicit recommendation: stop, defer, or proceed to Validation Assessment.
+
+## 6. Minimum Structure
 
 ### 6.1. Review Identity
 
@@ -126,9 +136,22 @@ Must include:
 - notes or conditions if applicable
 - owner for each follow-up action where conditions are set
 
-## 7. What to Keep Out
+## 7. Writing Rules
 
-Keep the following out of this artifact:
+Keep it brief. Include only enough detail to understand:
+
+- what the need is
+- why it matters
+- who is affected
+- whether it broadly aligns with organizational direction and mandate
+- whether obvious stop signals exist
+- what should happen next
+
+The governing principle is:
+
+> Capture enough to support a clear triage decision. Do not deepen analysis unless the item earns the right to move forward.
+
+Keep the following out:
 
 - solution design
 - detailed requirements
@@ -137,56 +160,44 @@ Keep the following out of this artifact:
 - estimates or schedules beyond basic triage observations
 - detailed risk mitigation planning
 
-## 8. Relationships to Other Artifacts
-
-The [Challenges and Needs](challenges_and_needs_specification.md) may be used before or alongside this artifact where the request needs clearer problem framing.
-
-If the item proceeds, this artifact feeds the [Validation Assessment](validation_assessment_specification.md).
-
-## 9. Ownership, Review, and Acceptance Expectations
+## 8. Traceability, Ownership, and Review
 
 The Assessment Owner usually prepares this artifact as a quick IT-side review with input from the requestor and any immediately relevant stakeholders.
 
 The triage decision should be confirmed by the relevant ITS lead, intake governance owner, or other delegated decision-maker.
 
-## 10. Maintenance Expectations
+This artifact traces forward to the [Validation Assessment Specification](validation_assessment_specification.md) if the item proceeds.
 
-This artifact is normally stable once the decision is recorded. If the work is deferred and later revisited, create an updated review or a new version with the new decision context visible.
+## 9. Done When
 
-## 11. Validation Guide
+This artifact is ready when:
 
-- Is the need understandable without specialist knowledge?
-- Is the desired outcome written as an outcome rather than a solution?
-- Are the affected parties and cost of inaction visible enough to support triage?
-- Are obvious dealbreakers checked rather than ignored?
-- Is the recommendation explicit and attributable?
+- the need is understandable without specialist knowledge
+- the desired outcome is written as an outcome rather than a solution
+- the affected parties and cost of inaction are visible enough to support triage
+- obvious dealbreakers have been checked rather than ignored
+- the recommendation is explicit and attributable
+- the decision record is complete
 
-## 12. Prompt Guide
+## 10. What Comes Next
 
-### 12.1. Starter Prompt
+1. If the recommendation is to **proceed**, open the [Challenges and Needs Specification](challenges_and_needs_specification.md) to sharpen the problem basis where needed.
+2. Move to the [Validation Assessment Specification](validation_assessment_specification.md) to test business alignment, sponsorship, and the case for focused analysis.
+3. If the recommendation is to **stop or defer**, record the decision, assign follow-up ownership where conditions apply, and close the item or schedule a re-review date.
 
-```
+## 11. Prompt Guide
+
+Starter prompt:
+
+```text
 Draft an Initial Review for a proposed work item.
 Summarize the need, desired outcome, who is affected, the cost of inaction, obvious dealbreakers, and a clear recommendation to stop, defer, or proceed to Validation Assessment.
 Keep it concise, practical, and free of solution design.
 ```
 
-### 12.2. Section Prompts
+Validation prompt:
 
-```
-Rewrite the problem statement and desired outcome so they describe the current issue and intended improvement without naming a solution, system, or vendor.
-```
-
-```
-Create a short recommendation section that makes the stop, defer, or proceed decision explicit and gives a brief rationale.
-```
-
-### 12.3. Validation Prompts
-
-```
+```text
 Check whether this Initial Review functions as a fast triage record rather than a business case or design brief.
-```
-
-```
 Rewrite any section that drifts into design, requirements, or premature analysis.
 ```
