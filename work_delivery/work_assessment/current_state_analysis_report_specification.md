@@ -1,6 +1,6 @@
 # Current State Analysis Report Specification
 
-## 1. Purpose and Intended Outcome
+## 1. What This Artifact Is For
 
 The Current State Analysis Report gives a structured, evidence-based view of the current operating reality relevant to the work request.
 
@@ -8,7 +8,7 @@ It exists to document what actually happens today, what systems, workflows, hand
 
 The intended outcome is that Work Assessment can rely on a practical current-state baseline that is strong enough to support recommendation, boundary setting, ownership visibility, supportability thinking, and later handoff into Work Definition.
 
-## 2. When It Is Required
+## 2. When to Use It
 
 This artifact is situational within Work Assessment.
 
@@ -24,8 +24,7 @@ It is most commonly justified when:
 
 For simple work, a concise current-state summary inside any of the work assessment forms i.e. initial, validation or full report is usually sufficient.
 
-## 3. Intended Readers and Users
-
+**Intended readers:** 
 - Assessment Owner
 - analysis lead or business analyst
 - sponsor or sponsor candidate
@@ -33,8 +32,8 @@ For simple work, a concise current-state summary inside any of the work assessme
 - ITS leadership or governance reviewers
 - practitioners preparing the Work Assessment Report or later definition artifacts
 
-## 4. Intended Project Context
 
+**Project context:** 
 Use this artifact during Validation Assessment or focused analysis when the work request depends on a reliable picture of the current environment.
 
 It is especially useful where the request is shaped by:
@@ -49,7 +48,9 @@ It is especially useful where the request is shaped by:
 
 This artifact should reflect the current state that actually exists. It should not normalize broken practices and it should not quietly replace current-state evidence with future-state recommendations.
 
-## 5. How Much Detail to Include
+
+**How much detail to include:**
+
 
 Include enough detail to show what is happening today, what materially shapes it, and why that matters to the work request.
 
@@ -61,9 +62,46 @@ The governing principle is:
 
 > Document the current reality clearly enough to support assessment and handoff. Do not turn the artifact into a future-state design pack or enterprise-wide diagnostic.
 
-## 6. Required Content or Minimum Structure
 
-### 6.1. Report identity and assessment boundary
+## 3. Stage Fit and Handoffs
+
+This artifact can support the:
+
+- [Validation Assessment](validation_assessment_specification.md)
+- [Work Assessment Report](work_assessment_report_specification.md)
+- [Business Process Stage Analysis](business_process_stage_analysis_specification.md)
+
+It should help make the current-state summary in those gate artifacts more reliable and more reusable.
+
+If the work proceeds, later definition artifacts should reference this current-state analysis rather than rediscovering the same facts from scratch.
+
+
+## 4. Before You Start
+
+Make sure you have:
+
+- the relevant upstream assessment artifacts
+- access to subject matter experts and the requester
+- a named Assessment Owner
+- awareness of any material constraints or prior work on this topic
+
+If key inputs are missing, treat the output as a working draft only.
+
+
+## 5. How to Draft It
+
+Follow these steps:
+
+1. Read the relevant upstream assessment artifacts and context.
+2. Gather the required inputs listed in section 6.
+3. Complete each section in order, working from existing assessment inputs.
+4. Identify material gaps and note them explicitly rather than guessing.
+5. Record the decision and any conditions or follow-up actions clearly.
+
+
+## 6. Minimum Structure
+
+### 6.1. Report Identity and Assessment Boundary
 
 Must include:
 
@@ -76,7 +114,7 @@ Must include:
 
 This opening section should make the report boundary and evidence basis easy to find without reading the whole document.
 
-### 6.2. Current-state overview
+### 6.2. Current-State Overview
 
 Must include:
 
@@ -85,7 +123,7 @@ Must include:
 - the main business units, roles, or functions involved
 - the main systems, tools, records, or channels involved where materially relevant
 
-### 6.3. Actual workflows, handoffs, and operational realities
+### 6.3. Actual Workflows, Handoffs, and Operational Realities
 
 Must include:
 
@@ -96,7 +134,7 @@ Must include:
 
 Where useful, this section should reference or incorporate the [Business Process Stage Analysis](business_process_stage_analysis_specification.md).
 
-### 6.4. Systems, records, dependencies, and constraints
+### 6.4. Systems, Records, Dependencies, and Constraints
 
 Must include:
 
@@ -104,7 +142,7 @@ Must include:
 - notable dependencies on other teams, services, vendors, policies, data quality, approvals, or timing windows
 - operational, technical, policy, staffing, or environmental constraints that materially affect the current state
 
-### 6.5. Workarounds, bottlenecks, duplication, rework, and prior attempts
+### 6.5. Workarounds, Bottlenecks, Duplication, Rework, and Prior Attempts
 
 Must include:
 
@@ -113,7 +151,7 @@ Must include:
 - prior attempts, partial fixes, or abandoned efforts where relevant
 - why these matter to the current request or recommendation
 
-### 6.6. Roles, ownership, supportability, and control implications
+### 6.6. Roles, Ownership, Supportability, and Control Implications
 
 Must include:
 
@@ -122,7 +160,7 @@ Must include:
 - where ownership is unclear, fragmented, or dependent on individuals
 - any control, audit, record, or supportability implication that materially shapes the work request
 
-### 6.7. Current-state reference points
+### 6.7. Current-State Reference Points
 
 Must include:
 
@@ -132,7 +170,7 @@ Must include:
 
 This section should separate observed current-state facts from later recommendations. It should be clear which points are carry-forward facts for later definition and which questions still need validation before design or delivery decisions are made.
 
-### 6.8. Evidence basis and confidence notes
+### 6.8. Evidence Basis and Confidence Notes
 
 Must include:
 
@@ -141,7 +179,7 @@ Must include:
 - where evidence is partial, outdated, anecdotal, or still needs validation
 - any material inference, assumption, or confidence limit that affects how findings should be read
 
-### 6.9. Example content showing the minimum structure
+### 6.9. Example Content Showing the Minimum Structure
 
 Example only. Adapt to the real work request.
 
@@ -201,7 +239,8 @@ Example only. Adapt to the real work request.
 - Medium evidence: local office variation, based on a limited sample of offices
 - Open point: whether all offices use the same review criteria
 
-## 7. What to Keep Out
+
+## 7. Writing Rules
 
 Keep the following out of this artifact:
 
@@ -212,19 +251,8 @@ Keep the following out of this artifact:
 - detailed vendor analysis
 - enterprise-wide architecture content that does not materially affect this request
 
-## 8. Relationships to Other Artifacts
 
-This artifact can support the:
-
-- [Validation Assessment](validation_assessment_specification.md)
-- [Work Assessment Report](work_assessment_report_specification.md)
-- [Business Process Stage Analysis](business_process_stage_analysis_specification.md)
-
-It should help make the current-state summary in those gate artifacts more reliable and more reusable.
-
-If the work proceeds, later definition artifacts should reference this current-state analysis rather than rediscovering the same facts from scratch.
-
-## 9. Ownership, Review, and Acceptance Expectations
+## 8. Traceability, Ownership, and Review
 
 The Assessment Owner or analysis lead usually prepares this artifact with input from operational stakeholders, subject matter experts, and any relevant service, support, data, security, or compliance contributors.
 
@@ -234,15 +262,8 @@ Formal acceptance is not normally required, but the report should be reliable en
 
 Reviewers should challenge any section that reads like a recommendation without a clear current-state basis behind it.
 
-## 10. Maintenance Expectations
 
-This artifact may be a living assessment document while Validation Assessment or focused analysis is underway.
-
-Update it when material current-state facts change, when major evidence gaps are closed, or when previously assumed ownership, workflow, or dependency information turns out to be wrong.
-
-Once the Work Assessment recommendation is finalized, the report normally becomes a point-in-time assessment record.
-
-## 11. Validation Guide
+## 9. Done When
 
 - Does the report describe what actually happens today rather than an idealized or recommended future state?
 - Are the material workflows, handoffs, workarounds, bottlenecks, duplication, constraints, and dependencies visible?
@@ -253,26 +274,48 @@ Once the Work Assessment recommendation is finalized, the report normally become
 - Does it identify which current-state facts should remain easy to reference from the Work Assessment Report or later definition?
 - Is the detail practical and bounded rather than drifting into a full redesign or architecture pack?
 
-## 12. Prompt Guide for Drafting the Artifact
 
-### 12.1. Starter prompt
+## 10. What Comes Next
 
-> Draft a Current State Analysis Report for this work request.
-> Describe what actually happens today, the relevant systems, workflows, handoffs, dependencies, constraints, workarounds, bottlenecks, duplication, rework, ownership realities, support implications, and prior attempts where relevant.
-> Make clear which current-state facts later definition should be able to reference directly.
-> Show the main evidence sources and note any assumption, inference, evidence gap, or confidence limit that materially affects the picture.
-> Keep the report evidence-based, practical, and free of future-state design or implementation planning.
+After this artifact is complete:
 
-### 12.2. Section prompts
+1. carry forward key findings to the next assessment stage
+2. reference relevant upstream artifacts to avoid rediscovering established facts
+3. use outputs to inform the [Work Assessment Report](work_assessment_report_specification.md) where applicable
 
-> Rewrite the current-state overview so it reflects the real operating situation today, including the roles, systems, and practical conditions that materially shape the work.
 
-> Summarize the most important current-state facts that later definition should reference without converting them into future-state recommendations.
+## 11. Prompt Guide
 
-> Identify any sentence that sounds like a recommendation and rewrite it as an observed current-state fact or a clearly marked open question.
+### 12.1. Starter Prompt
 
-### 12.3. Validation prompts
+```
+Draft a Current State Analysis Report for this work request.
+Describe what actually happens today, the relevant systems, workflows, handoffs, dependencies, constraints, workarounds, bottlenecks, duplication, rework, ownership realities, support implications, and prior attempts where relevant.
+Make clear which current-state facts later definition should be able to reference directly.
+Show the main evidence sources and note any assumption, inference, evidence gap, or confidence limit that materially affects the picture.
+Keep the report evidence-based, practical, and free of future-state design or implementation planning.
+```
 
-> Check whether this Current State Analysis Report describes the actual current state clearly enough to support assessment and later handoff without drifting into solution design or roadmap content.
+### 12.2. Section Prompts
 
-> Rewrite any section that treats assumptions as facts, hides workarounds or ownership gaps, obscures confidence limits, or starts describing the target state instead of the current state.
+```
+Rewrite the current-state overview so it reflects the real operating situation today, including the roles, systems, and practical conditions that materially shape the work.
+```
+
+```
+Summarize the most important current-state facts that later definition should reference without converting them into future-state recommendations.
+```
+
+```
+Identify any sentence that sounds like a recommendation and rewrite it as an observed current-state fact or a clearly marked open question.
+```
+
+### 12.3. Validation Prompts
+
+```
+Check whether this Current State Analysis Report describes the actual current state clearly enough to support assessment and later handoff without drifting into solution design or roadmap content.
+```
+
+```
+Rewrite any section that treats assumptions as facts, hides workarounds or ownership gaps, obscures confidence limits, or starts describing the target state instead of the current state.
+```

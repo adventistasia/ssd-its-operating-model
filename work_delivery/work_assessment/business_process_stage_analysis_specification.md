@@ -1,14 +1,14 @@
 # Business Process Stage Analysis Specification
 
-## 1. Purpose and Intended Outcome
+## 1. What This Artifact Is For
 
 The Business Process Stage Analysis makes the current business process visible stage by stage so later assessment and definition do not have to guess how the work actually flows today.
 
 It exists to show the real flow of work, who does what, what inputs and records are used, where decisions or controls happen, and what outcomes or handoffs each stage produces. A useful Business Process Stage Analysis helps the team understand the present business process without drifting into process redesign, solution design, or implementation planning. It should also make cross-stage handoffs, dependencies, and exception paths visible enough that later assessment does not have to rediscover them.
 
-The intended outcome is that Work Assessment can reference a clear stage-by-stage view of the current business process where that understanding materially affects the recommendation, scope boundary, supportability view, or later definition work.
+Use this artifact when a clear picture of the current process is needed to make a sound assessment recommendation, set a scope boundary, think through supportability, or hand off confidently into Work Definition.
 
-## 2. When It Is Required
+## 2. When to Use It
 
 This artifact is situational within Work Assessment.
 
@@ -23,8 +23,7 @@ It is most commonly justified when:
 
 It is usually unnecessary when the current process can be explained accurately in a short narrative inside the Validation Assessment or Current State Analysis Report.
 
-## 3. Intended Readers and Users
-
+**Intended readers:** 
 - Assessment Owner
 - analysis lead or business analyst
 - requester's subject matter experts
@@ -32,8 +31,8 @@ It is usually unnecessary when the current process can be explained accurately i
 - sponsor or sponsor candidate
 - practitioners who later prepare the Work Assessment Report or Work Definition artifacts
 
-## 4. Intended Project Context
 
+**Project context:** 
 Use this artifact for process-driven work where the current flow of activities matters to understanding the problem, unmet need, control issue, or service impact.
 
 It is especially useful when the request involves:
@@ -46,7 +45,9 @@ It is especially useful when the request involves:
 
 This is an assessment artifact. It should describe the current process as it operates today, not the desired future process.
 
-## 5. How Much Detail to Include
+
+**How much detail to include:**
+
 
 Include enough detail to let a reader understand how the process moves from one stage to the next and where the important actors, inputs, records, decisions, outputs, and handoffs sit.
 
@@ -60,9 +61,47 @@ The governing principle is:
 
 > Make the current business flow understandable and usable for assessment. Do not turn the artifact into process redesign, operating procedure detail, or solution design.
 
-## 6. Required Content or Minimum Structure
 
-### 6.1. Analysis identity and scope
+## 3. Stage Fit and Handoffs
+
+This artifact can support the:
+
+- [Validation Assessment](validation_assessment_specification.md)
+- [Current State Analysis Report](current_state_analysis_report_specification.md)
+- [Work Assessment Report](work_assessment_report_specification.md)
+- [Types of Diagrams Guide](types_of_diagrams_guide.md)
+
+It is a supporting assessment artifact, not one of the three core Work Assessment gate artifacts.
+
+If Work Definition proceeds, later artifacts may reference this analysis rather than recreating the same current-process breakdown from scratch.
+
+
+## 4. Before You Start
+
+Make sure you have:
+
+- the relevant upstream assessment artifacts
+- access to subject matter experts and the requester
+- a named Assessment Owner
+- awareness of any material constraints or prior work on this topic
+
+If key inputs are missing, treat the output as a working draft only.
+
+
+## 5. How to Draft It
+
+Follow these steps:
+
+1. Read the relevant upstream assessment artifacts and context.
+2. Gather the required inputs listed in section 6.
+3. Complete each section in order, working from existing assessment inputs.
+4. Identify material gaps and note them explicitly rather than guessing.
+5. Record the decision and any conditions or follow-up actions clearly.
+
+
+## 6. Minimum Structure
+
+### 6.1. Analysis Identity and Scope
 
 Must include:
 
@@ -73,7 +112,7 @@ Must include:
 - analysis boundary showing where the process starts and ends for this assessment
 - source basis used, such as interviews, walkthroughs, records, or existing process notes
 
-### 6.2. Process summary
+### 6.2. Process Summary
 
 Must include:
 
@@ -82,7 +121,7 @@ Must include:
 - the normal end point or business outcome produced
 - any boundary note explaining what connected upstream or downstream process areas are outside this analysis
 
-### 6.3. Stage-by-stage process analysis
+### 6.3. Stage-By-Stage Process Analysis
 
 Must include a stage-by-stage structure.
 
@@ -105,7 +144,7 @@ The stage entries may be presented as a table or as repeated stage sections, but
 
 Where a process diagram is used, it should support the stage analysis rather than replace the required content fields.
 
-### 6.4. Observed process issues and practical notes
+### 6.4. Observed Process Issues and Practical Notes
 
 Must include:
 
@@ -115,7 +154,7 @@ Must include:
 
 This section should point to what is happening today. It should not propose the future solution.
 
-### 6.5. Cross-stage handoffs, dependencies, and exceptions
+### 6.5. Cross-Stage Handoffs, Dependencies, and Exceptions
 
 Must include:
 
@@ -125,14 +164,14 @@ Must include:
 
 This section may summarize the most important cross-stage points already visible in the stage entries, but it should bring them together so they are easy to assess as a whole.
 
-### 6.6. Assessment-use summary
+### 6.6. Assessment-Use Summary
 
 Must include:
 
 - the current-process facts that Validation Assessment, Current State Analysis, or the Work Assessment Report should be able to reference directly
 - any areas where the process understanding is still partial, disputed, or needs confirmation
 
-### 6.7. Example content showing the minimum structure
+### 6.7. Example Content Showing the Minimum Structure
 
 Example only. Adapt to the real work request.
 
@@ -178,7 +217,8 @@ Example only. Adapt to the real work request.
 - status visibility and repeated document checking are likely material causes of delay
 - it is still unclear whether all local offices follow the same review path
 
-## 7. What to Keep Out
+
+## 7. Writing Rules
 
 Keep the following out of this artifact:
 
@@ -189,20 +229,8 @@ Keep the following out of this artifact:
 - detailed procedure manuals or work instructions
 - full control redesign or approval matrices
 
-## 8. Relationships to Other Artifacts
 
-This artifact can support the:
-
-- [Validation Assessment](validation_assessment_specification.md)
-- [Current State Analysis Report](current_state_analysis_report_specification.md)
-- [Work Assessment Report](work_assessment_report_specification.md)
-- [Types of Diagrams Guide](types_of_diagrams_guide.md)
-
-It is a supporting assessment artifact, not one of the three core Work Assessment gate artifacts.
-
-If Work Definition proceeds, later artifacts may reference this analysis rather than recreating the same current-process breakdown from scratch.
-
-## 9. Ownership, Review, and Acceptance Expectations
+## 8. Traceability, Ownership, and Review
 
 The Assessment Owner or analysis lead usually prepares this artifact with input from the people who perform or oversee the process today.
 
@@ -212,15 +240,8 @@ Formal acceptance is not normally required, but the artifact should be reliable 
 
 Reviewers should check that stage fields remain explicit and that important handoffs or exceptions are not lost inside a simplified diagram or summary.
 
-## 10. Maintenance Expectations
 
-This artifact is usually a point-in-time assessment record.
-
-Update it if the team learns that the stage breakdown, actors, inputs, or outputs were materially wrong or incomplete before the Work Assessment recommendation is finalized.
-
-If the work is deferred and later revisited, refresh the analysis if the underlying process has changed.
-
-## 11. Validation Guide
+## 9. Done When
 
 - Does the analysis show the current process as it actually operates today rather than an ideal or proposed future state?
 - Are the stages, actors, inputs, outputs, and handoffs clear enough that another practitioner can understand the flow without major guessing?
@@ -230,25 +251,47 @@ If the work is deferred and later revisited, refresh the analysis if the underly
 - Does the artifact stop short of becoming process redesign, requirements, or delivery planning?
 - Does it identify which current-process facts should remain easy to reference in later assessment or definition?
 
-## 12. Prompt Guide for Drafting the Artifact
 
-### 12.1. Starter prompt
+## 10. What Comes Next
 
-> Draft a Business Process Stage Analysis for the current-state process relevant to this work request.
-> Break the process into stages and show the stage purpose, primary actor, supporting roles where relevant, required input, usual source, data used, activity description, decision or control point where relevant, output produced, and notable handoff, dependency, or exception.
-> Then summarize the cross-stage handoffs, dependencies, and exceptions that matter most to the assessment.
-> Keep it practical, evidence-based, and focused on the current process rather than future design.
+After this artifact is complete:
 
-### 12.2. Section prompts
+1. carry forward key findings to the next assessment stage
+2. reference relevant upstream artifacts to avoid rediscovering established facts
+3. use outputs to inform the [Work Assessment Report](work_assessment_report_specification.md) where applicable
 
-> Rewrite the stage entries so each one describes what actually happens today, who does it, what input is needed, what output is produced, and what handoff or control matters.
 
-> Summarize the cross-stage issues that materially affect the work request without proposing solutions.
+## 11. Prompt Guide
 
-> Check whether any important dependency or exception is only implied inside a stage description and make it explicit.
+### 12.1. Starter Prompt
 
-### 12.3. Validation prompts
+```
+Draft a Business Process Stage Analysis for the current-state process relevant to this work request.
+Break the process into stages and show the stage purpose, primary actor, supporting roles where relevant, required input, usual source, data used, activity description, decision or control point where relevant, output produced, and notable handoff, dependency, or exception.
+Then summarize the cross-stage handoffs, dependencies, and exceptions that matter most to the assessment.
+Keep it practical, evidence-based, and focused on the current process rather than future design.
+```
 
-> Check whether this Business Process Stage Analysis is detailed enough to support assessment and later handoff without becoming a redesign document or operating procedure.
+### 12.2. Section Prompts
 
-> Rewrite any stage description that assumes a future state, names a solution, or hides the real current handoff, dependency, control, or record issue.
+```
+Rewrite the stage entries so each one describes what actually happens today, who does it, what input is needed, what output is produced, and what handoff or control matters.
+```
+
+```
+Summarize the cross-stage issues that materially affect the work request without proposing solutions.
+```
+
+```
+Check whether any important dependency or exception is only implied inside a stage description and make it explicit.
+```
+
+### 12.3. Validation Prompts
+
+```
+Check whether this Business Process Stage Analysis is detailed enough to support assessment and later handoff without becoming a redesign document or operating procedure.
+```
+
+```
+Rewrite any stage description that assumes a future state, names a solution, or hides the real current handoff, dependency, control, or record issue.
+```

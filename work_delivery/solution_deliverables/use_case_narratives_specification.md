@@ -271,7 +271,7 @@ Useful drafting cautions:
 - If a use case is so narrow that it describes only a single click or UI gesture, raise it back to a meaningful user outcome.
 - Use the same role names and access assumptions as the User Roles, Personas & Access Model artifact.
 
-## 8. Traceability and Ownership Minimum
+## 8. Traceability, Ownership, and Review
 
 Minimum traceability expectation:
 

@@ -116,7 +116,7 @@ Keep the following out:
 - test scripts
 - backlog items
 
-## 8. Traceability and Ownership Minimum
+## 8. Traceability, Ownership, and Review
 
 Each capability entry should be traceable forward to at least one downstream behavior artifact.
 

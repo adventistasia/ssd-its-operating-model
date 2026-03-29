@@ -140,7 +140,7 @@ Keep the following out:
 - sprint plans
 - technical design detail
 
-## 8. Traceability and Ownership Minimum
+## 8. Traceability, Ownership, and Review
 
 Minimum traceability expectation:
 

@@ -1,6 +1,6 @@
 # DevOps Guide Specification
 
-## 1. Purpose and Intended Outcome
+## 1. What This Artifact Is For
 
 The DevOps Guide defines how the solution is deployed, configured, operated, monitored, supported, and recovered in day-to-day live service.
 
@@ -8,9 +8,15 @@ It exists to convert delivery and implementation knowledge into repeatable opera
 
 The intended outcome is that a competent DevOps team can run, support, maintain, and recover the deployed system or application consistently, safely, and independently after handover.
 
-## 2. When It Is Required
+Intended readers include: DevOps teams, platform or site reliability teams, support teams, and Service Owner and Support Owner.
+
+## 2. When to Use It
 
 This artifact is required when a solution will be handed to a DevOps, platform, operations, or support team and has repeatable deployment, configuration, maintenance, troubleshooting, monitoring, or recovery tasks.
+
+Use this artifact during detailed design, operational readiness, handover, and live-service transition. It is most useful where another team must safely deploy, update, operate, monitor, support, and recover the solution after delivery.
+
+It should align with ITIL 4 Service Configuration Management, Monitoring and Event Management, Change Enablement, and Service Desk practices by making operational ownership, release activity, monitoring, and support interactions clear. It should also reflect NIST planning discipline by making operational prerequisites, roles, dependencies, and evidence expectations explicit.
 
 ## 3. Stage Fit and Handoffs
 
@@ -29,26 +35,32 @@ Downstream artifacts:
 - [Operations & Support Model Specification](operations_and_support_model_specification.md)
 - [Operational Readiness Confirmation Record Specification](operational_readiness_confirmation_record_specification.md)
 
-## 4. Intended Readers and Users
+This guide should align with the Technical Design Document, Solution Module Definitions, Operations & Support Model, Access Control guidance, and Backup, Restore & Recovery Plan.
 
-- DevOps teams
-- platform or site reliability teams where applicable
-- support teams
-- Service Owner and Support Owner
+## 4. Before You Start
 
-## 5. Intended Project Context
+Confirm the following inputs are available before drafting:
 
-Use this artifact during detailed design, operational readiness, handover, and live-service transition. It is most useful where another team must safely deploy, update, operate, monitor, support, and recover the solution after delivery.
+- confirmed operational design or deployed scope
+- named DevOps owner and Support Owner
+- access and tooling inventory for the environments in scope
+- understanding of environments, deployment pipeline, and release process
+- reference to the Technical Design Document or equivalent
+- understanding of recovery obligations, monitoring requirements, and escalation paths
 
-It should align with ITIL 4 Service Configuration Management, Monitoring and Event Management, Change Enablement, and Service Desk practices by making operational ownership, release activity, monitoring, and support interactions clear. It should also reflect NIST planning discipline by making operational prerequisites, roles, dependencies, and evidence expectations explicit.
+## 5. How to Draft It
 
-## 6. How Much Detail to Include
+1. **Set operational context** — identify the system, covered environments, DevOps owner, and the live-service boundary this guide covers (see [6.1](#6.1.-operational-context)).
+2. **Document access, tools, and prerequisites** — list required roles, tools, consoles, pipelines, scripts, prerequisite conditions, and secure handling notes (see [6.2](#6.2.-access,-tools,-and-prerequisites)).
+3. **Describe environments and configuration** — document environments in scope, key components and pipelines, configurable items, and authoritative configuration record locations (see [6.3](#6.3.-environment-and-configuration-overview)).
+4. **Write deployment, release, and change procedures** — document normal deployment steps, patching and update steps, post-change verification, rollback trigger points, and related change or approval controls (see [6.4](#6.4.-deployment,-release,-and-change-procedures)).
+5. **Define routine operational tasks** — list recurring maintenance activities, frequencies, expected health-check results, known cautions, and required operational records (see [6.5](#6.5.-routine-operational-tasks)).
+6. **Document monitoring, alerting, and incident response** — state what to monitor, what normal looks like, how to respond to abnormal conditions, common issues with first-line corrective actions, escalation points, and vendor dependencies (see [6.6](#6.6.-monitoring,-alerting,-and-incident-response)).
+7. **Record recovery references and operational records expectations** — note when rollback or recovery should be considered, operational prerequisites, reference to the Backup, Restore & Recovery Plan, and required logs, dashboards, and records (see [6.7](#6.7.-recovery-and-operational-records-references)).
 
-Include execution-level operational detail. Another competent DevOps team should be able to perform key deployment, operational, support, and recovery tasks reliably. Do not turn it into a full design document or a secret store.
+## 6. Minimum Structure
 
-## 7. Required Content or Minimum Structure
-
-### 7.1. Operational context
+### 6.1. Operational Context
 
 Must include:
 
@@ -60,7 +72,7 @@ Must include:
 
 This section orients the reader to the system being operated.
 
-### 7.2. Access, tools, and prerequisites
+### 6.2. Access, Tools, and Prerequisites
 
 Must include:
 
@@ -71,7 +83,7 @@ Must include:
 
 This section tells the receiving DevOps team what is needed before work begins.
 
-### 7.3. Environment and configuration overview
+### 6.3. Environment and Configuration Overview
 
 Must include:
 
@@ -82,7 +94,7 @@ Must include:
 
 This section provides operational orientation without repeating full design detail.
 
-### 7.4. Deployment, release, and change procedures
+### 6.4. Deployment, Release, and Change Procedures
 
 Must include where relevant:
 
@@ -94,7 +106,7 @@ Must include where relevant:
 
 This section makes controlled operational change and repeatable release activity possible in practice.
 
-### 7.5. Routine operational tasks
+### 6.5. Routine Operational Tasks
 
 Must include:
 
@@ -106,7 +118,7 @@ Must include:
 
 This section defines the ongoing operational workload.
 
-### 7.6. Monitoring, alerting, and incident response
+### 6.6. Monitoring, Alerting, and Incident Response
 
 Must include:
 
@@ -119,7 +131,7 @@ Must include:
 
 This section supports supportability, operational continuity, and effective incident response.
 
-### 7.7. Recovery and operational records references
+### 6.7. Recovery and Operational Records References
 
 Must include:
 
@@ -130,7 +142,9 @@ Must include:
 
 This section makes recovery and evidence expectations visible without duplicating the full recovery plan.
 
-## 8. What to Keep Out
+## 7. Writing Rules
+
+Include execution-level operational detail. Another competent DevOps team should be able to perform key deployment, operational, support, and recovery tasks reliably. Do not turn it into a full design document or a secret store.
 
 Keep the following out of this artifact:
 
@@ -140,21 +154,11 @@ Keep the following out of this artifact:
 - the full recovery strategy
 - project backlog or task planning
 
-## 9. Relationships to Other Artifacts
-
-This artifact should align with the Technical Design Document, Solution Module Definitions, Operations & Support Model, Access Control guidance, and Backup, Restore & Recovery Plan.
-
-## 10. Ownership, Review, and Acceptance Expectations
+## 8. Traceability, Ownership, and Review
 
 The implementation lead, DevOps lead, platform engineer, or technical delivery owner usually authors the guide with operational input.
 
 It should be reviewed by the receiving DevOps or support team and the Service Owner before handover. For systems with meaningful operational impact, operational contributors should begin shaping this guidance during solution design.
-
-## 11. Maintenance Expectations
-
-This is a living operational document. Update it when release steps, tools, access methods, monitoring, alerting, operational dependencies, or escalation paths change.
-
-## 12. Traceability and Ownership Minimum
 
 Minimum traceability expectation:
 
@@ -168,7 +172,11 @@ Minimum ownership expectation:
 - Service Owner confirms operational accountability.
 - Delivery Owner confirms handover completeness before closure.
 
-## 13. Validation Guide
+## 9. Maintenance Expectations
+
+This is a living operational document. Update it when release steps, tools, access methods, monitoring, alerting, operational dependencies, or escalation paths change.
+
+## 10. Validation Guide
 
 - Can a DevOps team operate the system safely from this guide?
 - Are deployment, maintenance, monitoring, incident-response, and troubleshooting steps practical?
@@ -178,11 +186,40 @@ Minimum ownership expectation:
 
 If weak, add missing operational steps, clarify expected results, and remove design-heavy or insecure content.
 
-## 14. Prompt Guide for Drafting the Artifact
+## 11. Done When
 
-### 14.1. Starter prompt
+- All 7 sections (operational context through recovery references) are complete and consistent with what is actually deployed.
+- A DevOps team member not on the delivery team can follow the deployment and monitoring steps without additional guidance.
+- Access and tooling requirements are documented securely, without raw credentials or secrets.
+- Escalation paths and recovery references are explicit and point to owning teams or authoritative plans.
+- The guide has been reviewed by the receiving DevOps or support team and the Service Owner.
 
-> Draft a DevOps Guide for this solution.
-> Write for the DevOps team that will run and support the system after handover.
-> Include operational context, access prerequisites, deployment and change procedures, routine operational tasks, monitoring and incident-response guidance, recovery references, and evidence expectations.
-> Keep it execution-focused and secure.
+## 12. What Comes Next
+
+1. Review with the receiving DevOps team before handover.
+2. Reference this guide in the [Operational Readiness Confirmation Record](operational_readiness_confirmation_record_specification.md).
+3. Confirm alignment with the [Operations & Support Model](operations_and_support_model_specification.md) and [Backup, Restore & Recovery Plan](backup_restore_and_recovery_plan_specification.md).
+4. Keep current after go-live as operational changes occur.
+
+## 13. Prompt Guide
+
+**Starter prompt:**
+
+```
+Draft a DevOps Guide for this solution.
+Write for the DevOps team that will run and support the system after handover.
+Include operational context, access prerequisites, deployment and change procedures, routine operational tasks, monitoring and incident-response guidance, recovery references, and evidence expectations.
+Keep it execution-focused and secure.
+```
+
+**Validation prompt:**
+
+```
+Review this DevOps Guide against the following questions:
+- Can a DevOps team operate the system safely from this guide alone?
+- Are deployment, maintenance, monitoring, incident-response, and troubleshooting steps practical and complete?
+- Does the guide make evidence, escalation, and vendor-dependency expectations explicit enough for controlled support?
+- Are access, records, and recovery references clear and securely documented?
+- Does the guide avoid design-heavy or secret-storing content?
+Flag any section that is missing, vague, or unsuitable for handover.
+```

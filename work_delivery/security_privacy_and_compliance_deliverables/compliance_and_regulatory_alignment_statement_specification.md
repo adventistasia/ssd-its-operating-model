@@ -1,6 +1,6 @@
 # Compliance & Regulatory Alignment Statement Specification
 
-## 1. Purpose and Intended Outcome
+## 1. What This Artifact Is For
 
 The Compliance & Regulatory Alignment Statement documents how the initiative aligns with applicable internal policies, contractual obligations, regulatory requirements, and data protection expectations.
 
@@ -8,33 +8,56 @@ It exists to make compliance exposure visible, interpreted, and attributable bef
 
 The intended outcome is that applicable obligations are translated into clear accountability, visible alignment decisions, and understood gaps that can be acted on before they become audit or operational issues.
 
-## 2. When It Is Required
+Intended readers include: Security / Data Protection Officer, compliance and governance reviewers, Sponsor and Business Owner, Delivery Owner, and audit reviewers.
+
+## 2. When to Use It
 
 This artifact is required when the initiative is subject to internal policy, regulatory, contractual, sectoral, privacy, or audit obligations that materially affect solution design, operation, or acceptance.
-
-## 3. Intended Readers and Users
-
-- Security / Data Protection Officer
-- compliance and governance reviewers
-- Sponsor and Business Owner
-- Delivery Owner
-- audit reviewers
-
-## 4. Intended Project Context
 
 Use this artifact when the initiative needs a formal statement of how obligations were considered and addressed. It is most useful where multiple policy, privacy, or regulatory requirements must be interpreted into practical delivery and control actions.
 
 It should align with NIST CSF governance outcomes and the NIST Privacy Framework by translating obligations into accountable controls, decisions, and actions.
 
-In the Work Delivery Framework lifecycle, this artifact is typically outlined in Stage 2 when obligations materially affect authorization decisions, elaborated in Stage 4, updated through Stage 6 as controls are implemented, and used in Stage 7 acceptance and closure reviews.
+## 3. Stage Fit and Handoffs
 
-## 5. How Much Detail to Include
+Outlined in Stage 2 when obligations materially affect authorization decisions, elaborated in Stage 4, updated through Stage 6 as controls are implemented, and used in Stage 7 acceptance and closure reviews.
 
-Include enough detail to identify the applicable obligation, what it means for the initiative, how it is addressed, and what remains open. Do not turn it into a legal treatise.
+Upstream inputs:
 
-## 6. Required Content or Minimum Structure
+- [Initiative Definition Document Specification](../governance_and_control_deliverables/initiative_definition_document_specification.md)
+- [Security & Privacy Risk Assessment Specification](security_and_privacy_risk_assessment_specification.md)
 
-### 6.1. Statement context
+Downstream outputs inform:
+
+- [Residual Risk Acceptance Record Specification](residual_risk_acceptance_record_specification.md)
+- [Formal Acceptance & Closure Record Specification](../governance_and_control_deliverables/formal_acceptance_and_closure_record_specification.md)
+
+Also relates to:
+
+- [Data Governance & Impact Assessment Specification](../data_governance_and_records_deliverables/data_governance_and_impact_assessment_specification.md)
+- [Access Control & Authorization Model Specification](access_control_and_authorization_model_specification.md)
+- [Audit & Monitoring Design Summary Specification](audit_and_monitoring_design_summary_specification.md)
+
+## 4. Before You Start
+
+Before drafting, confirm you have:
+
+- identified applicable obligations (policy, regulatory, contractual, privacy)
+- named compliance lead
+- initiative scope confirmed
+- reference to the Initiative Definition Document or Work Brief
+- known waivers or exceptions already identified
+
+## 5. How to Draft It
+
+1. Complete statement context header — identify the initiative, scope, date, and owner (from 6.1).
+2. Populate obligation rows — for each obligation record applicability, treatment, evidence, owner, status, and any gap or note (from 6.2).
+3. Identify and document open gaps and dependencies — list unresolved gaps, required waivers, and dependencies that affect compliance alignment (from 6.3).
+4. Review for vague alignment claims and hidden non-compliance.
+
+## 6. Minimum Structure
+
+### 6.1. Statement Context
 
 Must include:
 
@@ -45,7 +68,7 @@ Must include:
 
 This section identifies what the alignment statement covers.
 
-### 6.2. Required content for each obligation row
+### 6.2. Required Content for Each Obligation Row
 
 Each obligation row must include:
 
@@ -66,7 +89,7 @@ Use controlled status values where helpful, such as `addressed`, `in progress`, 
 
 This row structure turns the statement into a usable control-mapping tool.
 
-### 6.3. Open gaps and dependencies
+### 6.3. Open Gaps and Dependencies
 
 Must include:
 
@@ -76,7 +99,9 @@ Must include:
 
 This section makes unresolved exposure visible.
 
-## 7. What to Keep Out
+## 7. Writing Rules
+
+Include enough detail to identify the applicable obligation, what it means for the initiative, how it is addressed, and what remains open. Do not turn it into a legal treatise.
 
 Keep the following out of this artifact:
 
@@ -84,20 +109,7 @@ Keep the following out of this artifact:
 - unsupported legal conclusions
 - hidden non-compliance in vague notes
 
-## 8. Relationships to Other Artifacts
-
-This artifact should align with:
-
-- [Work Delivery Framework](../work_delivery_framework.md)
-- [Initiative Definition Document Specification](../governance_and_control_deliverables/initiative_definition_document_specification.md)
-- [Security & Privacy Risk Assessment Specification](security_and_privacy_risk_assessment_specification.md)
-- [Data Governance & Impact Assessment Specification](../data_governance_and_records_deliverables/data_governance_and_impact_assessment_specification.md)
-- [Access Control & Authorization Model Specification](access_control_and_authorization_model_specification.md)
-- [Audit & Monitoring Design Summary Specification](audit_and_monitoring_design_summary_specification.md)
-- [Residual Risk Acceptance Record Specification](residual_risk_acceptance_record_specification.md)
-- [Formal Acceptance & Closure Record Specification](../governance_and_control_deliverables/formal_acceptance_and_closure_record_specification.md)
-
-## 9. Ownership, Review, and Acceptance Expectations
+## 8. Traceability, Ownership, and Review
 
 The compliance lead, security lead, or governance reviewer usually coordinates this artifact with business and legal or privacy input where needed.
 
@@ -105,24 +117,38 @@ Formal review should be completed by the relevant compliance or protection autho
 
 The Delivery Owner is accountable for ensuring open compliance gaps are visible and tracked to decision or treatment. The relevant Acceptance Authority should confirm that material obligations are addressed or explicitly conditionally accepted.
 
-## 10. Maintenance Expectations
+## 9. Maintenance Expectations
 
 Update when obligations change, solution scope changes, or compliance gaps are discovered or resolved.
 
-## 11. Validation Guide
+## 10. Done When
 
-- Does the statement show clearly what obligations apply and why?
-- Can a reviewer see how each obligation is being addressed?
-- Is there enough evidence or reference detail to verify the claimed alignment?
-- Are unresolved gaps, waivers, or dependencies explicit?
-- Is ownership assigned for material obligations?
+- The statement shows clearly what obligations apply and why.
+- A reviewer can see how each obligation is being addressed.
+- There is enough evidence or reference detail to verify the claimed alignment.
+- Unresolved gaps, waivers, or dependencies are explicit.
+- Ownership is assigned for material obligations.
 
-If weak, make the applicability reasoning clearer and tighten ownership of open actions.
+## 11. What Comes Next
 
-## 12. Prompt Guide for Drafting the Artifact
+1. Review with compliance or governance authority.
+2. Feed open gaps into the [Residual Risk Acceptance Record Specification](residual_risk_acceptance_record_specification.md) where needed.
+3. Reference in the [Formal Acceptance & Closure Record Specification](../governance_and_control_deliverables/formal_acceptance_and_closure_record_specification.md).
 
-### 12.1. Starter prompt
+## 12. Prompt Guide
 
-> Draft a Compliance & Regulatory Alignment Statement for this initiative.
-> List the applicable obligations, explain briefly why each applies, state how each is being addressed, identify owners, and record any open gaps or waivers.
-> Keep it practical and table-driven.
+### 12.1. Starter Prompt
+
+```
+Draft a Compliance & Regulatory Alignment Statement for this initiative.
+List the applicable obligations, explain briefly why each applies, state how each is being addressed, identify owners, and record any open gaps or waivers.
+Keep it practical and table-driven.
+```
+
+### 12.2. Validation Prompt
+
+```
+Review this Compliance & Regulatory Alignment Statement.
+Check that each obligation has a clear applicability reason, a stated treatment approach, an evidence or reference pointer, a named owner, and a status.
+Flag any vague alignment claims, hidden non-compliance, or obligations without an owner or gap note.
+```

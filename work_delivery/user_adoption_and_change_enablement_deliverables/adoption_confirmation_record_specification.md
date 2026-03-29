@@ -1,6 +1,6 @@
 # Adoption Confirmation Record Specification
 
-## 1. Purpose and Intended Outcome
+## 1. What This Artifact Is For
 
 The Adoption Confirmation Record provides formal confirmation that impacted user groups were informed, required enablement activities occurred, key adoption risks were reviewed, and the Business Owner acknowledges user readiness.
 
@@ -8,32 +8,58 @@ It exists to keep readiness evidence visible rather than assumed. A useful recor
 
 The intended outcome is that user readiness is acknowledged on the basis of visible evidence, with remaining adoption risks and conditions made explicit before release or handover.
 
-## 2. When It Is Required
+Intended readers include: Business Owner, Change or Communications Lead, Delivery Owner, and governance reviewers.
 
-This artifact is required when the initiative needs formal confirmation that adoption preparation was completed before or shortly after go-live.
+## 2. When to Use It
 
-## 3. Intended Readers and Users
+Use this artifact when the initiative needs formal confirmation that adoption preparation was completed before or shortly after go-live.
 
-- Business Owner
-- Change or Communications Lead
-- Delivery Owner
-- governance reviewers
-
-## 4. Intended Project Context
-
-Use this artifact near rollout or go-live, after communications and enablement activities have been delivered. It is most useful where user readiness must be evidenced and attributable, not just informally stated.
+Use it near rollout or go-live, after communications and enablement activities have been delivered. It is most useful where user readiness must be evidenced and attributable, not just informally stated.
 
 It should align with PMI stakeholder-readiness and acceptance discipline by linking user preparation to evidence and ownership. It should also align with ITIL organizational change management by making readiness acknowledgement explicit.
 
 In the Work Delivery Framework lifecycle, this artifact is primarily a Stage 7 acceptance and closure input, supported by evidence collected during Stage 5 and Stage 6.
 
-## 5. How Much Detail to Include
+## 3. Stage Fit and Handoffs
 
-Keep it concise. Include enough detail to show what readiness actions occurred, what evidence exists, what risks remain, and who confirmed readiness.
+| Stage | Role of this artifact |
+| --- | --- |
+| Stage 5–6 – Mobilization and Delivery | Evidence collected as communications and enablement are delivered |
+| Stage 7 – Acceptance, Transition & Closure | Primary use: formal readiness confirmation as part of acceptance package |
 
-## 6. Required Content or Minimum Structure
+**Upstream inputs:**
 
-### 6.1. Record identity
+- [User Impact Assessment](user_impact_assessment_specification.md) — defines which user groups require preparation and what adoption risks apply
+- [Change & Communication Plan](change_and_communication_plan_specification.md) — provides evidence of planned and delivered communications
+- [Training & Enablement Materials Specification](training_and_enablement_materials_specification.md) — provides evidence of enablement delivery
+- [Adoption Support Model](adoption_support_model_specification.md) — provides evidence of support arrangements
+
+**Downstream outputs:**
+
+- [Acceptance Record Specification](../solution_deliverables/acceptance_record_specification.md) — references adoption confirmation as part of solution acceptance
+- [Formal Acceptance & Closure Record Specification](../governance_and_control_deliverables/formal_acceptance_and_closure_record_specification.md) — includes adoption confirmation as part of formal closure
+
+## 4. Before You Start
+
+Confirm the following before drafting:
+
+- communications have been delivered
+- enablement activities have been completed
+- adoption evidence collected by user group
+- named Business Owner and change lead
+- readiness status known for each user group
+- any deferred or conditional groups identified
+
+## 5. How to Draft It
+
+1. Complete the record identity section (§6.1).
+2. Populate user group rows with readiness status and evidence references (§6.2).
+3. Record the Business Owner acknowledgment (§6.3).
+4. Review for unsupported readiness claims and make conditions explicit.
+
+## 6. Minimum Structure
+
+### 6.1. Record Identity
 
 Must include:
 
@@ -45,7 +71,7 @@ Must include:
 
 This section identifies what readiness claim the record is making.
 
-### 6.2. Required content for each user-group row
+### 6.2. Required Content for Each User-Group Row
 
 Each row must include:
 
@@ -63,7 +89,7 @@ Recommended table:
 
 This row structure makes the basis for readiness visible and reviewable.
 
-### 6.3. Business Owner readiness acknowledgment
+### 6.3. Business Owner Readiness Acknowledgment
 
 Must include:
 
@@ -73,7 +99,9 @@ Must include:
 
 This section is the actual readiness decision.
 
-## 7. What to Keep Out
+## 7. Writing Rules
+
+Keep it concise. Include enough detail to show what readiness actions occurred, what evidence exists, what risks remain, and who confirmed readiness.
 
 Keep the following out of this artifact:
 
@@ -81,19 +109,7 @@ Keep the following out of this artifact:
 - campaign asset libraries
 - detailed issue logs unless they materially affect readiness
 
-## 8. Relationships to Other Artifacts
-
-This record should align with:
-
-- [Work Delivery Framework](../work_delivery_framework.md)
-- [User Impact Assessment Specification](user_impact_assessment_specification.md)
-- [Change & Communication Plan Specification](change_and_communication_plan_specification.md)
-- [Training & Enablement Materials Specification](training_and_enablement_materials_specification.md)
-- [Adoption Support Model Specification](adoption_support_model_specification.md)
-- [Acceptance Record Specification](../solution_deliverables/acceptance_record_specification.md)
-- [Formal Acceptance & Closure Record Specification](../governance_and_control_deliverables/formal_acceptance_and_closure_record_specification.md)
-
-## 9. Ownership, Review, and Acceptance Expectations
+## 8. Traceability, Ownership, and Review
 
 The Change or Communications Lead or Business Owner representative usually prepares the record.
 
@@ -101,24 +117,39 @@ The Business Owner normally confirms the readiness acknowledgment and acts as th
 
 The Delivery Owner is accountable for ensuring this readiness record is available as part of the Stage 7 acceptance package.
 
-## 10. Maintenance Expectations
+## 9. Maintenance Expectations
 
 Update until readiness is confirmed. If readiness is conditional, keep the conditions visible or issue a superseding version when they are closed.
 
-## 11. Validation Guide
+## 10. Done When
 
-- Does the record show clearly which user groups were prepared and how?
-- Are remaining risks or conditions visible?
-- Does the record make partial, phased, or conditional readiness explicit rather than implied?
-- Is the Business Owner acknowledgment explicit?
-- Does the record rely on evidence references rather than unsupported readiness claims?
+- User group rows are populated with evidence references and readiness status.
+- Remaining risks or conditions are visible and owned.
+- Partial, phased, or conditional readiness is explicit rather than implied.
+- Business Owner acknowledgment is recorded with date.
+- Record does not rely on unsupported readiness claims.
 
-If weak, strengthen the evidence references and make any conditional readiness clearer.
+## 11. What Comes Next
 
-## 12. Prompt Guide for Drafting the Artifact
+1. Include as part of the Stage 7 acceptance package.
+2. Reference in the [Acceptance Record](../solution_deliverables/acceptance_record_specification.md) and [Formal Acceptance & Closure Record](../governance_and_control_deliverables/formal_acceptance_and_closure_record_specification.md).
+3. Track open conditions to closure and issue a superseding version when they are closed.
+4. Confirm any deferred group coverage before full closure.
 
-### 12.1. Starter prompt
+## 12. Prompt Guide
 
-> Draft an Adoption Confirmation Record for this initiative.
-> Summarize which user groups were informed, what enablement occurred, what risks or conditions remain, and the Business Owner's readiness acknowledgment.
-> Keep it concise and evidence-based.
+### 12.1. Starter Prompt
+
+```
+Draft an Adoption Confirmation Record for this initiative.
+Summarize which user groups were informed, what enablement occurred, what risks or conditions remain, and the Business Owner's readiness acknowledgment.
+Keep it concise and evidence-based.
+```
+
+### 12.2. Validation Prompt
+
+```
+Review this Adoption Confirmation Record.
+Check that: user group rows are populated with evidence references and readiness status; remaining risks or conditions are visible and owned; partial, phased, or conditional readiness is explicit; the Business Owner acknowledgment is recorded with a date; and the record does not rely on unsupported readiness claims.
+Identify any gaps and suggest where evidence references or conditional readiness need to be made clearer.
+```

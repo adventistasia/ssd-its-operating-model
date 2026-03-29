@@ -1,36 +1,61 @@
 # Project Charter Specification
 
-## 1. Purpose and Intended Outcome
+## 1. What This Artifact Is For
 
-The Project Charter formally records sponsorship, authority, priority, funding commitment, and the Stage 3 Work Authorization decision.
+The Project Charter formally records sponsorship, authority, priority, funding commitment, and the Stage 3 — Work Authorization decision.
 
 It exists to confirm that the initiative has been intentionally authorized and that the Delivery Owner has clear authority to act within the approved boundary. A useful charter makes the authorization basis, key commitments, and accountability model easy to understand and audit.
 
-The intended outcome is that delivery starts only when explicit authorization exists, with visible sponsorship, approved authority, and clear accountability.
+Intended readers include: Sponsor, Decision Authorities, Delivery Owner, Outcome Owner, and finance, governance, and audit stakeholders.
 
-## 2. When It Is Required
+## 2. When to Use It
 
-This artifact is required in Stage 3 - Work Authorization when formal authorization, budget commitment, resource assignment, or named delivery authority is needed before delivery starts.
+This artifact is required in Stage 3 — Work Authorization when formal authorization, budget commitment, resource assignment, or named delivery authority is needed before delivery starts.
 
-## 3. Intended Readers and Users
-
-- Sponsor
-- Decision Authorities
-- Delivery Owner
-- Outcome Owner
-- finance, governance, and audit stakeholders
-
-## 4. Intended Project Context
-
-Use this artifact at authorization time and when material re-authorization is needed. It is most useful where the organization needs a concise but formal statement of who approved the work, what was committed, and what authority was granted.
+Use it at authorization time and when material re-authorization is needed. It is most useful where the organization needs a concise but formal statement of who approved the work, what was committed, and what authority was granted.
 
 It should align with PMI charter practice by recording purpose, high-level scope, authority, key constraints, and decision accountability.
 
-## 5. How Much Detail to Include
+It is normally stable once approved. Issue a new version or formal revision when sponsorship, funding, authority, decision conditions, or approved scope changes materially.
 
-Keep it concise and decision-ready. Include enough detail to show what is being authorized, by whom, with what funding and authority, and under what constraints. Do not duplicate the full Initiative Definition Document.
+## 3. Stage Fit and Handoffs
 
-## 6. Required Content or Minimum Structure
+This artifact is produced in Stage 3 — Work Authorization.
+
+**Upstream sources:**
+
+- [Initiative Definition Document](initiative_definition_document_specification.md) — the authorized baseline this charter references and must not contradict
+- Relevant funding or governance approvals
+
+**Downstream artifacts:**
+
+- [Delivery Charter](delivery_charter_specification.md) — mobilization operating agreement at Stage 5
+- [Delivery Roadmap](delivery_roadmap_specification.md) — delivery sequencing and milestone planning
+- [Decision Record Log](decision_record_log_specification.md) — where authorization conditions and follow-up decisions are tracked
+
+Where authorization is conditional, the charter should reference the tracked condition log or follow-up record used during delivery governance.
+
+## 4. Before You Start
+
+Before drafting, confirm you have:
+
+- a completed and reviewed [Initiative Definition Document](initiative_definition_document_specification.md)
+- a named Sponsor and named Delivery Owner
+- a confirmed decision authority or approving body
+- clarity on approved budget or funding commitment
+- any conditions or limits the authorizing body is applying
+
+If the Initiative Definition Document is incomplete or the authorization basis is unclear, label this document as a **working draft** and note what is missing.
+
+## 5. How to Draft It
+
+1. **Confirm the authorization basis.** Identify the decision authority or approving body, the type of authorization action (resolution, delegated approval, committee action), and the decision date.
+2. **State the decision outcome clearly.** Use one of: Approve, Defer, Reject, or Approve with Conditions. If the outcome is not Approve or Approve with Conditions, state explicitly that delivery is not authorized to start.
+3. **Summarize the commitment.** Briefly record the approved purpose, high-level scope, budget, constraints, and authority granted — referencing the Initiative Definition Document rather than repeating its full content.
+4. **Record any conditions.** For each condition attached to the authorization, name the responsible owner and the due date or resolution point.
+5. **Complete the charter identity section.** Fill in all identity fields and record the approval reference.
+
+## 6. Minimum Structure
 
 This artifact is often short and table-based.
 
@@ -40,7 +65,7 @@ Must include:
 
 - project or initiative name
 - charter version or date
-- sponsor
+- Sponsor
 - Delivery Owner or project lead
 - author or preparing party
 
@@ -57,7 +82,7 @@ Must include:
 - authority granted to the Delivery Owner
 - any explicit conditions, limits, or decision assumptions attached to the authorization
 
-If the decision outcome is not `Approve` or `Approve with Conditions`, the charter must clearly state that delivery is not authorized to start.
+If the decision outcome is not Approve or Approve with Conditions, the charter must clearly state that delivery is not authorized to start.
 
 This section is the core control statement of the charter.
 
@@ -71,7 +96,7 @@ Must include:
 - key constraints and high-level risks
 - named owner for each authorization condition where applicable
 - reporting or acceptance expectations
-- reference to the authoritative Initiative Definition Document version that this authorization is based on
+- reference to the authoritative [Initiative Definition Document](initiative_definition_document_specification.md) version that this authorization is based on
 
 This section shows what the organization is committing to and on what basis.
 
@@ -93,9 +118,11 @@ Recommended fields:
 
 Use short, decision-focused entries rather than narrative paragraphs where possible.
 
-## 7. What to Keep Out
+## 7. Writing Rules
 
-Keep the following out of this artifact:
+Keep the charter concise and decision-ready. Include enough detail to show what is being authorized, by whom, with what funding and authority, and under what constraints.
+
+Keep the following out:
 
 - detailed scope breakdown
 - design decisions
@@ -103,21 +130,24 @@ Keep the following out of this artifact:
 - full risk registers
 - repeated copies of the Initiative Definition Document
 
-## 8. Relationships to Other Artifacts
-
-The charter should reference the Initiative Definition Document, relevant funding or governance approvals, and major decision records.
-
-Where authorization is conditional, it should also reference the tracked condition log or follow-up record used during delivery governance.
-
-## 9. Ownership, Review, and Acceptance Expectations
+## 8. Traceability, Ownership, and Review
 
 The charter is usually prepared by the Delivery Owner or governance lead and approved by the Sponsor or Decision Authority.
 
-## 10. Maintenance Expectations
+This artifact traces back to the [Initiative Definition Document](initiative_definition_document_specification.md). It feeds forward to the [Delivery Charter](delivery_charter_specification.md) and [Delivery Roadmap](delivery_roadmap_specification.md).
 
-The charter is normally stable once approved. Issue a new version or formal revision when sponsorship, funding, authority, decision conditions, or approved scope changes materially.
+## 9. Done When
 
-## 11. Validation Guide
+The charter is ready to issue when:
+
+- the decision outcome is explicitly stated as Approve, Defer, Reject, or Approve with Conditions
+- the authorizing body and date are named
+- the authority granted to the Delivery Owner is clear
+- approved budget or funding commitment is recorded
+- all authorization conditions have named owners
+- the Initiative Definition Document version it is based on is referenced
+
+## 10. Validation Guide
 
 - Does the charter clearly show who authorized the work and what authority was granted?
 - Is the Stage 3 decision outcome explicit as Approve, Defer, Reject, or Approve with Conditions?
@@ -129,21 +159,25 @@ The charter is normally stable once approved. Issue a new version or formal revi
 
 If weak, tighten the authorization statement, reduce duplicated project detail, and make the commitment summary easier to scan.
 
-## 12. Prompt Guide for Drafting the Artifact
+## 11. What Comes Next
 
-### 12.1. Starter prompt
+1. File the charter as the Stage 3 authorization record and record the approval reference in the [Initiative Definition Document](initiative_definition_document_specification.md).
+2. Begin Stage 4 — Work Definition Details to elaborate functional capabilities and domain deliverables.
+3. Produce the [Delivery Charter](delivery_charter_specification.md) at Stage 5 to mobilize the delivery team.
+4. Track any authorization conditions in the [Decision Record Log](decision_record_log_specification.md).
 
-> Draft a Project Charter that formally records sponsorship, authority, purpose, high-level scope, funding commitment, major constraints, and the decision to proceed.
-> Keep it short, attributable, and suitable for formal governance review.
+## 12. Prompt Guide
 
-### 12.2. Section prompts
+### Starter prompt
 
-> Draft the authorization statement so it clearly identifies the approving authority, date, and the authority granted to the Delivery Owner.
+```
+Draft a Project Charter that formally records sponsorship, authority, purpose, high-level scope, funding commitment, major constraints, and the decision to proceed.
+Keep it short, attributable, and suitable for formal governance review.
+```
 
-> Create a charter summary table using the required fields in this specification.
+### Validation prompt
 
-### 12.3. Validation prompts
-
-> Check whether this charter functions as a formal authorization artifact rather than a shortened project plan.
-
-> Rewrite any section that duplicates Initiative Definition content beyond what is needed for authorization.
+```
+Check whether this charter functions as a formal authorization artifact rather than a shortened project plan.
+Rewrite any section that duplicates Initiative Definition content beyond what is needed for authorization.
+```

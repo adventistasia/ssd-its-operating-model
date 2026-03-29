@@ -110,7 +110,7 @@ Keep the following out:
 - detailed task planning
 - deep technical design that belongs elsewhere
 
-## 8. Traceability and Ownership Minimum
+## 8. Traceability, Ownership, and Review
 
 Minimum traceability expectation:
 

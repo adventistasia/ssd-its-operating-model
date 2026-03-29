@@ -1,51 +1,69 @@
 # Delivery Roadmap Specification
 
-## 1. Purpose and Intended Outcome
+## 1. What This Artifact Is For
 
-The Delivery Roadmap defines the planned path for delivering the authorized initiative from mobilization through acceptance and closure.
+The Delivery Roadmap defines the planned path for delivering the authorized initiative from mobilization through acceptance and closure. It makes sequencing, milestones, dependencies, and control points visible so delivery progress can be managed and governed.
 
-It is used to make sequencing, milestones, dependencies, and control points visible so delivery progress can be managed and governed.
+A useful roadmap is drafted early enough to support authorization-level visibility, elaborated before delivery starts, confirmed with the mobilized delivery team, and kept current through controlled updates as delivery changes.
 
-The intended outcome is that delivery teams and stakeholders share one practical roadmap that is:
+Intended readers include: Delivery Owner, Project Manager (if assigned), Sponsor and Decision Authority, delivery team leads and domain owners, and governance, portfolio, and risk stakeholders.
 
-- drafted early enough to support authorization-level visibility
-- elaborated in sufficient detail before delivery starts
-- confirmed with the mobilized delivery team before execution
-- maintained through controlled updates as delivery changes
-
-## 2. When It Is Required
+## 2. When to Use It
 
 This artifact is recommended for governed initiatives and required where controlled mobilization, cross-team dependencies, or milestone-based governance visibility are needed.
 
-Use it progressively:
+Use it progressively across stages:
 
-- Stage 2: draft high-level roadmap
-- Stage 4: elaborate roadmap to delivery-ready baseline
-- Stage 5: confirm roadmap with delivery team and key stakeholders
+- Stage 2 — Work Definition: draft a high-level roadmap with phases, key milestones, and major dependencies
+- Stage 4 — Work Definition Details: elaborate to a delivery-ready baseline with releases, control checkpoints, and domain deliverables
+- Stage 5 — Delivery Mobilization: confirm the roadmap with the delivery team and key stakeholders before execution begins
 
-## 3. Intended Readers and Users
+Use it when the initiative requires structured coordination and clear progress visibility beyond ad hoc task tracking.
 
-- Delivery Owner
-- Project Manager (if assigned)
-- Sponsor and Decision Authority
-- delivery team leads and domain owners
-- governance, portfolio, and risk stakeholders
+It should align with the [Work Delivery Framework](../work_delivery_framework.md) and the governance and control section of the [Standard Deliverables Guide](../standard_deliverables_guide.md).
 
-## 4. Intended Project Context
+## 3. Stage Fit and Handoffs
 
-Use this artifact when the initiative requires structured coordination and clear progress visibility beyond ad hoc task tracking.
+This artifact spans Stages 2 through 7 and is updated progressively at each stage gate.
 
-It should align with the Work Delivery Framework and the Governance & Control section of the Standard Deliverables Guide.
+**Upstream sources:**
 
-## 5. How Much Detail to Include
+- [Initiative Definition Document](initiative_definition_document_specification.md) — authorized scope baseline that defines what is in scope by phase
+- [Project Charter](project_charter_specification.md) — funding, authority, and authorization conditions that constrain the roadmap
 
-Include enough detail to guide execution and governance without turning the roadmap into a full task plan.
+**Downstream artifacts this roadmap feeds:**
 
-- Stage 2: phases, key milestones, major dependencies, key risks
-- Stage 4: releases/waves, control checkpoints, domain deliverables, planned acceptance points
-- Stage 5 onward: confirmed ownership, cadence dates, and controlled updates
+- [Delivery Charter](delivery_charter_specification.md) — mobilization operating agreement aligned to roadmap phases
+- [Decision Record Log](decision_record_log_specification.md) — change records tied to material roadmap revisions
+- Domain deliverables planned and tracked against roadmap phases
 
-## 6. Required Content or Minimum Structure
+## 4. Before You Start
+
+Before drafting, confirm you have:
+
+- a current [Initiative Definition Document](initiative_definition_document_specification.md) with approved scope boundaries
+- understanding of the major delivery phases or waves at minimum
+- awareness of material dependencies (internal and external)
+- named Delivery Owner accountable for roadmap integrity
+
+For a Stage 2 draft, high-level phase and milestone intent is sufficient. For a Stage 4 elaboration, confirm you also have:
+
+- elaborated functional capabilities and domain deliverables
+- confirmed team structure and domain owners
+- a working [Delivery Charter](delivery_charter_specification.md)
+
+If key inputs are missing, label the roadmap as a **working draft** and state what needs confirmation.
+
+## 5. How to Draft It
+
+1. **Define delivery phases or waves.** Name the major segments of delivery and their purpose. Align them to authorized scope boundaries.
+2. **Identify milestones and governance checkpoints.** For each phase, name observable milestones and the governance review or decision points that mark readiness to proceed.
+3. **Map dependencies and assumptions.** Record material internal and external dependencies. State critical assumptions that affect sequence or timing.
+4. **Align to scope and deliverables.** Map key in-scope deliverables or Deliverable Domains to phases. Note explicitly that unapproved scope is excluded.
+5. **Record major risks and change markers.** Identify sequencing constraints and state the conditions that would trigger a formal roadmap update.
+6. **Confirm with the delivery team at Stage 5.** Record who confirmed the roadmap, when, and what unresolved concerns remain with follow-up owners.
+
+## 6. Minimum Structure
 
 ### 6.1. Roadmap identity
 
@@ -77,7 +95,7 @@ Must include:
 
 Must include:
 
-- mapping to authorized scope baseline (for example Initiative Definition version)
+- mapping to authorized scope baseline (for example Initiative Definition Document version)
 - key in-scope deliverables or domains by phase
 - explicit note that unapproved scope is excluded
 
@@ -87,14 +105,14 @@ Must include:
 
 - major roadmap risks and sequencing constraints
 - conditions that trigger escalation or formal roadmap update
-- links to decision/change records for material revisions
+- links to decision or change records for material revisions
 
 ### 6.6. Confirmation and communication record
 
 Must include:
 
 - date and method used to confirm roadmap with delivery team (Stage 5)
-- confirming participants/roles
+- confirming participants and roles
 - unresolved concerns and follow-up owners
 
 ### 6.7. Template guide
@@ -110,37 +128,33 @@ Recommended fields:
 | Dependency | Precondition or external input |
 | Dependency owner | Owner accountable for coordination |
 | Risk note | Material delivery risk affecting roadmap |
-| Governance checkpoint | Review/decision point |
-| Update reference | Linked decision/change record ID |
+| Governance checkpoint | Review or decision point |
+| Update reference | Linked decision or change record ID |
 
-## 7. What to Keep Out
+## 7. Writing Rules
 
-Keep the following out of this artifact:
+Include enough detail to guide execution and governance without turning the roadmap into a full task plan.
+
+- Stage 2: phases, key milestones, major dependencies, key risks
+- Stage 4: releases or waves, control checkpoints, domain deliverables, planned acceptance points
+- Stage 5 onward: confirmed ownership, cadence dates, and controlled updates
+
+Keep the following out:
 
 - detailed day-to-day task assignments
 - low-level technical implementation steps
 - unapproved scope proposals presented as committed work
 - duplicate copies of full project plans or RAID logs
 
-## 8. Relationships to Other Artifacts
+## 8. Traceability, Ownership, and Review
 
-This roadmap should reference and stay aligned with:
+The Delivery Owner is accountable for roadmap integrity and update discipline. The Project Manager (if assigned) typically coordinates updates and publication.
 
-- Initiative Definition Document
-- Project Charter
-- Delivery Charter
-- relevant delivery plan and RAID/dependency tracking
-- Decision Record Log and change records
+Roadmap acceptance normally sits with the Delivery Owner and is reviewed with the Sponsor or Decision Authority where milestone governance requires it.
 
-## 9. Ownership, Review, and Acceptance Expectations
+This artifact traces back to the [Initiative Definition Document](initiative_definition_document_specification.md) and [Project Charter](project_charter_specification.md). Material revisions should link to records in the [Decision Record Log](decision_record_log_specification.md).
 
-The Delivery Owner is accountable for roadmap integrity and update discipline.
-
-The Project Manager (if assigned) typically coordinates updates and publication.
-
-Roadmap acceptance normally sits with the Delivery Owner and is reviewed with Sponsor/Decision Authority where milestone governance requires it.
-
-## 10. Maintenance Expectations
+## 9. Maintenance Expectations
 
 Update the roadmap whenever material sequence, milestone, dependency, or scope-aligned delivery assumptions change.
 
@@ -148,35 +162,42 @@ Each material revision should include:
 
 - what changed
 - why it changed
-- decision/change reference
+- decision or change reference
 - impact on milestones, dependencies, or acceptance timing
 
-## 11. Validation Guide
+The roadmap is a living document from Stage 2 through Stage 7. Each stage gate (Stage 4 elaboration, Stage 5 confirmation) produces a new baseline version.
 
-- Is the roadmap clearly aligned to authorized scope and current stage?
-- Are phases, milestones, and dependencies visible enough for governance and coordination?
-- Are material assumptions and risks explicit rather than implied?
-- Has the roadmap been confirmed with delivery team stakeholders at mobilization?
-- Are updates traceable through versioning and decision/change references?
+## 10. Done When
 
-If weak, simplify the structure, make owners explicit, and remove detail that belongs in task planning tools.
+The roadmap is ready to use when:
 
-## 12. Prompt Guide for Drafting the Artifact
+- phases, milestones, and governance checkpoints are visible and aligned to authorized scope
+- material dependencies and assumptions are explicit with owners named where known
+- scope alignment is confirmed and unapproved scope is excluded
+- major risks and conditions for escalation are recorded
+- at Stage 5: the roadmap has been confirmed with the delivery team and unresolved concerns have owners
 
-### 12.1. Starter prompt
+## 11. What Comes Next
 
-> Draft a Delivery Roadmap for a governed initiative.
-> Show phases, milestones, dependencies, risks, and governance checkpoints.
-> Keep it aligned to authorized scope and suitable for stage-gated governance review.
+1. Use the confirmed roadmap to set up delivery cadence in the [Delivery Charter](delivery_charter_specification.md).
+2. Track material roadmap changes in the [Decision Record Log](decision_record_log_specification.md).
+3. Update the roadmap at each significant stage gate or when material assumptions change.
+4. Use the roadmap to monitor progress against milestones during Stage 6 — Work Delivery.
+5. Reference the roadmap in the [Formal Acceptance & Closure Record](formal_acceptance_and_closure_record_specification.md) to confirm what was delivered against the plan.
 
-### 12.2. Section prompts
+## 12. Prompt Guide
 
-> Expand this Stage 2 roadmap into a Stage 4 elaborated roadmap with release sequencing, dependencies, and checkpoint visibility.
+### Starter prompt
 
-> Draft a Stage 5 confirmation note that records who reviewed the roadmap, what was confirmed, and what follow-up actions remain.
+```
+Draft a Delivery Roadmap for a governed initiative.
+Show phases, milestones, dependencies, risks, and governance checkpoints.
+Keep it aligned to authorized scope and suitable for stage-gated governance review.
+```
 
-### 12.3. Validation prompts
+### Validation prompt
 
-> Check whether any roadmap element implies new scope not found in the authorized baseline.
-
-> Identify unclear dependencies, missing owners, or milestone entries that are not governance-testable.
+```
+Check whether any roadmap element implies new scope not found in the authorized baseline.
+Identify unclear dependencies, missing owners, or milestone entries that are not governance-testable.
+```

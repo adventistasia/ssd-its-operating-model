@@ -9,13 +9,13 @@ It answers a set of foundational questions:
 * **What problem does this initiative need to solve?**
 * **Who experiences the problem and why does it matter?**
 * **What outcomes and success measures define "done"?**
-* **What assumptions, exclusions or dependencies shape how the problem can be solved?**
+* **What assumptions, exclusions, or dependencies shape how the problem can be solved?**
 
-By explicitly recording these items up front, the brief reduces the risk of designing a well-governed solution to the wrong problem. It provides a reference point for later discussions about scope, trade-offs, and acceptance.
+By explicitly recording these items up front, the brief reduces the risk of designing a well-governed solution to the wrong problem. It provides a reference point for later discussions about scope, trade-offs, and acceptance. Intended readers include delivery owners, outcome owners, sponsors, solution leads, and anyone drafting Functional Capabilities.
 
 ## 2. When to Use It
 
-Use this artifact early in **Work Definition (Stage 2)** (Work Definition) after the initiative has passed work assessment but before Functional Capabilities are drafted. It is especially useful when:
+Use this artifact early in **Work Definition (Stage 2)** after the initiative has passed work assessment but before Functional Capabilities are drafted. It is especially useful when:
 
 * The problem statement is vague or contested.
 * There are multiple stakeholders with different interpretations of the desired outcome.
@@ -26,13 +26,13 @@ For very small initiatives or urgent fixes, these items may be recorded directly
 
 ## 3. Stage Fit and Handoffs
 
-* **Work Definition (Stage 2):** Draft and review the brief before writing Functional Capabilities. Use it to align stakeholders on problem, outcome, assumptions and success measures.
+* **Work Definition (Stage 2):** Draft and review the brief before writing Functional Capabilities. Use it to align stakeholders on problem, outcome, assumptions, and success measures.
 * **Work Authorization (Stage 3):** Treat this brief as part of the authorization basis when the Initiative Definition Document is light or absent.
-* **Work Definition Details (Stage 4):** Refer to the brief when structuring modules, drafting use cases and defining quality attributes. It should remain unchanged unless the initiative's purpose is formally revised through change control.
+* **Work Definition Details (Stage 4):** Refer to the brief when structuring modules, drafting use cases, and defining quality attributes. It should remain unchanged unless the initiative's purpose is formally revised through change control.
 
 Upstream sources:
 
-* Work Brief or Initiative Definition Document
+* Work Brief or [Initiative Definition Document](../governance_and_control_deliverables/initiative_definition_document_specification.md)
 
 Downstream artifacts:
 
@@ -46,7 +46,7 @@ Make sure you have access to:
 
 * The approved initiative objective and rationale.
 * Any preliminary problem statements from assessments or stakeholder interviews.
-* Known scope boundaries, exclusions and constraints.
+* Known scope boundaries, exclusions, and constraints.
 * Initial assumptions or dependencies acknowledged by sponsors or domain experts.
 * A named owner and reviewer for the brief.
 
@@ -54,11 +54,11 @@ If any of these are missing, draft the brief as a working document and label it 
 
 ## 5. How to Draft It
 
-1. **Summarize the problem.** Write one or two paragraphs that describe the core problem the solution must address. Explain who experiences the problem, how it manifests, and why it matters.
-2. **Identify the affected user groups or stakeholders.** List the roles, teams or personas for whom the problem exists. Note any special conditions or contexts that influence how they experience the problem.
+1. **Summarize the problem.** Write one or two paragraphs describing the core problem the solution must address. Explain who experiences the problem, how it manifests, and why it matters.
+2. **Identify the affected user groups or stakeholders.** List the roles, teams, or personas for whom the problem exists. Note any special conditions or contexts that influence how they experience the problem.
 3. **Describe intended outcomes.** State the outcomes that must be achieved to consider the problem solved. Outcomes should reflect the benefits or business results, not proposed solutions.
 4. **Define success measures.** List measurable indicators or criteria that will be used to judge whether the outcomes have been achieved. Include target values or qualitative thresholds where possible.
-5. **Record assumptions.** Note assumptions that underpin the problem definition or outcomes. For example, assumed process changes, resource availability, timing constraints, or stakeholder commitments.
+5. **Record assumptions.** Note assumptions that underpin the problem definition or outcomes — for example, assumed process changes, resource availability, timing constraints, or stakeholder commitments.
 6. **Record exclusions and boundaries.** Clarify what is explicitly out of scope. Identify related problems that will not be addressed by this initiative.
 7. **Identify dependencies.** List any external factors, systems, or parallel initiatives that materially affect whether the outcomes can be achieved.
 8. **Name owners and reviewers.** Identify who is responsible for maintaining the brief and who must review and validate its content.
@@ -93,23 +93,47 @@ Describe what is deliberately out of scope or will not be addressed by this init
 
 Identify the owner of the brief, the reviewers, and any accountable parties for problem and outcome definition. Record who validated the brief (Outcome Owner, Sponsor, or delegate), the date of validation, and any comments. This ensures the brief is treated as an authoritative baseline rather than an informal note.
 
-## 7. Acceptance Criteria
+## 7. Writing Rules
+
+Write the problem statement in plain language from the perspective of those experiencing the problem. Keep outcomes focused on business results and away from feature or solution language. State assumptions explicitly and label them clearly as assumptions rather than facts.
+
+Keep the following out:
+
+* proposed solution designs or feature lists
+* system or technical constraints that belong in the Non-Functional Requirements Specification
+* detailed scope or capability definitions that belong in Functional Capabilities
+* implementation or delivery plans
+
+## 8. Traceability, Ownership, and Review
+
+This artifact traces back to the Work Brief or Initiative Definition Document.
+
+It feeds forward to the Functional Capabilities Specification, Non-Functional Requirements Specification, and Solution Modules Specification.
+
+Ownership expectations:
+
+* Delivery Owner is accountable for ensuring the brief is completed, labeled, and maintained.
+* Outcome Owner or delegated business sponsor reviews and validates the brief before Functional Capabilities are drafted.
+* Reviewer confirms that outcomes reflect business intent rather than implicit solution assumptions.
+
+Acceptance evidence: approved brief confirmed by the Delivery Owner and Outcome Owner or delegate.
+
+## 9. Done When
 
 * The problem statement clearly describes the underlying problem rather than potential solutions.
 * Intended outcomes reflect the desired business results rather than features or technical goals.
 * Success measures are defined and, where possible, quantified.
-* Assumptions, exclusions and dependencies are visible and reviewable.
+* Assumptions, exclusions, and dependencies are visible and reviewable.
 * The brief is endorsed by the named owner and reviewer.
 
-## 8. Recommended Acceptance Evidence
+## 10. What Comes Next
 
-* Approved Problem & Outcome Validation Brief signed by the Delivery Owner and Outcome Owner or delegate.
+1. Use this brief as the primary input when drafting [Functional Capabilities](functional_capabilities_specification.md).
+2. Use success measures to inform [Non-Functional Requirements](non_functional_requirements_specification.md).
+3. Keep this brief visible when structuring [Solution Modules](solution_modules_specification.md) to confirm that module scope stays anchored to the original problem.
+4. Revisit and formally revise through change control if the initiative's purpose or outcomes change.
 
-## 9. Recommended Acceptance Authority
-
-* Outcome Owner or delegated business sponsor.
-
-## 10. Prompt Guide
+## 11. Prompt Guide
 
 Starter prompt:
 
@@ -129,5 +153,5 @@ Keep it concise and business-focused, and avoid solution details.
 Validation prompt:
 
 ```text
-Check whether the Problem & Outcome Validation Brief clearly states the problem, intended outcomes, success measures, assumptions, exclusions and dependencies, and whether it introduces solution detail.
+Check whether the Problem & Outcome Validation Brief clearly states the problem, intended outcomes, success measures, assumptions, exclusions, and dependencies, and whether it introduces solution detail.
 ```

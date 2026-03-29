@@ -254,7 +254,7 @@ Keep the following out:
 
 For detailed authorization logic, use the formal access-control spec in the security domain.
 
-## 8. Traceability and Ownership Minimum
+## 8. Traceability, Ownership, and Review
 
 Minimum traceability expectation:
 

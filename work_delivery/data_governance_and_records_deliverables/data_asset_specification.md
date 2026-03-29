@@ -1,6 +1,6 @@
 # Data Asset Specification
 
-## 1. Purpose and Intended Outcome
+## 1. What This Artifact Is For
 
 The Data Asset Specification provides authoritative documentation of the key data handled by the initiative so that ownership, structure, storage, lifecycle, and recoverability are clear.
 
@@ -8,20 +8,11 @@ It exists to make the data understandable and governable beyond the original des
 
 The intended outcome is that the data asset can be governed, protected, supported, and changed with clear ownership and without needing to rediscover core facts about the data.
 
-## 2. When It Is Required
+Intended readers include: Data Steward, data analysts and designers, security and privacy reviewers, IT Operations / Service Owner, support teams, and audit reviewers.
+
+## 2. When to Use It
 
 This artifact is required when the initiative introduces, changes, or depends materially on governed data assets.
-
-## 3. Intended Readers and Users
-
-- Data Steward
-- data analysts and designers
-- security and privacy reviewers
-- IT Operations / Service Owner
-- support teams
-- audit reviewers
-
-## 4. Intended Project Context
 
 Use this artifact when the organization needs a practical, authoritative view of the data asset beyond a generic project description. It is most useful where data ownership, system of record, retention, storage, and recovery treatment must be explicit.
 
@@ -29,13 +20,45 @@ It should align with NIST planning and privacy-management guidance by making inv
 
 In the Work Delivery Framework lifecycle, this artifact is usually identified at summary level in Stage 2, elaborated in Stage 4, and validated as delivery evidence in Stage 6. It supports Stage 7 by providing a clear, supportable record of data ownership and lifecycle treatment.
 
-## 5. How Much Detail to Include
+## 3. Stage Fit and Handoffs
 
-Include enough detail to describe the key entities, attributes, ownership, storage, system of record, retention, and recovery relevance. Do not try to replace a full enterprise data catalog or every physical schema artifact.
+**Upstream inputs:**
 
-## 6. Required Content or Minimum Structure
+- [Initiative Definition Document Specification](../governance_and_control_deliverables/initiative_definition_document_specification.md) — confirms the approved scope and data categories the specification must cover
+- [Data Governance & Impact Assessment](data_governance_and_impact_assessment_specification.md) — identifies data sensitivity, obligations, and stewardship context that inform this specification
 
-### 6.1. Data asset context
+**Downstream consumers:**
+
+- [Backup, Restore & Recovery Plan](../operational_readiness_deliverables/backup_restore_and_recovery_plan_specification.md) — uses storage locations, lifecycle, and recovery status from this specification
+- [Data Migration Record](data_migration_record_specification.md) — references this specification for source and target asset context and must be updated after cutover
+- [Operational Readiness Confirmation Record](../operational_readiness_deliverables/operational_readiness_confirmation_record_specification.md) — requires a current data asset record before closure is confirmed
+
+**Also relates to:**
+
+- [Technical Design Document Specification](../operational_readiness_deliverables/technical_design_document_specification.md) — shares structural context; this specification focuses on governance rather than design
+- [Security & Privacy Risk Assessment Specification](../security_privacy_and_compliance_deliverables/security_and_privacy_risk_assessment_specification.md) — uses sensitivity and storage information from this specification to assess risk
+
+## 4. Before You Start
+
+Confirm the following inputs are available before drafting:
+
+- confirmed initiative scope and data categories in scope
+- named Data Steward
+- known storage locations and environments
+- understanding of retention obligations and recovery requirements
+- reference to the [Initiative Definition Document](../governance_and_control_deliverables/initiative_definition_document_specification.md) or Work Brief that authorized the work
+
+## 5. How to Draft It
+
+1. **Document data asset context** (§6.1) — name the asset, state its business purpose, define its scope, and record the version or status.
+2. **Describe structure and content** (§6.2) — identify key entities and relationships, and capture a data dictionary for important fields or attributes.
+3. **Record ownership and authority** (§6.3) — declare the system of record, name the responsible owner and Data Steward, and note any systems that republish or derive the data.
+4. **Document storage and lifecycle treatment** (§6.4) — record storage locations, retention rules, archival treatment, backup or recovery inclusion status, and disposal approach.
+5. **Add supporting notes for recovery, quality, or interface context** (§6.5) — note downstream usage, known data-quality constraints, and operational notes that affect support or recovery.
+
+## 6. Minimum Structure
+
+### 6.1. Data Asset Context
 
 Must include:
 
@@ -46,7 +69,7 @@ Must include:
 
 This section identifies the governed asset and why it exists.
 
-### 6.2. Structure and content view
+### 6.2. Structure and Content View
 
 Must include:
 
@@ -55,7 +78,7 @@ Must include:
 
 This section makes the asset understandable to readers other than the original designer.
 
-### 6.3. Ownership and authority
+### 6.3. Ownership and Authority
 
 Must include:
 
@@ -66,7 +89,7 @@ Must include:
 
 This section makes governance and correctness accountability explicit.
 
-### 6.4. Storage and lifecycle treatment
+### 6.4. Storage and Lifecycle Treatment
 
 Must include:
 
@@ -78,7 +101,7 @@ Must include:
 
 This section shows how the asset is managed over time.
 
-### 6.5. Optional supporting notes
+### 6.5. Optional Supporting Notes
 
 Should include when useful:
 
@@ -88,7 +111,9 @@ Should include when useful:
 
 This section adds practical context without expanding the artifact into a full design pack.
 
-## 7. What to Keep Out
+## 7. Writing Rules
+
+Include enough detail to describe the key entities, attributes, ownership, storage, system of record, retention, and recovery relevance. Do not try to replace a full enterprise data catalog or every physical schema artifact.
 
 Keep the following out of this artifact:
 
@@ -97,20 +122,7 @@ Keep the following out of this artifact:
 - lengthy legal text
 - unrelated business-process instructions
 
-## 8. Relationships to Other Artifacts
-
-This artifact should align with:
-
-- [Work Delivery Framework](../work_delivery_framework.md)
-- [Initiative Definition Document Specification](../governance_and_control_deliverables/initiative_definition_document_specification.md)
-- [Data Governance & Impact Assessment Specification](data_governance_and_impact_assessment_specification.md)
-- [Technical Design Document Specification](../operational_readiness_deliverables/technical_design_document_specification.md)
-- [Backup, Restore & Recovery Plan Specification](../operational_readiness_deliverables/backup_restore_and_recovery_plan_specification.md)
-- [Security & Privacy Risk Assessment Specification](../security_privacy_and_compliance_deliverables/security_and_privacy_risk_assessment_specification.md)
-- [Data Migration Record Specification](data_migration_record_specification.md)
-- [Operational Readiness Confirmation Record Specification](../operational_readiness_deliverables/operational_readiness_confirmation_record_specification.md)
-
-## 9. Ownership, Review, and Acceptance Expectations
+## 8. Traceability, Ownership, and Review
 
 The Data Steward or data design lead usually owns this artifact with delivery and operations input.
 
@@ -118,24 +130,41 @@ Review should include relevant governance, security, and support stakeholders.
 
 The Delivery Owner is accountable for ensuring this artifact stays aligned with authorized scope and implemented behavior. The relevant Acceptance Authority should confirm the data-asset record is complete enough for ongoing support and governance before closure.
 
-## 10. Maintenance Expectations
+## 9. Maintenance Expectations
 
 Update when data structure, ownership, system of record, storage, retention, or recovery treatment changes materially.
 
-## 11. Validation Guide
+## 10. Done When
 
-- Does it make the data asset understandable to someone other than the original designer?
-- Are ownership, system of record, and storage locations clear?
-- Are lifecycle and recoverability expectations visible?
-- Is the system-of-record boundary clear enough to support reconciliation, migration, and audit?
-- Does it stay focused on the governed asset rather than drifting into full technical schema detail?
+- Data asset name, purpose, and scope are documented
+- Key entities, relationships, and important attributes are described
+- Data Steward and system of record are named
+- Storage locations, retention rules, and lifecycle treatment are recorded
+- Backup or recovery inclusion status is stated
+- A reviewer other than the original designer can understand and use the record
 
-If weak, add stewardship clarity, simplify the structure description, and make the lifecycle rules easier to find.
+## 11. What Comes Next
 
-## 12. Prompt Guide for Drafting the Artifact
+1. Reference this specification in the [Data Governance & Impact Assessment](data_governance_and_impact_assessment_specification.md) to align data structure and stewardship details.
+2. Use as input to the [Backup, Restore & Recovery Plan](../operational_readiness_deliverables/backup_restore_and_recovery_plan_specification.md) when defining recovery scope for this asset.
+3. Reference when planning a [Data Migration Record](data_migration_record_specification.md) if data is moving, and update after cutover to reflect the new authoritative location.
+4. Confirm the record is current before the [Operational Readiness Confirmation Record](../operational_readiness_deliverables/operational_readiness_confirmation_record_specification.md) is finalized.
 
-### 12.1. Starter prompt
+## 12. Prompt Guide
 
-> Draft a Data Asset Specification for this initiative.
-> Describe the asset's purpose, key entities or structures, important attributes, system of record, storage locations, ownership, lifecycle rules, and backup or recovery relevance.
-> Keep it authoritative, practical, and maintainable.
+### 12.1. Starter Prompt
+
+```
+Draft a Data Asset Specification for this initiative.
+Describe the asset's purpose, key entities or structures, important attributes, system of record, storage locations, ownership, lifecycle rules, and backup or recovery relevance.
+Keep it authoritative, practical, and maintainable.
+```
+
+### 12.2. Validation Prompt
+
+```
+Review this Data Asset Specification.
+Check that the data asset name, purpose, and scope are documented; key entities and attributes are described; Data Steward and system of record are named; storage locations, retention rules, and lifecycle treatment are recorded; and backup or recovery inclusion status is stated.
+Confirm that a reviewer other than the original designer can understand and use the record.
+Note any gaps in stewardship clarity, lifecycle rules, or system-of-record boundaries.
+```

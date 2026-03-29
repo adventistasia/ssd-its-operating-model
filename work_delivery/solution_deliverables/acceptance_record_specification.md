@@ -123,7 +123,7 @@ Keep the following out:
 
 Reference the evidence instead of copying it.
 
-## 8. Traceability and Ownership Minimum
+## 8. Traceability, Ownership, and Review
 
 Minimum traceability expectation:
 

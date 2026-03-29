@@ -1,49 +1,66 @@
 # Delivery Charter Specification
 
-## 1. Purpose and Intended Outcome
+## 1. What This Artifact Is For
 
-The Delivery Charter formally charters and mobilizes the delivery team after work authorization.
+The Delivery Charter formally charters and mobilizes the delivery team after work authorization. It defines how the team will operate, communicate, govern execution, and prepare for acceptance readiness.
 
-It defines how the team will operate, communicate, govern execution, and prepare for acceptance readiness.
+A useful delivery charter makes delivery expectations explicit before execution begins and keeps execution visible, governed, and acceptance-ready. It may also serve as the agenda and output record for the delivery team kickoff meeting.
 
-The intended outcome is a shared operating agreement that makes delivery expectations explicit before execution begins and keeps execution visible, governed, and acceptance-ready.
+Intended readers include: Delivery Owner, Project Manager (if assigned), delivery team members and team leads, Sponsor and governance stakeholders, Acceptance Authorities, and operations and support stakeholders.
 
-## 2. When It Is Required
+## 2. When to Use It
 
 This artifact is required when an initiative needs controlled delivery mobilization, cross-team coordination, or explicit execution governance.
 
-It is primarily used in Stage 5 (Delivery Mobilization), though it may be drafted earlier and finalized at mobilization.
+It is primarily used in Stage 5 — Delivery Mobilization, though it may be drafted earlier and finalized at mobilization.
 
-## 3. Intended Readers and Users
+It does not replace the [Project Charter](project_charter_specification.md), detailed delivery plans, or active trackers.
 
-- Delivery Owner
-- Project Manager (if assigned)
-- delivery team members and team leads
-- Sponsor and governance stakeholders
-- Acceptance Authorities and support/operational stakeholders
+## 3. Stage Fit and Handoffs
 
-## 4. Intended Project Context
+This artifact is produced in Stage 5 — Delivery Mobilization, once the [Project Charter](project_charter_specification.md) is in place.
 
-Use this artifact to launch delivery in a controlled, visible, and accountable way.
+**Upstream sources:**
 
-It may also serve as the agenda and output record for the delivery team kickoff meeting.
+- [Initiative Definition Document](initiative_definition_document_specification.md) — authorized scope baseline
+- [Project Charter](project_charter_specification.md) — authorization, funding, and authority basis
+- [Delivery Roadmap](delivery_roadmap_specification.md) — sequencing, milestones, and phase plan
 
-It does not replace the Project Charter, detailed delivery plans, or active trackers.
+**Downstream artifacts this charter activates:**
 
-## 5. How Much Detail to Include
+- [Decision Record Log](decision_record_log_specification.md) — decision tracking during execution
+- [Solution Assumptions & Issues Register](solution_assumptions_and_issues_register_specification.md) — active RAID tracking during execution
+- Delivery plans, acceptance trackers, and communication records
 
-Keep the charter practical and execution-focused.
+## 4. Before You Start
 
-Include enough detail so team members know how delivery will be run and governed, without duplicating day-to-day planning artifacts.
+Before drafting, confirm you have:
 
-## 6. Required Content or Minimum Structure
+- an authorized [Project Charter](project_charter_specification.md)
+- a current [Initiative Definition Document](initiative_definition_document_specification.md) and at least a draft [Delivery Roadmap](delivery_roadmap_specification.md)
+- a named Delivery Owner
+- clarity on team structure and key roles
+- the minimum Stage 5 trackers ready to stand up (RAID/dependency, decision, acceptance)
+
+If the authorization basis is unclear or the delivery team is not yet assembled, label this document as a **working draft**.
+
+## 5. How to Draft It
+
+1. **State the mobilization intent and scope guardrails.** Reference the authorized baseline and make clear that scope changes require formal governance.
+2. **Define team operating expectations.** Describe what is expected of delivery teams and role leads — accountability for deliverables, evidence readiness, and decision participation.
+3. **Define the communication cadence.** Specify meeting rhythm, channels, escalation path, and stakeholder communication frequency.
+4. **Document governance controls.** State how changes, risks, issues, and decisions will be handled and escalated during execution.
+5. **Set up control trackers.** Identify which trackers are required (RAID/dependency, decision, acceptance), name the owner of each, and confirm they are active.
+6. **If used as kickoff record:** capture the kickoff date, participants, decisions made, and open actions with owners.
+
+## 6. Minimum Structure
 
 ### 6.1. Charter identity
 
 Must include:
 
 - initiative name
-- charter version/date
+- charter version and date
 - stage context (normally Stage 5)
 - owner and preparing party
 
@@ -77,7 +94,7 @@ Must include:
 
 - change path and escalation path
 - decision logging expectations
-- issue/risk/dependency handling expectations
+- issue, risk, and dependency handling expectations
 - acceptance-readiness management expectations
 - requirement to keep status visibility based on deliverables, evidence, and decision needs
 
@@ -114,66 +131,58 @@ Recommended fields:
 | Tracker ownership | Who maintains RAID/dependency, decision, and acceptance trackers |
 | Kickoff outcomes | Confirmed decisions and follow-up actions |
 
-## 7. What to Keep Out
+## 7. Writing Rules
 
-Keep the following out of this artifact:
+Keep the charter practical and execution-focused. Include enough detail so team members know how delivery will be run and governed, without duplicating day-to-day planning artifacts.
+
+Keep the following out:
 
 - duplicate copies of the Project Charter
-- detailed backlog/task scheduling
+- detailed backlog or task scheduling
 - detailed technical design content
 - unresolved scope proposals presented as agreed execution expectations
 
-## 8. Relationships to Other Artifacts
+## 8. Traceability, Ownership, and Review
 
-The Delivery Charter should align with and reference:
+The Delivery Owner is accountable for producing and activating this artifact. The Project Manager (if assigned) supports coordination and maintenance.
 
-- Initiative Definition Document
-- Project Charter
-- Delivery Roadmap
-- communication plan
-- decision, RAID, and acceptance trackers
+The charter should be reviewed with team leads and Sponsor or governance stakeholders as needed for controlled mobilization.
 
-## 9. Ownership, Review, and Acceptance Expectations
+This artifact traces back to the [Project Charter](project_charter_specification.md) and [Initiative Definition Document](initiative_definition_document_specification.md). It feeds forward to the active delivery governance trackers and, ultimately, to the [Formal Acceptance & Closure Record](formal_acceptance_and_closure_record_specification.md).
 
-The Delivery Owner is accountable for producing and activating this artifact.
+Update when delivery operating expectations, communication methods, governance controls, or key roles change materially. Keep revision history concise and attributable.
 
-The Project Manager (if assigned) supports coordination and maintenance.
+## 9. Done When
 
-The charter should be reviewed with team leads and Sponsor/governance stakeholders as needed for controlled mobilization.
+The charter is ready to activate delivery when:
 
-## 10. Maintenance Expectations
+- mobilization intent and scope guardrails are explicit and reference the authorized baseline
+- team operating expectations, communication methods, and escalation paths are defined
+- minimum Stage 5 controls are active (RAID/dependency, decision, and acceptance tracking)
+- owners are named for each control tracker
+- the Delivery Owner has reviewed and confirmed the charter with team leads
+- if used as kickoff record: decisions and follow-up actions are captured
 
-Update when delivery operating expectations, communication methods, governance controls, or key roles change materially.
+## 10. What Comes Next
 
-Keep revision history concise and attributable.
+1. Activate all control trackers named in section 6.6 before execution begins.
+2. Conduct or finalize the delivery team kickoff using this charter as the agenda.
+3. Confirm the [Delivery Roadmap](delivery_roadmap_specification.md) with the assembled team.
+4. Begin Stage 6 — Work Delivery with governance controls in place.
 
-## 11. Validation Guide
+## 11. Prompt Guide
 
-- Does this charter clearly mobilize the team for controlled execution?
-- Are team expectations, communication methods, and governance controls explicit?
-- Are the minimum Stage 5 controls active (RAID/dependency, decision, and acceptance tracking)?
-- Can a new team member understand how delivery operates from this artifact?
-- Is the artifact aligned with authorized scope and related governance records?
-- If used for kickoff, are decisions and actions clearly captured?
+### Starter prompt
 
-If weak, reduce narrative and make role expectations, cadence, and escalation rules more explicit.
+```
+Draft a Delivery Charter for Stage 5 mobilization.
+Define delivery team expectations, communication methods, governance controls, and acceptance-readiness management.
+Keep it practical and suitable for use in a kickoff meeting.
+```
 
-## 12. Prompt Guide for Drafting the Artifact
+### Validation prompt
 
-### 12.1. Starter prompt
-
-> Draft a Delivery Charter for Stage 5 mobilization.
-> Define delivery team expectations, communication methods, governance controls, and acceptance-readiness management.
-> Keep it practical and suitable for use in a kickoff meeting.
-
-### 12.2. Section prompts
-
-> Create a team operating expectations section that clearly defines what is expected of delivery teams and role leads.
-
-> Draft a communication and cadence section that shows meeting rhythm, channels, and escalation methods.
-
-### 12.3. Validation prompts
-
-> Review this charter for missing accountability, unclear communication methods, or weak change/escalation controls.
-
-> Check whether any section duplicates project planning detail that should sit in delivery plans instead.
+```
+Review this charter for missing accountability, unclear communication methods, or weak change and escalation controls.
+Check whether any section duplicates project planning detail that should sit in delivery plans instead.
+```
