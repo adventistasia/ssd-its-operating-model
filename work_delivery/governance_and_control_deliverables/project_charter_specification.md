@@ -147,7 +147,7 @@ The charter is ready to issue when:
 - all authorization conditions have named owners
 - the Initiative Definition Document version it is based on is referenced
 
-## Validation guide
+## 10. Validation Guide
 
 - Does the charter clearly show who authorized the work and what authority was granted?
 - Is the Stage 3 decision outcome explicit as Approve, Defer, Reject, or Approve with Conditions?
@@ -159,14 +159,14 @@ The charter is ready to issue when:
 
 If weak, tighten the authorization statement, reduce duplicated project detail, and make the commitment summary easier to scan.
 
-## 10. What Comes Next
+## 11. What Comes Next
 
 1. File the charter as the Stage 3 authorization record and record the approval reference in the [Initiative Definition Document](initiative_definition_document_specification.md).
 2. Begin Stage 4 — Work Definition Details to elaborate functional capabilities and domain deliverables.
 3. Produce the [Delivery Charter](delivery_charter_specification.md) at Stage 5 to mobilize the delivery team.
 4. Track any authorization conditions in the [Decision Record Log](decision_record_log_specification.md).
 
-## 11. Prompt Guide
+## 12. Prompt Guide
 
 ### Starter prompt
 

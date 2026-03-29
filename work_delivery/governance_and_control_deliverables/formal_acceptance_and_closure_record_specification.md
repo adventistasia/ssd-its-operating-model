@@ -169,7 +169,7 @@ The record is ready to issue when:
 - the final financial and delivery summary is complete or referenced
 - the named closing authority, decision date, and approval reference are recorded
 
-## Validation guide
+## 10. Validation Guide
 
 - Does the record show clearly that required acceptance happened before closure?
 - Where operations are impacted, does the record clearly confirm handover and receiving ownership?
@@ -181,19 +181,14 @@ The record is ready to issue when:
 
 If weak, improve the acceptance references, clarify the closure status, and make outstanding conditions more explicit.
 
-## 10. What Comes Next
+## 11. What Comes Next
 
 1. Distribute the signed closure record to the Sponsor, Delivery Owner, Acceptance Authorities, and audit or governance record holders.
 2. Update the [Initiative Definition Document](initiative_definition_document_specification.md) status to Final and record the closure reference.
 3. Ensure any residual obligations are transferred to named owners with due dates visible outside this record.
 4. Archive the initiative record set including the closure record, acceptance records, and decision log.
 
-## 11. Prompt Guide
-
-### Starter prompt
-
-```
-Draft a Formal Acceptance & Closure Record for this initiative.
+## 12. Prompt Guide
 Summarize accepted deliverables or domains, any residual obligations or exceptions, and the final closure decision with named authority and date.
 Keep it concise, attributable, and evidence-linked.
 ```
