@@ -1,153 +1,122 @@
 # Decision Record Log Specification
 
-## 1. Purpose and Intended Outcome
+## 1. What This Artifact Is For
 
-The Decision Record Log maintains an attributable history of material decisions affecting scope, funding, sequencing, risk treatment, architecture direction, compliance position, or acceptance.
+The **Decision Record Log** keeps a traceable record of material decisions made during an initiative. It prevents decisions from being lost, forgotten, or re-litigated by making them visible with a clear owner, rationale, and current status.
 
-It exists to make important decisions visible after the meeting or conversation where they were made. A useful Decision Record Log helps delivery teams, reviewers, and future maintainers understand what was decided, why, by whom, and what changed as a result.
+## 2. When to Use It
 
-The intended outcome is that material decisions remain traceable, do not need to be rediscovered or re-litigated, and can be followed through into delivery, governance, and acceptance actions.
+Start the log in **Work Definition (Stage 2)** when the initiative begins making decisions about scope, funding, approach, or design. Keep it active until the initiative closes.
 
-## 2. When It Is Required
+Use it whenever a decision could affect:
 
-This artifact is required when the initiative involves material governance, scope, risk, acceptance, or design decisions that should remain reviewable over time.
+* scope, funding, or approved baselines
+* risk position, security, or compliance
+* architecture, module design, or integration approach
+* acceptance approach or conditions
 
-It is strongly recommended for initiatives with multiple authorities, material risk, or likely audit needs.
+Do not use it for routine operational choices, meeting discussion notes, or minor day-to-day decisions that do not affect governance or delivery.
 
-## 3. Intended Readers and Users
+## 3. Stage Fit
 
-- Sponsor and Decision Authorities
-- Delivery Owner
-- governance and audit reviewers
-- future maintainers
-- leads affected by recorded decisions
+| Stage | What to log |
+| --- | --- |
+| Work Definition (Stage 2) | Early decisions on problem, scope, funding, or delivery approach |
+| Work Authorization (Stage 3) | Authorization decisions, conditions, and risk acceptance |
+| Work Definition Details (Stage 4) | Design decisions on modules, NFRs, integrations, or business rules |
+| Delivery Mobilization (Stage 5) | Mobilization, risk response, and execution decisions |
+| Work Delivery (Stage 6) | Decisions on implementation, evidence, or material changes |
+| Acceptance, Transition & Closure (Stage 7) | Acceptance decisions and closure decisions |
 
-## 4. Intended Project Context
+## 4. How to Use It
 
-Use this artifact from definition through closure. It is most useful where decisions need to remain traceable across changing teams, phases, and artifacts.
+1. Assign a log owner (usually the Delivery Owner or governance coordinator).
+2. When a material decision is made, add a row immediately — while context is fresh.
+3. Keep each entry short. Record the decision, not the meeting discussion.
+4. If a decision changes, mark the original row `Superseded` and add a new row. Never overwrite history.
+5. Share the log with the delivery team and reviewers so it is visible, not buried.
 
-It should align with PMI governance and integrated change-control discipline by making material decisions attributable and easy to review without searching across email, meeting notes, or chat history.
+## 5. Minimum Structure
 
-## 5. How Much Detail to Include
+### 5.1. Baseline — simplest form
 
-Keep each entry short but decision-useful. Include enough context that another reader can understand the decision, the rationale, the decision-maker, and the impact on delivery or governance.
+Use the baseline log when the initiative is small, has few cross-team dependencies, and does not need detailed traceability to other artifacts.
 
-## 6. Required Content or Minimum Structure
+| DR-### | Date | Decision | Authority | Rationale | Status |
+| --- | --- | --- | --- | --- | --- |
 
-This artifact should be table-driven.
+**Example:**
 
-### 6.1. Log context
+| DR-### | Date | Decision | Authority | Rationale | Status |
+| --- | --- | --- | --- | --- | --- |
+| DR-001 | 2026-01-15 | Use Azure for hosting | IT Director | Best fit for existing licensing and support capability | Approved |
+| DR-002 | 2026-01-22 | Defer mobile app to Phase 2 | Sponsor | Budget constraint; core web functionality is sufficient for Phase 1 | Approved |
+| DR-003 | 2026-02-10 | Increase data retention from 3 to 7 years | Compliance Officer | New regulatory requirement effective July 2026 | Approved |
 
-Must include:
+### 5.2. Extended — with cross-domain traceability
 
-- initiative or solution name
-- log owner
-- current version or last updated date
+Use the extended log when the initiative is large, has multiple teams or authorities, or needs traceability to other deliverables such as NFRs, business rules, integrations, or assumptions.
 
-This section identifies the log and who maintains it.
+Add cross-domain columns only when they apply to the initiative. Leave unused columns out of the table.
 
-### 6.2. Required content for each decision row
+| DR-### | Date | Title | Category | Decision | Authority | Rationale | Impacted Artifacts | Baseline Impact | Related AI-### | Related QA-### | Related BR-### | Related INT-### | Conditions / Follow-Up | Follow-Up Owner | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-Each decision row must include:
+**Example:**
 
-- Decision ID
-- decision date
-- decision title
-- decision category
-- decision taken
-- decision maker or approving authority
-- artifact or evidence basis used for the decision
-- rationale or basis
-- impacted artifacts or deliverables
-- baseline impact or change implication where the decision alters approved scope, cost, authority, risk position, or acceptance approach
-- conditions or follow-up actions where applicable
-- follow-up owner where action is required
-- current status
+| DR-### | Date | Title | Category | Decision | Authority | Rationale | Impacted Artifacts | Baseline Impact | Related AI-### | Related BR-### | Conditions / Follow-Up | Follow-Up Owner | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| DR-001 | 2026-01-15 | Hosting platform selection | Architecture | Use Azure for hosting | IT Director | Best fit for existing licensing and support | Technical Design Document | Confirms baseline | AI-003 | | IT to confirm DR-compliant region by Jan 30 | Infrastructure Lead | Approved |
+| DR-002 | 2026-01-22 | Mobile app deferred | Scope | Defer mobile app to Phase 2 | Sponsor | Budget constraint; core web sufficient for Phase 1 | Functional Capabilities (FC-007 deferred) | Scope change | | | Update FC register to mark FC-007 deferred | Delivery Owner | Approved |
+| DR-003 | 2026-02-10 | Data retention extension | Compliance | Extend retention from 3 to 7 years | Compliance Officer | New regulatory requirement | Data Governance Spec, DevOps Guide | Baseline change — storage sizing update required | AI-007 | BR-004 | Update storage estimate and DR design before Delivery Mobilization (Stage 5) | Delivery Owner | Approved |
 
-Recommended columns:
+## 6. Status Values
 
-| Decision ID | Date | Title | Category | Decision Taken | Authority | Evidence Basis | Rationale | Impacted Artifacts | Baseline Impact | Conditions / Follow-Up | Follow-Up Owner | Status |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+Use these status values consistently:
 
-Use controlled status values such as:
+| Status | Meaning |
+| --- | --- |
+| `Proposed` | Under review, not yet approved |
+| `Approved` | Decision accepted and in effect |
+| `Superseded` | Replaced by a later decision — keep row visible |
+| `Withdrawn` | No longer applicable |
 
-- `Proposed`
-- `Approved`
-- `Superseded`
-- `Withdrawn`
+## 7. Relationships to Other Artifacts
 
-This row structure is the main information model of the log.
+Decisions may affect and should link to:
 
-### 6.3. Decision logging rules
+* [Solution Assumptions & Issues Register](solution_assumptions_and_issues_register_specification.md) (`AI-###`) — when a decision resolves an assumption or opens a new issue
+* [Non-Functional Requirements Specification](../solution_deliverables/non_functional_requirements_specification.md) (`QA-###`) — when a decision affects a quality target
+* [Business Rules Catalog](../solution_deliverables/business_rules_catalog_specification.md) (`BR-###`) — when a decision adds or changes a rule
+* [Integration & External Dependency Specification](../solution_deliverables/integration_and_external_dependency_specification.md) (`INT-###`) — when a decision introduces or changes an integration
 
-Must include:
+## 8. Recommended Acceptance Evidence
 
-- what kinds of decisions belong in the log
-- rule that superseded decisions remain visible rather than deleted
-- rule that routine low-impact operational choices should not overload the log
-- rule that decisions requiring artifact updates, re-approval, or new acceptance conditions must identify the affected baseline or record explicitly
-- rule that each decision with conditions records a named owner for each follow-up action
+* Updated Decision Record Log showing all material decisions with authority, rationale, and current status.
+* Confirmation by the Delivery Owner that the log is complete up to the acceptance point.
 
-This section keeps the log useful and governable.
+## 9. Recommended Acceptance Authority
 
-### 6.4. Template guide
+* **Sponsor or Decision Authority** for governance-level decisions.
+* **Delivery Owner** for design-level and execution decisions.
 
-Use short entries:
+## 10. Prompt Guide
 
-- `Category`: scope, funding, risk, architecture, privacy, acceptance, or other defined category
-- `Decision`: the conclusion, not the meeting discussion
-- `Evidence basis`: the artifact, analysis, or record used to support the decision
-- `Rationale`: a short reason, not full minutes
-- `Impacted artifacts`: name the records or specifications that must align to the decision
-- `Baseline impact`: state whether the decision confirms the current baseline, changes it, or creates a follow-up action to revise it
+Starter prompt:
 
-## 7. What to Keep Out
+```text
+Create a Decision Record Log for this initiative.
+Add a row for each material decision made so far, with a DR-### ID, date, decision statement, authority, rationale, and status.
+Use the baseline structure for simple initiatives or the extended structure when cross-domain traceability is needed.
+Keep entries short — record the conclusion, not the discussion.
+```
 
-Keep the following out of this artifact:
+Validation prompt:
 
-- full meeting minutes
-- raw discussion history
-- large attachments copied into the log
-- routine operational choices that do not affect governance or delivery direction
-
-## 8. Relationships to Other Artifacts
-
-The log should reference the Initiative Definition Document, Project Charter, major scope baselines, risk acceptance records, and closure records where applicable.
-
-## 9. Ownership, Review, and Acceptance Expectations
-
-The Delivery Owner or governance coordinator usually maintains the log. Decision makers remain accountable for the recorded decision itself.
-
-## 10. Maintenance Expectations
-
-Update the log as decisions occur. If a decision changes, mark the original entry as superseded and add the new one rather than overwriting history.
-
-## 11. Validation Guide
-
-- Does each entry identify the decision, authority, rationale, and impacted artifacts clearly?
-- Can a reader tell whether the decision changed an approved baseline or only clarified it?
-- Can a reader tell which decisions are still current?
-- Is the log short enough to scan and strong enough to support audit or future change review?
-- Does the log avoid becoming a copy of meeting minutes?
-
-If weak, shorten entries, improve status handling, and make impacts on artifacts more explicit.
-
-## 12. Prompt Guide for Drafting the Artifact
-
-### 12.1. Starter prompt
-
-> Create or update a Decision Record Log for this initiative.
-> Capture only material decisions, with clear decision IDs, authority, rationale, impacted artifacts, follow-up ownership, and current status.
-> Keep each entry short enough to scan quickly.
-
-### 12.2. Section prompts
-
-> Convert these meeting outcomes into Decision Record Log entries using the required row fields in this specification.
-
-> Review the log and mark any entries that should be superseded, withdrawn, or removed because they are not material enough for this artifact.
-
-### 12.3. Validation prompts
-
-> Check whether this log distinguishes clearly between decisions, rationale, and follow-up actions.
-
-> Check whether any current decision affecting scope, funding, or acceptance is missing from the log.
+```text
+Review this Decision Record Log. Check that:
+- each entry records what was decided (not the discussion)
+- each entry has a named authority and a current status
+- superseded decisions are marked Superseded, not deleted
+- any decision affecting scope, funding, or acceptance is included
+```
