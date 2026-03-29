@@ -49,7 +49,7 @@ The governing principle is:
 
 ## 6. Required Content or Minimum Structure
 
-### 6.1. Report identity and control
+### 6.1. Report Identity and Control
 
 Must include:
 
@@ -63,7 +63,7 @@ Must include:
 - references to the Initial Review and Validation Assessment
 - reference to the analysis basis used
 
-### 6.2. Executive summary
+### 6.2. Executive Summary
 
 Must include:
 
@@ -71,7 +71,7 @@ Must include:
 - the recommended decision
 - brief explanation of why that recommendation is being made now
 
-### 6.3. Assessed need, desired outcome, and success measures
+### 6.3. Assessed Need, Desired Outcome, and Success Measures
 
 Must include:
 
@@ -81,7 +81,7 @@ Must include:
 - who is materially affected
 - consequence of inaction
 
-### 6.4. Assessment scope boundary
+### 6.4. Assessment Scope Boundary
 
 Must include:
 
@@ -91,7 +91,7 @@ Must include:
 
 This is an assessment-level boundary, not a full authorized scope baseline.
 
-### 6.5. Preferred path and option summary
+### 6.5. Preferred Path and Option Summary
 
 Must include:
 
@@ -99,7 +99,7 @@ Must include:
 - the preferred path
 - why the preferred path is better than the alternatives at this stage
 
-### 6.6. Current-state, stakeholder, and analysis findings summary
+### 6.6. Current-State, Stakeholder, and Analysis Findings Summary
 
 Must include:
 
@@ -110,7 +110,7 @@ Must include:
 
 Where supporting assessment artifacts were used, this section should make clear which findings come from the [Current State Analysis Report](current_state_analysis_report_specification.md), the [Business Process Stage Analysis](business_process_stage_analysis_specification.md), or the [Challenges and Needs](challenges_and_needs_specification.md).
 
-### 6.7. High-level requirements, capabilities, and work profile summary
+### 6.7. High-Level Requirements, Capabilities, and Work Profile Summary
 
 Must include:
 
@@ -118,7 +118,7 @@ Must include:
 - likely work classification or initiative type where helpful
 - rough indication of whether the work appears small, medium, or large in governance terms
 
-### 6.8. Major risks, dependencies, and viability considerations
+### 6.8. Major Risks, Dependencies, and Viability Considerations
 
 Must include:
 
@@ -126,7 +126,7 @@ Must include:
 - key dependencies and timing constraints
 - sponsorship, funding, supportability, security, privacy, regulatory, or organizational readiness concerns that matter to the recommendation
 
-### 6.9. Recommended definition focus and assessment reference basis
+### 6.9. Recommended Definition Focus and Assessment Reference Basis
 
 Must include:
 
@@ -157,7 +157,7 @@ The goal is not to finish definition inside Work Assessment. The goal is to poin
 
 The deliverables named here are not limited to the current [Standard Deliverables Guide](../standard_deliverables_guide.md). If the work clearly needs another deliverable to define, govern, accept, operate, or support the initiative responsibly, name it explicitly rather than forcing the work into an incomplete standard list.
 
-### 6.10. Work assessment recommendation
+### 6.10. Work Assessment Recommendation
 
 Must include one explicit recommendation:
 
@@ -169,7 +169,7 @@ Include rationale and any conditions or cautions attached to the recommendation.
 
 This recommendation should reflect whether there is enough information to define the initiative and move it toward authorization.
 
-### 6.11. Decision record
+### 6.11. Decision Record
 
 Must include:
 
@@ -179,7 +179,7 @@ Must include:
 - evidence basis used for the decision
 - conditions, follow-up actions, or required owners where applicable
 
-### 6.12. Handoff references
+### 6.12. Handoff References
 
 Should include:
 
@@ -228,22 +228,32 @@ This artifact is normally stable once the assessment decision is recorded. If th
 - Does definition have a clear assessment reference basis if the recommendation is to proceed?
 - Does the definition section clearly separate what is already established in assessment artifacts from what still needs to be defined or confirmed?
 
-## 12. Prompt Guide for Drafting the Artifact
+## 12. Prompt Guide
 
-### 12.1. Starter prompt
+### 12.1. Starter Prompt
 
-> Draft a Work Assessment Report that synthesizes the Initial Review, Validation Assessment, and completed focused analysis into a final assessment recommendation.
-> Explain the validated need, current state, stakeholder needs, desired outcomes, success measures, high-level requirements or capabilities, analysis findings, preferred path, major risks and dependencies, and what Work Definition must clarify next.
-> Keep it decision-ready, practical, and lighter than an Initiative Definition Document.
+```
+Draft a Work Assessment Report that synthesizes the Initial Review, Validation Assessment, and completed focused analysis into a final assessment recommendation.
+Explain the validated need, current state, stakeholder needs, desired outcomes, success measures, high-level requirements or capabilities, analysis findings, preferred path, major risks and dependencies, and what Work Definition must clarify next.
+Keep it decision-ready, practical, and lighter than an Initiative Definition Document.
+```
 
-### 12.2. Section prompts
+### 12.2. Section Prompts
 
-> Write the preferred-path section so it explains why the recommended option is better than the alternatives at this stage, including the do-nothing option.
+```
+Write the preferred-path section so it explains why the recommended option is better than the alternatives at this stage, including the do-nothing option.
+```
 
-> Draft the definition-focus section so the next team can see what assessment artifacts and findings to reference, what carry-forward baseline should remain stable, who needs to be involved, and what questions remain open.
+```
+Draft the definition-focus section so the next team can see what assessment artifacts and findings to reference, what carry-forward baseline should remain stable, who needs to be involved, and what questions remain open.
+```
 
-### 12.3. Validation prompts
+### 12.3. Validation Prompts
 
-> Check whether this report works as the final work assessment decision artifact and handoff basis without drifting into Work Definition or authorization.
+```
+Check whether this report works as the final work assessment decision artifact and handoff basis without drifting into Work Definition or authorization.
+```
 
-> Rewrite any section that behaves like an approved scope baseline, project charter, or design brief.
+```
+Rewrite any section that behaves like an approved scope baseline, project charter, or design brief.
+```

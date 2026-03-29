@@ -52,7 +52,7 @@ The governing principle is:
 
 ## 6. Required Content or Minimum Structure
 
-### 6.1. Work request identity
+### 6.1. Work Request Identity
 
 Must include:
 
@@ -62,7 +62,7 @@ Must include:
 - date or version
 - short note on the business area, service area, or operational context affected
 
-### 6.2. Affected parties and operating context
+### 6.2. Affected Parties and Operating Context
 
 Must include:
 
@@ -70,7 +70,7 @@ Must include:
 - where the issue appears in practice
 - any relevant timing, volume, service, compliance, or operational context that helps explain the challenge
 
-### 6.3. Primary challenge statement
+### 6.3. Primary Challenge Statement
 
 Must include:
 
@@ -81,7 +81,7 @@ Must include:
 
 The statement should describe the main present challenge in plain language rather than naming a preferred solution.
 
-### 6.4. Challenge and symptom breakdown
+### 6.4. Challenge and Symptom Breakdown
 
 Must include:
 
@@ -91,7 +91,7 @@ Must include:
 
 Where more than one challenge is materially relevant, present them as a short list or table so the primary challenge and the supporting challenges stay distinct.
 
-### 6.5. Needs breakdown and desired improvement
+### 6.5. Needs Breakdown and Desired Improvement
 
 Must include:
 
@@ -102,7 +102,7 @@ Must include:
 
 Where possible, distinguish the main underlying need from the symptom that triggered attention, and distinguish supporting needs from preferred solutions. Do not let a requested tool, feature, vendor, or delivery approach silently become the accepted statement of need.
 
-### 6.6. Likely causes or contributing factors
+### 6.6. Likely Causes or Contributing Factors
 
 Must include:
 
@@ -112,7 +112,7 @@ Must include:
 
 This section should frame likely causes lightly. It should not become a full root-cause analysis exercise unless that is separately justified later.
 
-### 6.7. Why it matters now and consequence of inaction
+### 6.7. Why It Matters Now and Consequence of Inaction
 
 Must include:
 
@@ -120,7 +120,7 @@ Must include:
 - the business, operational, service, control, user, or compliance impact
 - the likely consequence of doing nothing in the near to medium term
 
-### 6.8. Assessment framing notes
+### 6.8. Assessment Framing Notes
 
 Must include:
 
@@ -128,7 +128,7 @@ Must include:
 - any key assumption, boundary note, or open question that should stay visible
 - the concise problem basis and cautions that later assessment should carry forward rather than rediscover
 
-### 6.9. Example content showing the minimum structure
+### 6.9. Example Content Showing the Minimum Structure
 
 Example only. Adapt to the real work request.
 
@@ -239,25 +239,37 @@ Once the Validation Assessment recommendation is recorded, the artifact normally
 - Are important solution assumptions, evidence gaps, or confidence limits still visible?
 - Does it give Validation Assessment a clearer problem basis and set of questions to test next?
 
-## 12. Prompt Guide for Drafting the Artifact
+## 12. Prompt Guide
 
-### 12.1. Starter prompt
+### 12.1. Starter Prompt
 
-> Draft a Challenges and Needs artifact for a work item that has passed initial triage.
-> Explain who is affected, what is happening today, where the issue appears, why it matters now, what the primary challenge or need is, what related secondary challenges or needs also materially contribute, what likely causes are already visible, what impact is being felt, and what consequence may follow if nothing changes.
-> Note any evidence gap, confidence limit, or solution assumption that still needs validation.
-> Keep it practical, lightweight, and free of solution design or detailed requirements.
+```
+Draft a Challenges and Needs artifact for a work item that has passed initial triage.
+Explain who is affected, what is happening today, where the issue appears, why it matters now, what the primary challenge or need is, what related secondary challenges or needs also materially contribute, what likely causes are already visible, what impact is being felt, and what consequence may follow if nothing changes.
+Note any evidence gap, confidence limit, or solution assumption that still needs validation.
+Keep it practical, lightweight, and free of solution design or detailed requirements.
+```
 
-### 12.2. Section prompts
+### 12.2. Section Prompts
 
-> Rewrite the challenge statement so it describes the business problem and operating reality without naming a preferred system, tool, or delivery approach.
+```
+Rewrite the challenge statement so it describes the business problem and operating reality without naming a preferred system, tool, or delivery approach.
+```
 
-> Distinguish the visible symptoms from the underlying business or operational needs in plain language, and make the primary need clear without hiding the supporting needs.
+```
+Distinguish the visible symptoms from the underlying business or operational needs in plain language, and make the primary need clear without hiding the supporting needs.
+```
 
-> Identify any requested solution idea that should remain visible as an assumption to test rather than as accepted need.
+```
+Identify any requested solution idea that should remain visible as an assumption to test rather than as accepted need.
+```
 
-### 12.3. Validation prompts
+### 12.3. Validation Prompts
 
-> Check whether this artifact gives Validation Assessment a clear problem basis without becoming a business case, requirement set, or solution brief.
+```
+Check whether this artifact gives Validation Assessment a clear problem basis without becoming a business case, requirement set, or solution brief.
+```
 
-> Rewrite any section that turns a likely cause into a confirmed fact, hides an evidence gap, or turns an unmet need into a premature solution statement.
+```
+Rewrite any section that turns a likely cause into a confirmed fact, hides an evidence gap, or turns an unmet need into a premature solution statement.
+```

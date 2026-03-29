@@ -43,7 +43,7 @@ The governing principle is:
 
 ## 6. Required Content or Minimum Structure
 
-### 6.1. Review identity
+### 6.1. Review Identity
 
 Must include:
 
@@ -52,33 +52,33 @@ Must include:
 - date identified
 - Assessment Owner
 
-### 6.2. Statement of need
+### 6.2. Statement of Need
 
 Must include:
 
 - the problem, risk, or opportunity that exists today
 - the trigger or reason it surfaced now
 
-### 6.3. Desired outcome
+### 6.3. Desired Outcome
 
 Must include:
 
 - a short outcome-focused statement of what would be better if the issue were addressed
 
-### 6.4. Current challenges or friction points
+### 6.4. Current Challenges or Friction Points
 
 Must include:
 
 - the main blockers, pain points, or conditions making the issue difficult today
 
-### 6.5. Who is affected and why it matters
+### 6.5. Who Is Affected and Why It Matters
 
 Must include:
 
 - primary stakeholders or users affected
 - why the issue matters if left unresolved
 
-### 6.6. Cost of inaction
+### 6.6. Cost of Inaction
 
 Must include:
 
@@ -86,26 +86,26 @@ Must include:
 - a directional impact level such as low, moderate, or high
 - a brief rationale
 
-### 6.7. Strategic and organizational fit
+### 6.7. Strategic and Organizational Fit
 
 Must include:
 
 - a quick view of whether the item aligns with strategy, priorities, mandate, known risks, or stakeholder support
 - brief note where fit is weak or unclear
 
-### 6.8. Obvious constraints or dealbreakers
+### 6.8. Obvious Constraints or Dealbreakers
 
 Must include:
 
 - any factor that would immediately make further assessment unjustified
 
-### 6.9. Initial feasibility sanity check
+### 6.9. Initial Feasibility Sanity Check
 
 Must include:
 
 - a very high-level view of whether the work appears feasible, clearly infeasible, or unclear without deeper assessment
 
-### 6.10. Review recommendation
+### 6.10. Review Recommendation
 
 Must include one explicit recommendation:
 
@@ -115,7 +115,7 @@ Must include one explicit recommendation:
 
 Include a brief rationale.
 
-### 6.11. Decision record
+### 6.11. Decision Record
 
 Must include:
 
@@ -161,22 +161,32 @@ This artifact is normally stable once the decision is recorded. If the work is d
 - Are obvious dealbreakers checked rather than ignored?
 - Is the recommendation explicit and attributable?
 
-## 12. Prompt Guide for Drafting the Artifact
+## 12. Prompt Guide
 
-### 12.1. Starter prompt
+### 12.1. Starter Prompt
 
-> Draft an Initial Review for a proposed work item.
-> Summarize the need, desired outcome, who is affected, the cost of inaction, obvious dealbreakers, and a clear recommendation to stop, defer, or proceed to Validation Assessment.
-> Keep it concise, practical, and free of solution design.
+```
+Draft an Initial Review for a proposed work item.
+Summarize the need, desired outcome, who is affected, the cost of inaction, obvious dealbreakers, and a clear recommendation to stop, defer, or proceed to Validation Assessment.
+Keep it concise, practical, and free of solution design.
+```
 
-### 12.2. Section prompts
+### 12.2. Section Prompts
 
-> Rewrite the problem statement and desired outcome so they describe the current issue and intended improvement without naming a solution, system, or vendor.
+```
+Rewrite the problem statement and desired outcome so they describe the current issue and intended improvement without naming a solution, system, or vendor.
+```
 
-> Create a short recommendation section that makes the stop, defer, or proceed decision explicit and gives a brief rationale.
+```
+Create a short recommendation section that makes the stop, defer, or proceed decision explicit and gives a brief rationale.
+```
 
-### 12.3. Validation prompts
+### 12.3. Validation Prompts
 
-> Check whether this Initial Review functions as a fast triage record rather than a business case or design brief.
+```
+Check whether this Initial Review functions as a fast triage record rather than a business case or design brief.
+```
 
-> Rewrite any section that drifts into design, requirements, or premature analysis.
+```
+Rewrite any section that drifts into design, requirements, or premature analysis.
+```

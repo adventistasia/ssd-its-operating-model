@@ -63,7 +63,7 @@ The governing principle is:
 
 ## 6. Required Content or Minimum Structure
 
-### 6.1. Report identity and assessment boundary
+### 6.1. Report Identity and Assessment Boundary
 
 Must include:
 
@@ -76,7 +76,7 @@ Must include:
 
 This opening section should make the report boundary and evidence basis easy to find without reading the whole document.
 
-### 6.2. Current-state overview
+### 6.2. Current-State Overview
 
 Must include:
 
@@ -85,7 +85,7 @@ Must include:
 - the main business units, roles, or functions involved
 - the main systems, tools, records, or channels involved where materially relevant
 
-### 6.3. Actual workflows, handoffs, and operational realities
+### 6.3. Actual Workflows, Handoffs, and Operational Realities
 
 Must include:
 
@@ -96,7 +96,7 @@ Must include:
 
 Where useful, this section should reference or incorporate the [Business Process Stage Analysis](business_process_stage_analysis_specification.md).
 
-### 6.4. Systems, records, dependencies, and constraints
+### 6.4. Systems, Records, Dependencies, and Constraints
 
 Must include:
 
@@ -104,7 +104,7 @@ Must include:
 - notable dependencies on other teams, services, vendors, policies, data quality, approvals, or timing windows
 - operational, technical, policy, staffing, or environmental constraints that materially affect the current state
 
-### 6.5. Workarounds, bottlenecks, duplication, rework, and prior attempts
+### 6.5. Workarounds, Bottlenecks, Duplication, Rework, and Prior Attempts
 
 Must include:
 
@@ -113,7 +113,7 @@ Must include:
 - prior attempts, partial fixes, or abandoned efforts where relevant
 - why these matter to the current request or recommendation
 
-### 6.6. Roles, ownership, supportability, and control implications
+### 6.6. Roles, Ownership, Supportability, and Control Implications
 
 Must include:
 
@@ -122,7 +122,7 @@ Must include:
 - where ownership is unclear, fragmented, or dependent on individuals
 - any control, audit, record, or supportability implication that materially shapes the work request
 
-### 6.7. Current-state reference points
+### 6.7. Current-State Reference Points
 
 Must include:
 
@@ -132,7 +132,7 @@ Must include:
 
 This section should separate observed current-state facts from later recommendations. It should be clear which points are carry-forward facts for later definition and which questions still need validation before design or delivery decisions are made.
 
-### 6.8. Evidence basis and confidence notes
+### 6.8. Evidence Basis and Confidence Notes
 
 Must include:
 
@@ -141,7 +141,7 @@ Must include:
 - where evidence is partial, outdated, anecdotal, or still needs validation
 - any material inference, assumption, or confidence limit that affects how findings should be read
 
-### 6.9. Example content showing the minimum structure
+### 6.9. Example Content Showing the Minimum Structure
 
 Example only. Adapt to the real work request.
 
@@ -253,26 +253,38 @@ Once the Work Assessment recommendation is finalized, the report normally become
 - Does it identify which current-state facts should remain easy to reference from the Work Assessment Report or later definition?
 - Is the detail practical and bounded rather than drifting into a full redesign or architecture pack?
 
-## 12. Prompt Guide for Drafting the Artifact
+## 12. Prompt Guide
 
-### 12.1. Starter prompt
+### 12.1. Starter Prompt
 
-> Draft a Current State Analysis Report for this work request.
-> Describe what actually happens today, the relevant systems, workflows, handoffs, dependencies, constraints, workarounds, bottlenecks, duplication, rework, ownership realities, support implications, and prior attempts where relevant.
-> Make clear which current-state facts later definition should be able to reference directly.
-> Show the main evidence sources and note any assumption, inference, evidence gap, or confidence limit that materially affects the picture.
-> Keep the report evidence-based, practical, and free of future-state design or implementation planning.
+```
+Draft a Current State Analysis Report for this work request.
+Describe what actually happens today, the relevant systems, workflows, handoffs, dependencies, constraints, workarounds, bottlenecks, duplication, rework, ownership realities, support implications, and prior attempts where relevant.
+Make clear which current-state facts later definition should be able to reference directly.
+Show the main evidence sources and note any assumption, inference, evidence gap, or confidence limit that materially affects the picture.
+Keep the report evidence-based, practical, and free of future-state design or implementation planning.
+```
 
-### 12.2. Section prompts
+### 12.2. Section Prompts
 
-> Rewrite the current-state overview so it reflects the real operating situation today, including the roles, systems, and practical conditions that materially shape the work.
+```
+Rewrite the current-state overview so it reflects the real operating situation today, including the roles, systems, and practical conditions that materially shape the work.
+```
 
-> Summarize the most important current-state facts that later definition should reference without converting them into future-state recommendations.
+```
+Summarize the most important current-state facts that later definition should reference without converting them into future-state recommendations.
+```
 
-> Identify any sentence that sounds like a recommendation and rewrite it as an observed current-state fact or a clearly marked open question.
+```
+Identify any sentence that sounds like a recommendation and rewrite it as an observed current-state fact or a clearly marked open question.
+```
 
-### 12.3. Validation prompts
+### 12.3. Validation Prompts
 
-> Check whether this Current State Analysis Report describes the actual current state clearly enough to support assessment and later handoff without drifting into solution design or roadmap content.
+```
+Check whether this Current State Analysis Report describes the actual current state clearly enough to support assessment and later handoff without drifting into solution design or roadmap content.
+```
 
-> Rewrite any section that treats assumptions as facts, hides workarounds or ownership gaps, obscures confidence limits, or starts describing the target state instead of the current state.
+```
+Rewrite any section that treats assumptions as facts, hides workarounds or ownership gaps, obscures confidence limits, or starts describing the target state instead of the current state.
+```

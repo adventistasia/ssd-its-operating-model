@@ -62,7 +62,7 @@ The governing principle is:
 
 ## 6. Required Content or Minimum Structure
 
-### 6.1. Analysis identity and scope
+### 6.1. Analysis Identity and Scope
 
 Must include:
 
@@ -73,7 +73,7 @@ Must include:
 - analysis boundary showing where the process starts and ends for this assessment
 - source basis used, such as interviews, walkthroughs, records, or existing process notes
 
-### 6.2. Process summary
+### 6.2. Process Summary
 
 Must include:
 
@@ -82,7 +82,7 @@ Must include:
 - the normal end point or business outcome produced
 - any boundary note explaining what connected upstream or downstream process areas are outside this analysis
 
-### 6.3. Stage-by-stage process analysis
+### 6.3. Stage-By-Stage Process Analysis
 
 Must include a stage-by-stage structure.
 
@@ -105,7 +105,7 @@ The stage entries may be presented as a table or as repeated stage sections, but
 
 Where a process diagram is used, it should support the stage analysis rather than replace the required content fields.
 
-### 6.4. Observed process issues and practical notes
+### 6.4. Observed Process Issues and Practical Notes
 
 Must include:
 
@@ -115,7 +115,7 @@ Must include:
 
 This section should point to what is happening today. It should not propose the future solution.
 
-### 6.5. Cross-stage handoffs, dependencies, and exceptions
+### 6.5. Cross-Stage Handoffs, Dependencies, and Exceptions
 
 Must include:
 
@@ -125,14 +125,14 @@ Must include:
 
 This section may summarize the most important cross-stage points already visible in the stage entries, but it should bring them together so they are easy to assess as a whole.
 
-### 6.6. Assessment-use summary
+### 6.6. Assessment-Use Summary
 
 Must include:
 
 - the current-process facts that Validation Assessment, Current State Analysis, or the Work Assessment Report should be able to reference directly
 - any areas where the process understanding is still partial, disputed, or needs confirmation
 
-### 6.7. Example content showing the minimum structure
+### 6.7. Example Content Showing the Minimum Structure
 
 Example only. Adapt to the real work request.
 
@@ -230,25 +230,37 @@ If the work is deferred and later revisited, refresh the analysis if the underly
 - Does the artifact stop short of becoming process redesign, requirements, or delivery planning?
 - Does it identify which current-process facts should remain easy to reference in later assessment or definition?
 
-## 12. Prompt Guide for Drafting the Artifact
+## 12. Prompt Guide
 
-### 12.1. Starter prompt
+### 12.1. Starter Prompt
 
-> Draft a Business Process Stage Analysis for the current-state process relevant to this work request.
-> Break the process into stages and show the stage purpose, primary actor, supporting roles where relevant, required input, usual source, data used, activity description, decision or control point where relevant, output produced, and notable handoff, dependency, or exception.
-> Then summarize the cross-stage handoffs, dependencies, and exceptions that matter most to the assessment.
-> Keep it practical, evidence-based, and focused on the current process rather than future design.
+```
+Draft a Business Process Stage Analysis for the current-state process relevant to this work request.
+Break the process into stages and show the stage purpose, primary actor, supporting roles where relevant, required input, usual source, data used, activity description, decision or control point where relevant, output produced, and notable handoff, dependency, or exception.
+Then summarize the cross-stage handoffs, dependencies, and exceptions that matter most to the assessment.
+Keep it practical, evidence-based, and focused on the current process rather than future design.
+```
 
-### 12.2. Section prompts
+### 12.2. Section Prompts
 
-> Rewrite the stage entries so each one describes what actually happens today, who does it, what input is needed, what output is produced, and what handoff or control matters.
+```
+Rewrite the stage entries so each one describes what actually happens today, who does it, what input is needed, what output is produced, and what handoff or control matters.
+```
 
-> Summarize the cross-stage issues that materially affect the work request without proposing solutions.
+```
+Summarize the cross-stage issues that materially affect the work request without proposing solutions.
+```
 
-> Check whether any important dependency or exception is only implied inside a stage description and make it explicit.
+```
+Check whether any important dependency or exception is only implied inside a stage description and make it explicit.
+```
 
-### 12.3. Validation prompts
+### 12.3. Validation Prompts
 
-> Check whether this Business Process Stage Analysis is detailed enough to support assessment and later handoff without becoming a redesign document or operating procedure.
+```
+Check whether this Business Process Stage Analysis is detailed enough to support assessment and later handoff without becoming a redesign document or operating procedure.
+```
 
-> Rewrite any stage description that assumes a future state, names a solution, or hides the real current handoff, dependency, control, or record issue.
+```
+Rewrite any stage description that assumes a future state, names a solution, or hides the real current handoff, dependency, control, or record issue.
+```

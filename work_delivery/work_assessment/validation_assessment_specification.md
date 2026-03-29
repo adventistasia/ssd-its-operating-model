@@ -43,7 +43,7 @@ The governing principle is:
 
 ## 6. Required Content or Minimum Structure
 
-### 6.1. Assessment identity
+### 6.1. Assessment Identity
 
 Must include:
 
@@ -53,7 +53,7 @@ Must include:
 - primary organizational beneficiary or interest served
 - assessment timebox
 
-### 6.2. Refined statement of need
+### 6.2. Refined Statement of Need
 
 Must include:
 
@@ -62,7 +62,7 @@ Must include:
 
 This section should be informed by the [Challenges and Needs](challenges_and_needs_specification.md) artifact so the validated need remains traceable to the original challenge, visible impacts, and underlying unmet need.
 
-### 6.3. Business alignment, outcome, and success measures
+### 6.3. Business Alignment, Outcome, and Success Measures
 
 Must include:
 
@@ -72,7 +72,7 @@ Must include:
 
 Where no sponsor is willing to own and advocate for the initiative, treat this as a major red flag.
 
-### 6.4. Current-state snapshot
+### 6.4. Current-State Snapshot
 
 Must include:
 
@@ -80,7 +80,7 @@ Must include:
 
 Where current-state understanding cannot be captured reliably in a short summary, reference a supporting [Current State Analysis Report](current_state_analysis_report_specification.md) and, where relevant, a [Business Process Stage Analysis](business_process_stage_analysis_specification.md).
 
-### 6.5. Scope boundaries
+### 6.5. Scope Boundaries
 
 Must include:
 
@@ -88,7 +88,7 @@ Must include:
 - what is clearly out of scope at this stage
 - key assumptions or boundary conditions
 
-### 6.6. High-level requirements and capabilities
+### 6.6. High-Level Requirements and Capabilities
 
 Must include:
 
@@ -102,7 +102,7 @@ These requirements or capabilities must be:
 - concise enough to support option comparison
 - light enough to guide later definition without behaving like detailed specifications
 
-### 6.7. Viable options
+### 6.7. Viable Options
 
 Must include:
 
@@ -110,14 +110,14 @@ Must include:
 - the do-nothing option
 - key advantages and drawbacks for each option
 
-### 6.8. Risk and feasibility check
+### 6.8. Risk and Feasibility Check
 
 Must include:
 
 - a practical signal check across sponsorship, strategy, security, privacy, compliance, operational sustainability, delivery feasibility, and funding
 - an overall risk signal
 
-### 6.9. Cost of inaction
+### 6.9. Cost of Inaction
 
 Must include:
 
@@ -125,13 +125,13 @@ Must include:
 - directional impact level
 - brief rationale
 
-### 6.10. Known dependencies and timing constraints
+### 6.10. Known Dependencies and Timing Constraints
 
 Must include:
 
 - known dependencies, sequencing constraints, funding-cycle issues, policy timing, or external readiness concerns
 
-### 6.11. Validation recommendation
+### 6.11. Validation Recommendation
 
 Must include one explicit recommendation:
 
@@ -141,7 +141,7 @@ Must include one explicit recommendation:
 
 Include rationale and optional relative priority where useful.
 
-### 6.12. Decision record
+### 6.12. Decision Record
 
 Must include:
 
@@ -152,7 +152,7 @@ Must include:
 - notes or conditions where applicable
 - owner for each follow-up action where conditions are set
 
-### 6.13. Handoff notes
+### 6.13. Handoff Notes
 
 Required when the item proceeds.
 
@@ -213,22 +213,32 @@ This artifact is usually stable once the recommendation and decision are recorde
 - Are major risk and feasibility concerns visible?
 - Does the recommendation clearly state whether the item should stop, defer, or proceed?
 
-## 12. Prompt Guide for Drafting the Artifact
+## 12. Prompt Guide
 
-### 12.1. Starter prompt
+### 12.1. Starter Prompt
 
-> Draft a Validation Assessment for a proposed work item that has passed initial triage.
-> Validate business alignment, sponsorship, the primary organizational beneficiary, desired outcomes, success measures, current state, scope boundaries, stakeholder needs, high-level requirements or capabilities, viable options, major risk and feasibility signals, cost of inaction, and a clear recommendation to stop, defer, or proceed to focused analysis.
-> Keep it evidence-based, practical, and free of detailed design or delivery planning.
+```
+Draft a Validation Assessment for a proposed work item that has passed initial triage.
+Validate business alignment, sponsorship, the primary organizational beneficiary, desired outcomes, success measures, current state, scope boundaries, stakeholder needs, high-level requirements or capabilities, viable options, major risk and feasibility signals, cost of inaction, and a clear recommendation to stop, defer, or proceed to focused analysis.
+Keep it evidence-based, practical, and free of detailed design or delivery planning.
+```
 
-### 12.2. Section prompts
+### 12.2. Section Prompts
 
-> Rewrite the high-level requirements or capabilities so they describe what a viable solution must do without naming technology, implementation detail, or vendor choices.
+```
+Rewrite the high-level requirements or capabilities so they describe what a viable solution must do without naming technology, implementation detail, or vendor choices.
+```
 
-> Compare the conceptual options in a short table that includes advantages, drawbacks, and the do-nothing option.
+```
+Compare the conceptual options in a short table that includes advantages, drawbacks, and the do-nothing option.
+```
 
-### 12.3. Validation prompts
+### 12.3. Validation Prompts
 
-> Check whether this Validation Assessment supports an evidence-based decision on whether focused analysis should happen without drifting into Work Definition.
+```
+Check whether this Validation Assessment supports an evidence-based decision on whether focused analysis should happen without drifting into Work Definition.
+```
 
-> Rewrite any section that behaves like a requirement set, design brief, or implementation plan.
+```
+Rewrite any section that behaves like a requirement set, design brief, or implementation plan.
+```
