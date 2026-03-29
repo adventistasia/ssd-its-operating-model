@@ -45,7 +45,7 @@ For small governed work using a [Work Brief](work_brief/work_brief_specification
 
 Use this reference differently at each stage:
 
-- **Stage 1 - Work Assessment:** use the [Work Assessment Process](work_assessment/work_assessment_process.md) and its three assessment artifacts to decide whether the work should proceed into definition. This guide mainly becomes active after that decision.
+- **Stage 1 - Work Assessment:** use the [Work Assessment Process](work_assessment/work_assessment_process.md) and its three assessment artifacts to decide whether the work should proceed into definition. This guide mainly becomes active after that decision, except for the Work Assessment Deliverables domain, which can be used after Initial Review and Validation Assessment are complete and the decision is to continue with fuller work assessment.
 - **Stage 2 - Work Definition:** identify the required deliverables for the initiative, use domains to organize them where helpful, identify Acceptance Authorities, and define the minimum authorization-level output needed for a sound decision.
 - **Stage 3 - Work Authorization:** confirm that selected deliverables, owners, acceptance approach, and major cost/risk implications are decision-ready.
 - **Stage 4 - Work Definition Details:** elaborate the required deliverables and any additional definition deliverables needed to build, test, transition, and accept the work.
@@ -792,7 +792,90 @@ This prevents informal or assumed adoption.
 - Business Owner
 - Change or Communications Lead
 
-## 13. Summary Table
+## 13. Work Assessment Deliverables
+
+### 13.1. Purpose
+
+Use this domain when Initial Review and Validation Assessment are complete, the decision is to continue with fuller work assessment, and the team needs controlled assessment outputs that later definition can reuse directly.
+
+This domain is especially useful when operators need to make explicit:
+
+- the background, challenges, unmet needs, and current-state findings that shape the work
+- the workflow, handoff, ownership, or control realities that materially affect the recommendation
+- the business opportunity being explored, including opportunities that may be worth preserving even if the work is later deferred
+- the recommendation on whether definition effort should now be invested
+
+This domain is for focused assessment work after the earlier screening steps. Do not use it for Initial Review or Validation Assessment themselves.
+
+### 13.2. Standard Deliverables (as applicable)
+
+- **[Challenges & Needs Summary](#13.3.%20Challenges%20&%20Needs%20Summary)**
+- **[Current State Analysis Report](#13.4.%20Current%20State%20Analysis%20Report)**
+- **[Business Process Stage Analysis](#13.5.%20Business%20Process%20Stage%20Analysis)**
+- **[Work Assessment Report](#13.6.%20Work%20Assessment%20Report)**
+
+### 13.3. Challenges & Needs Summary
+
+Keeps the validated problem basis, unmet needs, and business opportunity context visible while fuller work assessment is underway.
+
+In many cases this will refine and carry forward the existing [Challenges and Needs](work_assessment/challenges_and_needs_specification.md) artifact rather than recreate it.
+
+#### Acceptance Criteria
+
+- The primary challenge, unmet need, or business opportunity is explicit.
+- Affected parties, visible impacts, and consequence of inaction or missed opportunity are clear.
+- Any visible solution assumptions are still treated as assumptions rather than settled decisions.
+
+### 13.4. Current State Analysis Report
+
+Documents the current operating reality that later definition should be able to reference directly instead of rediscovering it.
+
+Use it when systems, workflows, records, ownership, or operational constraints are material enough that a short summary in the gate artifacts would be too thin.
+
+#### Acceptance Criteria
+
+- The current-state boundary and evidence basis are clear.
+- The relevant systems, workflows, handoffs, workarounds, constraints, and ownership signals are visible.
+- The report is usable as carry-forward context for later definition.
+
+### 13.5. Business Process Stage Analysis
+
+Makes the current business flow visible stage by stage where delays, handoffs, roles, controls, or exceptions materially shape the work.
+
+Use it when later definition would otherwise need to reconstruct the current process from scratch.
+
+#### Acceptance Criteria
+
+- The important stages, actors, inputs, outputs, handoffs, and controls are explicit.
+- Material bottlenecks, ownership gaps, dependencies, or exception paths are visible.
+- The analysis stays focused on the current process rather than future-state redesign.
+
+### 13.6. Work Assessment Report
+
+Provides the final recommendation on whether the work should enter definition and what definition should start from if it does.
+
+This is the main decision-ready deliverable in the domain.
+
+#### Acceptance Criteria
+
+- The report makes an explicit stop, defer, or proceed recommendation.
+- The recommendation is supported by the relevant assessment findings and supporting artifacts.
+- The handoff basis into the next definition artifact is clear and reusable.
+
+### 13.7. Recommended Acceptance Evidence
+
+- Completed Work Assessment Report
+- Current State Analysis Report where used
+- Business Process Stage Analysis where used
+- Challenges & Needs Summary where used or carried forward
+- visible references to the assessment decision basis and next-step recommendation
+
+### 13.8. Recommended Acceptance Authority
+
+- ITS leadership / intake governance
+- delegated work assessment decision authority where applicable
+
+## 14. Summary Table
 
 | Deliverable Domain                | Primary Intent                                                                 |
 | --------------------------------- | ------------------------------------------------------------------------------ |
@@ -802,8 +885,9 @@ This prevents informal or assumed adoption.
 | Data Governance & Records         | Make data and records explicit, governed, owned, and auditable                 |
 | Security, Privacy & Compliance    | Identify, reduce, and explicitly accept security, privacy, and compliance risk |
 | User Adoption & Change Enablement | Prepare users for change, reduce adoption risk, and support sustained usage    |
+| Work Assessment Deliverables      | Keep focused assessment findings, opportunities, and the definition handoff usable and traceable |
 
-## 14. Appendix B - Domain Selection Matrix
+## 15. Appendix B - Domain Selection Matrix
 
 Use this matrix during Work Definition to decide which domains should be in scope.
 
@@ -815,8 +899,9 @@ Use this matrix during Work Definition to decide which domains should be in scop
 | Data Governance & Records | Data is created, changed, migrated, classified, or governed | Data impact summary with steward and system-of-record view | Data structures, migration, retention, or stewardship are material | General functional behavior that does not materially affect governed data |
 | Security, Privacy & Compliance | Sensitive data, access control, logging, or regulatory exposure exists | Risk summary plus minimum control intent | Privacy, audit, or compliance obligations are material | General project management or user enablement |
 | User Adoption & Change Enablement | User behavior, communications, or training are materially affected | Impact summary plus basic communication / enablement approach | Rollout is broad, high-impact, or behavior change is significant | Core solution functionality or system design |
+| Work Assessment Deliverables | Initial Review and Validation Assessment are complete, the decision is to continue with fuller work assessment, and the assessment findings need to be preserved as reusable research or opportunity context | Work Assessment Report plus only the supporting assessment artifacts needed to make the recommendation credible and reusable | Current state, workflow, stakeholder need, or business opportunity analysis materially shapes the recommendation or later definition | Initial triage, Validation Assessment itself, or solution design |
 
-## 15. Appendix C - Minimum Viable Outputs by Domain
+## 16. Appendix C - Minimum Viable Outputs by Domain
 
 | Domain | Smallest acceptable content set |
 | --- | --- |
@@ -826,54 +911,55 @@ Use this matrix during Work Definition to decide which domains should be in scop
 | Data Governance & Records | Data impact summary, steward, system of record, and major data obligations |
 | Security, Privacy & Compliance | Risk summary, key controls, and required authority review |
 | User Adoption & Change Enablement | Impacted users, communication approach, enablement actions, and adoption owner |
+| Work Assessment Deliverables | Clear recommendation, reusable assessment basis, and only the focused analysis needed to carry the background, needs, current state, process realities, or opportunity context forward |
 
-## 16. Appendix A — Role Glossary
+## 17. Appendix A — Role Glossary
 
-### 16.1. Sponsor
+### 17.1. Sponsor
 
 Authorizes the initiative, commits funding and priority, and accepts organizational risk.
 
-### 16.2. Decision Authority
+### 17.2. Decision Authority
 
 Accountable for the go / no-go decision to commit organizational capacity, time, funding, and risk to delivery.
 
-### 16.3. Acceptance Authority
+### 17.3. Acceptance Authority
 
 Accountable for formally accepting deliverables within an in-scope deliverable domain based on defined acceptance criteria and evidence.
 
-### 16.4. Outcome Owner
+### 17.4. Outcome Owner
 
 Accountable for achieving the intended business outcomes and confirming that delivered value meets the agreed success measures.
 
-### 16.5. Business Owner / Process Owner
+### 17.5. Business Owner / Process Owner
 
 Accountable for the business process outcomes supported by the solution and commonly serves as the Acceptance Authority for Solution Deliverables.
 
-### 16.6. Data Steward
+### 17.6. Data Steward
 
 Accountable for dataset correctness, quality, and governance obligations.
 
-### 16.7. Data Governance Officer (DGO)
+### 17.7. Data Governance Officer (DGO)
 
 Oversees data governance standards and compliance.
 
-### 16.8. Delivery Owner
+### 17.8. Delivery Owner
 
 Accountable for delivery execution, stage discipline, and ensuring required deliverables and evidence are produced.
 
-### 16.9. IT Operations / Service Owner
+### 17.9. IT Operations / Service Owner
 
 Accountable for ongoing operation and support of the system.
 
-### 16.10. Security / Data Protection Officer
+### 17.10. Security / Data Protection Officer
 
 Accountable for privacy, security, and regulatory compliance.
 
-### 16.11. Change or Communications Lead
+### 17.11. Change or Communications Lead
 
 Accountable for user readiness, communications, and adoption enablement activities.
 
-## 17. How to Use This Document
+## 18. How to Use This Document
 
 This document serves as the authoritative catalog of standard deliverables and acceptance expectations across deliverable domains.
 
@@ -881,43 +967,43 @@ It does not make every deliverable mandatory for every initiative. During Work D
 
 Deliverable domains mainly organize the deliverables view. The team should still make the actual required deliverables visible.
 
-### 17.1. During Work Definition (Stage 2)
+### 18.1. During Work Definition (Stage 2)
 
 - Confirm which deliverables are required for the initiative, using deliverable domains as an organizing structure where useful.
+- If Work Assessment Deliverables were used, make the carry-forward assessment references explicit so definition does not rediscover the same background, challenges, needs, current-state facts, or opportunity context.
 - Identify the Acceptance Authority for every required deliverable or clearly defined deliverable grouping.
 - Agree which standard deliverables are expected for each relevant domain, at authorization-level depth.
 - Additional expected deliverables not needed for authorization may be listed at summary level so likely effort remains visible.
 - Use the deliverable Acceptance Criteria section as the basis for defining what "done" will mean later at acceptance.
 
-### 17.2. During Work Authorization (Stage 3)
+### 18.2. During Work Authorization (Stage 3)
 
 - Confirm that scope, ownership, funding commitments, and risk implications are decision-ready.
 - Confirm Acceptance Authorities remain valid for each required deliverable or deliverable grouping.
 - Record the authorization decision and associated commitments.
 
-### 17.3. During Work Definition Details (Stage 4)
+### 18.3. During Work Definition Details (Stage 4)
 
 - Elaborate the required deliverables identified in Stage 2 and produce any additional definition deliverables needed to build, test, transition, and accept the solution.
 - Ensure elaboration remains consistent with the authorized scope and intent.
 
-### 17.4. During Delivery Mobilization (Stage 5)
+### 18.4. During Delivery Mobilization (Stage 5)
 
 - Activate the Delivery Charter and related execution controls needed for controlled delivery.
 - Confirm the Delivery Roadmap with the mobilized delivery team and key stakeholders.
 - Confirm reporting rhythm, escalation path, change path, and acceptance-readiness tracking are in place.
 
-### 17.5. During Work Delivery (Stage 6)
+### 18.5. During Work Delivery (Stage 6)
 
 - Produce the required deliverables for each relevant domain and collect acceptance evidence.
 - Use the deliverable Acceptance Criteria section to drive validation and evidence collection.
 - Track progress by accepted deliverables and evidence, not activity.
 
-### 17.6. During Acceptance, Transition & Closure (Stage 7)
+### 18.6. During Acceptance, Transition & Closure (Stage 7)
 
 - Validate that the Acceptance Criteria expectations are addressed for every required deliverable.
 - Ensure required evidence is complete, reviewable, and attributable.
 - Record formal acceptance by the named Acceptance Authorities and formally close the initiative.
 
 Completion requires acceptance across all applicable deliverable domains.
-
 

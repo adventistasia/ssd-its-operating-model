@@ -27,11 +27,13 @@ Use these in order when screening whether work should proceed:
 
 1. [Work Assessment Process](work_assessment/work_assessment_process.md)
 2. [Initial Review Specification](work_assessment/initial_review_specification.md)
-3. [Challenges and Needs Specification](work_assessment/challenges_and_needs_specification.md)
+3. [Challenges and Needs Specification](work_assessment/challenges_and_needs_specification.md) where early problem framing would strengthen Validation Assessment
 4. [Validation Assessment Specification](work_assessment/validation_assessment_specification.md)
-5. [Current State Analysis Report Specification](work_assessment/current_state_analysis_report_specification.md) where current-state evidence needs to be more explicit
-6. [Business Process Stage Analysis Specification](work_assessment/business_process_stage_analysis_specification.md) where workflow stages, handoffs, or controls materially shape the work
-7. [Work Assessment Report Specification](work_assessment/work_assessment_report_specification.md)
+5. If the decision is to continue with fuller work assessment, use the relevant Work Assessment Deliverables:
+   - [Current State Analysis Report Specification](work_assessment/current_state_analysis_report_specification.md) where current-state evidence needs to be more explicit
+   - [Business Process Stage Analysis Specification](work_assessment/business_process_stage_analysis_specification.md) where workflow stages, handoffs, or controls materially shape the work
+   - [Challenges and Needs Specification](work_assessment/challenges_and_needs_specification.md) again where the challenge, unmet-need, or opportunity basis needs to be carried forward more explicitly
+6. [Work Assessment Report Specification](work_assessment/work_assessment_report_specification.md)
 
 ### 3.2. Stage 2 to Stage 3 - Definition and Authorization
 
@@ -51,9 +53,11 @@ Use the process guides first, then the relevant domain specifications:
 2. [Standard Deliverables Guide](standard_deliverables_guide.md)
 3. The domain specifications listed below
 
-## 4. Work Assessment Folder
+## 4. Work Assessment and Work Assessment Deliverables Folder
 
 Folder: [work_assessment](work_assessment)
+
+Use this folder both for the Stage 1 gate artifacts and, after Initial Review and Validation Assessment are complete and the decision is to continue with fuller work assessment, for the Work Assessment Deliverables domain.
 
 - [Work Assessment Process](work_assessment/work_assessment_process.md)
 - [Initial Review Specification](work_assessment/initial_review_specification.md)
@@ -137,4 +141,3 @@ Folder: [user_adoption_and_change_enablement_deliverables](user_adoption_and_cha
 ## 12. Shared Reference
 
 - [Specification Best Practice Reference](specification_best_practice_reference.md)
-

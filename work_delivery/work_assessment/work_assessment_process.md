@@ -44,6 +44,8 @@ Follow this core flow, using the supporting artifacts inside the relevant step:
 
 Use the supporting artifacts only where they make the assessment clearer and more reusable without turning Work Assessment into Work Definition. This includes the [Challenges and Needs](challenges_and_needs_specification.md) artifact, which is optional but useful for work where early capture of challenges and unmet needs would sharpen the problem basis for Validation Assessment.
 
+Once Initial Review and Validation Assessment are complete and the decision is to continue with fuller work assessment, treat the focused analysis artifacts used in Step 3 as the Work Assessment Deliverables domain for that work item. Use only the artifacts that materially improve the recommendation or create a reusable assessment base for later definition.
+
 The normal handoff is:
 
 `Work Assessment Report -> Initiative Definition Document`
@@ -205,6 +207,8 @@ Supporting artifact status in this step:
 - [Current State Analysis Report](current_state_analysis_report_specification.md): situational, start here if the current state is too complex or disputed for a short Validation Assessment summary
 - [Business Process Stage Analysis](business_process_stage_analysis_specification.md): situational, use where stage-by-stage business flow, handoffs, actors, inputs, or controls materially shape the work request
 
+These supporting artifacts are not yet the Work Assessment Deliverables domain. That domain starts only if the work passes Validation Assessment and the decision is to continue with fuller work assessment.
+
 ### 6.3. Step 3 - Work Assessment Report
 
 Goal:
@@ -225,6 +229,12 @@ Do this:
 5. Describe the recommended definition starting boundary without trying to define the full initiative yet.
 6. Record what the next definition step must confirm, define, or resolve if work proceeds.
 7. Record the final work assessment decision and handoff basis.
+
+Operator rule for this step:
+
+- treat only the focused analysis actually used here as the Work Assessment Deliverables for the item
+- use them to capture background, challenges, needs, current state, process realities, and business opportunities that later definition should not need to rediscover
+- do not create extra assessment artifacts unless they materially improve the recommendation or handoff
 
 Produce:
 
