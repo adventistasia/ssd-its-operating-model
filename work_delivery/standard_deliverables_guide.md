@@ -45,7 +45,7 @@ For small governed work using a [Work Brief](work_brief/work_brief_specification
 
 Use this reference differently at each stage:
 
-- **Stage 1 - Work Assessment:** use the [Work Assessment Process](work_assessment/work_assessment_process.md) and its three assessment artifacts to decide whether the work should proceed into definition. This guide mainly becomes active after that decision.
+- **Stage 1 - Work Assessment:** use the [Work Assessment Process](work_assessment/work_assessment_process.md) and its three assessment artifacts to decide whether the work should proceed into definition.
 - **Stage 2 - Work Definition:** identify the required deliverables for the initiative, use domains to organize them where helpful, identify Acceptance Authorities, and define the minimum authorization-level output needed for a sound decision.
 - **Stage 3 - Work Authorization:** confirm that selected deliverables, owners, acceptance approach, and major cost/risk implications are decision-ready.
 - **Work Definition Details (Stage 4):** elaborate the required deliverables and any additional definition deliverables needed to build, test, transition, and accept the work.
@@ -93,9 +93,107 @@ Use numbering consistently in headings where practical, for example:
 - `### 7.1. Record identity`
 - `### 12.3. Validation prompts`
 
-## 7. Solution Deliverables
+## 7. Work Assessment Deliverables
 
 ### 7.1. Purpose
+
+Use this domain when Initial Review and Validation Assessment are complete, the decision is to continue with fuller work assessment, and the team needs controlled assessment outputs that later definition can reuse directly.
+
+This domain is especially useful when operators need to make explicit:
+
+- the background, challenges, unmet needs, and current-state findings that shape the work
+- the workflow, handoff, ownership, or control realities that materially affect the recommendation
+- the business opportunity being explored, including opportunities that may be worth preserving even if the work is later deferred
+- the recommendation on whether definition effort should now be invested
+
+This domain is for focused assessment work after the earlier screening steps. Do not use it for Initial Review or Validation Assessment themselves.
+
+### 7.2. Related Specifications
+
+- [Challenges and Needs Specification](work_assessment/challenges_and_needs_specification.md)
+- [Current State Analysis Report Specification](work_assessment/current_state_analysis_report_specification.md)
+- [Business Process Stage Analysis Specification](work_assessment/business_process_stage_analysis_specification.md)
+- [Work Assessment Report Specification](work_assessment/work_assessment_report_specification.md)
+
+### 7.3. Standard Deliverables (as applicable)
+
+- **[Challenges and Needs](#7.4.%20Challenges%20and%20Needs)**
+- **[Current State Analysis Report](#7.5.%20Current%20State%20Analysis%20Report)**
+- **[Business Process Stage Analysis](#7.6.%20Business%20Process%20Stage%20Analysis)**
+- **[Work Assessment Report](#7.7.%20Work%20Assessment%20Report)**
+
+### 7.4. Challenges and Needs
+
+Keeps the validated problem basis, unmet needs, and business opportunity context visible while fuller work assessment is underway.
+
+In many cases this will refine and carry forward the existing Challenges and Needs artifact rather than recreate it.
+
+See the [Challenges and Needs Specification](work_assessment/challenges_and_needs_specification.md).
+
+#### Acceptance Criteria
+
+- The primary challenge, unmet need, or business opportunity is explicit.
+- Affected parties, visible impacts, and consequence of inaction or missed opportunity are clear.
+- Any visible solution assumptions are still treated as assumptions rather than settled decisions.
+
+### 7.5. Current State Analysis Report
+
+Documents the current operating reality that later definition should be able to reference directly instead of rediscovering it.
+
+Use it when systems, workflows, records, ownership, or operational constraints are material enough that a short summary in the gate artifacts would be too thin.
+
+See the [Current State Analysis Report Specification](work_assessment/current_state_analysis_report_specification.md).
+
+#### Acceptance Criteria
+
+- The current-state boundary and evidence basis are clear.
+- The relevant systems, workflows, handoffs, workarounds, constraints, and ownership signals are visible.
+- The report is usable as carry-forward context for later definition.
+
+### 7.6. Business Process Stage Analysis
+
+Makes the current business flow visible stage by stage where delays, handoffs, roles, controls, or exceptions materially shape the work.
+
+Use it when later definition would otherwise need to reconstruct the current process from scratch.
+
+See the [Business Process Stage Analysis Specification](work_assessment/business_process_stage_analysis_specification.md).
+
+#### Acceptance Criteria
+
+- The important stages, actors, inputs, outputs, handoffs, and controls are explicit.
+- Material bottlenecks, ownership gaps, dependencies, or exception paths are visible.
+- The analysis stays focused on the current process rather than future-state redesign.
+
+### 7.7. Work Assessment Report
+
+Provides the final recommendation on whether the work should enter definition and what definition should start from if it does.
+
+This is the main decision-ready deliverable in the domain.
+
+See the [Work Assessment Report Specification](work_assessment/work_assessment_report_specification.md).
+
+#### Acceptance Criteria
+
+- The report makes an explicit stop, defer, or proceed recommendation.
+- The recommendation is supported by the relevant assessment findings and supporting artifacts.
+- The handoff basis into the next definition artifact is clear and reusable.
+
+### 7.8. Recommended Acceptance Evidence
+
+- Completed Work Assessment Report
+- Current State Analysis Report where used
+- Business Process Stage Analysis where used
+- Challenges and Needs where used or carried forward
+- visible references to the assessment decision basis and next-step recommendation
+
+### 7.9. Recommended Acceptance Authority
+
+- ITS leadership / intake governance
+- delegated work assessment decision authority where applicable
+
+## 8. Solution Deliverables
+
+### 8.1. Purpose
 
 Use the Solution Deliverables domain to turn approved scope into a delivered and accepted solution in a controlled, easy-to-follow way.
 
@@ -107,7 +205,7 @@ This domain answers five practical questions:
 - how should the solution behave
 - what evidence supports formal acceptance
 
-### 7.2. Simple Working Order
+### 8.2. Simple Working Order
 
 If a team is new to solution design, use the deliverables in this order:
 
@@ -132,21 +230,21 @@ For mobilization and coordination, pair the solution deliverables with:
 
 These governance artifacts support timing, coordination, and operating rhythm. They do not replace solution scope, behavior, or acceptance controls.
 
-### 7.3. Standard Deliverables (as applicable)
+### 8.3. Standard Deliverables (as applicable)
 
-- **[Problem & Outcome Validation Brief](#7.4.%20Problem%20%26%20Outcome%20Validation%20Brief)**
-- **[Functional Capabilities](#7.5.%20Functional%20Capabilities)**
-- **[Solution Modules Register](#7.6.%20Solution%20Modules%20Register)**
-- **[Solution Module Definition](#7.7.%20Solution%20Module%20Definition)**
-- **[Use Case Narratives](#7.8.%20Use%20Case%20Narratives)**
-- **[Business Rules Catalog](#7.9.%20Business%20Rules%20Catalog)**
-- **[Non-Functional Requirements Specification](#7.10.%20Non-Functional%20Requirements%20Specification)**
-- **[Integration & External Dependency Specification](#7.11.%20Integration%20%26%20External%20Dependency%20Specification)**
-- **[User Roles, Personas & Access Model](#7.12.%20User%20Roles,%20Personas%20&%20Access%20Model)**
-- **[Deployed Solution](#7.13.%20Deployed%20Solution)**
-- **[Acceptance Record](#7.14.%20Acceptance%20Record)**
+- **[Problem & Outcome Validation Brief](#8.4.%20Problem%20%26%20Outcome%20Validation%20Brief)**
+- **[Functional Capabilities](#8.5.%20Functional%20Capabilities)**
+- **[Solution Modules Register](#8.6.%20Solution%20Modules%20Register)**
+- **[Solution Module Definition](#8.7.%20Solution%20Module%20Definition)**
+- **[Use Case Narratives](#8.8.%20Use%20Case%20Narratives)**
+- **[Business Rules Catalog](#8.9.%20Business%20Rules%20Catalog)**
+- **[Non-Functional Requirements Specification](#8.10.%20Non-Functional%20Requirements%20Specification)**
+- **[Integration & External Dependency Specification](#8.11.%20Integration%20%26%20External%20Dependency%20Specification)**
+- **[User Roles, Personas & Access Model](#8.12.%20User%20Roles,%20Personas%20&%20Access%20Model)**
+- **[Deployed Solution](#8.13.%20Deployed%20Solution)**
+- **[Acceptance Record](#8.14.%20Acceptance%20Record)**
 
-### 7.4. Problem & Outcome Validation Brief
+### 8.4. Problem & Outcome Validation Brief
 
 Specification: [problem_and_outcome_validation_brief_specification](solution_deliverables/problem_and_outcome_validation_brief_specification.md)
 
@@ -161,7 +259,7 @@ Use this at the start of Stage 2 whenever the problem statement is vague, contes
 - Success measures are defined and, where possible, quantified.
 - Assumptions, exclusions and dependencies are visible.
 
-### 7.5. Functional Capabilities
+### 8.5. Functional Capabilities
 
 The approval-level list of business abilities the solution must provide.
 
@@ -173,7 +271,7 @@ This deliverable establishes the solution scope baseline before detailed design 
 - Capability statements stay at business ability level.
 - Exclusions, assumptions, or dependencies that affect scope understanding are visible.
 
-### 7.6. Solution Modules Register
+### 8.6. Solution Modules Register
 
 The overview document that lists all approved modules and shows how they relate to roles, use cases, and approved scope.
 
@@ -185,7 +283,7 @@ This deliverable helps teams organize scope around user behaviors and use cases 
 - Module boundaries do not introduce new scope.
 - Each module can be traced to the relevant Functional Capabilities and module detail.
 
-### 7.7. Solution Module Definition
+### 8.7. Solution Module Definition
 
 The detailed document for one module, including what it will deliver, the related use cases, and the module-level acceptance criteria.
 
@@ -197,7 +295,7 @@ This deliverable gives reviewers and delivery teams a one-module-at-a-time view 
 - Included use cases and supporting capabilities are visible.
 - Module-level acceptance criteria are reviewable and testable.
 
-### 7.8. Use Case Narratives
+### 8.8. Use Case Narratives
 
 The business-behavior view of how users achieve outcomes using the solution.
 
@@ -209,7 +307,7 @@ This deliverable gives developers, testers, reviewers, and Acceptance Authoritie
 - Rules, exceptions, and acceptance criteria are visible where they matter.
 - Each use case traces back to a Solution Module and approved Functional Capabilities.
 
-### 7.9. Business Rules Catalog
+### 8.9. Business Rules Catalog
 
 Specification: [business_rules_catalog_specification](solution_deliverables/business_rules_catalog_specification.md)
 
@@ -223,7 +321,7 @@ Use this when rules recur across multiple modules or use cases, audit or complia
 - Affected modules and use cases are identified for each rule.
 - The catalog does not introduce new scope — it consolidates and clarifies existing rules.
 
-### 7.10. Non-Functional Requirements Specification
+### 8.10. Non-Functional Requirements Specification
 
 Specification: [non_functional_requirements_specification](solution_deliverables/non_functional_requirements_specification.md)
 
@@ -237,7 +335,7 @@ Use this when performance, reliability, compliance, or service-level commitments
 - Attributes are linked to relevant functional scope where applicable.
 - Constraints, dependencies and assumptions affecting quality are documented.
 
-### 7.11. Integration & External Dependency Specification
+### 8.11. Integration & External Dependency Specification
 
 Specification: [integration_and_external_dependency_specification](solution_deliverables/integration_and_external_dependency_specification.md)
 
@@ -250,7 +348,7 @@ Use this when multiple material integrations exist or when external dependencies
 - Each integration has an `INT-###` ID and documents its purpose, contract summary, timing, error handling, fallback, and ownership.
 - Operational and security considerations are addressed for each integration.
 
-### 7.12. User Roles, Personas & Access Model
+### 8.12. User Roles, Personas & Access Model
 
 The actor model for the solution, including role purpose, access boundaries, and control-sensitive responsibilities.
 
@@ -262,7 +360,7 @@ This deliverable keeps role assumptions consistent across modules, use cases, se
 - Approval, stewardship, or sensitive-role responsibilities are visible where relevant.
 - Persona content, if used, adds context without expanding scope.
 
-### 7.13. Deployed Solution
+### 8.13. Deployed Solution
 
 The record of what approved scope is actually live, where it is live, and under what operational conditions.
 
@@ -274,7 +372,7 @@ This deliverable makes the live state visible and traceable to approved scope an
 - Delivered behavior matches approved scope or accepted changes.
 - Operational ownership and open live conditions are visible.
 
-### 7.14. Acceptance Record
+### 8.14. Acceptance Record
 
 The formal summary of what was reviewed, what evidence supports acceptance, what conditions remain, and what decision was made.
 
@@ -286,34 +384,34 @@ This deliverable keeps sign-off explicit and attributable.
 - Acceptance status and decision authority are explicit.
 - Conditions, exclusions, or deferred items are visible.
 
-### 7.15. Recommended Acceptance Evidence
+### 8.15. Recommended Acceptance Evidence
 
 - Completed Acceptance Record
 - linked validation and deployment evidence
 - visible traceability from approved scope to delivered behavior
 
-### 7.16. Recommended Acceptance Authority
+### 8.16. Recommended Acceptance Authority
 
 - Business Owner / Process Owner
 
-## 8. Governance & Control Deliverables
+## 9. Governance & Control Deliverables
 
-### 8.1. Purpose
+### 9.1. Purpose
 
 Ensure that intent, scope, authority, funding, risk acceptance, and closure decisions are explicit, attributable, and auditable across the lifecycle of the initiative.
 
-### 8.2. Standard Deliverables (as applicable)
+### 9.2. Standard Deliverables (as applicable)
 
-- **[Initiative Definition Document](#8.3.%20Initiative%20Definition%20Document)**
-- **[Project Charter](#8.4.%20Project%20Charter)**
-- **[Delivery Charter](#8.5.%20Delivery%20Charter)**
-- **[Delivery Roadmap](#8.6.%20Delivery%20Roadmap)**
-- **[Decision Record Log](#8.7.%20Decision%20Record%20Log)**
-- **[Solution Assumptions & Issues Register](#8.8.%20Solution%20Assumptions%20%26%20Issues%20Register)**
-- **[Validation & Evidence Matrix](#8.9.%20Validation%20%26%20Evidence%20Matrix)**
-- **[Formal Acceptance & Closure Record](#8.10.%20Formal%20Acceptance%20%26%20Closure%20Record)**
+- **[Initiative Definition Document](#9.3.%20Initiative%20Definition%20Document)**
+- **[Project Charter](#9.4.%20Project%20Charter)**
+- **[Delivery Charter](#9.5.%20Delivery%20Charter)**
+- **[Delivery Roadmap](#9.6.%20Delivery%20Roadmap)**
+- **[Decision Record Log](#9.7.%20Decision%20Record%20Log)**
+- **[Solution Assumptions & Issues Register](#9.8.%20Solution%20Assumptions%20%26%20Issues%20Register)**
+- **[Validation & Evidence Matrix](#9.9.%20Validation%20%26%20Evidence%20Matrix)**
+- **[Formal Acceptance & Closure Record](#9.10.%20Formal%20Acceptance%20%26%20Closure%20Record)**
 
-### 8.3. Initiative Definition Document
+### 9.3. Initiative Definition Document
 
 Defines the problem, future state, outcomes, scope boundaries, and high-level approach that justify investment and guide all downstream artifacts.
 
@@ -325,7 +423,7 @@ It establishes the baseline intent against which scope, design, and acceptance a
 - Key assumptions, constraints, and exclusions are recorded.
 - The document is usable as the authoritative baseline for downstream deliverables.
 
-### 8.4. Project Charter
+### 9.4. Project Charter
 
 Formally records sponsorship, authority, priority, and commitment to deliver the defined outcomes.
 
@@ -337,7 +435,7 @@ This document confirms that people, time, and funding are intentionally committe
 - The charter records the authority basis for proceeding with the work.
 - Funding or resource commitment is stated at the level required for the initiative.
 
-### 8.5. Delivery Charter
+### 9.5. Delivery Charter
 
 Specification: [delivery_charter_specification](governance_and_control_deliverables/delivery_charter_specification.md)
 
@@ -364,7 +462,7 @@ This deliverable is primarily used in **Stage 5 - Delivery Mobilization**, thoug
 - Communication, escalation, and decision paths are defined.
 - Execution controls and acceptance-readiness expectations are stated clearly enough for mobilization.
 
-### 8.6. Delivery Roadmap
+### 9.6. Delivery Roadmap
 
 Specification: [delivery_roadmap_specification](governance_and_control_deliverables/delivery_roadmap_specification.md)
 
@@ -384,7 +482,7 @@ The roadmap should remain aligned to approved scope and should be revised throug
 - Significant dependencies, reviews, or control points are identified.
 - Material changes to the roadmap are expected to be managed through change control.
 
-### 8.7. Decision Record Log
+### 9.7. Decision Record Log
 
 Maintains a clear record of material decisions affecting scope, funding, risk, sequencing, or acceptance. Each entry carries a `DR-###` ID and links to related assumptions (`AI-###`), quality attributes (`QA-###`), business rules (`BR-###`), and integration entries (`INT-###`) where the decision materially affects them.
 
@@ -399,7 +497,7 @@ This ensures that governance decisions are attributable, cross-referenced, and r
 - Cross-domain references (AI-###, QA-###, BR-###, INT-###) are included where the decision affects those areas.
 - Decision entries are maintained as the initiative progresses.
 
-### 8.8. Solution Assumptions & Issues Register
+### 9.8. Solution Assumptions & Issues Register
 
 Specification: [solution_assumptions_and_issues_register_specification](governance_and_control_deliverables/solution_assumptions_and_issues_register_specification.md)
 
@@ -413,7 +511,7 @@ Use this from Stage 2 onwards whenever there are multiple unknowns or design unc
 - Owners and target resolution timelines are defined.
 - Resolved items reference decisions or outcomes in the Decision Record Log.
 
-### 8.9. Validation & Evidence Matrix
+### 9.9. Validation & Evidence Matrix
 
 Specification: [validation_and_evidence_matrix_specification](governance_and_control_deliverables/validation_and_evidence_matrix_specification.md)
 
@@ -428,7 +526,7 @@ Use this when the initiative has multiple modules or capabilities needing explic
 - Evidence references are recorded for completed items.
 - Deferred or conditional items are clearly marked.
 
-### 8.10. Formal Acceptance & Closure Record
+### 9.10. Formal Acceptance & Closure Record
 
 Provides documented confirmation that:
 
@@ -444,7 +542,7 @@ This prevents informal completion without accountability.
 - Acceptance status for the initiative or relevant deliverables is explicitly recorded.
 - Any open items, conditions, or post-closure responsibilities are documented.
 
-### 8.11. Recommended Acceptance Evidence
+### 9.11. Recommended Acceptance Evidence
 
 - Approved Initiative Definition Document
 - Approved Project Charter
@@ -455,27 +553,27 @@ This prevents informal completion without accountability.
 - Completed Validation & Evidence Matrix
 - Completed Formal Acceptance & Closure Record
 
-### 8.12. Recommended Acceptance Authority
+### 9.12. Recommended Acceptance Authority
 
 - Sponsor or Delegated Decision Authority
 
-## 9. Operational Readiness Deliverables
+## 10. Operational Readiness Deliverables
 
-### 9.1. Purpose
+### 10.1. Purpose
 
 Ensure the solution can be deployed, administered, operated, supported, restored, and sustained under clear operational ownership beyond the original delivery team.
 
 For solutions with operational impact, these deliverables should start being shaped during solution design, not only near go-live. They should be driven by the solution behaviors, module definitions, and technical choices that operations teams will need to support later.
 
-### 9.2. Standard Deliverables (as applicable)
+### 10.2. Standard Deliverables (as applicable)
 
-- **[Technical Design Document](#9.3.%20Technical%20Design%20Document)**
-- **[DevOps Guide](#9.4.%20DevOps%20Guide)**
-- **[Operations & Support Model](#9.5.%20Operations%20&%20Support%20Model)**
-- **[Backup, Restore & Recovery Plan](#9.6.%20Backup,%20Restore%20&%20Recovery%20Plan)**
-- **[Operational Readiness Confirmation Record](#9.7.%20Operational%20Readiness%20Confirmation%20Record)**
+- **[Technical Design Document](#10.3.%20Technical%20Design%20Document)**
+- **[DevOps Guide](#10.4.%20DevOps%20Guide)**
+- **[Operations & Support Model](#10.5.%20Operations%20&%20Support%20Model)**
+- **[Backup, Restore & Recovery Plan](#10.6.%20Backup,%20Restore%20&%20Recovery%20Plan)**
+- **[Operational Readiness Confirmation Record](#10.7.%20Operational%20Readiness%20Confirmation%20Record)**
 
-### 9.3. Technical Design Document
+### 10.3. Technical Design Document
 
 Documents the technical design of the solution so that delivery, operations, and support teams can understand how it is structured, what it depends on, and what technical assumptions affect operation and change.
 
@@ -497,7 +595,7 @@ This artifact explains how the solution is built. It does not replace operating 
 - Important assumptions, constraints, and operationally significant design decisions are recorded.
 - The document is sufficient to inform support and future technical change.
 
-### 9.4. DevOps Guide
+### 10.4. DevOps Guide
 
 Provides the practical instructions and reference information needed to deploy, configure, maintain, troubleshoot, and support the solution in day-to-day operations.
 
@@ -518,7 +616,7 @@ This artifact explains how the solution is administered and supported in practic
 - Troubleshooting, support actions, and escalation notes are included for expected operational use.
 - The guide is usable without relying on undocumented knowledge held by one individual.
 
-### 9.5. Operations & Support Model
+### 10.5. Operations & Support Model
 
 Defines:
 
@@ -538,7 +636,7 @@ This artifact ensures the solution has clear long-term accountability.
 - Support boundaries, escalation path, and support model are documented.
 - Monitoring, incident response, or hypercare expectations are defined where relevant.
 
-### 9.6. Backup, Restore & Recovery Plan
+### 10.6. Backup, Restore & Recovery Plan
 
 Defines how the solution can be backed up, restored, recovered, or rolled back in the event of failure or deployment issue, including:
 
@@ -557,7 +655,7 @@ This artifact ensures the solution can survive incidents and disruption without 
 - Recovery responsibilities, dependencies, and required access are identified.
 - Validation expectations or evidence for restore, recovery, or rollback are recorded.
 
-### 9.7. Operational Readiness Confirmation Record
+### 10.7. Operational Readiness Confirmation Record
 
 Provides formal confirmation that:
 
@@ -576,7 +674,7 @@ This artifact prevents informal or unsupported handover.
 - The record confirms availability of the required design, administration, and recovery documentation.
 - Acceptance decision, conditions, and outstanding readiness actions are explicitly documented.
 
-### 9.8. Recommended Acceptance Evidence
+### 10.8. Recommended Acceptance Evidence
 
 - Approved Technical Design Document
 - Approved DevOps Guide
@@ -584,23 +682,23 @@ This artifact prevents informal or unsupported handover.
 - Approved Backup, Restore & Recovery Plan
 - Completed Operational Readiness Confirmation Record
 
-### 9.9. Recommended Acceptance Authority
+### 10.9. Recommended Acceptance Authority
 
 - IT Operations / Service Owner
 
-## 10. Data Governance & Records Deliverables
+## 11. Data Governance & Records Deliverables
 
-### 10.1. Purpose
+### 11.1. Purpose
 
 Ensure data produced, stored, or processed by the initiative is explicitly defined, governed, owned, and auditable, with clear operational and lifecycle accountability.
 
-### 10.2. Standard Deliverables (as applicable)
+### 11.2. Standard Deliverables (as applicable)
 
-- **[Data Governance & Impact Assessment](#10.3.%20Data%20Governance%20&%20Impact%20Assessment)**
-- **[Data Asset Specification](#10.4.%20Data%20Asset%20Specification)**
-- **[Data Migration Record](#10.5.%20Data%20Migration%20Record)** (if applicable)
+- **[Data Governance & Impact Assessment](#11.3.%20Data%20Governance%20&%20Impact%20Assessment)**
+- **[Data Asset Specification](#11.4.%20Data%20Asset%20Specification)**
+- **[Data Migration Record](#11.5.%20Data%20Migration%20Record)** (if applicable)
 
-### 10.3. Data Governance & Impact Assessment
+### 11.3. Data Governance & Impact Assessment
 
 Defines the governance and organizational impact of data handled by the initiative, including:
 
@@ -616,7 +714,7 @@ Defines the governance and organizational impact of data handled by the initiati
 - Material compliance, policy, or governance implications are identified.
 - A Data Steward or equivalent accountable role is named.
 
-### 10.4. Data Asset Specification
+### 11.4. Data Asset Specification
 
 Provides authoritative documentation of the known data handled by the initiative, including:
 
@@ -634,7 +732,7 @@ Provides authoritative documentation of the known data handled by the initiative
 - System of record, storage location, and responsible owner or steward are identified.
 - Retention, lifecycle, and backup inclusion status are stated where relevant.
 
-### 10.5. Data Migration Record
+### 11.5. Data Migration Record
 
 Used when data is materially migrated, transformed, or restructured.
 
@@ -662,33 +760,33 @@ May include:
 - Reconciliation or validation results are recorded, including exceptions and disposition.
 - Steward or Acceptance Authority sign-off is recorded when migration is performed.
 
-### 10.6. Recommended Acceptance Evidence
+### 11.6. Recommended Acceptance Evidence
 
 - Approved Data Governance & Impact Assessment
 - Approved Data Asset Specification
 - Approved Data Migration Record (if applicable)
 - Steward or Data Governance sign-off
 
-### 10.7. Recommended Acceptance Authority
+### 11.7. Recommended Acceptance Authority
 
 - Data Steward (dataset correctness and stewardship accountability)
 - Data Governance Officer (governance compliance)
 
-## 11. Security, Privacy & Compliance Deliverables
+## 12. Security, Privacy & Compliance Deliverables
 
-### 11.1. Purpose
+### 12.1. Purpose
 
 Ensure that security, privacy, and regulatory risks introduced by the initiative are explicitly identified, evaluated, controlled, and formally accepted where necessary.
 
-### 11.2. Standard Deliverables (as applicable)
+### 12.2. Standard Deliverables (as applicable)
 
-- **[Security & Privacy Risk Assessment](#11.3.%20Security%20&%20Privacy%20Risk%20Assessment)**
-- **[Access Control & Authorization Model](#11.4.%20Access%20Control%20&%20Authorization%20Model)**
-- **[Audit & Monitoring Design Summary](#11.5.%20Audit%20&%20Monitoring%20Design%20Summary)**
-- **[Compliance & Regulatory Alignment Statement](#11.6.%20Compliance%20&%20Regulatory%20Alignment%20Statement)**
-- **[Residual Risk Acceptance Record](#11.7.%20Residual%20Risk%20Acceptance%20Record%20(if%20applicable))** (if applicable)
+- **[Security & Privacy Risk Assessment](#12.3.%20Security%20&%20Privacy%20Risk%20Assessment)**
+- **[Access Control & Authorization Model](#12.4.%20Access%20Control%20&%20Authorization%20Model)**
+- **[Audit & Monitoring Design Summary](#12.5.%20Audit%20&%20Monitoring%20Design%20Summary)**
+- **[Compliance & Regulatory Alignment Statement](#12.6.%20Compliance%20&%20Regulatory%20Alignment%20Statement)**
+- **[Residual Risk Acceptance Record](#12.7.%20Residual%20Risk%20Acceptance%20Record%20(if%20applicable))** (if applicable)
 
-### 11.3. Security & Privacy Risk Assessment
+### 12.3. Security & Privacy Risk Assessment
 
 Identifies and evaluates security and privacy risks associated with the solution, including:
 
@@ -705,7 +803,7 @@ This artifact clarifies what could go wrong and how risk is reduced.
 - Required controls or treatment actions are documented for the identified risks.
 - Residual exposure requiring escalation or acceptance is made visible.
 
-### 11.4. Access Control & Authorization Model
+### 12.4. Access Control & Authorization Model
 
 Defines how access to the solution is controlled, including:
 
@@ -722,7 +820,7 @@ This ensures access decisions are intentional and reviewable.
 - Privileged or sensitive access considerations are explicitly documented.
 - Separation-of-duties or account-governance expectations are stated where relevant.
 
-### 11.5. Audit & Monitoring Design Summary
+### 12.5. Audit & Monitoring Design Summary
 
 Describes how key actions within the solution are logged and monitored, including:
 
@@ -738,7 +836,7 @@ This ensures accountability and forensic reconstructability.
 - Monitoring or alert expectations are documented for material risk scenarios.
 - Review, escalation, or follow-up triggers are defined where needed.
 
-### 11.6. Compliance & Regulatory Alignment Statement
+### 12.6. Compliance & Regulatory Alignment Statement
 
 Documents how the initiative aligns with applicable internal policies, regulatory obligations, and data protection requirements.
 
@@ -750,7 +848,7 @@ This ensures that compliance exposure is evaluated before and after implementati
 - The document states how the initiative aligns with, satisfies, or is conditioned by those obligations.
 - Material compliance issues needing action or approval are explicitly recorded.
 
-### 11.7. Residual Risk Acceptance Record (if applicable)
+### 12.7. Residual Risk Acceptance Record (if applicable)
 
 Records formal acknowledgment and acceptance of any material risks that remain after mitigation controls are applied.
 
@@ -762,7 +860,7 @@ This prevents silent or assumed risk acceptance.
 - Compensating controls, conditions, or limitations are recorded where relevant.
 - Acceptance authority and acceptance decision are explicitly documented.
 
-### 11.8. Recommended Acceptance Evidence
+### 12.8. Recommended Acceptance Evidence
 
 - Approved Security & Privacy Risk Assessment
 - Approved Access Control & Authorization Model
@@ -770,25 +868,25 @@ This prevents silent or assumed risk acceptance.
 - Approved Compliance & Regulatory Alignment Statement
 - Residual Risk Acceptance Record (if applicable)
 
-### 11.9. Recommended Acceptance Authority
+### 12.9. Recommended Acceptance Authority
 
 - Security / Data Protection Officer
 
-## 12. User Adoption & Change Enablement Deliverables
+## 13. User Adoption & Change Enablement Deliverables
 
-### 12.1. Purpose
+### 13.1. Purpose
 
 Ensure that impacted users understand the change, are prepared to use the solution correctly, and can adopt it without introducing avoidable operational risk or resistance.
 
-### 12.2. Standard Deliverables (as applicable)
+### 13.2. Standard Deliverables (as applicable)
 
-- **[User Impact Assessment](#12.3.%20User%20Impact%20Assessment)**
-- **[Change & Communication Plan](#12.4.%20Change%20&%20Communication%20Plan)**
-- **[Training & Enablement Materials](#12.5.%20Training%20&%20Enablement%20Materials)**
-- **[Adoption Support Model](#12.6.%20Adoption%20Support%20Model)**
-- **[Adoption Confirmation Record](#12.7.%20Adoption%20Confirmation%20Record)**
+- **[User Impact Assessment](#13.3.%20User%20Impact%20Assessment)**
+- **[Change & Communication Plan](#13.4.%20Change%20&%20Communication%20Plan)**
+- **[Training & Enablement Materials](#13.5.%20Training%20&%20Enablement%20Materials)**
+- **[Adoption Support Model](#13.6.%20Adoption%20Support%20Model)**
+- **[Adoption Confirmation Record](#13.7.%20Adoption%20Confirmation%20Record)**
 
-### 12.3. User Impact Assessment
+### 13.3. User Impact Assessment
 
 Identifies:
 
@@ -805,7 +903,7 @@ This artifact clarifies who is affected and what will change for them.
 - The expected behavioral or process change is described for the relevant groups.
 - Material adoption risks or resistance factors are documented.
 
-### 12.4. Change & Communication Plan
+### 13.4. Change & Communication Plan
 
 Defines how the change will be communicated and managed, including:
 
@@ -826,7 +924,7 @@ Promotional or informational websites created solely to support awareness, commu
 - Communication channels or activities are defined for the affected stakeholder groups.
 - Feedback or escalation routes are identified for questions, issues, or resistance.
 
-### 12.5. Training & Enablement Materials
+### 13.5. Training & Enablement Materials
 
 Provide structured support for users to perform required behaviors, including:
 
@@ -842,7 +940,7 @@ This ensures users can perform expected tasks correctly and consistently.
 - Content is aligned to the roles, tasks, or scenarios users must perform.
 - The materials are usable in the form needed for the initiative, whether reference, walkthrough, or formal training.
 
-### 12.6. Adoption Support Model
+### 13.6. Adoption Support Model
 
 Defines how users receive help after go-live, including:
 
@@ -858,7 +956,7 @@ This ensures adoption issues do not silently degrade outcomes.
 - Hypercare, transition support, or early-life support expectations are documented where relevant.
 - Known adoption risks and mitigation actions are recorded.
 
-### 12.7. Adoption Confirmation Record
+### 13.7. Adoption Confirmation Record
 
 Provides confirmation that:
 
@@ -875,7 +973,7 @@ This prevents informal or assumed adoption.
 - User readiness risks, conditions, or outstanding follow-up actions are documented.
 - Business Owner or delegated authority acknowledgment is explicitly recorded.
 
-### 12.8. Recommended Acceptance Evidence
+### 13.8. Recommended Acceptance Evidence
 
 - Approved User Impact Assessment
 - Approved Change & Communication Plan
@@ -883,15 +981,16 @@ This prevents informal or assumed adoption.
 - Defined Adoption Support Model
 - Completed Adoption Confirmation Record
 
-### 12.9. Recommended Acceptance Authority
+### 13.9. Recommended Acceptance Authority
 
 - Business Owner
 - Change or Communications Lead
 
-## 13. Summary Table
+## 14. Summary Table
 
 | Deliverable Domain                | Primary Intent                                                                 |
 | --------------------------------- | ------------------------------------------------------------------------------ |
+| Work Assessment Deliverables      | Keep focused assessment findings, opportunities, and the definition handoff usable and traceable |
 | Solution Deliverables             | Deliver the approved solution outcomes within authorized scope                 |
 | Governance & Control              | Make intent, authority, decisions, funding, acceptance, and closure auditable  |
 | Operational Readiness             | Ensure the solution is deployable, operable, supportable, and recoverable      |
@@ -899,12 +998,13 @@ This prevents informal or assumed adoption.
 | Security, Privacy & Compliance    | Identify, reduce, and explicitly accept security, privacy, and compliance risk |
 | User Adoption & Change Enablement | Prepare users for change, reduce adoption risk, and support sustained usage    |
 
-## 14. Appendix B - Domain Selection Matrix
+## 15. Appendix B - Domain Selection Matrix
 
 Use this matrix during Work Definition to decide which domains should be in scope.
 
 | Domain | Common trigger conditions | Minimum viable output | Expand depth when | Do not use this domain for |
 | --- | --- | --- | --- | --- |
+| Work Assessment Deliverables | Initial Review and Validation Assessment are complete, the decision is to continue with fuller work assessment, and the assessment findings need to be preserved as reusable research or opportunity context | Work Assessment Report plus only the supporting assessment artifacts needed to make the recommendation credible and reusable | Current state, workflow, stakeholder need, or business opportunity analysis materially shapes the recommendation or later definition | Initial triage, Validation Assessment itself, or solution design |
 | Solution Deliverables | New or changed user-facing or system behavior | Functional Capabilities plus concise acceptance approach | Behavior is complex, multi-step, role-sensitive, or needs structured validation through roles, modules, and use cases | General communications, training-only content, or governance-only decisions |
 | Governance & Control | Formal sponsorship, funding, prioritization, controlled delivery governance, or closure is needed | Initiative Definition, Project Charter, Decision Record Log, Delivery Charter, and Delivery Roadmap where controlled mobilization is needed | Funding, risk, delivery governance, or closure requires stronger traceability | Technical design or operational procedures |
 | Operational Readiness | Service, system, or support impact exists | Named support ownership plus minimum run / recovery view | The solution affects production support, recovery, or long-term maintainability | Business-only justification or user comms |
@@ -912,10 +1012,11 @@ Use this matrix during Work Definition to decide which domains should be in scop
 | Security, Privacy & Compliance | Sensitive data, access control, logging, or regulatory exposure exists | Risk summary plus minimum control intent | Privacy, audit, or compliance obligations are material | General project management or user enablement |
 | User Adoption & Change Enablement | User behavior, communications, or training are materially affected | Impact summary plus basic communication / enablement approach | Rollout is broad, high-impact, or behavior change is significant | Core solution functionality or system design |
 
-## 15. Appendix C - Minimum Viable Outputs by Domain
+## 16. Appendix C - Minimum Viable Outputs by Domain
 
 | Domain | Smallest acceptable content set |
 | --- | --- |
+| Work Assessment Deliverables | Clear recommendation, reusable assessment basis, and only the focused analysis needed to carry the background, needs, current state, process realities, or opportunity context forward |
 | Solution Deliverables | Approved scope baseline, clear actor model where needed, defined behavior, and evidence for acceptance |
 | Governance & Control | Named owners, authorization basis, key decisions, and delivery governance / closure confirmation as applicable |
 | Operational Readiness | Named run/support owners, basic support approach, and recovery intent |
@@ -923,53 +1024,53 @@ Use this matrix during Work Definition to decide which domains should be in scop
 | Security, Privacy & Compliance | Risk summary, key controls, and required authority review |
 | User Adoption & Change Enablement | Impacted users, communication approach, enablement actions, and adoption owner |
 
-## 16. Appendix A — Role Glossary
+## 17. Appendix A — Role Glossary
 
-### 16.1. Sponsor
+### 17.1. Sponsor
 
 Authorizes the initiative, commits funding and priority, and accepts organizational risk.
 
-### 16.2. Decision Authority
+### 17.2. Decision Authority
 
 Accountable for the go / no-go decision to commit organizational capacity, time, funding, and risk to delivery.
 
-### 16.3. Acceptance Authority
+### 17.3. Acceptance Authority
 
 Accountable for formally accepting deliverables within an in-scope deliverable domain based on defined acceptance criteria and evidence.
 
-### 16.4. Outcome Owner
+### 17.4. Outcome Owner
 
 Accountable for achieving the intended business outcomes and confirming that delivered value meets the agreed success measures.
 
-### 16.5. Business Owner / Process Owner
+### 17.5. Business Owner / Process Owner
 
 Accountable for the business process outcomes supported by the solution and commonly serves as the Acceptance Authority for Solution Deliverables.
 
-### 16.6. Data Steward
+### 17.6. Data Steward
 
 Accountable for dataset correctness, quality, and governance obligations.
 
-### 16.7. Data Governance Officer (DGO)
+### 17.7. Data Governance Officer (DGO)
 
 Oversees data governance standards and compliance.
 
-### 16.8. Delivery Owner
+### 17.8. Delivery Owner
 
 Accountable for delivery execution, stage discipline, and ensuring required deliverables and evidence are produced.
 
-### 16.9. IT Operations / Service Owner
+### 17.9. IT Operations / Service Owner
 
 Accountable for ongoing operation and support of the system.
 
-### 16.10. Security / Data Protection Officer
+### 17.10. Security / Data Protection Officer
 
 Accountable for privacy, security, and regulatory compliance.
 
-### 16.11. Change or Communications Lead
+### 17.11. Change or Communications Lead
 
 Accountable for user readiness, communications, and adoption enablement activities.
 
-## 17. How to Use This Document
+## 18. How to Use This Document
 
 This document serves as the authoritative catalog of standard deliverables and acceptance expectations across deliverable domains.
 
@@ -977,43 +1078,42 @@ It does not make every deliverable mandatory for every initiative. During Work D
 
 Deliverable domains mainly organize the deliverables view. The team should still make the actual required deliverables visible.
 
-### 17.1. During Work Definition (Stage 2)
+### 18.1. During Work Definition (Stage 2)
 
 - Confirm which deliverables are required for the initiative, using deliverable domains as an organizing structure where useful.
+- If Work Assessment Deliverables were used, make the carry-forward assessment references explicit so definition does not rediscover the same background, challenges, needs, current-state facts, or opportunity context.
 - Identify the Acceptance Authority for every required deliverable or clearly defined deliverable grouping.
 - Agree which standard deliverables are expected for each relevant domain, at authorization-level depth.
 - Additional expected deliverables not needed for authorization may be listed at summary level so likely effort remains visible.
 - Use the deliverable Acceptance Criteria section as the basis for defining what "done" will mean later at acceptance.
 
-### 17.2. During Work Authorization (Stage 3)
+### 18.2. During Work Authorization (Stage 3)
 
 - Confirm that scope, ownership, funding commitments, and risk implications are decision-ready.
 - Confirm Acceptance Authorities remain valid for each required deliverable or deliverable grouping.
 - Record the authorization decision and associated commitments.
 
-### 17.3. During Work Definition Details (Stage 4)
+### 18.3. During Work Definition Details (Stage 4)
 
 - Elaborate the required deliverables identified in Stage 2 and produce any additional definition deliverables needed to build, test, transition, and accept the solution.
 - Ensure elaboration remains consistent with the authorized scope and intent.
 
-### 17.4. During Delivery Mobilization (Stage 5)
+### 18.4. During Delivery Mobilization (Stage 5)
 
 - Activate the Delivery Charter and related execution controls needed for controlled delivery.
 - Confirm the Delivery Roadmap with the mobilized delivery team and key stakeholders.
 - Confirm reporting rhythm, escalation path, change path, and acceptance-readiness tracking are in place.
 
-### 17.5. During Work Delivery (Stage 6)
+### 18.5. During Work Delivery (Stage 6)
 
 - Produce the required deliverables for each relevant domain and collect acceptance evidence.
 - Use the deliverable Acceptance Criteria section to drive validation and evidence collection.
 - Track progress by accepted deliverables and evidence, not activity.
 
-### 17.6. During Acceptance, Transition & Closure (Stage 7)
+### 18.6. During Acceptance, Transition & Closure (Stage 7)
 
 - Validate that the Acceptance Criteria expectations are addressed for every required deliverable.
 - Ensure required evidence is complete, reviewable, and attributable.
 - Record formal acceptance by the named Acceptance Authorities and formally close the initiative.
 
 Completion requires acceptance across all applicable deliverable domains.
-
-
