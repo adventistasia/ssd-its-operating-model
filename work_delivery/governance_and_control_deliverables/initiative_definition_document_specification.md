@@ -1,73 +1,92 @@
 # Initiative Definition Document Specification
 
-## 1. Purpose and Intended Outcome
+## 1. What This Artifact Is For
 
-The Initiative Definition Document explains what the initiative is, why it exists, what outcomes it is intended to achieve, what boundaries govern delivery, and what must be delivered for the initiative to be accepted.
+The Initiative Definition Document is the main governance baseline for an initiative. It explains what the initiative is, why it exists, what outcomes it must achieve, what boundaries govern delivery, and what must be delivered for the initiative to be accepted.
 
-It is the main governance baseline for initiative intent, scope, ownership, deliverable expectations, and approval context. A useful Initiative Definition Document supports authorization, downstream planning, controlled change, and later acceptance without becoming a catch-all repository for detailed design or execution content.
+A well-written IDD supports authorization, downstream planning, controlled scope change, and final acceptance. It is not a design document, a task plan, or a repository for detailed execution content.
 
-In this specification, an approved definition means the version of the Initiative Definition Document that has been formally authorized as the baseline the initiative will be governed against.
+**Approved definition** means the version of the IDD that has been formally authorized as the baseline the initiative will be governed against. All downstream artifacts are tested against this baseline.
 
-The intended outcome is that the initiative has a single authoritative baseline for outcomes, scope boundaries, ownership, required deliverables, major impacts, and decision references that downstream work can align to and be tested against.
+## 2. When to Use It
 
-## 2. When It Is Required
+Use this artifact as the default Stage 2 - Work Definition baseline for:
 
-This artifact is the default Stage 2 - Work Definition baseline for projects, major enhancements, and planned initiatives that change systems, services, data, security posture, support load, or cost in a material way.
+- projects and major enhancements
+- planned initiatives that change systems, services, data, security posture, support load, or cost in a material way
 
-For appropriately small governed work, a Work Brief may be used as the scaled Stage 2 artifact instead.
+For appropriately small, contained, or low-risk work, use a [Work Brief](../work_brief/work_brief_specification.md) instead. Do not force a full IDD when a Work Brief is sufficient.
 
-## 3. Intended Readers and Users
+## 3. Stage Fit and Handoffs
 
-- Sponsor and sponsoring body where applicable
-- Decision Authorities
-- Outcome Owner
-- Delivery Owner and delivery team
-- Acceptance Authorities
-- Operations and support
-- Audit and future maintainers
+- **Stage 1:** consume the [Work Assessment Report](../work_assessment/work_assessment_report_specification.md) and carry forward the validated need, desired outcomes, major risks, dependencies, and stakeholder context.
+- **Stage 2:** draft and baseline this document. It governs scope, deliverables, ownership, and authorization.
+- **Stage 3:** use this document as the primary input to the [Project Charter](project_charter_specification.md) authorization decision.
+- **Stage 4 onward:** this document governs scope control, deliverable expectations, and acceptance authority throughout delivery and closure.
 
-## 4. Intended Project Context
+Upstream source:
 
-Use this artifact during initiative definition and keep it as the authoritative baseline once the initiative is authorized. It is most useful where intent, scope, ownership, and deliverables must remain visible across multiple downstream artifacts and across change over time.
+- [Work Assessment Report Specification](../work_assessment/work_assessment_report_specification.md)
 
-This document should anchor project chartering, scope control, deliverable definition, authorization decisions, and downstream acceptance. It should remain understandable to leadership and maintainers while still being operationally useful to delivery and governance roles.
+Downstream artifacts fed by this document:
 
-## 5. How Much Detail to Include
+- [Project Charter Specification](project_charter_specification.md)
+- [Functional Capabilities Specification](../solution_deliverables/functional_capabilities_specification.md)
+- domain-specific solution, operational readiness, and acceptance artifacts
+- [Acceptance Record Specification](../solution_deliverables/acceptance_record_specification.md)
 
-Include enough detail to support decision-making, clarify scope boundaries, define deliverable expectations, make ownership explicit, and show key risk, financial, operational, and support implications. Use references for detailed design, planning, testing, and operating material rather than embedding them.
+## 4. Audience and Context
 
-The governing principle is:
+Write for the full governance audience: Sponsor, Decision Authorities, Outcome Owner, Delivery Owner and team, Acceptance Authorities, operations and support, audit, and future maintainers.
 
-> Include enough information to make a sound decision and to understand what the initiative is, what it will deliver, who is accountable, and what material implications must be accepted. Put detailed content in separate artifacts and reference them from this document.
+The document must be understandable to leadership and to delivery teams at the same time. Achieve this by using plain language, keeping governance-level content in the IDD, and pointing to specialist artifacts for detail.
 
-At authorization time, this document should contain enough clarity to support informed approval. During delivery, it should remain current enough to govern scope, deliverables, and acceptance without drifting into detailed design or task management.
+## 5. Before You Start
 
-For appropriately small initiatives, it is acceptable for all relevant information to remain in the Initiative Definition Document. Spinning off a separate artifact to hold detailed content is at the discretion of the practitioner, provided the document remains readable and governable.
+Make sure you have:
 
-## 6. Required Content or Minimum Structure
+- the completed Stage 1 work assessment or equivalent initiation inputs
+- a validated business need and intended outcomes
+- confirmed or proposed Outcome Owner, Delivery Owner, and Sponsor
+- a known or proposed authorization path
+- agreed scope boundaries or enough input to draft them
+- awareness of material risks, dependencies, and operational impacts
 
-### 6.1. Document identity and control
+If any of these are missing, label the output as a working draft and state the gaps.
 
-Must include:
+## 6. How to Draft It
+
+1. Start from the Stage 1 outputs. Carry forward the validated need, outcomes, risks, dependencies, and stakeholder context.
+2. Write the executive summary first so the document's purpose is clear before writing section by section.
+3. Write scope boundaries explicitly - list both in-scope and out-of-scope content. Ambiguous scope becomes a control problem later.
+4. Build the deliverables table before writing detailed content. Knowing what must be delivered keeps the rest of the document focused.
+5. Write risks, financial implications, and operational support at governance level. Point to detailed artifacts for depth.
+6. Use references to downstream artifacts rather than embedding their content here.
+7. Review for accountability gaps: every deliverable needs a named Delivery Owner and Acceptance Authority before authorization.
+
+The governing principle: include enough information to make a sound decision and to understand what the initiative is, what it will deliver, who is accountable, and what material implications must be accepted. Put detailed content in separate artifacts and reference them.
+
+## 7. Minimum Structure
+
+### 7.1. Document identity and control
+
+Include:
 
 - initiative name
 - initiative or project ID where used
-- version
-- status such as Draft, Active, or Final
+- version and status (Draft, Active, or Final)
 - last updated date
 - Outcome Owner
 - Delivery Owner
-- sponsor
-- sponsoring body where different from the sponsor
-- Decision Authorities, including the level or type of decision each is authorized to make where needed
+- Sponsor
+- sponsoring body where different from the Sponsor
+- Decision Authorities, including the type of decision each is authorized to make
 - authorization record or reference to the formal approval basis
 - change log or equivalent version history
 
-This section identifies the controlled governance baseline and who has authority over it.
+### 7.2. Executive summary
 
-### 6.2. Executive summary
-
-Must include:
+Include:
 
 - plain-language description of the initiative
 - why the initiative exists now
@@ -77,63 +96,59 @@ Must include:
 - estimated ongoing annual operating cost or OpEx where applicable
 - approved budget and current expenditure position where already available
 
-This section should allow a decision-maker to understand the initiative quickly and see the scale of commitment being requested.
+Write this so a decision-maker can understand the initiative and the scale of commitment being requested without reading further.
 
-### 6.3. Business need and rationale
+### 7.3. Business need and rationale
 
-Must include:
+Include:
 
 - current problem or opportunity
 - who is affected
-- why action is justified
+- why action is justified now
 - consequences of inaction where relevant
 
-This section explains the case for the initiative.
+### 7.4. Outcomes and success measures
 
-### 6.4. Outcomes and success measures
-
-Must include:
+Include:
 
 - intended outcomes
 - measurable success indicators
 - important non-goals or things that should not be treated as success
 
-This section helps downstream artifacts remain aligned to intended value.
+### 7.5. Scope boundaries
 
-### 6.5. Scope boundaries
-
-Must include:
+Include:
 
 - in-scope content
 - out-of-scope content
 - assumptions
 - key constraints
 
-If functional scope is material to understanding the initiative, include either a concise summary of required functional capabilities or a reference to the separate functional capabilities artifact.
+If functional scope is material to understanding the initiative, include a concise summary of required capabilities or a reference to a separate [Functional Capabilities](../solution_deliverables/functional_capabilities_specification.md) artifact.
 
-This section is the main boundary control for the initiative.
+This section is the primary boundary control for the initiative. Make it explicit.
 
-### 6.6. Deliverables and acceptance structure
+### 7.6. Deliverables and acceptance structure
 
-Must include:
+Include:
 
 - required deliverables or Deliverable Domains
 - Delivery Owner for each deliverable
 - Acceptance Authority for each deliverable or domain
-- acceptance focus or what matters for sign-off
+- acceptance focus (what matters for sign-off)
 - current status
 - note of any deliverables or domains intentionally excluded, deferred, or to be confirmed later, with reason
 
-Recommended columns:
+Recommended table:
 
 | Deliverable or domain | Description | Delivery Owner | Acceptance Authority | Acceptance focus | Status | Reference |
 | --- | --- | --- | --- | --- | --- | --- |
 
-When Deliverable Domains are first mentioned in an Initiative Definition Document, reference the [Standard Deliverables Guide](../standard_deliverables_guide.md) so the reader can understand the domain structure being used.
+When Deliverable Domains are first mentioned, reference the [Standard Deliverables Guide](../standard_deliverables_guide.md) so the reader understands the domain structure being used.
 
-If the Initiative Definition Document is the sole artifact for the initiative, the acceptance focus may be expressed directly as the acceptance criteria.
+If the IDD is the sole artifact for the initiative, the acceptance focus may be written directly as acceptance criteria.
 
-Use the following status values for deliverables:
+Use these status values:
 
 - Draft
 - Planned
@@ -141,20 +156,13 @@ Use the following status values for deliverables:
 - Delivered
 - Accepted
 
-Where applicable, also include:
+Where applicable, also include: reference to the delivered artifact, reference to supporting evidence, reference to the acceptance record, and acceptance date.
 
-- reference to the delivered artifact
-- reference to supporting evidence
-- reference to the acceptance record
-- acceptance date
+**Control rule:** a deliverable is only accepted when the named Acceptance Authority has formally confirmed that the acceptance focus has been met.
 
-Control rule: a deliverable is only accepted when the named Acceptance Authority has formally confirmed that the acceptance focus has been met.
+### 7.7. Key risks, dependencies, and major impacts
 
-This section turns the initiative from an idea into an accountable delivery baseline.
-
-### 6.7. Key risks, dependencies, and major impacts
-
-Must include:
+Include:
 
 - major delivery or feasibility risks
 - material dependencies
@@ -163,35 +171,28 @@ Must include:
 
 Where financial detail is relevant, make visible:
 
-- estimated CapEx
-- estimated OpEx
+- estimated CapEx and OpEx
 - approved budget if available
 - actual spend and variance if already in flight
 
-This section helps define what decision-makers are being asked to commit to.
-
-### 6.8. Operational support summary
+### 7.8. Operational support summary
 
 Required when the initiative materially impacts a service or system.
 
-Include only the minimum governance-level summary needed to show that operational sustainability has been considered. Detailed support design should remain in operational readiness artifacts.
-
-Recommended content:
+Include only what is needed to show operational sustainability has been considered:
 
 - operational or run owner
 - support owner
 - intended support tier model and escalation path at summary level
 - monitoring and recovery intent at summary level
 - expected ongoing support effort or cost impact
-- reference to the relevant operational readiness artifact or artifacts where detailed support arrangements will be maintained
+- reference to the relevant operational readiness artifact where detailed support arrangements will be maintained
 
-Encourage the practitioner to link to the relevant supporting operational readiness material rather than restating detailed support content here.
+Link to the supporting operational readiness material. Do not restate detailed support content here.
 
-This section keeps the governance baseline connected to supportability without turning the document into a runbook.
+### 7.9. Related references and supporting decisions
 
-### 6.9. Related references and supporting decisions
-
-Should include:
+Include:
 
 - links to upstream assessments
 - key policy or strategy references
@@ -200,11 +201,9 @@ Should include:
 - relevant decision or approval records
 - contracts, licensing, or external references that materially shape scope or obligations
 
-This section prevents duplication while preserving traceability.
+## 8. What to Keep Out
 
-## 7. What to Keep Out
-
-Keep the following out of this artifact:
+Keep the following out of this document:
 
 - detailed architecture and configuration
 - full runbooks or procedures
@@ -214,123 +213,100 @@ Keep the following out of this artifact:
 - detailed risk register entries better managed elsewhere
 - technical specifications beyond what is needed to understand scope, risk, or approval implications
 
-## 8. Relationships to Other Artifacts
+## 9. Writing Rules
 
-This artifact should normally be created from the completed Stage 1 assessment outputs, especially the [Work Assessment Report](../work_assessment/work_assessment_report_specification.md), plus any other initiation inputs that materially affect scope, ownership, risk, or deliverables.
+- Write at governance level. Make decisions and commitments clear, not activity detail.
+- Use plain language. Write for a reader who understands the business but not the technical specifics.
+- Be explicit about scope. "In scope" and "out of scope" must leave no room for different interpretations.
+- Use references, not copies. Point to separate artifacts for design, plans, and detailed content.
+- Name owners. Every deliverable, risk, condition, and accountability must have a named person.
+- Use the deliverables table. Structured rows are easier to review and maintain than prose lists.
+- Keep financial and operational implications at the summary level needed for governance decisions.
+- For small initiatives where all content fits here, keeping everything in one document is acceptable. Readability and governability are the tests.
 
-For work that is intentionally scaled and can be governed as one small work item, use the [Work Brief Specification](../work_brief/work_brief_specification.md) instead of forcing a full Initiative Definition Document.
+## 10. Traceability and Ownership Minimum
 
-This artifact anchors the Project Charter, Functional Capabilities, domain-specific deliverables, decision records, operational readiness artifacts, and final acceptance and closure records.
+**Upstream:** this document should be created from the completed Stage 1 work assessment outputs and any other initiation inputs that affect scope, ownership, risk, or deliverables.
 
-Where delivery is broken into smaller controlled work items, the Initiative Definition Document may also anchor one or more Work Briefs used as child work orders under the approved initiative baseline.
+**Downstream:** this document anchors the Project Charter, Functional Capabilities, domain-specific solution and operational readiness deliverables, decision records, and final acceptance and closure records.
 
-Those Work Briefs should stay within the initiative's approved scope, ownership, deliverable expectations, and authorization boundaries. They should define and control discrete pieces of work without replacing the Initiative Definition Document as the main governance baseline.
+**Work Briefs under this document:** where delivery is broken into smaller controlled work items, the IDD may anchor child Work Briefs. Those Work Briefs must stay within the initiative's approved scope, ownership, and authorization boundaries.
 
-The Project Charter should not contradict this document. If authorization, funding, scope, ownership, required deliverables, or major impacts change materially, the Initiative Definition Document should be updated first or in controlled parallel with the related governance decision.
+**Project Charter alignment:** the Project Charter must not contradict this document. If authorization, funding, scope, ownership, or required deliverables change materially, update this document first or in controlled parallel with the related governance decision.
 
-## 9. Ownership, Review, and Acceptance Expectations
+**Ownership:**
 
-The Delivery Owner usually coordinates the document with input from the Outcome Owner and Sponsor.
+- The Delivery Owner coordinates the document with input from the Outcome Owner and Sponsor.
+- Key owners and Decision Authorities review before authorization.
+- Formal approval normally sits with the Sponsor or delegated Decision Authority, with the approval reference recorded in the document control section.
 
-It should be reviewed by key owners and Decision Authorities before authorization. Formal approval normally sits with the Sponsor or delegated Decision Authority, with the approval reference recorded in the document control section.
+## 11. Maintenance Expectations
 
-## 10. Maintenance Expectations
+This is a living governance document. Keep it current across the full initiative lifecycle.
 
-This is a living governance document. Keep deliverables, owners, decision references, scope status, major impacts, and acceptance status current. Use references to detailed artifacts rather than embedding large downstream content.
+**At minimum, keep current:**
 
-At minimum:
+- deliverable status and references
+- change log for material updates
+- authorization and decision references
+- major cost, risk, and support implications at governance level
 
-- keep the deliverables section current
-- keep the change log current for material updates
-- keep authorization and decision references traceable
-- keep major cost, risk, and support implications visible at governance level
-
-## 11. Lifecycle and Change Control
-
-### 11.1. Definition stage
-
-Create the document from the completed Stage 1 work assessment outputs and other initiation inputs. In normal use, this means starting from the [Work Assessment Report](../work_assessment/work_assessment_report_specification.md) and carrying forward the validated need, desired outcomes, major risks, dependencies, stakeholder context, and recommended Stage 2 focus.
-
-Confirm outcomes, scope boundaries, owners, deliverables, Acceptance Authorities, major impacts, and the expected authorization path.
-
-### 11.2. Authorization stage
-
-Use the draft document as part of the approval basis. Once formally authorized, update status to Active and record the approval reference.
-
-### 11.3. Delivery stage
-
-Keep deliverable status, references, acceptance information, and major governance-relevant changes current. Improve clarity as needed, but do not use this document as a design pack or task tracker.
-
-### 11.4. Closure stage
-
-Confirm accepted deliverables, acceptance dates, final ownership visibility, and final financial position where relevant. Update status to Final.
-
-### 11.5. Change rule
-
-Changes that alter outcomes, scope boundaries, required deliverables, Acceptance Authorities, ownership, authorization basis, or major cost or risk must:
+**Change control rule:** changes that alter outcomes, scope boundaries, required deliverables, Acceptance Authorities, ownership, authorization basis, or major cost or risk must:
 
 1. be recorded as a controlled update to this document
 2. be reviewed by the relevant owners and decision-makers
 3. be re-authorized where the change is material
 
-## 12. Agent Validation Instruction Checklist
+**Lifecycle points:**
 
-Use this checklist when reviewing a produced or written Initiative Definition Document. Compare the document against each instruction and identify any gaps, ambiguity, missing ownership, or misplaced detail.
+- **Stage 2 (definition):** create from Stage 1 outputs; confirm outcomes, scope, owners, deliverables, and expected authorization path
+- **Stage 3 (authorization):** use as primary authorization input; once approved, update status to Active and record the approval reference
+- **Stage 4–6 (delivery):** keep deliverable status and governance-relevant changes current; do not let it become a design pack or task tracker
+- **Stage 7 (closure):** confirm accepted deliverables, acceptance dates, final ownership, and final financial position; update status to Final
 
-### 12.1. Understanding and purpose
+## 12. Done When
 
-1. Confirm that a new reader can understand what the initiative is, why it exists, and what it intends to achieve from the executive summary, business need, and outcomes sections.
-2. Confirm that the intended outcomes and success measures are clearly stated and, where possible, measurable.
+This artifact is ready for authorization when:
 
-### 12.2. Scope and accountability
+- a new reader can understand what the initiative is, why it exists, and what it will deliver from sections 7.2–7.4 alone
+- in-scope and out-of-scope boundaries are explicit and unambiguous
+- every deliverable has a named Delivery Owner and Acceptance Authority, with a defined acceptance focus
+- excluded, deferred, or to-be-confirmed deliverables are visible with reasons
+- Outcome Owner, Delivery Owner, Sponsor, and Decision Authorities are named
+- major risks, financial implications, and operational impacts are visible at governance level
+- if Deliverable Domains are used, the [Standard Deliverables Guide](../standard_deliverables_guide.md) is referenced where domains are first introduced
+- no detailed design, task plans, or copies of downstream deliverables have leaked in
 
-3. Confirm that in-scope and out-of-scope boundaries are explicit and unambiguous.
-4. Confirm that Outcome Owner, Delivery Owner, Sponsor, and Decision Authorities are present and named.
-5. Confirm that the authorization basis is visible and traceable.
-
-### 12.3. Deliverables and acceptance
-
-6. Confirm that all required deliverables are clearly listed, either by domain or as a consolidated list.
-7. Confirm that each deliverable has a named Delivery Owner and Acceptance Authority.
-8. Confirm that the acceptance focus is clearly defined for each deliverable, or that acceptance criteria are stated where the Initiative Definition Document is the sole artifact.
-9. Confirm that excluded, deferred, or still-to-be-confirmed deliverables are visible with reasons.
-10. Confirm that deliverable status uses the defined status values: Draft, Planned, In Progress, Delivered, or Accepted.
-11. If Deliverable Domains are used, confirm that the document references the [Standard Deliverables Guide](../standard_deliverables_guide.md) when the domains are first introduced.
-
-### 12.4. Living document expectations
-
-12. Confirm that each listed deliverable has a current status.
-13. Where a deliverable is delivered, confirm that a reference to the delivered artifact exists.
-14. Where evidence is required, confirm that the evidence exists and is referenced.
-15. Where a deliverable is accepted, confirm that the acceptance record is referenced and the acceptance date is recorded.
-16. Confirm that the document is current and that the change log reflects material updates.
-
-### 12.5. Operational and financial viability
-
-17. Confirm that major risks, dependencies, and feasibility concerns are visible enough for governance review.
-18. Confirm that CapEx, OpEx, budget position, and material financial assumptions are visible at the right level.
-19. If the initiative impacts a service or system, confirm that run ownership, support ownership, and ongoing support implications are visible and that the document links to the relevant operational readiness artifact or artifacts.
-
-### 12.6. Change control
-
-20. Confirm that material changes are handled through controlled update and re-authorization where required.
-
-## 13. Prompt Guide for Drafting the Artifact
+## 13. Prompt Guide
 
 ### 13.1. Starter prompt
 
-> Draft an Initiative Definition Document for this initiative.
-> Explain the business need, intended outcomes, scope boundaries, owners, deliverables, acceptance structure, major risks and dependencies, financial implications, and governance references.
-> Keep it readable for leadership, delivery teams, and future reviewers, and keep detailed design or execution content out.
+```text
+Draft an Initiative Definition Document for this initiative.
+Explain the business need, intended outcomes, scope boundaries, owners, deliverables,
+acceptance structure, major risks and dependencies, financial implications, and governance references.
+Keep it readable for leadership, delivery teams, and future reviewers.
+Keep detailed design and execution content out.
+```
 
 ### 13.2. Section prompts
 
-> Draft the scope boundaries and deliverables sections so a reviewer can see what is in scope, what is out, what is deferred, who must deliver each major artifact, and who can accept it.
+```text
+Draft the scope boundaries and deliverables sections so a reviewer can see what is in scope,
+what is out, what is deferred, who must deliver each major artifact, and who can accept it.
+```
 
-> Draft the risks, dependencies, impacts, and operational support summary sections so major delivery, operational, financial, and governance implications are visible without becoming a full risk register, business case, or runbook.
+```text
+Draft the risks, dependencies, impacts, and operational support summary sections so major
+delivery, operational, financial, and governance implications are visible without becoming
+a full risk register, business case, or runbook.
+```
 
-### 13.3. Validation prompts
+### 13.3. Validation prompt
 
-> Check whether this Initiative Definition Document can act as a clear governance baseline for downstream scope, design, delivery, and acceptance artifacts.
-
-> Rewrite any section that has drifted into detailed design, task planning, duplicated downstream content, or unclear accountability.
+```text
+Check whether this Initiative Definition Document can act as a clear governance baseline
+for downstream scope, design, delivery, and acceptance artifacts.
+Rewrite any section that has drifted into detailed design, task planning,
+duplicated downstream content, or unclear accountability.
+```
