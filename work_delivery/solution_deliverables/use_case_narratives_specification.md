@@ -65,35 +65,37 @@ Follow these steps:
 
 1. Pick one module and the related approved capabilities.
 2. Name the primary actor as a role, then state the actor's goal in plain language.
-3. State the trigger that starts the use case and the preconditions that must already be true.
+3. State the trigger that starts the use case, the preconditions that must already be true, and the postconditions that must hold when the use case ends.
 4. State the success outcome and, where useful, the minimum guaranteed state if the use case cannot complete successfully.
 5. Write the main flow as numbered actor-system steps that show the normal path to the goal.
-6. Keep conditions, failures, and branch logic out of the main flow where possible. Put them in alternate or exception paths instead.
-7. Add alternate and exception paths that say what condition causes the branch, which main-flow step they branch from, and whether they rejoin the main flow or end the use case.
-8. Add business rules, validations, access expectations, audit notes, and special quality or control notes only where they materially affect behavior or acceptance.
-9. Finish with clear acceptance criteria that can be observed or evidenced.
+6. Keep conditions, failures, and branch logic out of the main flow where possible. Put them in alternate flows instead.
+7. Add alternate flows that say what condition causes the branch, which main-flow step they branch from, and whether they rejoin the main flow or end the use case.
+8. Add business rules, validations, and access expectations where they materially affect behavior or acceptance. Treat access expectations as business rules for users.
+9. Add data processing notes and auditability requirements where traceability or audit matters.
+10. Add non-functional requirements where quality, security, privacy, or timing conditions affect acceptance.
+11. Finish with clear acceptance criteria that can be observed or evidenced.
 
 Useful tests:
 
 - If the use case reads like a click-by-click screen script, pull it back to business behavior.
 - If the preconditions say obvious things such as "the system is available," remove them unless they matter to the reader.
-- If an alternate path does not explain what happens next, finish it so the outcome is clear.
+- If an alternate flow does not explain what happens next, finish it so the outcome is clear.
 - If it introduces behavior not found in the approved baseline, remove or escalate it.
 
 ## 6. Minimum Structure
 
 Use this structure for each use case.
 
-### 6.1. Identification and scope
+### 6.1. Identification and Scope
 
 Must include:
 
-- `Use Case ID`: the stable identifier for the use case, such as `UC-001`
-- `Use case name`: a short goal-oriented title such as `Submit service request`
-- `Module ID`: the one `SM-###` module this use case belongs to
-- `Related Functional Capabilities`: the approved `FC-###` items this use case supports
-- `Primary actor`: the role that initiates the use case
-- `Supporting actors or systems`: other roles or systems that materially participate
+1. `Use Case ID`: the stable identifier for the use case, such as `UC-001`
+2. `Use Case Name`: a short goal-oriented title such as `Submit service request`
+3. `Module ID`: the one `SM-###` module this use case belongs to
+4. `Related Functional Capabilities`: the approved `FC-###` items this use case supports, each paired with the capability statement or a shortened version of it
+5. `Primary Actor`: the role that initiates the use case
+6. `Supporting Actors or Systems`: other roles or systems that materially participate
 
 This section anchors the use case to the approved solution structure.
 
@@ -101,47 +103,52 @@ Example values:
 
 ```text
 Use Case ID: UC-001
-Use case name: Submit service request
+Use Case Name: Submit service request
 Module ID: SM-001
-Related Functional Capabilities: FC-001, FC-002
-Primary actor: Staff member
-Supporting actors or systems: Request management system, notification service
+Related Functional Capabilities:
+  FC-001 – Allow staff to submit service requests through a defined channel
+  FC-002 – Route submitted requests to the appropriate support queue
+Primary Actor: Staff member
+Supporting Actors or Systems: Request management system, notification service
 ```
 
-### 6.2. Goal and starting conditions
+### 6.2. Goals
 
 Must include:
 
-- `Actor goal`: what the primary actor is trying to achieve
-- `Trigger`: what starts the use case
-- `Preconditions`: what must already be true before the use case starts
-- `Success outcome` or `Success guarantee`: what must be true when the use case completes successfully
+1. `Actor Goal`: what the primary actor is trying to achieve
+2. `Trigger`: what starts the use case
+3. `Preconditions`: what must already be true before the use case starts
+4. `Postconditions`: what must be true after the use case ends, regardless of outcome
+5. `Success Outcome` or `Success Guarantee`: what must be true when the use case completes successfully
 
 May include:
 
-- `Minimum guarantee` or `Failure outcome`: what must still be true if the use case cannot complete successfully
+1. `Minimum Guarantee` or `Failure Outcome`: what must still be true if the use case cannot complete successfully
 
-This section distinguishes the actor's goal, the event that starts the use case, and the conditions the use case depends on.
+This section distinguishes the actor's goal, the event that starts the use case, the conditions it depends on, and the states it leaves behind.
 
 Example values:
 
 ```text
-Actor goal: Submit a valid request and receive confirmation that it is being handled
+Actor Goal: Submit a valid request and receive confirmation that it is being handled
 Trigger: Staff member decides to request support
 Preconditions:
 - Staff member is authenticated
 - Staff member has access to the request channel
-Success outcome:
+Postconditions:
+- An audit record exists for the attempt, whether or not it completed
+Success Outcome:
 - A valid request is recorded, assigned an identifier, and routed for action
-Minimum guarantee:
+Minimum Guarantee:
 - No incomplete request is treated as submitted
 ```
 
-### 6.3. Main flow
+### 6.3. Main Flow
 
 Must include:
 
-- `Main flow`: the normal path of behavior, written as numbered steps in business language
+1. `Main Flow`: the normal path of behavior, written as numbered steps in business language
 
 Each step should make clear:
 
@@ -154,7 +161,7 @@ The main flow should describe the typical successful path with as little branchi
 Example values:
 
 ```text
-Main flow:
+Main Flow:
 1. Staff member enters the request details.
 2. The system checks that required information is present.
 3. The system records the request.
@@ -162,13 +169,13 @@ Main flow:
 5. The system routes the request to the correct queue.
 ```
 
-### 6.4. Alternate and exception paths
+### 6.4. Alternate Flows
 
 Must include:
 
-- `Alternate and exception paths`: important variations, failures, rejections, exception handling, or recovery paths
+1. `Alternate Flows`: important variations, failures, rejections, exception handling, or recovery paths
 
-Each alternate or exception path should say:
+Each alternate flow should say:
 
 - which main-flow step it branches from
 - what condition causes the branch
@@ -180,50 +187,77 @@ This section is where most ambiguity is removed.
 Example values:
 
 ```text
-Alternate and exception paths:
+Alternate Flows:
 - 2a. Required information is missing. The system shows the missing fields and the use case stays with the staff member until the information is completed or the attempt is abandoned.
 - 5a. Routing fails. The system records the request, flags it for support follow-up, and ends the use case with manual routing required.
 ```
 
-### 6.5. Rules, controls, and special conditions
+### 6.5. Business Rules
 
 Must include where relevant:
 
-- `Business rules and validations`: the checks, rules, or conditions that affect correct behavior
-- `Access expectations`: who is allowed to perform the action and any important access limits
-- `Auditability requirements`: what must be traceable or recorded for control or review purposes
+1. `Business Rules and Validations`: the checks, rules, or conditions that affect correct behavior
+2. `Access Expectations`: who is allowed to perform the action and any access limits, treated as business rules for users
 
 May include where materially relevant:
 
-- `Special requirements`: security, privacy, timing, or other non-functional conditions that change how the use case is accepted
-- `Open issues`: unresolved items that affect review or later elaboration
+1. `Open Issues`: unresolved items that affect review or later elaboration
 
 Keep this section behavior-linked. Do not turn it into technical design.
 
 Example values:
 
 ```text
-Business rules and validations:
+Business Rules and Validations:
 - Request type must be selected.
 - Required fields must be completed.
 - Submission time must be recorded.
-Access expectations:
+Access Expectations:
 - Only authenticated staff members can submit a request.
 - Staff members can view only their own requests unless given a support role.
-Auditability requirements:
-- The system records who submitted the request and when.
-- The system records the assigned queue or the routing failure state.
-Special requirements:
-- Confirmation should be issued immediately after successful submission.
-Open issues:
+Open Issues:
 - Confirm whether routing fallback should create a support alert automatically.
 ```
 
-### 6.6. Acceptance and traceability
+### 6.6. Data Processing and Auditing
+
+Must include where relevant:
+
+1. `Data Processed`: the key data items created, read, updated, or used during the use case
+2. `Auditability Requirements`: what must be traceable or recorded for control or review purposes
+
+Keep this section behavior-linked. Do not describe internal data structures or storage schema.
+
+Example values:
+
+```text
+Data Processed: Request type, staff identifier, request timestamp, routing destination, submission status.
+Auditability Requirements:
+- The system records who submitted the request and when.
+- The system records the assigned queue or the routing failure state.
+```
+
+### 6.7. Non-Functional Requirements
+
+May include where materially relevant:
+
+1. `Non-Functional Requirements`: security, privacy, timing, availability, or other quality conditions that change how the use case is accepted
+
+State only the non-functional conditions that directly affect acceptance of this use case. Keep technical detail out.
+
+Example values:
+
+```text
+Non-Functional Requirements:
+- Confirmation must be issued immediately after successful submission.
+- The request form must be accessible to staff members with assistive technology.
+```
+
+### 6.8. Acceptance Criteria
 
 Must include:
 
-- `Acceptance criteria`: the observable results that show the use case is working correctly
+1. `Acceptance Criteria`: the observable results that show the use case is working correctly
 
 Should make clear:
 
@@ -234,7 +268,7 @@ Should make clear:
 Example values:
 
 ```text
-Acceptance criteria:
+Acceptance Criteria:
 - A valid request is saved with a unique identifier.
 - The staff member receives a confirmation.
 - The request is routed to the correct queue or flagged for follow-up when routing fails.
@@ -249,7 +283,7 @@ Each use case must:
 - reference approved capabilities only
 - describe one actor goal at a useful business level
 - stay at business-behavior level and treat the solution as a black box
-- distinguish trigger, preconditions, success outcome, and alternate paths clearly
+- distinguish trigger, preconditions, postconditions, success outcome, and alternate flows clearly
 - be complete enough that reviewers do not have to guess
 
 In a behavior-centered module model, use cases are the main content that gives the module its shape. They still must map back to approved capabilities.
@@ -289,13 +323,14 @@ Minimum ownership expectation:
 
 This artifact is ready when:
 
-- the actor, goal, trigger, and outcome are clear
+- the actor, goal, trigger, postconditions, and outcome are clear
 - preconditions are meaningful rather than filler
 - the main flow shows the normal path without unnecessary branching
-- important alternate paths and rules are visible
-- access and audit expectations match the agreed role model
+- important alternate flows, business rules, and data processing and auditing needs are visible
+- access expectations are stated as business rules and match the agreed role model
+- non-functional requirements that affect acceptance are captured
 - acceptance criteria are observable
-- the use case is traceable to one module and approved capabilities
+- the use case is traceable to one module and approved capabilities, with capability statements included
 
 ## 10. What Comes Next
 
@@ -313,8 +348,8 @@ Starter prompt:
 
 ```text
 Draft a Use Case Narrative for Stage 4.
-Use one defined module, approved FC IDs, and the required use case structure.
-State the actor goal, trigger, preconditions, success outcome, main flow, alternate paths, rules, access expectations, auditability needs, and observable acceptance criteria.
+Use one defined module, approved FC IDs paired with their capability statements, and the required use case structure.
+State the actor goal, trigger, preconditions, postconditions, success outcome, main flow, alternate flows, business rules, access expectations, data processing, auditability requirements, non-functional requirements, and observable acceptance criteria.
 Keep the writing at business-behavior level. Do not add UI design or unapproved scope.
 ```
 
@@ -325,5 +360,5 @@ Check whether this use case introduces behavior outside the approved Functional 
 ```
 
 ```text
-Check whether each alternate path states what triggers it, what happens next, and whether the use case returns to the main flow or ends.
+Check whether each alternate flow states what triggers it, what happens next, and whether the use case returns to the main flow or ends.
 ```
