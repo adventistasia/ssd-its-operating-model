@@ -69,12 +69,38 @@ If any of these are missing, treat the catalog as a working draft and label it a
 
 ## 6. Minimum Structure
 
-Use a table like this:
+You may use a table like this:
 
 | Rule ID | Rule statement | Rationale / Policy basis | Affected modules / use cases | Decision impact | Validation & evidence | Notes |
 | --- | --- | --- | --- | --- | --- | --- |
 | `BR-001` | Approver must be a manager in the requestor's department. | Company Policy XYZ | `SM-002`, `UC-008` | Requests from other departments require re-assignment to correct approver. | UAT; audit log | Exceptions only for emergency scenarios |
 | `BR-002` | Requests over $5,000 require finance approval. | Finance Policy 12-B | `SM-001`, `UC-003` | Adds finance approval step. | Functional test; evidence of approval captured | Threshold indexed annually |
+
+You may also opt to organize the catalog as numbered domains (top-level sections). Within each domain, list business rules as numbered entries keyed by their `BR-###` identifiers and rule titles.
+
+Each rule entry must include the following attributes in order:
+
+1. Rule statement
+2. Rationale / Policy basis
+3. Affected modules / use cases
+4. Decision impact
+5. Validation & evidence
+6. Notes
+
+**Required format.** Use this pattern for all entries:
+
+```markdown
+## 1. [Domain Name]
+
+### BR-001 — [Rule Title]
+
+- **Rule statement:** [Concise statement of the rule, including any conditions or thresholds.]
+- **Rationale / Policy basis:** [The policy, regulation, or business rationale that requires this rule.]
+- **Affected modules / use cases:** [SM-### and UC-### identifiers.]
+- **Decision impact:** [How the rule affects decisions, outcomes, or system behavior.]
+- **Validation & evidence:** [How the rule will be tested and what evidence will demonstrate compliance.]
+- **Notes:** [Any exceptions, open questions, or additional context.]
+```
 
 ## 7. Writing Rules
 
