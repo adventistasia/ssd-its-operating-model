@@ -60,8 +60,18 @@ Escalate to an Initiative Definition Document when the work becomes too broad, t
 | Follow the solution-design path                     | [Solution Design Process](work%20delivery/solution_design_process.md)                   |
 | Draft a small governed work record                  | [Work Brief Specification](work%20delivery/work_brief/work_brief_specification.md)      |
 | Use AI to draft controlled artifacts                | [AI-Assisted Authoring Standard](work%20delivery/ai_assisted_authoring_standard.md)     |
+| Review session digests (decisions and changes)      | [Session Digests](session_digests)                                                      |
 | Understand the control intent behind the repository | [ITS Operating Model](its_operating_model.md)                                           |
 
+
+
+
+## Session Digests
+
+Session digests capture decisions, created/changed artifacts, and next steps from drafting sessions so changes remain traceable without relying on chat history.
+
+- [20260410_work_delivery_framework_simplification_and_overlay.md](session_digests/20260410_work_delivery_framework_simplification_and_overlay.md)
+- [20260410_framework_readability_fatigue_and_plain_language_template.md](session_digests/20260410_framework_readability_fatigue_and_plain_language_template.md)
 
 ## Practical Rule
 
