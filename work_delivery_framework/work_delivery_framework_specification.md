@@ -26,6 +26,60 @@ The framework is optimized for software initiatives.
 3. Non-software initiatives that can use the framework with minimum changes
 
 Conditional use does not make this a general enterprise change framework by default. The default design target remains software project delivery.
+### 1.2 Framework form and publication model
+
+This framework is a full **operating model** for work definition and delivery readiness. It is not optional guidance.
+
+**Canonical deliverable**  
+The canonical source of truth is this document (`work_delivery_framework_specification.md`). Teams MUST treat it as the authoritative operating model definition.
+
+**Workflow and control model**  
+The framework MUST define:
+1. how a business request enters the system
+2. the sequence of stages a project moves through
+3. the outputs required at each stage
+4. what “good” and “complete” mean for each required output
+5. when work is blocked due to missing or unclear information
+
+**Machine-consumable structure (Markdown-first)**  
+This document MUST include machine-consumable definitions embedded as fenced YAML blocks with stable IDs so AI agents can extract and apply the framework consistently.
+
+At minimum, the machine-consumable model MUST represent:
+1. stages (with entry and exit criteria)
+2. artifacts (with required contents and completeness criteria)
+3. gates (with pass/fail criteria and stop/proceed rules)
+
+The YAML blocks MUST use stable identifiers (example shapes only):
+
+```yaml
+kind: stage
+id: STAGE-INTAKE
+name: Intake
+entry_criteria: []
+exit_criteria: []
+required_artifacts: []
+gate: GATE-INTAKE-EXIT
+```
+
+```yaml
+kind: artifact
+id: ARTIFACT-BUSINESS-REQUEST
+name: Business Request
+required_sections: []
+completeness_criteria: []
+```
+
+```yaml
+kind: gate
+id: GATE-INTAKE-EXIT
+name: Intake Exit Gate
+pass_criteria: []
+fail_conditions: []
+decision_rights: []
+```
+
+**Behavioral implication**  
+The framework MUST support human teams using AI agents as assistants while keeping the final outputs reviewable and enforceable by humans.
 
 ## 2. Behavioral Contract
 
@@ -234,17 +288,16 @@ These scenarios are intended for external evaluation of the framework’s outcom
 
 ## 6. Ambiguity Warnings
 
-### 6.1 Framework format is undefined
+### 6.1 Framework format is resolved
 
-**What is ambiguous**  
-It is not clear whether this framework is meant to be a written standard, a structured template library, a gated workflow, a decision tree, a knowledge base site, or some combination.
+**Resolved decision**  
+This framework is a full operating model for work definition and delivery readiness, expressed as a Markdown-first canonical specification with enforceable workflow stages, stage gates, and artifact definitions.
 
-**Likely agent assumption**  
-An agent would likely choose a convenient documentation format and structure on its own, which could produce the wrong kind of deliverable.
+**Publication model**  
+The canonical source of truth is this specification file. It MUST embed machine-consumable YAML blocks (with stable IDs) for stages, artifacts, and gates so AI agents can apply it consistently.
 
-**Question to resolve**  
-What concrete artifact are you asking to be created: a policy document, a playbook, a template set, a staged workflow, a knowledge base structure, or a full operating model?
-
+**Implication for implementation**  
+Subsequent framework refinements MUST extend the structured YAML model in this document rather than creating parallel “shadow” definitions elsewhere.
 ### 6.2 Required artifact set is unspecified
 
 **What is ambiguous**  
@@ -374,3 +427,4 @@ How should framework outputs be reviewed: peer review, PMO checkpoint, architect
 ## 8. Remaining Contradictions
 
 No direct contradictions were stated, but there is one tension that should be resolved explicitly: the framework must be rigorous enough for autonomous delivery while also avoiding bureaucracy. That tension is manageable, but only if you define how rigor scales by project type, risk, and complexity.
+
