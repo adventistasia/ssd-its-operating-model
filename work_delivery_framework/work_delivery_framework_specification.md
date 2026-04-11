@@ -4,7 +4,28 @@
 
 This framework defines how internal teams, the PMO, delivery managers, and internal engineers turn a new business request into delivery-ready project documentation. Its purpose is to produce complete, unambiguous, buildable, supportable specifications that are sufficient for internal human teams, external development teams, or AI agents to deliver work without redefining the problem during execution.
 
-The framework exists to make “good” and “complete” explicit. It is intended for complex enterprise work, including greenfield and brownfield software initiatives, while avoiding unnecessary process overhead for its own sake.
+The framework exists to make “good” and “complete” explicit while avoiding unnecessary process overhead for its own sake.
+
+### 1.1 Scope of applicability
+
+The framework is optimized for software initiatives.
+
+**In scope**
+1. Greenfield software projects
+2. Brownfield software projects
+
+**Out of scope**
+1. Minor low-risk changes
+2. Research spikes
+3. Support work
+4. Small internal process changes
+
+**Conditionally in scope**
+1. Complex operational changes affecting multiple organizations
+2. Complex internal process changes affecting the whole organization
+3. Non-software initiatives that can use the framework with minimum changes
+
+Conditional use does not make this a general enterprise change framework by default. The default design target remains software project delivery.
 
 ## 2. Behavioral Contract
 
@@ -246,16 +267,13 @@ An agent would likely invent stage gates such as intake, discovery, definition, 
 **Question to resolve**  
 What are the formal stages, and what evidence is required to move from one stage to the next?
 
-### 6.4 Scope differentiation by work type is unclear
+### 6.4 Scope differentiation by work type is resolved
 
-**What is ambiguous**  
-The framework is meant for projects including greenfield and brownfield software work, but it is unclear whether non-software work, operational changes, research spikes, or minor enhancements are included.
+**Resolved decision**  
+The framework is optimized for software initiatives. It is in scope for greenfield and brownfield software projects. It is out of scope for minor low-risk changes, research spikes, support work, and small internal process changes. It may be used conditionally for complex operational changes affecting multiple organizations, complex internal process changes affecting the whole organization, and non-software initiatives that can use the framework with minimum changes.
 
-**Likely agent assumption**  
-An agent would likely either overgeneralize the framework to all work or narrow it only to software delivery.
-
-**Question to resolve**  
-Exactly what categories of work are in scope and out of scope for this framework?
+**Implication for implementation**  
+The default framework shape should be designed for software project delivery first. Conditional reuse is allowed where the same control logic fits, but this decision does not broaden the framework into a universal model for all organizational work.
 
 ### 6.5 “Good” and “complete” are directionally defined but not operationalized
 

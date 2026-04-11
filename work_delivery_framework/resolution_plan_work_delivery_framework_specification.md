@@ -20,14 +20,15 @@ Recommended high-level order of resolution:
 
 ## 2. Ambiguity Register
 
-- [ ] **A01 — In-scope and out-of-scope work types are not fully defined**
+- [x] **A01 — In-scope and out-of-scope work types are not fully defined**
   - Relevant section(s): §1 System Overview; §5.1; §5.6; §6.4
-  - Description: The specification references greenfield and brownfield software initiatives, but it does not clearly define whether the framework also applies to operational changes, internal process changes, research spikes, support work, non-software initiatives, or minor enhancements. Possible interpretations range from software-only to a broader enterprise change framework.
+  - Description: The specification referenced greenfield and brownfield software initiatives, but did not clearly define whether the framework also applies to operational changes, internal process changes, research spikes, support work, non-software initiatives, or minor enhancements.
   - Why it matters: Scope determines who must use the framework, which paths need to exist, and which artifacts are required.
   - Dependencies: Blocks or materially affects A04, A05, A06, A09, A12.
   - Estimated complexity: Medium
   - Risk if unresolved: High
-  - Status: Unresolved
+  - Status: Resolved
+  - Resolution note: The framework is optimized for software initiatives. It is in scope for greenfield and brownfield software projects; out of scope for minor low-risk changes, research spikes, support work, and small internal process changes; and conditionally in scope for complex operational changes affecting multiple organizations, complex internal process changes affecting the whole organization, and non-software initiatives that can use the framework with minimum changes.
 
 - [ ] **A02 — Framework form and publication model are undefined**
   - Relevant section(s): §4.2; §6.1
@@ -205,7 +206,7 @@ These are not unimportant, but they are either conditional by delivery mode or e
 
 | Done | Priority order | Ambiguity ID and title | Why it is in this position | Expected outcome of resolving it | Recommended stakeholders or decision owners | Suggested method to resolve it | Status |
 |---|---:|---|---|---|---|---|---|
-| [ ] | 1 | **A01 — In-scope and out-of-scope work types** | Scope must be fixed before paths, artifacts, and controls can be defined. | A clear applicability statement and exclusions list. | Framework sponsor, PMO lead, delivery leadership | Scope decision with explicit inclusion/exclusion rules and examples. | Unresolved |
+| [x] | 1 | **A01 — In-scope and out-of-scope work types** | Scope must be fixed before paths, artifacts, and controls can be defined. | A clear applicability statement and exclusions list. | Framework sponsor, PMO lead, delivery leadership | Scope decision with explicit inclusion/exclusion rules and examples. | Resolved |
 | [ ] | 2 | **A02 — Framework form and publication model** | The team must know what it is actually building before detailing mechanics. | A defined framework packaging model, such as operating model plus templates and workflow. | Framework sponsor, knowledge owner, PMO | Decision on deliverable form, structure, and publishing approach. | Unresolved |
 | [ ] | 3 | **A03 — Governance, ownership, and decision rights** | Enforcement cannot work without named owners and escalation authority. | A RACI-like ownership model and formal stop/proceed authority. | PMO, delivery leadership, framework owner | Governance decision with named roles and approval rights. | Unresolved |
 | [ ] | 4 | **A04 — Minimum intake inputs and entry readiness** | Intake quality determines whether the process starts with enough signal. | A minimum required input set and intake gate definition. | Request owners, PMO, delivery managers | Clarification plus intake checklist and blocker rules. | Unresolved |
@@ -224,9 +225,10 @@ These are not unimportant, but they are either conditional by delivery mode or e
 
 ## 5. Progress Tracking Summary
 
-- [ ] **Total ambiguities identified:** 16
-- [ ] **Foundational items:** 9
-- [ ] **Dependent items:** 5
-- [ ] **Optional / lower-impact items:** 2
-- [ ] **Tracking note:** Each ambiguity ID is stable and reusable. Items can be checked off in the register and in the prioritized plan as they are resolved.
-
+- **Total ambiguities identified:** 16
+- **Resolved ambiguities:** 1
+- **Remaining unresolved ambiguities:** 15
+- **Foundational items:** 9
+- **Dependent items:** 5
+- **Optional / lower-impact items:** 2
+- **Tracking note:** A01 has been resolved and checked off in both the ambiguity register and the prioritized plan. The next active ambiguity is A02.
