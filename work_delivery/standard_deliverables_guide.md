@@ -42,6 +42,18 @@ Deliverables not needed for authorization may still be listed at summary level d
 For small governed work using a [Work Brief](work_brief/work_brief_specification.md), use this guide in the same way. Select only the deliverables the work actually needs, then make the owner, Acceptance Authority, and evidence basis visible in the Work Brief or linked supporting artifacts.
 
 ## 4. Operational Use Model
+The [Work Delivery Framework](work_delivery_framework.md) remains the authoritative seven-stage control model.
+
+For larger engineering initiatives, teams may also use the simpler four-phase operating view:
+
+- **Assess** = Stage 1
+- **Define and Authorize** = Stages 2-3
+- **Elaborate and Mobilize** = Stages 4-5
+- **Deliver, Accept and Close** = Stages 6-7
+
+Use the four-phase view to simplify navigation and reporting.
+
+Use the seven-stage view when selecting required artifacts, checking stage readiness, or confirming whether work is allowed to move forward.
 
 Use this reference differently at each stage:
 
@@ -58,6 +70,10 @@ For smaller initiatives, use the minimum viable deliverable depth. The framework
 The practical operating sequence is:
 
 `Assess the work -> define the approved scope -> select the needed deliverables -> authorize the work -> elaborate only what is needed -> deliver with evidence -> accept, hand over, and close`
+
+The same sequence can be read more simply for larger engineering initiatives as:
+
+`Assess -> Define and Authorize -> Elaborate and Mobilize -> Deliver, Accept and Close`
 
 ## 5. Minimum Viable Deliverable Depth
 
@@ -1117,3 +1133,6 @@ Deliverable domains mainly organize the deliverables view. The team should still
 - Record formal acceptance by the named Acceptance Authorities and formally close the initiative.
 
 Completion requires acceptance across all applicable deliverable domains.
+
+
+

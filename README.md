@@ -1,4 +1,4 @@
-# ITS Operating Model - Start Here
+﻿# ITS Operating Model - Start Here
 
 This repository is meant to read as one operating system for planned ITS work.
 
@@ -16,6 +16,14 @@ Use it to understand how work should move from intake to closure so that it is c
 For normal planned work, the path is:
 
 `Work Assessment -> Work Definition -> Work Authorization -> Work Definition Details -> Delivery Mobilization -> Work Delivery -> Acceptance, Transition & Closure`
+
+For larger engineering initiatives, this can also be read through a simpler four-phase operating view:
+
+`Assess -> Define and Authorize -> Elaborate and Mobilize -> Deliver, Accept and Close`
+
+Use the four-phase view for easier navigation, reporting, and day-to-day coordination.
+
+Use the seven-stage path as the authoritative governance model.
 
 Start here based on where the work is:
 
@@ -46,17 +54,31 @@ Escalate to an Initiative Definition Document when the work becomes too broad, t
 | If you want to...                                   | Start here                                                                              |
 | --------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | Understand the full planned-work lifecycle          | [Work Delivery Framework](work%20delivery/work_delivery_framework.md)                   |
+| Run day-to-day delivery control as a Delivery Owner | [Delivery Owner Runbook](work%20delivery/delivery_owner_runbook.md)                     |
 | Screen whether work should proceed at all           | [Work Assessment Process](work%20delivery/work_assessment/work_assessment_process.md)   |
 | Find the right deliverable specification            | [Deliverable Specifications Index](work%20delivery/deliverable_specifications_index.md) |
 | Choose which deliverables are needed                | [Standard Deliverables Guide](work%20delivery/standard_deliverables_guide.md)           |
 | Follow the solution-design path                     | [Solution Design Process](work%20delivery/solution_design_process.md)                   |
 | Draft a small governed work record                  | [Work Brief Specification](work%20delivery/work_brief/work_brief_specification.md)      |
 | Use AI to draft controlled artifacts                | [AI-Assisted Authoring Standard](work%20delivery/ai_assisted_authoring_standard.md)     |
+| Review session digests (decisions and changes)      | [Session Digests](session_digests)                                                      |
 | Understand the control intent behind the repository | [ITS Operating Model](its_operating_model.md)                                           |
 
+
+
+
+## Session Digests
+
+Session digests capture decisions, created/changed artifacts, and next steps from drafting sessions so changes remain traceable without relying on chat history.
+
+- [20260410_work_delivery_framework_simplification_and_overlay.md](session_digests/20260410_work_delivery_framework_simplification_and_overlay.md)
+- [20260410_framework_readability_fatigue_and_plain_language_template.md](session_digests/20260410_framework_readability_fatigue_and_plain_language_template.md)
 
 ## Practical Rule
 
 Planned ITS work should not move forward because people are busy, because effort has already started, or because the request feels urgent.
 
 It should move forward because the work has been assessed, defined, authorized, delivered with evidence, accepted explicitly, handed over where needed, and closed formally.
+
+
+

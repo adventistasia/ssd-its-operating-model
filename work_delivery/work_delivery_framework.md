@@ -1,12 +1,157 @@
-# Work Delivery Framework
+﻿# Work Delivery Framework
 
-## 1. Purpose
+Status: working draft
+
+## Purpose
 
 This framework is the main staged operating path for planned ITS work from intake to closure.
 
 It governs planned work delivery initiatives, including projects, significant enhancements, and smaller governed initiatives.
 
 It puts the Define-Decide-Deliver (DDD) Work Management Model into practice by defining the minimum decisions, documents, ownership, and controls needed to deliver work clearly, accountably, and sustainably.
+
+## Start Here
+
+Use this document for:
+
+- understanding how planned ITS work should move from intake to closure
+- navigating what must be produced, decided, and evidenced at each stage
+- orienting Delivery Owners on "what's required next" without having to re-read the full framework every time
+- directing repeat-use operational work to the [Delivery Owner Runbook](delivery_owner_runbook.md)
+
+Do not use this document for:
+
+- drafting a specific work record (use the relevant specification, then come back here to confirm stage controls)
+- skipping stage decision points or acceptance because work already started
+
+### Quick Navigation (Delivery Owners)
+
+| If you need to... | Start here |
+| --- | --- |
+| Screen whether work should proceed at all | [Stage 1 - Work Assessment](#9.%20Stage%201%20-%20Work%20Assessment) and the [Work Assessment Process](work_assessment/work_assessment_process.md) |
+| Create a decision-ready definition baseline | [Stage 2 - Work Definition](#10.%20Stage%202%20-%20Work%20Definition) |
+| Get a formal go / no-go decision | [Stage 3 - Work Authorization](#11.%20Stage%203%20-%20Work%20Authorization) |
+| Turn authorized intent into delivery-ready detail | [Stage 4 - Work Definition Details](#12.%20Stage%204%20-%20Work%20Definition%20Details) |
+| Set up the operating rhythm and trackers before execution | [Stage 5 - Delivery Mobilization](#13.%20Stage%205%20-%20Delivery%20Mobilization) |
+| Run execution and report progress by outputs and evidence | [Stage 6 - Work Delivery](#14.%20Stage%206%20-%20Work%20Delivery) |
+| Get explicit acceptance, transition ownership, and close | [Stage 7 - Acceptance, Transition & Closure](#15.%20Stage%207%20-%20Acceptance%2C%20Transition%20%26%20Closure) |
+
+### Jump To A Stage
+
+- [Stage 1 - Work Assessment](#9.%20Stage%201%20-%20Work%20Assessment)
+- [Stage 2 - Work Definition](#10.%20Stage%202%20-%20Work%20Definition)
+- [Stage 3 - Work Authorization](#11.%20Stage%203%20-%20Work%20Authorization)
+- [Stage 4 - Work Definition Details](#12.%20Stage%204%20-%20Work%20Definition%20Details)
+- [Stage 5 - Delivery Mobilization](#13.%20Stage%205%20-%20Delivery%20Mobilization)
+- [Stage 6 - Work Delivery](#14.%20Stage%206%20-%20Work%20Delivery)
+- [Stage 7 - Acceptance, Transition & Closure](#15.%20Stage%207%20-%20Acceptance%2C%20Transition%20%26%20Closure)
+
+## Use This When
+
+- the work is planned ITS work that needs visible scope, ownership, decision rights, and formal acceptance
+- the work is large (project / significant enhancement) or small but still governance-relevant
+- you need a single "navigation spine" that stays stable from intake through closure
+
+## What You Need First
+
+Before using this framework to drive work forward, confirm:
+
+- the current stage (if unclear, start at Stage 1)
+- a named Delivery Owner
+- the Decision Authority and whether decision authority is delegated (see [Delegated Decision Authority](#5.1.%20Delegated%20Decision%20Authority))
+- the current scope boundary (approved or working, but explicit)
+- the acceptance basis (Acceptance Authorities and what "acceptance" means for the deliverables in scope)
+
+## What To Do
+
+1. Identify the current stage and its exit criteria.
+2. Produce the minimum outputs for that stage.
+3. Record decisions and changes so they are attributable and reviewable.
+4. Keep evidence linked as you deliver (do not reconstruct evidence at the end).
+5. Obtain explicit acceptance and close with a recorded closure basis.
+
+## Minimum Required Content
+
+Keep these controls visible (even when artifacts are concise):
+
+- scope boundary and intended outcome (Stages 2-3)
+- named owners and decision rights (see [Core Roles](#5.%20Core%20Roles))
+- decision record minimum for stage decisions (see [Decision Record Minimum](#6.%20Decision%20Record%20Minimum))
+- deliverables and Acceptance Authority mapping (Stages 2 and 5)
+- evidence linked to deliverables (Stage 6)
+- explicit acceptance and closure record (Stage 7)
+
+## Who Is Involved
+
+These roles apply to each planned work item governed by this framework.
+
+| Role | What they do |
+| ---- | ------------ |
+| Delivery Owner | Owns stage discipline, coordination, delivery control, and evidence readiness |
+| Sponsor | Confirms why the work matters and keeps it supported |
+| Decision Authority | Makes the formal go / no-go decision and major governance decisions |
+| Outcome Owner | Owns the intended outcome and success measures |
+| Acceptance Authority | Provides explicit sign-off for a deliverable domain or deliverable |
+| Support / Operational Owner | Confirms readiness to run and support the solution where applicable |
+| Subject Matter Leads | Provide specialist inputs and reviews as needed |
+
+For fuller role definitions and delegated authority rules, see [Core Roles](#5.%20Core%20Roles).
+
+## Required Checks
+
+Confirm:
+
+- the work does not proceed without a Stage 3 authorization decision record
+- acceptance is defined early enough that teams are not surprised at Stage 7
+- progress is reported by deliverables and evidence, not activity alone
+- "done" means explicit acceptance, not delivery completion
+
+## Required Approvals
+
+- Stage 3 requires an explicit work authorization decision by the Decision Authority (see [Stage 3 - Work Authorization](#11.%20Stage%203%20-%20Work%20Authorization)).
+- Stage 7 requires explicit acceptance by Acceptance Authorities (see [Stage 7 - Acceptance, Transition & Closure](#15.%20Stage%207%20-%20Acceptance%2C%20Transition%20%26%20Closure)).
+
+## Evidence To Keep
+
+Retain:
+
+- assessment outputs and Stage 1 decision record
+- the approved baseline record (Work Brief or Initiative Definition Document)
+- authorization decision record and any conditions (Stage 3)
+- change records when scope / timing / cost / risk changes
+- acceptance evidence links and acceptance records (Stages 6-7)
+- closure record and handover confirmation where applicable (Stage 7)
+
+## What This Produces
+
+This framework should leave a Delivery Owner with:
+
+- a clear stage-by-stage path with minimum outputs and exit criteria
+- traceability from assessment to authorization, delivery evidence, acceptance, and closure
+- a stable navigation spine for day-to-day governance and delivery control
+
+## What To Read Next
+
+- To choose which deliverables are needed: [Standard Deliverables Guide](standard_deliverables_guide.md)
+- To draft a small governed work record: [Work Brief Specification](work_brief/work_brief_specification.md)
+- To draft the formal baseline for an initiative: [Initiative Definition Document Specification](governance_and_control_deliverables/initiative_definition_document_specification.md)
+- To find the correct drafting guide for a deliverable: [Deliverable Specifications Index](deliverable_specifications_index.md)
+- To follow the solution scope / behavior path: [Solution Design Process](solution_design_process.md)
+- To use AI for governed drafting safely: [AI-Assisted Authoring Standard](ai_assisted_authoring_standard.md)
+
+## Common Mistakes
+
+- starting delivery work before Stage 3 authorization
+- treating Stage 5 mobilization (operating rhythm, trackers, acceptance readiness) as optional
+- losing traceability between approved scope and what gets built
+- reporting progress by activity instead of deliverable status and evidence status
+- delivering without explicit acceptance and then calling the work "complete"
+
+## If This Is Not Straightforward
+
+- If the work is broad, risky, cross-team, security-sensitive, data-sensitive, or operationally significant, scale up the artifact set using the [Standard Deliverables Guide](standard_deliverables_guide.md) and the [Deliverable Specifications Index](deliverable_specifications_index.md).
+- If the current stage is unclear, stop and start at Stage 1 rather than guessing.
+- If decision authority is unclear, treat it as not delegated until delegation is explicit and recorded (see [Delegated Decision Authority](#5.1.%20Delegated%20Decision%20Authority)).
 
 ## Related Documents
 
@@ -18,8 +163,11 @@ It puts the Define-Decide-Deliver (DDD) Work Management Model into practice by d
 - [Standard Deliverables Guide](standard_deliverables_guide.md)
 - [Deliverable Specifications Index](deliverable_specifications_index.md)
 - [Solution Design Process](solution_design_process.md)
+- [AI-Assisted Authoring Standard](ai_assisted_authoring_standard.md)
 
-### 1.1. How This Framework Fits with the Other Core Documents
+## More Detail
+
+### How This Framework Fits with the Other Core Documents
 
 Use the core repository documents in this order:
 
@@ -30,7 +178,6 @@ Use the core repository documents in this order:
 - The [Deliverable Specifications Index](deliverable_specifications_index.md) points to the detailed drafting specifications for those deliverables.
 
 If a reader only needs one document to understand how planned ITS work should move from intake to closure in practice, this is the anchor document.
-
 ## 2. Intended Outcome
 
 When applied consistently:
@@ -42,6 +189,27 @@ When applied consistently:
 - changes are traceable and controlled
 - operational support is prepared before handover
 - acceptance and closure are formal, attributable, and evidence-based
+
+
+### 2.1. Seven Stages with a Simpler Four-Phase Operating View
+
+The **seven-stage model** remains the authoritative governance spine for planned work.
+
+For larger engineering initiatives, teams may also use a simpler **four-phase operating view** for navigation, reporting, and day-to-day coordination.
+
+The four-phase view does not replace the seven stages. It groups them into a simpler operating picture while preserving the stage-level control points.
+
+| Four-phase operating view | Governing stages included | Practical use |
+| --- | --- | --- |
+| **Assess** | Stage 1 - Work Assessment | Screen the work before definition effort grows |
+| **Define and Authorize** | Stage 2 - Work Definition; Stage 3 - Work Authorization | Define what is being proposed, then make the formal go / no-go decision |
+| **Elaborate and Mobilize** | Stage 4 - Work Definition Details; Stage 5 - Delivery Mobilization | Turn approved intent into delivery-ready detail, then activate execution controls |
+| **Deliver, Accept and Close** | Stage 6 - Work Delivery; Stage 7 - Acceptance, Transition & Closure | Deliver the approved outputs, gather evidence, accept formally, hand over, and close |
+
+Use this rule when both views appear in repository documents:
+
+- the **seven-stage view** is the formal control model
+- the **four-phase view** is the simplified operating view
 
 ## 3. Applicability and Scaling
 
@@ -56,7 +224,7 @@ To keep the framework practical:
 - use the minimum viable level of detail needed for the work's size, risk, and impact
 - one document may satisfy multiple outputs if the required information is explicit and traceable
 - smaller initiatives may use concise versions of artifacts, but they must not skip decision points, ownership, or acceptance controls
-- use a Work Brief as the lighter alternative to an Initiative Definition Document — it carries the same essential controls without the full initiative structure
+- use a Work Brief as the lighter alternative to an Initiative Definition Document - it carries the same essential controls without the full initiative structure
 - for standalone planned work, use a Work Brief instead of a simple task description when the work still needs clear purpose, scope, ownership, delivery basis, traceability, and closure
 - use a Work Brief to support physical Kanban boards by acting as the corresponding digital record where the detail, owners, decisions, and acceptance basis are stored
 
@@ -66,7 +234,7 @@ The framework is intentionally control-light for low-complexity work and should 
 
 A Work Brief is the standard tool for defining any planned work so that the work is understood before it is executed and delivered. It gives the work a clear purpose, scope, ownership, delivery basis, and acceptance criteria, whatever the size or complexity of the work.
 
-The Work Brief can be used to partially implement this framework — concentrating on the definition, decision, delivery, and closure elements without requiring the full staged structure a larger initiative would need.
+The Work Brief can be used to partially implement this framework - concentrating on the definition, decision, delivery, and closure elements without requiring the full staged structure a larger initiative would need.
 
 For larger planned work, multiple Work Briefs may be used to define the individual deliverables or discrete work items that together make up the whole. Each brief carries its own definition, ownership, and acceptance controls, while staying traceable to the broader purpose of the work.
 
@@ -88,6 +256,15 @@ The Define-Decide-Deliver model is the control logic underneath this framework.
 - **Deliver** happens across Stage 5 Delivery Mobilization, Stage 6 Work Delivery, and Stage 7 Acceptance, Transition & Closure.
 
 This means the repository is not describing two competing models. The DDD model is the simple control rule. The Work Delivery Framework is the practical staged operating path that puts that rule into day-to-day use.
+
+
+### 4.2. Boundary Rules for the Four-Phase View
+
+The four-phase view only works if these boundaries remain explicit:
+
+- **Define and Authorize** must stay decision-ready. It defines what is being approved and records the approval decision. It does not become detailed design or execution planning.
+- **Elaborate and Mobilize** starts only after authorization. Stage 4 produces delivery-ready detail. Stage 5 activates cadence, controls, trackers, and the initial execution plan. Stage 5 is a readiness checkpoint, not a second design stage.
+- **Deliver, Accept and Close** must keep execution, evidence, operational handover, and formal closure visible as separate control outcomes even when they are reported together.
 
 ## 5. Core Roles
 
@@ -195,7 +372,28 @@ In practice, the framework works like this:
 - Stage 6 Work Delivery - delivers the approved outputs and gathers evidence as the work progresses
 - Stage 7 Acceptance, Transition & Closure - formally accepts the result, transfers operational responsibility, and closes the work
 
-A Work Brief is the ITS standard tool for defining work. It makes every piece of work clear to all stakeholders — why it is needed, what must be delivered, what the delivery basis is, and what evidence confirms the work is done.
+
+For larger engineering initiatives, the same path can be read more simply like this:
+
+- **Assess** = Stage 1
+- **Define and Authorize** = Stages 2-3
+- **Elaborate and Mobilize** = Stages 4-5
+- **Deliver, Accept and Close** = Stages 6-7
+
+Use the four-phase view when:
+
+- reporting progress to leadership
+- orienting a new delivery team
+- explaining where the work is in practical terms
+- simplifying repository navigation
+
+Use the seven-stage view when:
+
+- making or checking governance decisions
+- confirming whether the right artifacts exist
+- deciding whether work is allowed to move forward
+- checking acceptance, handover, and closure discipline
+A Work Brief is the ITS standard tool for defining work. It makes every piece of work clear to all stakeholders - why it is needed, what must be delivered, what the delivery basis is, and what evidence confirms the work is done.
 
 A Work Brief can be used to partially implement this framework, applying the definition, decision, delivery, and closure elements as a focused operating path without requiring the full staged structure a larger initiative would need.
 
@@ -510,6 +708,15 @@ AI must not:
 - no material scope expansion has been introduced
 - the work is ready for Delivery Mobilization
 
+
+### 12.5. Boundary Rule with Stage 5
+
+Stage 4 and Stage 5 sit in the same simplified operating phase, but they must not be treated as the same control point.
+
+- Stage 4 produces delivery-ready content.
+- Stage 5 confirms the team, cadence, trackers, escalation path, and initial execution plan are ready.
+- Stage 5 must not become a second design stage or a hidden scope-expansion stage.
+
 ## 13. Stage 5 - Delivery Mobilization
 
 **Purpose:** Prepare the team and governance rhythm to execute in a controlled, visible, and sustainable way.
@@ -519,6 +726,8 @@ AI must not:
 **Primary Owner:** Delivery Owner.
 
 ### 13.1. Minimum Outputs
+
+Stage 5 is the readiness checkpoint between delivery-ready design and controlled execution.
 
 - Delivery Charter
 - Delivery Roadmap confirmed with the delivery team
@@ -676,3 +885,8 @@ AI must not:
 ### 15.5. Hard Rule
 
 Delivered without acceptance is not complete.
+
+
+
+
+

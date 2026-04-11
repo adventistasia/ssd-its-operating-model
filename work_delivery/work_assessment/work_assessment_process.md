@@ -1,4 +1,111 @@
-# Work Assessment Process
+﻿# Work Assessment Process
+
+Status: working draft
+
+## Purpose
+
+This document is the practical operating guide for Stage 1 - Work Assessment.
+
+It helps teams screen requests early, deepen scrutiny only where justified, and pass forward only work that is worth defining.
+
+## Start Here
+
+Use this document for:
+
+- deciding whether a request should enter Work Definition at all
+- running Stage 1 in a consistent, traceable way
+- producing an assessment handoff that definition can reuse (instead of rediscovering context)
+- routing ongoing delivery control to the [Delivery Owner Runbook](../delivery_owner_runbook.md) once work moves beyond assessment
+
+Do not use this document for:
+
+- authorizing delivery (authorization happens in Stage 3)
+- detailed requirements, solution design, or implementation planning
+
+### Quick Navigation
+
+| If you need to... | Start here |
+| --- | --- |
+| Run the fast initial screen | [Quick Start](#Quick%20Start) then [Initial Review Specification](initial_review_specification.md) |
+| Decide whether deeper validation is justified | [Validation Assessment Specification](validation_assessment_specification.md) |
+| Capture current-state evidence only when needed | [Current State Analysis Report Specification](current_state_analysis_report_specification.md) and/or [Business Process Stage Analysis Specification](business_process_stage_analysis_specification.md) |
+| Produce the formal Stage 1 output and recommendation | [Work Assessment Report Specification](work_assessment_report_specification.md) |
+
+## Use This When
+
+- the work has not yet been screened and you need a Stage 1 decision
+- sponsorship, impact, risk, or timing is unclear and needs validation before definition effort grows
+- you want a reusable assessment base that makes Stage 2 faster and more accurate
+
+## What You Need First
+
+Before starting Work Assessment, confirm:
+
+- who is requesting the work and who represents the outcome / business need
+- who will own delivery if the work proceeds (named Delivery Owner, even if provisional)
+- what minimum decision is needed at the end of Stage 1 (continue / defer / reject)
+- what evidence would change the recommendation
+
+## What To Do
+
+1. Complete Initial Review as a quick ITS-side screen.
+2. If needed, capture Challenges and Needs to sharpen the problem basis.
+3. Complete Validation Assessment with the right stakeholders.
+4. Use focused analysis artifacts only when they materially strengthen the recommendation.
+5. Produce the Work Assessment Report with a clear recommendation and decision basis.
+
+## Minimum Required Content
+
+Include at least:
+
+- request context and problem / opportunity statement
+- high-level scope hypothesis (what is in / out, even if early)
+- known constraints, risks, and dependencies
+- recommended next step (continue / defer / reject) and why
+- any conditions required if the work proceeds
+
+## Who Is Involved
+
+| Role | What they do |
+| ---- | ------------ |
+| Assessment lead | Runs Stage 1 activities and assembles the recommendation pack |
+| Requester / business SME | Provides problem context, current-state reality, and outcome intent |
+| Delivery Owner (provisional) | Ensures the work is assessable and that the handoff will be usable for definition |
+| Sponsor / Decision Authority (as applicable) | Receives the recommendation and makes the Stage 1 decision |
+
+## Evidence To Keep
+
+Retain:
+
+- completed forms and drafts used in assessment
+- key current-state evidence (only what is needed)
+- the final Work Assessment Report and its referenced sources
+
+## What This Produces
+
+- a clear Stage 1 recommendation with decision basis
+- a reusable assessment base for Stage 2 definition
+
+## What To Read Next
+
+- If the decision is to proceed with definition: [Work Delivery Framework - Stage 2](../work_delivery_framework.md#10.%20Stage%202%20-%20Work%20Definition)
+- For small governed work: [Work Brief Specification](../work_brief/work_brief_specification.md)
+- For fuller initiatives: [Initiative Definition Document Specification](../governance_and_control_deliverables/initiative_definition_document_specification.md)
+
+## Common Mistakes
+
+- turning assessment into definition by producing detailed design too early
+- collecting lots of evidence without a clear decision question
+- proceeding to definition without a clear Stage 1 recommendation and handoff
+
+## Related Documents
+
+- [Work Delivery Framework](../work_delivery_framework.md)
+- [Standard Deliverables Guide](../standard_deliverables_guide.md)
+- [Deliverable Specifications Index](../deliverable_specifications_index.md)
+- [AI-Assisted Authoring Standard](../ai_assisted_authoring_standard.md)
+
+## More Detail
 
 ## Related Documents
 
@@ -378,3 +485,5 @@ Warning signs:
 - kill risks are visible but ignored
 - definition is forced to rediscover basic problem, stakeholder, and risk context
 - "proceed" is treated as approval to deliver
+
+
