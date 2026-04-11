@@ -118,6 +118,281 @@ The framework MUST support human teams using AI agents as assistants while keepi
 6. When a project cannot be described with testable acceptance patterns or equivalent observable outcome definitions, the system must treat that as an unresolved gap.
 7. When a project would require undocumented assumptions to proceed, the system must stop progression until those assumptions are replaced with explicit decisions or documented open issues.
 
+### 2.4 Lifecycle stages, progression gates, and exit criteria (resolved)
+
+The framework lifecycle is defined as a sequence of formal stages with explicit progression gates. A project MAY be blocked at any gate if the required evidence is missing or ambiguity remains unresolved.
+
+**Important boundary note**  
+Stages and gates define the control model. The exact required artifact taxonomy is resolved separately (see Ambiguity A06). Until A06 is resolved, stage definitions may list `required_artifacts: []` in YAML and rely on entry/exit criteria instead of naming specific artifacts.
+
+**Stages (in order)**
+1. Intake
+2. Assessment / Qualification
+3. Discovery / Initiative Definition
+4. Authorization (conditional)
+5. Solution Definition
+6. Planning / Project Team Mobilization / MVP Plan
+7. Delivery / Execution
+8. Handoff / Transition
+9. Closure
+
+**Gates (in order)**
+1. Qualified Request
+2. Initiative Defined (for Authorization decision)
+3. Authorized (conditional)
+4. Specification Complete
+5. MVP Identified (MVP scope + MVP success/acceptance criteria approved)
+6. All Deliverables Accepted (Acceptance Owner accepts delivered solution against specified acceptance criteria)
+7. Transition Complete (supported operating state accepted)
+8. Closure Complete
+
+**Stage → gate mapping**
+1. Intake has no progression gate; it establishes initial ownership and opens the record.
+2. Assessment / Qualification ends at Gate 1 (Qualified Request).
+3. Discovery / Initiative Definition ends at Gate 2 (Initiative Defined).
+4. Authorization (conditional) ends at Gate 3 (Authorized).
+   - If Authorization is not required, the project transitions from Discovery directly to Solution Definition after Gate 2.
+   - Authorization applicability thresholds are defined elsewhere (see Ambiguity A09); until then, Authorization is explicitly conditional and must be declared as “Required” or “Not Required” by the Gate Decision Owner at Gate 2.
+5. Solution Definition ends at Gate 4 (Specification Complete).
+6. Planning / Mobilization / MVP Plan ends at Gate 5 (MVP Identified).
+7. Delivery / Execution ends at Gate 6 (All Deliverables Accepted).
+8. Handoff / Transition ends at Gate 7 (Transition Complete).
+9. Closure ends at Gate 8 (Closure Complete).
+
+**Minimum evidence categories by gate (high-level)**
+1. Gate 1 (Qualified Request): in-scope determination; threshold determination (if applicable); accountable Delivery Owner assigned; initial stakeholder list; known unknowns captured.
+2. Gate 2 (Initiative Defined): bounded scope; desired outcomes and success measures; major constraints and dependencies; initial solution direction; estimated effort/shape at an appropriate level; decision on whether Authorization is required.
+3. Gate 3 (Authorized): explicit business authorization to invest resources; budget/resource commitment (as applicable); funding/priority decision recorded; Gate Decision Owner named.
+4. Gate 4 (Specification Complete): solution definition is complete enough for downstream planning and task breakdown without inventing business requirements; acceptance criteria are defined; critical risks/unknowns are either resolved or explicitly managed as open issues.
+5. Gate 5 (MVP Identified): MVP scope is defined; MVP success measures and MVP acceptance criteria are explicit and approved; delivery approach is feasible with the current team and constraints.
+6. Gate 6 (All Deliverables Accepted): delivered solution is accepted by the named Acceptance Owner against the specified acceptance criteria; any deviations are explicitly approved and recorded.
+7. Gate 7 (Transition Complete): operating ownership is established; support model is ready; transition activities are complete; the solution is in a supported operating state.
+8. Gate 8 (Closure Complete): closure requirements are satisfied (final acceptance evidence present, transition complete, decision log updated, outcomes recorded, and closure rationale documented).
+
+**Machine-consumable lifecycle model (YAML)**
+
+```yaml
+kind: stage
+id: STAGE-INTAKE
+name: Intake
+entry_criteria: []
+exit_criteria:
+  - Initial request captured
+  - Provisional triage ownership assigned
+required_artifacts: []
+gate: null
+```
+
+```yaml
+kind: stage
+id: STAGE-ASSESSMENT
+name: Assessment / Qualification
+entry_criteria:
+  - Intake completed
+exit_criteria:
+  - Request qualified as in-scope (or rejected as out-of-scope)
+required_artifacts: []
+gate: GATE-QUALIFIED-REQUEST
+```
+
+```yaml
+kind: stage
+id: STAGE-DISCOVERY
+name: Discovery / Initiative Definition
+entry_criteria:
+  - Gate 1 passed
+exit_criteria:
+  - Initiative definition is sufficient to decide authorization requirement
+required_artifacts: []
+gate: GATE-INITIATIVE-DEFINED
+```
+
+```yaml
+kind: stage
+id: STAGE-AUTHORIZATION
+name: Authorization
+conditional: true
+entry_criteria:
+  - Authorization is required (declared at Gate 2)
+exit_criteria:
+  - Authorization decision recorded
+required_artifacts: []
+gate: GATE-AUTHORIZED
+```
+
+```yaml
+kind: stage
+id: STAGE-SOLUTION-DEFINITION
+name: Solution Definition
+entry_criteria:
+  - Gate 2 passed
+exit_criteria:
+  - Solution definition is complete enough for planning and task breakdown
+required_artifacts: []
+gate: GATE-SPECIFICATION-COMPLETE
+```
+
+```yaml
+kind: stage
+id: STAGE-PLANNING
+name: Planning / Project Team Mobilization / MVP Plan
+entry_criteria:
+  - Gate 4 passed
+exit_criteria:
+  - MVP scope and MVP acceptance criteria approved
+required_artifacts: []
+gate: GATE-MVP-IDENTIFIED
+```
+
+```yaml
+kind: stage
+id: STAGE-DELIVERY
+name: Delivery / Execution
+entry_criteria:
+  - Gate 5 passed
+exit_criteria:
+  - Delivered solution accepted against acceptance criteria
+required_artifacts: []
+gate: GATE-DELIVERABLES-ACCEPTED
+```
+
+```yaml
+kind: stage
+id: STAGE-TRANSITION
+name: Handoff / Transition
+entry_criteria:
+  - Gate 6 passed
+exit_criteria:
+  - Supported operating state accepted
+required_artifacts: []
+gate: GATE-TRANSITION-COMPLETE
+```
+
+```yaml
+kind: stage
+id: STAGE-CLOSURE
+name: Closure
+entry_criteria:
+  - Gate 7 passed
+exit_criteria:
+  - Closure requirements satisfied and recorded
+required_artifacts: []
+gate: GATE-CLOSURE-COMPLETE
+```
+
+```yaml
+kind: gate
+id: GATE-QUALIFIED-REQUEST
+name: Qualified Request
+pass_criteria:
+  - Request is in scope for the framework
+  - Gate Decision Owner is named
+fail_conditions:
+  - Request is out of scope
+  - Scope cannot be determined due to missing inputs
+default_decision_owner_role: Delivery Owner
+requires_named_decision_owner: true
+decision_rights: []
+```
+
+```yaml
+kind: gate
+id: GATE-INITIATIVE-DEFINED
+name: Initiative Defined (for Authorization decision)
+pass_criteria:
+  - Scope is bounded
+  - Outcomes and success measures are defined at an appropriate level
+  - Authorization requirement is declared (Required or Not Required)
+fail_conditions:
+  - Critical ambiguity remains unresolved
+  - Authorization requirement cannot be decided due to missing information
+default_decision_owner_role: Delivery Owner
+requires_named_decision_owner: true
+decision_rights: []
+```
+
+```yaml
+kind: gate
+id: GATE-AUTHORIZED
+name: Authorized
+conditional: true
+pass_criteria:
+  - Business authorization to invest resources is explicit and recorded
+fail_conditions:
+  - Authorization is required but not granted
+default_decision_owner_role: Business / Product Owner (Budget Owner)
+requires_named_decision_owner: true
+decision_rights: []
+```
+
+```yaml
+kind: gate
+id: GATE-SPECIFICATION-COMPLETE
+name: Specification Complete
+pass_criteria:
+  - Solution definition is sufficient for planning and task breakdown
+  - Acceptance criteria are defined
+fail_conditions:
+  - Downstream delivery would require inventing business requirements
+default_decision_owner_role: Delivery Owner
+requires_named_decision_owner: true
+decision_rights: []
+```
+
+```yaml
+kind: gate
+id: GATE-MVP-IDENTIFIED
+name: MVP Identified
+pass_criteria:
+  - MVP scope is defined
+  - MVP success measures are explicit
+  - MVP acceptance criteria are explicit and approved
+fail_conditions:
+  - MVP is undefined or acceptance expectations are ambiguous
+default_decision_owner_role: Delivery Owner
+requires_named_decision_owner: true
+decision_rights: []
+```
+
+```yaml
+kind: gate
+id: GATE-DELIVERABLES-ACCEPTED
+name: All Deliverables Accepted
+pass_criteria:
+  - Delivered solution is accepted by the Acceptance Owner against the specified acceptance criteria
+fail_conditions:
+  - Acceptance criteria are not met and no explicit deviation approval exists
+default_decision_owner_role: Acceptance Owner (Business / Product Owner)
+requires_named_decision_owner: true
+decision_rights: []
+```
+
+```yaml
+kind: gate
+id: GATE-TRANSITION-COMPLETE
+name: Transition Complete
+pass_criteria:
+  - Support model and operating ownership are accepted
+fail_conditions:
+  - The solution cannot be supported as delivered
+default_decision_owner_role: Operations / Support Owner
+requires_named_decision_owner: true
+decision_rights: []
+```
+
+```yaml
+kind: gate
+id: GATE-CLOSURE-COMPLETE
+name: Closure Complete
+pass_criteria:
+  - Closure requirements are satisfied and recorded
+fail_conditions:
+  - Closure evidence is incomplete
+default_decision_owner_role: PMO / ITS Director
+requires_named_decision_owner: true
+decision_rights: []
+```
+
 ## 3. Explicit Non-Behaviors
 
 1. The system must not add bureaucracy for its own sake because extra process that does not improve delivery quality weakens adoption and slows execution.
@@ -380,12 +655,15 @@ Should the framework have lightweight, standard, and complex paths, and if so, w
 5. If there is substantive disagreement at a gate, the Gate Decision Owner MUST identify an alternative path forward (scope, sequencing, approach, or risk treatment) and record a plan of action forward in the project Decision Log.
 
 **Default Gate Decision Owner roles (unless explicitly overridden by name in the Initiative Definition / Project Brief)**  
-1. Intake / ready to start definition: Delivery Owner
-2. Definition complete / ready for solution design: Delivery Owner
-3. Solution definition complete / ready for delivery planning: Delivery Owner
-4. Delivery plan complete / ready to execute: Delivery Owner
-5. Operational readiness / ready to go live and support: Operations / Support Owner
-6. External handoff readiness (if an external team will build): Delivery Owner
+1. Qualified Request: Delivery Owner
+2. Initiative Defined (for Authorization decision): Delivery Owner
+3. Authorized (when Authorization is required): Business / Product Owner (Budget Owner)
+4. Specification Complete: Delivery Owner
+5. MVP Identified: Delivery Owner
+6. All Deliverables Accepted: Acceptance Owner (Business / Product Owner)
+7. Transition Complete: Operations / Support Owner
+8. Closure Complete: PMO / ITS Director
+9. External handoff readiness (if an external team will build): Delivery Owner
 
 **Consent model (for being named as Gate Decision Owner)**  
 Consent is implied when there is no objection upon acceptance of the document where the person is listed. It is expected that the named Gate Decision Owner will be informed of their responsibilities.
@@ -459,4 +737,3 @@ How should framework outputs be reviewed: peer review, PMO checkpoint, architect
 ## 8. Remaining Contradictions
 
 No direct contradictions were stated, but there is one tension that should be resolved explicitly: the framework must be rigorous enough for autonomous delivery while also avoiding bureaucracy. That tension is manageable, but only if you define how rigor scales by project type, risk, and complexity.
-
