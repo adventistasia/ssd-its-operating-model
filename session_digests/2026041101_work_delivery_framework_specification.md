@@ -1,6 +1,6 @@
 ---
 lorespec: "0.1"
-id: "work-delivery-framework-specification"
+id: "2026041101"
 date: "2026-04-11"
 source: "chatgpt"
 topic: "Specification drafting and knowledge extraction for an internal work delivery framework that defines delivery-ready project documentation."
@@ -93,11 +93,6 @@ Answer the open questions about artifact sets, gates, scaling, governance, and a
 ### N2 — Determine delivery form
 Decide whether the framework will be published as a policy document, playbook, template library, or other format.
 
-## REFERENCE
-
-### R1 — LoreSpec scribe guide
-The scribe format used here follows the LoreSpec guide at `scribe.md`, which describes how to structure knowledge objects, classification, and connections.
-
 ## Connections
 
 - The specification (A1) is based on decisions D1–D5 and supports insights I1 and I2.
@@ -107,5 +102,3 @@ The scribe format used here follows the LoreSpec guide at `scribe.md`, which des
 ## Trail Updates
 
 - **work-delivery-framework**: This trail records the creation of the work delivery framework specification and the unresolved design questions.
-- **specification-quality**: Updated to include lessons on defining behavioural contracts rather than templates and measuring completeness by executability.
-- **ai-ready-documentation**: Updated to emphasise the need for precision to avoid AI hallucinations and misinterpretations.
