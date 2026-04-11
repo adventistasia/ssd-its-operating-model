@@ -4,4 +4,4 @@ New Work Delivery Framework (in progress) is located in `work_delivery_framework
 
 ## Session Digests
 
-Past conversations, decisions, context in LoreSpec format may be found in `session_digests`. These are created using `extract-a-lore-md` skill. When creating a LORE or session digest, see if it can be linked to an existing session digest but only if no explicit trail is provided.
+`session_digests/` contains past conversations, decisions, context, and issues in LoreSpec format, generated via the `extract-a-lore-md` skill. When creating a LORE or session digest, link it to an existing session digest when appropriate, but only if no explicit trail is provided.
