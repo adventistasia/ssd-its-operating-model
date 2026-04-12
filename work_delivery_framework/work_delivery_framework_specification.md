@@ -453,6 +453,7 @@ Both names MUST exist:
 **Always required**
 1. Initiative Definition / Project Brief (large-work mode) **OR** Work Brief (small-work mode) — required by **Gate 2**
 2. Decision Log — must exist for every initiative and must exist no later than **Gate 2**
+3. Open Items Register — must exist for every initiative and must exist no later than **Gate 2**
 
 **Conditional artifacts (trigger → artifact(s) → required-by gate)**
 1. External vendor involved → Delivery Charter → **Gate 4** (or **Gate 3** when early delivery-team commitment is required)
@@ -462,9 +463,6 @@ Both names MUST exist:
 5. Security/compliance impact → Access Model + Security/Privacy Risk Impact Assessment → **Gate 4**
 6. New integration / API change → API/Contract Specification → **Gate 4**
 7. Customer-facing change → User Adoption Plan → start between **Gate 4** and **Gate 6** (earlier is better); must be complete no later than **Gate 6**
-
-**Optional artifact (Delivery Owner discretion)**
-1. RAID Register (Risks/Assumptions/Issues/Dependencies) — optional; if used, it SHOULD be created early enough to affect gate decisions and is RECOMMENDED no later than Gate 2.
 
 **Filename guidance**
 Artifact names are canonical. Exact filenames are not enforced, but projects are strongly encouraged to use the canonical artifact names as filenames to support consistent discovery and audit.
@@ -552,6 +550,42 @@ common_failure_conditions:
   - Entries omit enough rationale or status information that downstream teams must reinterpret why the decision exists.
 entry_schema_notes:
   - Each decision entry should include: decision statement, date, owner, status, options considered, rationale, and implications.
+```
+
+```yaml
+kind: artifact
+id: ARTIFACT-OPEN-ITEMS-REGISTER
+name: Open Items Register
+packaging_mode: standalone
+required_by_gate: GATE-INITIATIVE-DEFINED
+purpose: Canonical initiative-level register for tracking blockers, risks, issues, assumptions, and dependencies in a single standard structure so gate decisions, escalation, and closure are auditable and consistent.
+required_contents:
+  - Entry ID
+  - Entry type (blocker, risk, issue, assumption, dependency)
+  - Title
+  - Description
+  - Owner
+  - Status (open, in progress, monitoring, resolved, closed)
+  - Affected stage or gate
+  - Impact summary
+  - Next action
+  - Target resolution or decision date
+  - Created date
+  - Last updated date
+  - Resolution note (required when resolved or closed)
+  - Origin reference (required for blocker entries that arose from another open item)
+artifact_specific_completeness_rules:
+  - The register exists for every initiative even if empty or near-empty.
+  - Every open item is specific enough to support a gate decision rather than acting as a vague reminder.
+  - No open blocker affecting the current gate remains at gate passage.
+  - Any open non-blocker item that remains at gate passage is explicitly owned, has a next action and target date where applicable, and does not invalidate the gate's mandatory pass conditions.
+common_failure_conditions:
+  - Teams track unresolved items in local notes, meetings, or artifact margins instead of the canonical register.
+  - Entries omit enough ownership, impact, or next-step information that gate reviewers cannot judge whether progression is valid.
+  - A gate-disqualifying item remains classified as a non-blocker instead of being reclassified or recorded as a blocker.
+entry_schema_notes:
+  - The Open Items Register is a single table or equivalent single register structure with typed entries, not separate RAID tables.
+  - Blocker entries SHOULD reference the originating item when they arise from a risk, issue, assumption, or dependency.
 ```
 
 ```yaml
@@ -784,27 +818,6 @@ common_failure_conditions:
   - Required controls or approvals are missing, unclear, or disconnected from the proposed solution.
 ```
 
-```yaml
-kind: artifact
-id: ARTIFACT-RAID-REGISTER
-name: RAID Register (Risks/Assumptions/Issues/Dependencies)
-optional: true
-decision_owner_discretion: Delivery Owner
-recommended_by_gate: GATE-INITIATIVE-DEFINED
-purpose: Optional tracking artifact for risks, assumptions, issues, and dependencies when a standalone register adds delivery-control value.
-required_contents:
-  - Risks
-  - Assumptions
-  - Issues
-  - Dependencies
-artifact_specific_completeness_rules:
-  - Entries are specific enough to support ownership, visibility, and review rather than acting as vague placeholders.
-  - The register complements rather than hides mandatory gate or artifact completeness requirements.
-common_failure_conditions:
-  - The register contains generic items with no decision value.
-  - Teams use the register to defer mandatory definition work without making that incompleteness explicit.
-```
-
 ### 2.6 Completeness and delivery-readiness model (resolved)
 
 This section resolves Ambiguity A08.
@@ -857,19 +870,21 @@ Each gate definition MUST explicitly include:
 
 The exact mapping of critical stage-defining artifacts is deferred to a later ambiguity (see Section 6.13 / Ambiguity A17). Until that mapping is resolved, gate definitions MUST retain an explicit placeholder rather than silently assuming which artifacts are critical.
 
-#### 2.6.5 Blockers vs open issues
+#### 2.6.5 Blockers vs controlled open items
 
 The framework MUST distinguish between:
-1. **Blockers** — items that force gate failure
-2. **Open issues** — items that may remain open only if they are explicitly controlled
+1. **Blockers** — first-class open-item entries that force gate failure when they affect the current gate
+2. **Controlled open items** — non-blocker open-item entries (`risk`, `issue`, `assumption`, `dependency`) that may remain open only if they are explicitly managed in the Open Items Register
 
-An open issue MAY remain only if all of the following are true:
-1. the gap is stated explicitly
+A controlled open item MAY remain open at gate passage only if all of the following are true:
+1. the item is stated explicitly in the Open Items Register
 2. a named owner is assigned
-3. a resolution plan or next action exists
-4. downstream work can proceed without inventing business requirements
+3. a next action exists
+4. a target resolution or decision date exists where appropriate
+5. the item does not invalidate the gate's mandatory pass conditions
+6. downstream work can proceed without inventing business requirements
 
-If any of those conditions are not satisfied, the issue is a blocker for completeness purposes.
+If a non-blocker item becomes gate-disqualifying, it MUST be reclassified or recorded as a `blocker` entry and handled under the blocker rules defined in Section 2.11.
 
 #### 2.6.6 Qualitative rating definitions
 
@@ -1341,6 +1356,164 @@ evidence_completeness_override: >
 audit_reopen_rule: >
   PMO audit findings may reopen a passed gate only when a material completeness
   failure or material control failure is discovered.
+```
+
+### 2.11 Blocker, risk, and open-issue handling model (resolved: A14)
+
+This section resolves Ambiguity A14.
+
+#### 2.11.1 Canonical tracking model
+
+The framework MUST use one canonical **Open Items Register** for every initiative.
+
+The Open Items Register:
+1. MUST exist for every initiative no later than Gate 2, even if empty or near-empty
+2. MUST be the authoritative place for tracking unresolved blockers, risks, issues, assumptions, and dependencies
+3. MUST use a single table or equivalent single register structure with typed entries
+4. MUST NOT be replaced by separate RAID tables, ad hoc action logs, meeting notes, or artifact margin comments
+
+The allowed entry types are:
+1. `blocker`
+2. `risk`
+3. `issue`
+4. `assumption`
+5. `dependency`
+
+All item types are valid across the lifecycle, but gate reviewers and Gate Decision Owners MUST interpret them according to stage-specific expectations and gate meaning.
+
+#### 2.11.2 Status model
+
+The standard lifecycle statuses for Open Items Register entries are:
+1. `open` — identified, recorded, and assigned, but active response has not yet materially started
+2. `in progress` — active work is underway to resolve, reduce, clarify, or decide the item
+3. `monitoring` — the item remains unresolved, but observation is the chosen control strategy for now
+4. `resolved` — the underlying condition has been dealt with in substance, but formal confirmation or closure is still pending where required
+5. `closed` — the item has completed its lifecycle in the register and requires no further action, monitoring, or decision
+
+`Monitoring` is not the default state for all unresolved items. It indicates a conscious decision that watchful observation is the correct current treatment.
+
+#### 2.11.3 Ownership and closure authority
+
+Every open-item entry MUST have one named item owner.
+
+The item owner is responsible for:
+1. maintaining the entry
+2. driving or coordinating next actions
+3. monitoring watch conditions where the status is `monitoring`
+4. escalating the item when escalation rules are triggered
+
+Closure authority is separated from day-to-day ownership:
+1. the item owner MAY propose resolution or closure
+2. closure of a non-blocking item that materially affects progression MUST be confirmed by the relevant accountable owner (typically the Delivery Owner or relevant functional owner)
+3. closure of a blocker affecting a gate MUST be confirmed by the named Gate Decision Owner for that gate
+
+#### 2.11.4 Blocker rules and gate effects
+
+`Blocker` is a first-class item type.
+
+At gate passage:
+1. any open `blocker` affecting the current gate forces gate failure
+2. open non-blocker items (`risk`, `issue`, `assumption`, `dependency`) MAY remain only if they satisfy the controlled-open-item rule already defined in Section 2.6.5
+3. if a non-blocker item becomes gate-disqualifying, it MUST be reclassified or recorded as a `blocker` entry before the gate decision is finalized
+
+When a blocker arises from another item type, the blocker entry MUST reference the originating item so the escalation path remains traceable.
+
+#### 2.11.5 Minimum entry fields
+
+Every Open Items Register entry MUST include at least:
+1. `id`
+2. `type`
+3. `title`
+4. `description`
+5. `owner`
+6. `status`
+7. `affected_stage_or_gate`
+8. `impact_summary`
+9. `next_action`
+10. `target_resolution_or_decision_date`
+11. `created_date`
+12. `last_updated_date`
+
+The following are conditionally required:
+1. `resolution_note` when the status is `resolved` or `closed`
+2. `origin_reference` when a blocker arose from another open item
+
+Projects MAY add local fields, but they MUST NOT remove or rename the canonical minimum fields.
+
+#### 2.11.6 Escalation rules
+
+Escalation is mandatory, not optional, when any of the following is true:
+1. an item is classified as a `blocker`
+2. an item is overdue against its target resolution or decision date
+3. an item has no valid owner
+4. an item has no valid next action
+5. an item credibly threatens an upcoming gate's mandatory pass conditions
+
+Escalation handling rules:
+1. any `blocker` MUST be escalated immediately to the relevant Gate Decision Owner
+2. a non-blocker item that meets an escalation trigger MUST be escalated to the Delivery Owner and, where progression is affected, to the relevant Gate Decision Owner
+3. escalation outcomes that contain a material decision or stop/proceed determination MUST be recorded in the Decision Log
+4. PMO intervention follows the escalation and dispute rules already defined in Section 2.10
+
+#### 2.11.7 Boundary with the Decision Log
+
+The Open Items Register and Decision Log have distinct purposes.
+
+The Open Items Register answers:
+1. what unresolved items exist
+2. what type each item is
+3. who owns it
+4. what its current status and next action are
+
+The Decision Log answers:
+1. what formal decision was made
+2. who made it
+3. why it was made
+4. what implications it carries
+
+The framework therefore requires strict separation:
+1. the Open Items Register tracks the lifecycle of unresolved items
+2. the Decision Log records formal decisions such as blocker reclassification, escalation outcomes, explicit proceed decisions with bounded open items, scope/risk treatment decisions, and accepted deviations
+3. teams MUST NOT treat register updates as a substitute for recording a formal decision when one has been made
+
+#### 2.11.8 Machine-consumable open-items model (YAML)
+
+```yaml
+kind: control_model
+id: CONTROL-MODEL-OPEN-ITEMS
+name: Open Items Register and Blocker Handling Model
+canonical_artifact: ARTIFACT-OPEN-ITEMS-REGISTER
+entry_types:
+  - blocker
+  - risk
+  - issue
+  - assumption
+  - dependency
+statuses:
+  - open
+  - in progress
+  - monitoring
+  - resolved
+  - closed
+gate_rules:
+  blocker_rule: >
+    Any open blocker affecting the current gate forces gate failure.
+  controlled_open_item_rule: >
+    Open non-blocker items may remain only if they are explicitly managed,
+    owned, actionable, and do not invalidate the gate's mandatory pass
+    conditions.
+  reclassification_rule: >
+    A gate-disqualifying non-blocker item must be reclassified or recorded as
+    a blocker before the gate decision is finalized.
+escalation_triggers:
+  - blocker
+  - overdue_target_date
+  - missing_owner
+  - missing_next_action
+  - upcoming_gate_threat
+decision_log_boundary:
+  register_tracks: unresolved_item_lifecycle
+  decision_log_tracks: formal_decisions_and_rationale
 ```
 
 ## 3. Explicit Non-Behaviors

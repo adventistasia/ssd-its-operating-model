@@ -145,14 +145,15 @@ Recommended high-level order of resolution:
   - Risk if unresolved: High
   - Status: Resolved
   - Resolution note: The default model is Delivery Owner-led review with PMO assurance oversight. PMO defines the standard, assigns the Gate Decision Owner, checks evidence completeness, attends every substantive gate, audits samples, and intervenes on escalation, non-compliance, or dispute. Review mode follows the existing gate profile (small-work substantive at Gates 2/4/6 and quick-pass elsewhere; large-work substantive at all gates). Substantive gates require live meetings and committee-action style review records; quick-pass gates require a Decision Log entry only. Independent review is trigger-based only (architecture, security/privacy, external vendor handoff, material business/regulatory risk) and requires explicit domain signoff when triggered. PMO audits may reopen a passed gate only for material completeness or control failure.
-- [ ] **A14 - Blocker, risk, and open-issue handling model is incomplete**
+- [x] **A14 - Blocker, risk, and open-issue handling model is incomplete**
   - Relevant section(s): Section 2.2.1-7; Section 2.3.7; Section 4.5.3-4; Section 5.4-5.5
   - Description: The specification requires missing information, dependencies, risks, and open questions to be documented, but it does not define the taxonomy, recording method, ownership, escalation path, or closure criteria for those items.
   - Why it matters: The framework cannot reliably stop work on unresolved ambiguity unless unresolved items are managed in a standard way.
   - Dependencies: Depends on A03, A04, A05, A13.
   - Estimated complexity: Medium
   - Risk if unresolved: High
-  - Status: Unresolved
+  - Status: Resolved
+  - Resolution note: The framework now mandates a single Open Items Register for every initiative by Gate 2. It uses one typed-entry model (`blocker`, `risk`, `issue`, `assumption`, `dependency`) across the full lifecycle, with standard statuses (`open`, `in progress`, `monitoring`, `resolved`, `closed`), mandatory minimum fields, one named item owner per entry, explicit blocker reclassification when a non-blocker becomes gate-disqualifying, mandatory escalation triggers, Gate Decision Owner confirmation for blocker closure, and strict separation from the Decision Log, which records formal decisions rather than item lifecycle updates.
 - [ ] **A15 - AI-agent sufficiency standard is implied but not concretely defined**
   - Relevant section(s): Section 1; Section 2.1.8-10; Section 2.3.5; Section 3.8; Section 5.3
   - Description: The specification requires outputs to be precise enough for AI-assisted delivery, but it does not define what additional structure, explicitness, or machine-readable discipline is required beyond what would satisfy a human team.
@@ -222,7 +223,7 @@ These are not unimportant, but they are either conditional by delivery mode or e
 | [x] | 10 | **A10 - Acceptance criteria and observable validation model** | Acceptance design depends on artifacts, boundary, and completeness rules already being known. | A standard acceptance format and definition of observable validation. | Product or business leads, QA or validation stakeholders, engineering | Rule definition plus examples or acceptance-writing pattern. | Resolved |
 | [x] | 11 | **A11 - Minimum supportability and maintainability definition** | Operational readiness content can be specified after artifact structure and scaling are known. | A minimum operational-readiness content standard. | Support owner, operations lead, delivery manager | Clarification of required support fields, responsibilities, and transition expectations. | Resolved |
 | [x] | 12 | **A13 - Review, assurance, and audit mechanism** | Review design depends on governance, stages, and readiness criteria. | A standard review model with reviewer roles, checkpoints, and evidence. | PMO, framework owner, engineering review leads | Review workflow definition and approval policy. | Resolved |
-| [ ] | 13 | **A14 - Blocker, risk, and open-issue handling model** | Blocker handling should align to the approved workflow and governance model. | A standard issue register model and stop/proceed rules. | Delivery managers, PMO, framework owner | Decision on taxonomy, ownership, escalation, and closure rules. | Unresolved |
+| [x] | 13 | **A14 - Blocker, risk, and open-issue handling model** | Blocker handling should align to the approved workflow and governance model. | A standard issue register model and stop/proceed rules. | Delivery managers, PMO, framework owner | Decision on taxonomy, ownership, escalation, and closure rules. | Resolved |
 | [ ] | 14 | **A15 - AI-agent sufficiency standard** | AI-readiness should be calibrated after the human baseline is explicit. | A defined precision standard for AI-consumable documentation. | Framework owner, engineering, AI delivery stakeholders | Clarification of additional structure, explicitness, and prohibited ambiguity. | Unresolved |
 | [ ] | 15 | **A12 - External engagement modes and handoff variants** | External variants should be derived from the core framework rather than invented upfront. | A handoff model adjusted by vendor engagement type. | Vendor management, PMO, delivery leadership | Scope decision plus conditional handoff requirements by engagement model. | Unresolved |
 | [ ] | 16 | **A16 - Anti-bureaucracy guardrails** | Guardrails are most credible once the full framework exists and can be pruned deliberately. | A clear rule for omitting low-value steps without weakening readiness. | Framework owner, PMO, delivery leadership | Principle-to-rule conversion using omission criteria, waiver rules, and examples. | Unresolved |
@@ -231,9 +232,9 @@ These are not unimportant, but they are either conditional by delivery mode or e
 ## 5. Progress Tracking Summary
 
 - **Total ambiguities identified:** 17
-- **Resolved ambiguities:** 12
-- **Remaining unresolved ambiguities:** 5
+- **Resolved ambiguities:** 13
+- **Remaining unresolved ambiguities:** 4
 - **Foundational items:** 9
 - **Dependent items:** 5
 - **Optional / lower-impact items:** 2
-- **Tracking note:** A01-A11 and A13 have been resolved (12 of 17). A17 remains deferred. Next active ambiguity is now A14 (Blocker, risk, and open-issue handling model).
+- **Tracking note:** A01-A11 and A13-A14 have been resolved (13 of 17). A17 remains deferred. Next active ambiguity is now A15 (AI-agent sufficiency standard).
