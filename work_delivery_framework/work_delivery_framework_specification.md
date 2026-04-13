@@ -124,12 +124,12 @@ The framework MUST support human teams using AI agents as assistants while keepi
 8. When teams want to omit framework steps, artifacts, or requirements to reduce overhead, the system must allow omission only where the framework explicitly permits it and only when readiness is not weakened.
 9. When a control is part of the framework's non-waivable core, the system must treat that control as mandatory regardless of schedule pressure, team preference, or local judgments about convenience.
 
-### 2.4 Lifecycle stages, progression gates, and exit criteria (resolved)
+### 2.4 Lifecycle stages, progression gates, and exit criteria
 
-The framework lifecycle is defined as a sequence of formal stages with explicit progression gates. A project MAY be blocked at any gate if the required evidence is missing or ambiguity remains unresolved.
+The framework lifecycle is defined as a sequence of formal stages with explicit progression gates. A project MAY be blocked at any gate if the required evidence is missing or material ambiguity remains unresolved.
 
 **Important boundary note**
-Stages and gates define the control model. The canonical artifact taxonomy is now defined (see Section 2.5). Scaling thresholds for “small vs large work” are now resolved (see Section 2.7, Ambiguity A09).
+Stages and gates define the control model. The canonical artifact taxonomy is defined in Section 2.5. Scaling thresholds for “small vs large work” and formal tiering are defined in Section 2.7.
 
 **Stages (in order)**
 1. Intake
@@ -158,7 +158,7 @@ Stages and gates define the control model. The canonical artifact taxonomy is no
 3. Discovery / Initiative Definition ends at Gate 2 (Initiative Defined).
 4. Authorization (conditional) ends at Gate 3 (Authorized).
    - If Authorization is not required, the project transitions from Discovery directly to Solution Definition after Gate 2.
-   - Authorization applicability is now informed by the scaling model (see Section 2.7). For small-work, Authorization is typically “Not Required” since requiring an approved budget would already trigger large-work classification. For large-work, the Gate Decision Owner must declare Authorization as “Required” or “Not Required” at Gate 2.
+   - Authorization applicability is informed by the scaling model (see Section 2.7). For small-work, Authorization is typically “Not Required” since requiring an approved budget would already trigger large-work classification. For large-work, the Gate Decision Owner must declare Authorization as “Required” or “Not Required” at Gate 2.
 5. Solution Definition ends at Gate 4 (Specification Complete).
 6. Planning / Mobilization / MVP Plan ends at Gate 5 (MVP Identified).
 7. Delivery / Execution ends at Gate 6 (All Deliverables Accepted).
@@ -476,9 +476,9 @@ requires_named_decision_owner: true
 decision_rights: []
 ```
 
-### 2.5 Required artifact taxonomy (resolved)
+### 2.5 Required artifact taxonomy
 
-This section defines the canonical artifact taxonomy for this framework (Ambiguity A06).
+This section defines the canonical artifact taxonomy for this framework.
 
 #### 2.5.1 Category labels vs artifacts
 
@@ -496,8 +496,8 @@ The framework supports two packaging modes:
 1. **Small work:** one packet artifact called **Work Brief**.
 2. **Large work:** separate canonical artifacts (files) as defined in this section.
 
-**Important note (scaling resolved):**
-The thresholds for “small vs large work” and formal tiering are now defined (see Section 2.7, Ambiguity A09). The Delivery Owner MUST classify the project as small-work or large-work no later than Gate 2.
+**Important note**
+The thresholds for “small vs large work” and formal tiering are defined in Section 2.7. The Delivery Owner MUST classify the project as small-work or large-work no later than Gate 2.
 
 Both names MUST exist:
 - **Work Brief** is the small-work form.
@@ -533,7 +533,7 @@ When external participation is expected, the initiative MUST declare one provisi
 Advisory or review-only vendors are not a separate framework mode unless they become materially involved in delivery.
 
 **Framework evolution note**
-The artifact set is expected to evolve as the framework is made clearer. Changes MUST be applied by updating this specification’s artifact definitions (including the machine-consumable YAML blocks) rather than introducing parallel shadow taxonomies.
+The artifact set may evolve over time. Changes MUST be applied by updating this specification’s artifact definitions (including the machine-consumable YAML blocks) rather than introducing parallel shadow taxonomies.
 
 #### 2.5.4 Machine-consumable artifact model (YAML)
 
@@ -937,9 +937,9 @@ common_failure_conditions:
   - Required controls or approvals are missing, unclear, or disconnected from the proposed solution.
 ```
 
-### 2.6 Completeness and delivery-readiness model (resolved)
+### 2.6 Completeness and delivery-readiness model
 
-This section resolves Ambiguity A08.
+This section defines the completeness and delivery-readiness model used by the framework.
 
 #### 2.6.1 Model type
 
@@ -1042,9 +1042,9 @@ If the failure includes one or more AI-agent sufficiency failures, the review ou
 
 There is **no conditional progression** for completeness failure. If the artifact or gate fails, work stops until the documented deficiencies are corrected and re-reviewed.
 
-### 2.7 Scaling rules for small-work vs large-work (resolved)
+### 2.7 Scaling rules for small-work vs large-work
 
-This section resolves Ambiguity A09.
+This section defines the scaling rules for small-work and large-work.
 
 #### 2.7.1 Tiers
 
@@ -1170,9 +1170,9 @@ reclassification_rule: >
   missing artifacts to satisfy the gate requirements of the large-work tier.
 ```
 
-### 2.8 Acceptance criteria and observable validation model (resolved: A10)
+### 2.8 Acceptance criteria and observable validation model
 
-This section resolves Ambiguity A10 using clarified user intent: acceptance criteria must be **observable**, **quantifiable** where possible, and expressed in **hybrid Gherkin** (Gherkin-style Given/When/Then mixed with explicit success metrics and testability rules). The model prioritizes validation that downstream teams (human, vendor, or AI) can execute without subjective interpretation.
+This section defines the acceptance-criteria and validation model: acceptance criteria must be **observable**, **quantifiable** where possible, and expressed in **hybrid Gherkin** (Gherkin-style Given/When/Then mixed with explicit success metrics and testability rules). The model prioritizes validation that downstream teams (human, vendor, or AI) can execute without subjective interpretation.
 
 #### 2.8.1 Core principle (observable/quantifiable)
 
@@ -1253,9 +1253,9 @@ Then order is created with status "pending"
 
 **Bad (vague)**: "The order creation should work correctly and be fast."
 
-### 2.9 Minimum supportability and maintainability definition (resolved: A11)
+### 2.9 Minimum supportability and maintainability definition
 
-This section resolves Ambiguity A11. Supportability and maintainability are now explicit minimum requirements embedded in the **Deployment Guide** (for large-work) or **Work Brief** (small-work) and cross-referenced in TDD.
+This section defines supportability and maintainability as explicit minimum requirements embedded in the **Deployment Guide** (for large-work) or **Work Brief** (small-work) and cross-referenced in the TDD.
 
 #### 2.9.1 Minimum required content (always)
 
@@ -1323,11 +1323,11 @@ maintainability:
   upgrade_process: "Blue-green with automated rollback"
 ```
 
-This completes resolution of A10 and A11. The framework now provides enforceable, observable standards for validation and long-term operations.
+These sections provide enforceable, observable standards for validation and long-term operations.
 
-### 2.10 Review, assurance, and audit mechanism (resolved: A13)
+### 2.10 Review, assurance, and audit mechanism
 
-This section resolves Ambiguity A13.
+This section defines the review, assurance, and audit mechanism for the framework.
 
 #### 2.10.1 Default review ownership model
 
@@ -1481,9 +1481,9 @@ audit_reopen_rule: >
   failure or material control failure is discovered.
 ```
 
-### 2.11 Blocker, risk, and open-issue handling model (resolved: A14)
+### 2.11 Blocker, risk, and open-issue handling model
 
-This section resolves Ambiguity A14.
+This section defines the blocker, risk, and open-issue handling model for the framework.
 
 #### 2.11.1 Canonical tracking model
 
@@ -1639,9 +1639,9 @@ decision_log_boundary:
   decision_log_tracks: formal_decisions_and_rationale
 ```
 
-### 2.12 AI-agent sufficiency standard (resolved: A15)
+### 2.12 AI-agent sufficiency standard
 
-This section resolves Ambiguity A15.
+This section defines the AI-agent sufficiency standard used by the framework.
 
 #### 2.12.1 Standard type and control model
 
@@ -1759,7 +1759,7 @@ reporting_rule: >
   must explicitly label the result as an AI-sufficiency failure.
 ```
 
-### 2.13 Anti-bureaucracy guardrails (resolved: A16)
+### 2.13 Anti-bureaucracy guardrails
 
 This section converts the framework's anti-bureaucracy intent into enforceable rules.
 
@@ -1860,7 +1860,7 @@ recording_system:
   local_reference_when_relevant: true
 ```
 
-### 2.14 Critical stage-defining artifact mapping (resolved: A17)
+### 2.14 Critical stage-defining artifact mapping
 
 This section defines the canonical gate-to-critical-artifact mapping rules for the framework.
 
@@ -2300,264 +2300,10 @@ These scenarios are intended for external evaluation of the framework’s outcom
 2. Supportability and maintainability expectations are visible, not implied.
 3. Reviewers judge the artifacts sufficient for coordinated downstream planning across teams without conflicting interpretations of core requirements.
 
-## 6. Ambiguity Warnings
-
-### 6.1 Framework format is resolved
-
-**Resolved decision**
-This framework is a full operating model for work definition and delivery readiness, expressed as a Markdown-first canonical specification with enforceable workflow stages, stage gates, and artifact definitions.
-
-**Publication model**
-The canonical source of truth is this specification file. It MUST embed machine-consumable YAML blocks (with stable IDs) for stages, artifacts, and gates so AI agents can apply it consistently.
-
-**Implication for implementation**
-Subsequent framework refinements MUST extend the structured YAML model in this document rather than creating parallel “shadow” definitions elsewhere.
-### 6.2 Required artifact set is resolved
-
-**Resolved decision**
-The canonical artifact taxonomy is now defined in Section 2.5, including:
-1. The small-work packet model (Work Brief)
-2. The large-work separate-artifact model
-3. The always-required artifacts (including a Decision Log)
-4. The conditional artifacts and their triggers
-5. Gate timing expectations for when each artifact must exist
-
-**Implication for implementation**
-Implementations and downstream templates MUST align to the canonical artifact names and the machine-consumable artifact YAML blocks in Section 2.5, rather than inventing alternative local artifact taxonomies.
-
-### 6.3 Entry and exit criteria are not explicit
-
-**What is ambiguous**
-The framework’s starting trigger is broadly “a new business request,” but the exact readiness gates for entering, progressing, and completing the framework are not fully defined.
-
-**Likely agent assumption**
-An agent would likely invent stage gates such as intake, discovery, definition, handoff, and approval.
-
-**Question to resolve**
-What are the formal stages, and what evidence is required to move from one stage to the next?
-
-### 6.4 Scope differentiation by work type is resolved
-
-**Resolved decision**
-The framework is optimized for software initiatives. It is in scope for greenfield and brownfield software projects. It is out of scope for minor low-risk changes, research spikes, support work, and small internal process changes. It may be used conditionally for complex operational changes affecting multiple organizations, complex internal process changes affecting the whole organization, and non-software initiatives that can use the framework with minimum changes.
-
-**Implication for implementation**
-The default framework shape should be designed for software project delivery first. Conditional reuse is allowed where the same control logic fits, but this decision does not broaden the framework into a universal model for all organizational work.
-
-### 6.5 Completeness and delivery-readiness criteria are resolved
-
-**Resolved decision**
-Completeness is now defined as a hybrid model with:
-1. mandatory pass/fail criteria that fail immediately when unmet
-2. qualitative ratings (`weak`, `adequate`, `strong`) that describe quality after mandatory checks
-
-The model applies at both the artifact level and the gate level. Every artifact definition must include purpose, required contents, artifact-specific completeness rules, and common failure conditions. Every gate definition must include mandatory pass conditions, immediate fail conditions, a minimum qualitative threshold, and a critical-artifact field.
-
-The shared artifact core is:
-1. clarity
-2. internal consistency
-3. decision/assumption visibility
-4. actionability for the next consumer
-
-The shared gate-level mandatory checks are:
-1. stage-appropriate completeness
-2. cross-artifact consistency
-3. no unresolved blockers that force assumption-making
-4. sufficiency for the named downstream consumer to proceed without redefining the problem
-
-Qualitative thresholds are:
-1. Gates 1-3 and 5-8 require at least `adequate`
-2. Gate 4 (`Specification Complete`) requires `strong`
-
-Open issues may remain only when they are explicit, owned, have a resolution path, and do not force downstream invention of business requirements. There is no conditional progression for completeness failure, and reviewers may not upgrade ratings based on team confidence or undocumented context.
-
-**Implication for implementation**
-Framework reviews and any AI-assisted validation logic MUST apply the explicit completeness model in Section 2.6 rather than inventing local quality heuristics.
-
-### 6.6 Scaling rules for simple vs complex work are resolved
-
-**Resolved decision**
-The framework defines two tiers: small-work (Work Brief packet) and large-work (separate artifact set). Classification is a single-factor trigger: if any one of scope (multi-team, multi-system, multi-component, or greenfield), business impact (cross-department, material impact, or requires approved budget), or effort/complexity (Delivery Owner judgment; default to large-work when uncertain) hits the large-work threshold, the project is large-work. External involvement is relevant context but not a primary forcing factor.
-
-Small-work uses a quick-pass gate profile for Gates 1, 3, 5, 7, and 8; substantive review is still required at Gates 2, 4, and 6. Small-work requires only the Work Brief; conditional artifacts are at Delivery Owner discretion. Large-work follows the full gate and artifact model.
-
-Classification is declared no later than Gate 2. Reclassification from small-work to large-work is required if thresholds are exceeded mid-stream, and must be recorded in the Decision Log.
-
-**Implication for implementation**
-The scaling model MUST be applied as defined in Section 2.7. No intermediate tiers are introduced. The Delivery Owner MUST declare the tier no later than Gate 2 and MUST reclassify if thresholds are exceeded.
-
-### 6.7 Governance and ownership are resolved
-
-**Resolved decision**
-1. The framework owner is the PMO. The PMO is accountable for maintaining, evolving, and publishing this framework.
-2. Every gate in the framework MUST have a single accountable Gate Decision Owner (a named person) for the stop/proceed decision.
-3. The Gate Decision Owner for each gate is assigned at Intake by the PMO or the project Delivery Owner and recorded in the Initiative Definition / Project Brief. For large projects with a formal project charter, this information MUST also be recorded in the Project Charter.
-4. There are no role-based veto rights in this framework. The Gate Decision Owner is accountable for decisions made.
-5. If there is substantive disagreement at a gate, the Gate Decision Owner MUST identify an alternative path forward (scope, sequencing, approach, or risk treatment) and record a plan of action forward in the project Decision Log.
-
-**Default Gate Decision Owner roles (unless explicitly overridden by name in the Initiative Definition / Project Brief)**
-1. Qualified Request: Delivery Owner
-2. Initiative Defined (for Authorization decision): Delivery Owner
-3. Authorized (when Authorization is required): Business / Product Owner (Budget Owner)
-4. Specification Complete: Delivery Owner
-5. MVP Identified: Delivery Owner
-6. All Deliverables Accepted: Acceptance Owner (Business / Product Owner)
-7. Transition Complete: Operations / Support Owner
-8. Closure Complete: PMO / ITS Director
-9. External handoff readiness (if an external team will build): Delivery Owner
-
-**Consent model (for being named as Gate Decision Owner)**
-Consent is implied when there is no objection upon acceptance of the document where the person is listed. It is expected that the named Gate Decision Owner will be informed of their responsibilities.
-
-**Implication for implementation**
-Gate definitions in the machine-consumable YAML model MUST specify a default_decision_owner_role and MUST require a named decision owner per project (recorded in the Initiative Definition / Project Brief).
-
-### 6.8 Relationship to technical specification work is resolved
-
-**Resolved decision**
-The framework MUST produce business and system-level documentation that is strong enough for engineering teams to derive downstream technical specifications **without needing foundational clarification**.
-
-The framework does **not** require downstream engineering planning outputs (task breakdown) or code-level technical specification artifacts.
-
-**In-framework (this framework produces / requires)**
-1. Business and functional definition sufficient to avoid redefinition of intent (including functional requirements, use cases, user roles, and business rules).
-2. System-level technical documentation sufficient to derive downstream specs when needed, including:
-   - architecture and major system components
-   - data flows and/or system process diagrams
-3. In-framework design artifacts (as applicable), such as the Technical Design Document (TDD) and API/Contract Specification.
-4. Acceptance criteria and behavior-level tests derived from in-framework use cases (not detailed engineering test cases).
-
-**Out-of-scope / downstream (engineering planning and code-level technical specification work)**
-1. Work breakdown structures (epics/stories/tasks), sprint planning, and detailed implementation sequencing.
-2. Code-level design (module/class/function-level details) and per-endpoint acceptance test suites.
-3. Detailed engineering test plans and test cases (except where acceptance criteria require observable validation statements).
-
-**Notes**
-1. This boundary does not shift based on delivery mode (internal vs vendor), but completeness standards MAY need to be higher for AI-agent consumption (see Ambiguity A15).
-2. Long-term maintainability is supported by requiring durable business + system-level documentation, and by requiring operational artifacts (e.g., Deployment Guide) where applicable; it is not achieved by forcing in-framework task breakdowns or code-level specs.
-
-### 6.9 Acceptance and holdout pattern expectations are underdefined
-
-**What is ambiguous**
-You mentioned acceptance criteria and holdout patterns as examples of the context engineering teams need, but their required form and level of rigor are not specified.
-
-**Likely agent assumption**
-An agent would likely introduce its own testing or acceptance-writing model.
-
-**Question to resolve**
-What form should acceptance criteria take, and what do you mean by “testable using holdout patterns” in this framework?
-
-### 6.10 External team engagement modes are resolved
-
-**Resolved decision**
-The framework supports exactly three canonical external engagement modes:
-1. **Staff augmentation**
-2. **Co-delivery**
-3. **Full external delivery**
-
-These modes affect both governance expectations and handoff expectations, but they do **not** create separate lifecycle stage models. The core framework lifecycle and gates remain the same.
-
-**Mode definitions**
-1. **Staff augmentation** — external personnel work inside the internal team's delivery model as additional capacity. Internal teams retain delivery-system ownership, day-to-day direction, and framework accountability. Staff augmentation is **not** treated as a formal external handoff mode.
-2. **Co-delivery** — internal and external teams share delivery responsibility. The framework requires explicit responsibility mapping, working agreements, escalation paths, and interface rules between the internal and external teams.
-3. **Full external delivery** — the external team is expected to execute from the approved package with minimal dependence on recurring requirement clarification. The handoff package is expected to stand almost entirely on its own.
-
-**Out of scope as a separate mode**
-Advisory or review-only vendors are not a separate framework mode unless they become materially involved in delivery.
-
-**Governance implications**
-1. External engagement mode MUST be declared provisionally by **Gate 2** if external participation is expected.
-2. External engagement mode MUST be finalized no later than **Gate 4**.
-3. Framework gate ownership remains internal in all modes. Vendors or partners may provide evidence of completion, but formal gate passage remains the responsibility of the named internal Gate Decision Owner.
-4. Internal named owners continue to own business acceptance, transition acceptance, and closure decisions even when delivery is fully external.
-
-**Artifact and handoff implications**
-1. **Staff augmentation** does not by itself trigger a Delivery Charter or formal external handoff package.
-2. **Co-delivery** requires a Delivery Charter that makes shared responsibilities, coordination boundaries, escalation paths, and acceptance workflow explicit.
-3. **Full external delivery** requires a Delivery Charter and a stronger autonomy standard for the approved package: the external team should be able to execute from the package with near-zero need to reconstruct foundational business intent, scope boundaries, or acceptance expectations through live clarification.
-4. The difference between Co-delivery and Full External Delivery is not a separate artifact set; it is a higher handoff completeness and autonomy standard for Full External Delivery.
-
-**Implication for implementation**
-The framework MUST not treat all external participation as a single generic vendor case. Reviewers and AI agents applying the framework MUST distinguish staff augmentation from true external delivery, and MUST apply the stronger standalone-handoff expectation to Full External Delivery engagements.
-
-### 6.11 Supportability and maintainability expectations are not yet decomposed
-
-**What is ambiguous**
-You require long-term supportability and maintainability, but the exact observable requirements are not stated.
-
-**Likely agent assumption**
-An agent would likely invent generic operational-readiness sections.
-
-**Question to resolve**
-What minimum support and maintenance information must always be defined before work is considered ready?
-
-### 6.12 Review and audit mechanism is resolved
-
-**Resolved decision**
-1. The default model is Delivery Owner-led review with PMO assurance oversight.
-2. PMO defines the review standard, assigns the Gate Decision Owner, checks evidence completeness, attends every substantive gate review, audits samples, and intervenes on escalation, non-compliance, or dispute.
-3. Review mode follows the existing gate profile: small-work uses substantive review at Gates 2, 4, and 6 and quick-pass for the remaining gates; large-work uses substantive review at every gate.
-4. Substantive gate reviews require a live meeting. Quick-pass gates require only a Decision Log entry.
-5. Independent review is trigger-based only: architecture impact, security/privacy impact, external delivery/vendor handoff, or material business risk/regulatory exposure.
-6. When triggered, explicit domain signoff is required before the gate can pass, but overall gate ownership remains with the Gate Decision Owner.
-7. PMO audit findings may reopen a passed gate only when a material completeness failure or material control failure is later discovered.
-
-**Implication for implementation**
-The framework MUST apply the review mechanism in Section 2.10 rather than inventing local review boards, ad hoc signoff chains, or informal audit rules.
-
-### 6.13 Anti-bureaucracy guardrails are resolved
-
-**Resolved decision**
-The framework uses a hybrid anti-bureaucracy model:
-1. Core controls are never waivable.
-2. Only explicitly waivable non-core items may be omitted.
-3. Omission is allowed only when it does not weaken completeness, traceability, ownership clarity, downstream executability, or downstream supportability.
-
-**Non-waivable core controls**
-1. All formal gates
-2. Named Gate Decision Owners
-3. Tier-required primary artifacts
-4. `Decision Log`
-5. `Open Items Register`
-6. Any conditional artifact whose trigger is true
-
-**Approval and recording model**
-1. Delivery Owner may approve explicitly waivable non-core omissions with documented rationale.
-2. PMO review is required when the omission affects gate evidence, cross-team coordination, external delivery controls, or security/privacy/compliance assurance.
-3. Every approved omission or waiver decision MUST be recorded in the `Decision Log`, with local reference from the affected artifact or review record where relevant.
-
-**Implication for implementation**
-The framework MUST not use anti-bureaucracy language as a blanket excuse to skip controls. Reviewers and AI agents applying the framework MUST use Section 2.13's omission rules rather than local judgment calls about what feels unnecessary.
-
-### 6.14 Critical stage-defining artifact mapping is resolved
-
-**Resolved decision**
-The framework now uses a rule-based gate-to-critical-artifact mapping model defined in Section 2.14.
-
-**Key rules**
-1. `Work Brief` and `Project Brief` are packaging-mode substitutes for the primary definition artifact.
-2. `Decision Log` and `Open Items Register` are persistently gate-critical from Gate 2 onward.
-3. Triggered conditional artifacts become gate-critical only when their absence would invalidate the current gate's mandatory pass conditions.
-4. In packet mode, the `Work Brief` may elevate a project-specific deliverable to gate-critical status only when it explicitly ties that deliverable to a named gate.
-5. Where no standalone artifact exists for part of a gate's required evidence, that evidence may be embedded in persistent artifacts, triggered artifacts, or the formal gate review/decision record.
-6. `Closure Record` is now a universal framework artifact and is always required at Gate 8.
-
-**Implication for implementation**
-The framework MUST apply Section 2.14's mapping rules and gate-mapping YAML blocks rather than inferring gate-critical artifacts ad hoc from artifact timing or reviewer intuition.
-
-## 7. Implementation Constraints
+## 6. Implementation Constraints
 
 1. The implementation must remain minimal and avoid adding process overhead that does not improve delivery readiness, using the anti-bureaucracy control model in Section 2.13.
 2. The implementation must be suitable for human teams and AI-agent consumers.
 3. The implementation must support complex enterprise and large multi-team initiatives.
 4. No software integrations are currently required.
 5. No code generation or solution implementation is in scope.
-
-## 8. Remaining Contradictions
-
-No unresolved direct contradictions are currently stated.
-
-The primary historical tension in this specification was that the framework had to be rigorous enough for autonomous delivery while also avoiding bureaucracy. That tension is now managed explicitly through:
-1. the scaling model in Section 2.7
-2. the anti-bureaucracy guardrails in Section 2.13
-3. the completeness model in Section 2.6
