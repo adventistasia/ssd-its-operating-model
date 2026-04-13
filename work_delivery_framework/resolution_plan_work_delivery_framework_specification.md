@@ -93,14 +93,15 @@ Recommended high-level order of resolution:
   - Risk if unresolved: High
   - Status: Resolved
   - Resolution note: Completeness is now defined as a hybrid model with immediate-fail mandatory criteria plus qualitative ratings (`weak`, `adequate`, `strong`). The model applies at both artifact and gate level. Every artifact definition must include purpose, required contents, artifact-specific completeness rules, and common failure conditions, with a shared review core of clarity, internal consistency, decision/assumption visibility, and actionability for the next consumer. Every gate definition must include mandatory pass conditions, immediate fail conditions, a minimum qualitative threshold, and a critical-artifact field. Gates 1-3 and 5-8 require at least `adequate`; Gate 4 requires `strong`. Open issues may remain only when explicit, owned, actionable, and non-blocking for downstream work. Reviewers may not use undocumented context to upgrade ratings, document presence is not evidence of completeness, failed reviews require a written deficiency list tied to criteria, and there is no conditional progression for completeness failure.
-- [ ] **A17 - Critical stage-defining artifact mapping is deferred**
-  - Relevant section(s): Section 2.6.4; gate YAML definitions; Section 6.13
+- [x] **A17 - Critical stage-defining artifact mapping**
+  - Relevant section(s): Section 2.6.4; gate YAML definitions; Section 2.14; Section 6.14
   - Description: The completeness model now requires each gate to identify its critical stage-defining artifacts, but the exact mapping between gates and critical artifacts has not yet been defined.
   - Why it matters: The gate-level qualitative model, especially the rule for when a gate can be rated `strong`, depends on knowing which artifacts are stage-defining rather than merely present.
   - Dependencies: Depends on A05, A06, A08; materially affects A09, A13, A15.
   - Estimated complexity: Medium
   - Risk if unresolved: Medium
-  - Status: Unresolved
+  - Status: Resolved
+  - Resolution note: The framework now defines a rule-based gate-to-critical-artifact mapping model. Gate 1 uses a lightweight Request Intake Record. From Gate 2 onward, the primary definition artifact (`Work Brief` in packet mode or `Project Brief` in large-work mode), the Decision Log, and the Open Items Register are persistent critical artifacts. Gate 3 adds Project Charter as the only gate-specific critical artifact while persistent controls still apply. Gates 4-7 use persistent controls plus triggered conditional artifacts only when their absence would invalidate the current gate's pass conditions, with embedded evidence allowed where no standalone artifact exists. In packet mode, the Work Brief may elevate project-specific deliverables to gate-critical status only through explicit named-gate ties. Gate 8 now requires a universal Closure Record. Gate YAML placeholders were replaced with explicit artifact lists plus stable mapping-rule references.
 - [x] **A09 - Scaling rules for simple versus complex work are resolved**
   - Relevant section(s): Section 2.3.1-3; Section 5.6-5.7; Section 6.6; Section 8
   - Description: The specification states that the framework must avoid bureaucracy for simple work and scale up for complex work, but it does not define classification criteria, path variants, or thresholds for selecting a lighter or heavier path.
@@ -128,14 +129,15 @@ Recommended high-level order of resolution:
   - Risk if unresolved: High
   - Status: Resolved
   - Resolution note: Minimum 5 fields required (ownership, support model, observability, maintainability commitments, transition checklist). Embedded in Deployment Guide / Work Brief and TDD. Updated YAML for affected artifacts and GATE-TRANSITION-COMPLETE. Scaling rules defined. Gate 7 enforces supported operating state. New Section 2.9 added.
-- [ ] **A12 - External engagement modes and handoff variants are underspecified**
+- [x] **A12 - External engagement modes and handoff variants are underspecified**
   - Relevant section(s): Section 2.1.7; Section 4.3.10; Section 4.4.5; Section 5.2; Section 6.10
   - Description: The specification mentions external development teams but does not distinguish among full outsourced delivery, co-delivery, staff augmentation, implementation partners, or advisory vendors, nor define how handoff expectations change by engagement model.
   - Why it matters: Different external delivery modes require different artifact depth, assumptions, controls, and acceptance framing.
   - Dependencies: Depends on A01, A06, A09.
   - Estimated complexity: Medium
   - Risk if unresolved: Medium
-  - Status: Unresolved
+  - Status: Resolved
+  - Resolution note: The framework now supports exactly three canonical external engagement modes: staff augmentation, co-delivery, and full external delivery. Staff augmentation is not treated as a formal external handoff mode and does not by itself trigger a Delivery Charter. Co-delivery and full external delivery both trigger a Delivery Charter, but full external delivery carries the stronger standard: the approved package should stand almost entirely on its own, with minimal dependence on recurring clarification. External mode affects governance and handoff expectations, but not the lifecycle model. Mode is declared provisionally by Gate 2 and finalized no later than Gate 4, and formal framework gate acceptance remains owned by named internal decision owners in all modes.
 - [x] **A13 - Review, assurance, and audit mechanism is unclear**
   - Relevant section(s): Section 5; Section 6.12
   - Description: The specification uses reviewers, evaluators, and independent reviewers in scenarios, but does not define the official review process, review timing, required reviewers, approval model, or evidence retention expectations.
@@ -163,14 +165,15 @@ Recommended high-level order of resolution:
   - Risk if unresolved: Medium
   - Status: Resolved
   - Resolution note: The framework now uses a human-plus AI-sufficiency standard integrated into completeness for all required artifacts and gates. It defines a mandatory AI-sufficiency checklist, immediate-fail patterns, stable local identifiers for materially traceable items, numbered structure by default for normative/reference-bearing content, explicit actor/action/object wording for normative statements, controlled-placeholder rules tied to the Open Items Register, external-reference discipline, and explicit labeling of review failures as AI-sufficiency failures when they occur.
-- [ ] **A16 - Anti-bureaucracy guardrails are stated but not enforceable**
-  - Relevant section(s): Section 1; Section 2.3.1; Section 3.1-2; Section 5.6; Section 7.1; Section 8
+- [x] **A16 - Anti-bureaucracy guardrails are stated but not enforceable**
+  - Relevant section(s): Section 1; Section 2.3.1; Section 2.13; Section 5.6; Section 6.13; Section 7.1; Section 8
   - Description: The specification repeatedly says the framework must avoid unnecessary process, but it does not define how to judge whether an artifact, review step, or requirement adds delivery value or may be omitted. Possible interpretations range from strict minimalism to broad mandatory documentation with discretionary waivers.
   - Why it matters: Without an enforceable guardrail, teams may either over-document or bypass rigor under the banner of speed.
   - Dependencies: Depends on A02, A06, A08, A09.
   - Estimated complexity: Medium
   - Risk if unresolved: Medium
-  - Status: Unresolved
+  - Status: Resolved
+  - Resolution note: The framework now uses a hybrid anti-bureaucracy model. Non-waivable core controls are: all formal gates, named Gate Decision Owners, tier-required primary artifacts, the Decision Log, the Open Items Register, and any triggered conditional artifact. Only explicitly waivable non-core items may be omitted, and only if omission does not reduce completeness, traceability, ownership clarity, downstream executability, or downstream supportability. Delivery Owners may approve documented non-core omissions, but PMO review is required when omission affects gate evidence, cross-team coordination, external delivery controls, or security/privacy/compliance assurance. All approved omissions must be recorded canonically in the Decision Log, with local references where relevant.
 ## 3. Dependency and Sequencing Analysis
 
 ### Foundational
@@ -226,16 +229,16 @@ These are not unimportant, but they are either conditional by delivery mode or e
 | [x] | 12 | **A13 - Review, assurance, and audit mechanism** | Review design depends on governance, stages, and readiness criteria. | A standard review model with reviewer roles, checkpoints, and evidence. | PMO, framework owner, engineering review leads | Review workflow definition and approval policy. | Resolved |
 | [x] | 13 | **A14 - Blocker, risk, and open-issue handling model** | Blocker handling should align to the approved workflow and governance model. | A standard issue register model and stop/proceed rules. | Delivery managers, PMO, framework owner | Decision on taxonomy, ownership, escalation, and closure rules. | Resolved |
 | [x] | 14 | **A15 - AI-agent sufficiency standard** | AI-readiness should be calibrated after the human baseline is explicit. | A defined precision standard for AI-consumable documentation. | Framework owner, engineering, AI delivery stakeholders | Clarification of additional structure, explicitness, and prohibited ambiguity. | Resolved |
-| [ ] | 15 | **A12 - External engagement modes and handoff variants** | External variants should be derived from the core framework rather than invented upfront. | A handoff model adjusted by vendor engagement type. | Vendor management, PMO, delivery leadership | Scope decision plus conditional handoff requirements by engagement model. | Unresolved |
-| [ ] | 16 | **A16 - Anti-bureaucracy guardrails** | Guardrails are most credible once the full framework exists and can be pruned deliberately. | A clear rule for omitting low-value steps without weakening readiness. | Framework owner, PMO, delivery leadership | Principle-to-rule conversion using omission criteria, waiver rules, and examples. | Unresolved |
-| [ ] | 17 | **A17 - Critical stage-defining artifact mapping** | The completeness model now depends on identifying which artifacts are truly stage-defining at each gate. | A canonical gate-to-critical-artifact mapping, including packaging-mode and conditional-artifact rules. | Framework owner, PMO, delivery managers, engineering reviewers | Mapping decision with examples for packet mode, large-work mode, and conditional artifacts. | Unresolved |
+| [x] | 15 | **A12 - External engagement modes and handoff variants** | External variants should be derived from the core framework rather than invented upfront. | A handoff model adjusted by vendor engagement type. | Vendor management, PMO, delivery leadership | Scope decision plus conditional handoff requirements by engagement model. | Resolved |
+| [x] | 16 | **A16 - Anti-bureaucracy guardrails** | Guardrails are most credible once the full framework exists and can be pruned deliberately. | A clear rule for omitting low-value steps without weakening readiness. | Framework owner, PMO, delivery leadership | Principle-to-rule conversion using omission criteria, waiver rules, and examples. | Resolved |
+| [x] | 17 | **A17 - Critical stage-defining artifact mapping** | The completeness model now depends on identifying which artifacts are truly stage-defining at each gate. | A canonical gate-to-critical-artifact mapping, including packaging-mode and conditional-artifact rules. | Framework owner, PMO, delivery managers, engineering reviewers | Mapping decision with examples for packet mode, large-work mode, and conditional artifacts. | Resolved |
 
 ## 5. Progress Tracking Summary
 
 - **Total ambiguities identified:** 17
-- **Resolved ambiguities:** 14
-- **Remaining unresolved ambiguities:** 3
+- **Resolved ambiguities:** 17
+- **Remaining unresolved ambiguities:** 0
 - **Foundational items:** 9
 - **Dependent items:** 5
 - **Optional / lower-impact items:** 2
-- **Tracking note:** A01-A11 and A13-A15 have been resolved (14 of 17). A17 remains deferred. Next active ambiguity is now A12 (External engagement modes and handoff variants).
+- **Tracking note:** All identified ambiguities (A01-A17) are now resolved in the current specification and resolution plan.

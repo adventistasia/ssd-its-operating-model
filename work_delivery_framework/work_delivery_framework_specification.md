@@ -121,6 +121,8 @@ The framework MUST support human teams using AI agents as assistants while keepi
 5. When AI agents are used as delivery teams, the system must provide enough precision that the agents do not need to infer missing business requirements.
 6. When a project cannot be described with testable acceptance patterns or equivalent observable outcome definitions, the system must treat that as an unresolved gap.
 7. When a project would require undocumented assumptions to proceed, the system must stop progression until those assumptions are replaced with explicit decisions or documented open issues.
+8. When teams want to omit framework steps, artifacts, or requirements to reduce overhead, the system must allow omission only where the framework explicitly permits it and only when readiness is not weakened.
+9. When a control is part of the framework's non-waivable core, the system must treat that control as mandatory regardless of schedule pressure, team preference, or local judgments about convenience.
 
 ### 2.4 Lifecycle stages, progression gates, and exit criteria (resolved)
 
@@ -164,14 +166,14 @@ Stages and gates define the control model. The canonical artifact taxonomy is no
 9. Closure ends at Gate 8 (Closure Complete).
 
 **Minimum evidence categories by gate (high-level)**
-1. Gate 1 (Qualified Request): in-scope determination; threshold determination (if applicable); accountable Delivery Owner assigned; initial stakeholder list; known unknowns captured.
-2. Gate 2 (Initiative Defined): bounded scope; desired outcomes and success measures; major constraints and dependencies; initial solution direction; estimated effort/shape at an appropriate level; decision on whether Authorization is required.
+1. Gate 1 (Qualified Request): request intake record is complete enough to support qualification; in-scope determination; threshold determination (if applicable); accountable Delivery Owner assigned; initial stakeholder list; known unknowns captured.
+2. Gate 2 (Initiative Defined): bounded scope; desired outcomes and success measures; major constraints and dependencies; initial solution direction; estimated effort/shape at an appropriate level; decision on whether Authorization is required; provisional external engagement mode declared if external participation is expected.
 3. Gate 3 (Authorized): explicit business authorization to invest resources; budget/resource commitment (as applicable); funding/priority decision recorded; Gate Decision Owner named.
-4. Gate 4 (Specification Complete): solution definition is complete enough for downstream planning and task breakdown without inventing business requirements; acceptance criteria are defined; critical risks/unknowns are either resolved or explicitly managed as open issues.
+4. Gate 4 (Specification Complete): solution definition is complete enough for downstream planning and task breakdown without inventing business requirements; acceptance criteria are defined; critical risks/unknowns are either resolved or explicitly managed as open issues; external engagement mode is finalized if applicable; Delivery Charter is complete when required.
 5. Gate 5 (MVP Identified): MVP scope is defined; MVP success measures and MVP acceptance criteria are explicit and approved; delivery approach is feasible with the current team and constraints.
 6. Gate 6 (All Deliverables Accepted): delivered solution is accepted by the named Acceptance Owner against the specified acceptance criteria; any deviations are explicitly approved and recorded.
 7. Gate 7 (Transition Complete): operating ownership is established; support model is ready; transition activities are complete; the solution is in a supported operating state.
-8. Gate 8 (Closure Complete): closure requirements are satisfied (final acceptance evidence present, transition complete, decision log updated, outcomes recorded, and closure rationale documented).
+8. Gate 8 (Closure Complete): closure record is complete; final acceptance evidence is present; transition is complete; decision log is updated; outcomes are recorded; closure rationale is documented.
 
 **Machine-consumable lifecycle model (YAML)**
 
@@ -296,7 +298,8 @@ immediate_fail_conditions:
   - Scope cannot be determined due to missing inputs
 minimum_qualitative_threshold: adequate
 critical_stage_defining_artifacts:
-  - TBD-DEFERRED-TO-A17
+  - ARTIFACT-REQUEST-INTAKE-RECORD
+critical_mapping_rule_ref: RULE-GATE-1-CRITICAL-ARTIFACTS
 default_decision_owner_role: Delivery Owner
 requires_named_decision_owner: true
 decision_rights: []
@@ -310,12 +313,17 @@ mandatory_pass_conditions:
   - Scope is bounded
   - Outcomes and success measures are defined at an appropriate level
   - Authorization requirement is declared (Required or Not Required)
+  - If external participation is expected, a provisional external engagement mode is declared
 immediate_fail_conditions:
   - Critical ambiguity remains unresolved
   - Authorization requirement cannot be decided due to missing information
 minimum_qualitative_threshold: adequate
 critical_stage_defining_artifacts:
-  - TBD-DEFERRED-TO-A17
+  - ARTIFACT-PROJECT-BRIEF
+  - ARTIFACT-WORK-BRIEF
+  - ARTIFACT-DECISION-LOG
+  - ARTIFACT-OPEN-ITEMS-REGISTER
+critical_mapping_rule_ref: RULE-GATE-2-CRITICAL-ARTIFACTS
 default_decision_owner_role: Delivery Owner
 requires_named_decision_owner: true
 decision_rights: []
@@ -332,7 +340,12 @@ immediate_fail_conditions:
   - Authorization is required but not granted
 minimum_qualitative_threshold: adequate
 critical_stage_defining_artifacts:
-  - TBD-DEFERRED-TO-A17
+  - ARTIFACT-PROJECT-CHARTER
+  - ARTIFACT-PROJECT-BRIEF
+  - ARTIFACT-WORK-BRIEF
+  - ARTIFACT-DECISION-LOG
+  - ARTIFACT-OPEN-ITEMS-REGISTER
+critical_mapping_rule_ref: RULE-GATE-3-CRITICAL-ARTIFACTS
 default_decision_owner_role: Business / Product Owner (Budget Owner)
 requires_named_decision_owner: true
 decision_rights: []
@@ -345,11 +358,23 @@ name: Specification Complete
 mandatory_pass_conditions:
   - Solution definition is sufficient for planning and task breakdown
   - Acceptance criteria are defined
+  - If external delivery is used, the engagement mode is finalized and Delivery Charter obligations are satisfied
 immediate_fail_conditions:
   - Downstream delivery would require inventing business requirements
 minimum_qualitative_threshold: strong
 critical_stage_defining_artifacts:
-  - TBD-DEFERRED-TO-A17
+  - ARTIFACT-PROJECT-BRIEF
+  - ARTIFACT-WORK-BRIEF
+  - ARTIFACT-DECISION-LOG
+  - ARTIFACT-OPEN-ITEMS-REGISTER
+  - ARTIFACT-DELIVERY-CHARTER
+  - ARTIFACT-TDD
+  - ARTIFACT-API-CONTRACT-SPEC
+  - ARTIFACT-DATA-ASSET-SPEC
+  - ARTIFACT-DATA-MIGRATION-PLAN
+  - ARTIFACT-ACCESS-MODEL
+  - ARTIFACT-SECURITY-PRIVACY-RIA
+critical_mapping_rule_ref: RULE-GATE-4-CRITICAL-ARTIFACTS
 default_decision_owner_role: Delivery Owner
 requires_named_decision_owner: true
 decision_rights: []
@@ -367,7 +392,18 @@ immediate_fail_conditions:
   - MVP is undefined or acceptance expectations are ambiguous
 minimum_qualitative_threshold: adequate
 critical_stage_defining_artifacts:
-  - TBD-DEFERRED-TO-A17
+  - ARTIFACT-PROJECT-BRIEF
+  - ARTIFACT-WORK-BRIEF
+  - ARTIFACT-DECISION-LOG
+  - ARTIFACT-OPEN-ITEMS-REGISTER
+  - ARTIFACT-DELIVERY-CHARTER
+  - ARTIFACT-TDD
+  - ARTIFACT-API-CONTRACT-SPEC
+  - ARTIFACT-DATA-ASSET-SPEC
+  - ARTIFACT-DATA-MIGRATION-PLAN
+  - ARTIFACT-ACCESS-MODEL
+  - ARTIFACT-SECURITY-PRIVACY-RIA
+critical_mapping_rule_ref: RULE-GATE-5-CRITICAL-ARTIFACTS
 default_decision_owner_role: Delivery Owner
 requires_named_decision_owner: true
 decision_rights: []
@@ -383,7 +419,14 @@ immediate_fail_conditions:
   - Acceptance criteria are not met and no explicit deviation approval exists
 minimum_qualitative_threshold: adequate
 critical_stage_defining_artifacts:
-  - TBD-DEFERRED-TO-A17
+  - ARTIFACT-PROJECT-BRIEF
+  - ARTIFACT-WORK-BRIEF
+  - ARTIFACT-DECISION-LOG
+  - ARTIFACT-OPEN-ITEMS-REGISTER
+  - ARTIFACT-DELIVERY-CHARTER
+  - ARTIFACT-DEPLOYMENT-GUIDE
+  - ARTIFACT-USER-ADOPTION-PLAN
+critical_mapping_rule_ref: RULE-GATE-6-CRITICAL-ARTIFACTS
 default_decision_owner_role: Acceptance Owner (Business / Product Owner)
 requires_named_decision_owner: true
 decision_rights: []
@@ -399,7 +442,14 @@ immediate_fail_conditions:
   - The solution cannot be supported as delivered
 minimum_qualitative_threshold: adequate
 critical_stage_defining_artifacts:
-  - TBD-DEFERRED-TO-A17
+  - ARTIFACT-PROJECT-BRIEF
+  - ARTIFACT-WORK-BRIEF
+  - ARTIFACT-DECISION-LOG
+  - ARTIFACT-OPEN-ITEMS-REGISTER
+  - ARTIFACT-DELIVERY-CHARTER
+  - ARTIFACT-DEPLOYMENT-GUIDE
+  - ARTIFACT-USER-ADOPTION-PLAN
+critical_mapping_rule_ref: RULE-GATE-7-CRITICAL-ARTIFACTS
 default_decision_owner_role: Operations / Support Owner
 requires_named_decision_owner: true
 decision_rights: []
@@ -415,7 +465,12 @@ immediate_fail_conditions:
   - Closure evidence is incomplete
 minimum_qualitative_threshold: adequate
 critical_stage_defining_artifacts:
-  - TBD-DEFERRED-TO-A17
+  - ARTIFACT-CLOSURE-RECORD
+  - ARTIFACT-PROJECT-BRIEF
+  - ARTIFACT-WORK-BRIEF
+  - ARTIFACT-DECISION-LOG
+  - ARTIFACT-OPEN-ITEMS-REGISTER
+critical_mapping_rule_ref: RULE-GATE-8-CRITICAL-ARTIFACTS
 default_decision_owner_role: PMO / ITS Director
 requires_named_decision_owner: true
 decision_rights: []
@@ -451,12 +506,14 @@ Both names MUST exist:
 #### 2.5.3 Canonical artifacts (names, triggers, and required-by gates)
 
 **Always required**
-1. Initiative Definition / Project Brief (large-work mode) **OR** Work Brief (small-work mode) — required by **Gate 2**
-2. Decision Log — must exist for every initiative and must exist no later than **Gate 2**
-3. Open Items Register — must exist for every initiative and must exist no later than **Gate 2**
+1. Request Intake Record — required by **Gate 1**
+2. Initiative Definition / Project Brief (large-work mode) **OR** Work Brief (small-work mode) — required by **Gate 2**
+3. Decision Log — must exist for every initiative and must exist no later than **Gate 2**
+4. Open Items Register — must exist for every initiative and must exist no later than **Gate 2**
+5. Closure Record — required by **Gate 8**
 
 **Conditional artifacts (trigger → artifact(s) → required-by gate)**
-1. External vendor involved → Delivery Charter → **Gate 4** (or **Gate 3** when early delivery-team commitment is required)
+1. Co-delivery or full external delivery → Delivery Charter → **Gate 4** (or **Gate 3** when early delivery-team commitment is required)
 2. Authorization required → Approved Project Charter → **Gate 3**
 3. Material ops/support impact → Technical Design Document (TDD) + Deployment Guide → TDD by **Gate 4**, Deployment Guide by **Gate 6**
 4. Data migration → Data Asset Specification + Data Migration Plan → **Gate 4**
@@ -467,10 +524,42 @@ Both names MUST exist:
 **Filename guidance**
 Artifact names are canonical. Exact filenames are not enforced, but projects are strongly encouraged to use the canonical artifact names as filenames to support consistent discovery and audit.
 
+**External engagement mode rule**
+When external participation is expected, the initiative MUST declare one provisional external engagement mode by **Gate 2** and finalize it no later than **Gate 4**. The canonical modes are:
+1. **Staff augmentation** — external personnel work inside the internal team's delivery model; this does **not** by itself trigger a Delivery Charter or formal external handoff package.
+2. **Co-delivery** — internal and external teams share delivery responsibility; this **does** trigger a Delivery Charter and explicit responsibility/coordination rules.
+3. **Full external delivery** — the external team is expected to execute from the approved package with minimal reliance on recurring requirement clarification; this **does** trigger a Delivery Charter and the strongest handoff completeness standard.
+
+Advisory or review-only vendors are not a separate framework mode unless they become materially involved in delivery.
+
 **Framework evolution note**
 The artifact set is expected to evolve as the framework is made clearer. Changes MUST be applied by updating this specification’s artifact definitions (including the machine-consumable YAML blocks) rather than introducing parallel shadow taxonomies.
 
 #### 2.5.4 Machine-consumable artifact model (YAML)
+
+```yaml
+kind: artifact
+id: ARTIFACT-REQUEST-INTAKE-RECORD
+name: Request Intake Record
+packaging_mode: standalone
+required_by_gate: GATE-QUALIFIED-REQUEST
+purpose: Lightweight intake and assessment record that captures the minimum request information, initial scope qualification evidence, accountable triage ownership, and known unknowns needed to decide whether the request is a qualified framework candidate.
+required_contents:
+  - Requester name
+  - Background / problem / opportunity
+  - Desired outcome
+  - Success measures (explicitly Unknown/TBD allowed at entry)
+  - Affected systems / processes (explicitly Unknown/TBD allowed at entry)
+  - Triage owner
+  - Initial in-scope / out-of-scope assessment
+  - Initial known unknowns, dependencies, or blockers
+artifact_specific_completeness_rules:
+  - The record is sufficient to determine whether the request can be qualified, rejected, or sent for further clarification.
+  - Ownership, initial scope judgment, and known unknowns are visible without requiring meeting-only context.
+common_failure_conditions:
+  - The request can only be understood from informal conversation rather than from the captured intake record.
+  - Scope qualification or accountable ownership is missing or implied rather than explicit.
+```
 
 ```yaml
 kind: artifact
@@ -590,6 +679,30 @@ entry_schema_notes:
 
 ```yaml
 kind: artifact
+id: ARTIFACT-CLOSURE-RECORD
+name: Closure Record
+packaging_mode: standalone
+required_by_gate: GATE-CLOSURE-COMPLETE
+purpose: Formal closure artifact that records the final closure decision, closure evidence, remaining post-closure obligations if any, and the rationale for closing the initiative.
+required_contents:
+  - Closure decision and date
+  - Closure owner
+  - Final acceptance reference
+  - Transition completion reference
+  - Outcome summary against intended objectives
+  - Final decision/open-item disposition summary
+  - Closure rationale
+  - Post-closure actions or obligations (if any)
+artifact_specific_completeness_rules:
+  - The closure basis is explicit enough that a later reviewer can understand why the initiative was closed and what remained outstanding, if anything.
+  - Closure evidence links back to acceptance, transition, and final control records rather than asserting closure without traceable support.
+common_failure_conditions:
+  - Closure is declared without visible linkage to acceptance or transition completion.
+  - The record omits enough rationale or status information that later audit cannot determine what was actually closed.
+```
+
+```yaml
+kind: artifact
 id: ARTIFACT-PROJECT-CHARTER
 name: Project Charter (Approved)
 conditional_on:
@@ -615,23 +728,29 @@ kind: artifact
 id: ARTIFACT-DELIVERY-CHARTER
 name: Delivery Charter
 conditional_on:
-  - External vendor involved
+  - External engagement mode is Co-delivery or Full External Delivery
 required_by_gate_default: GATE-SPECIFICATION-COMPLETE
 may_be_required_by_gate:
   - GATE-AUTHORIZED
-purpose: Defines the external delivery engagement model, delivery responsibilities, and working agreements needed for a usable vendor or partner handoff.
+purpose: Defines the external delivery engagement model, delivery responsibilities, working agreements, and handoff expectations needed for usable collaboration with or handoff to an external delivery team.
 required_contents:
+  - External engagement mode (Co-delivery or Full External Delivery)
   - Delivery engagement model and roles/responsibilities
   - Delivery cadence and working agreements
   - Communication and escalation paths
   - Handoff expectations and acceptance workflow (high-level)
   - Access and environment expectations (as applicable)
+  - Decision and dependency interfaces between internal and external teams
+  - Internal named owners for framework gates and acceptance
 artifact_specific_completeness_rules:
   - Engagement roles, interfaces, and responsibilities are explicit enough to prevent delivery-governance gaps.
   - External parties can understand how work, decisions, escalation, and acceptance will operate.
+  - For Co-delivery, the shared-delivery model and coordination boundaries are explicit enough to avoid duplicated or unowned work.
+  - For Full External Delivery, the approved package is close to standalone: the external team can execute without routine requirement-reconstruction or repeated dependence on undocumented clarification.
 common_failure_conditions:
   - The delivery mode is too vague to determine responsibilities or handoff expectations.
   - The document leaves unowned coordination or escalation gaps between internal and external teams.
+  - A Full External Delivery engagement still depends on recurring clarification of foundational business intent, scope boundaries, or acceptance expectations.
 ```
 
 ```yaml
@@ -870,7 +989,7 @@ Each gate definition MUST explicitly include:
 3. **minimum qualitative threshold**
 4. **critical stage-defining artifacts**
 
-The exact mapping of critical stage-defining artifacts is deferred to a later ambiguity (see Section 6.13 / Ambiguity A17). Until that mapping is resolved, gate definitions MUST retain an explicit placeholder rather than silently assuming which artifacts are critical.
+The exact mapping rules for critical stage-defining artifacts are defined in Section 2.14. Reviewers and AI agents MUST apply those mapping rules rather than treating the gate YAML lists as flat unconditional artifact checklists.
 
 #### 2.6.5 Blockers vs controlled open items
 
@@ -1640,6 +1759,358 @@ reporting_rule: >
   must explicitly label the result as an AI-sufficiency failure.
 ```
 
+### 2.13 Anti-bureaucracy guardrails (resolved: A16)
+
+This section converts the framework's anti-bureaucracy intent into enforceable rules.
+
+#### 2.13.1 Core principle
+
+The framework MUST minimize overhead by design, but it MUST NOT allow teams to bypass controls that preserve delivery readiness, traceability, ownership clarity, or downstream executability/supportability.
+
+Anti-bureaucracy is achieved by:
+1. using the scaling model to keep small-work lighter than large-work
+2. defining optional and conditional artifacts explicitly
+3. allowing only controlled omission of non-core items
+
+Anti-bureaucracy is **not** achieved by ad hoc skipping of required controls.
+
+#### 2.13.2 Non-waivable core controls
+
+The following controls are non-waivable:
+1. All formal gates defined by the framework
+2. A named Gate Decision Owner for every gate
+3. The tier-required primary artifacts for the initiative's declared path
+4. The `Decision Log`
+5. The `Open Items Register`
+6. Any conditional artifact whose trigger condition is true
+
+No project, reviewer, or Delivery Owner may waive these controls under the banner of speed or practicality.
+
+#### 2.13.3 What may be omitted
+
+Only non-core items may be omitted, and only when the framework explicitly makes them optional, conditional, discretionary, or packaging-flexible.
+
+Examples of potentially omittable non-core items include:
+1. optional companion artifacts for small-work where no trigger condition exists
+2. duplicated sections or repeated content that can be consolidated without loss of meaning
+3. artifact-local presentation choices that do not change the required content, ownership visibility, or gate evidence
+
+If the framework does not explicitly allow an item to be optional, conditional, discretionary, or packaging-flexible, teams MUST treat it as required.
+
+#### 2.13.4 Omission / waiver test
+
+A non-core item may be omitted only when the omission does **not** reduce any of the following:
+1. completeness against the framework's readiness model
+2. decision traceability
+3. ownership clarity
+4. downstream executability
+5. downstream supportability
+
+If omission weakens any of those outcomes, the omission is not permitted.
+
+#### 2.13.5 Approval model
+
+The framework uses a tiered approval model for non-core omissions:
+1. The Delivery Owner may approve omission of explicitly waivable non-core items when the required rationale is documented.
+2. PMO review is required before omission is approved when the omission affects:
+   - gate evidence
+   - cross-team coordination
+   - external delivery controls
+   - security, privacy, or compliance assurance
+
+PMO review for these cases is a control requirement, not an optional escalation path.
+
+#### 2.13.6 Recording rule
+
+Every approved omission or waiver decision MUST be recorded canonically in the `Decision Log`.
+
+When the omission affects a specific artifact or gate review, the affected artifact or review record SHOULD reference the corresponding `Decision Log` entry so auditors and downstream teams can trace the rationale from either direction.
+
+Unrecorded omissions are invalid for framework purposes, even if they were discussed informally.
+
+#### 2.13.7 Machine-consumable anti-bureaucracy model (YAML)
+
+```yaml
+kind: policy
+id: POLICY-ANTI-BUREAUCRACY
+name: Anti-Bureaucracy Guardrail
+non_waivable_core_controls:
+  - all_formal_gates
+  - named_gate_decision_owner
+  - tier_required_primary_artifacts
+  - decision_log
+  - open_items_register
+  - triggered_conditional_artifacts
+omission_allowed_only_when:
+  - item_is_explicitly_optional_or_conditional_or_discretionary_or_packaging_flexible
+  - omission_does_not_reduce_completeness
+  - omission_does_not_reduce_traceability
+  - omission_does_not_reduce_ownership_clarity
+  - omission_does_not_reduce_downstream_executability
+  - omission_does_not_reduce_downstream_supportability
+delivery_owner_may_approve:
+  - explicitly_waivable_non_core_items
+pmo_review_required_when_affecting:
+  - gate_evidence
+  - cross_team_coordination
+  - external_delivery_controls
+  - security_privacy_compliance_assurance
+recording_system:
+  canonical_record: ARTIFACT-DECISION-LOG
+  local_reference_when_relevant: true
+```
+
+### 2.14 Critical stage-defining artifact mapping (resolved: A17)
+
+This section defines the canonical gate-to-critical-artifact mapping rules for the framework.
+
+#### 2.14.1 Mapping philosophy
+
+The framework uses a rule-based mapping model:
+1. each gate has a canonical base critical set
+2. packet mode and large-work mode use explicit substitution rules
+3. triggered conditional artifacts become gate-critical only when their absence would invalidate that gate's mandatory pass conditions
+4. some control artifacts remain persistently gate-critical from Gate 2 onward
+5. where a gate has no dedicated standalone artifact for part of its evidence, the required evidence may be embedded in the persistent artifacts, triggered artifacts, or the formal gate review/decision record
+
+Critical mapping is therefore not a flat list. It is a combination of:
+1. persistent control artifacts
+2. gate-specific artifacts
+3. triggered conditional artifacts
+4. explicitly elevated project-specific deliverables in packet mode
+5. embedded gate evidence where no standalone artifact exists
+
+#### 2.14.2 Persistent critical artifacts
+
+From Gate 2 onward, the following artifacts are persistently gate-critical:
+1. the primary definition artifact for the initiative's packaging mode:
+   - `ARTIFACT-WORK-BRIEF` in small-work
+   - `ARTIFACT-PROJECT-BRIEF` in large-work
+2. `ARTIFACT-DECISION-LOG`
+3. `ARTIFACT-OPEN-ITEMS-REGISTER`
+
+These artifacts remain critical through Closure because later gates must still be judged against the bounded scope, intended outcomes, decision history, and open-item status established earlier.
+
+#### 2.14.3 Packet-mode substitution and elevation rule
+
+In small-work packet mode:
+1. `ARTIFACT-WORK-BRIEF` substitutes for the large-work primary definition artifact at all applicable gates.
+2. The `Work Brief` is the base critical artifact unless a conditional artifact is explicitly triggered and separately required.
+3. The `Work Brief` may elevate a project-specific deliverable to gate-critical status only when it explicitly ties that deliverable to a named gate.
+4. A project-specific deliverable mentioned in the `Work Brief` does not become gate-critical merely because it is listed as a deliverable; the gate tie MUST be explicit.
+
+#### 2.14.4 Conditional-artifact criticality rule
+
+A triggered conditional artifact becomes gate-critical at the gate where its absence would invalidate that gate's mandatory pass conditions.
+
+This means:
+1. a conditional artifact may be required by one gate and still remain critical at a later gate if its contents remain necessary for the later stop/proceed decision
+2. a conditional artifact does not become gate-critical merely because it exists; it becomes gate-critical when the current gate depends on it materially
+
+#### 2.14.5 Gate-by-gate canonical mapping
+
+1. **Gate 1 (`Qualified Request`)**
+   - Base critical artifact: `ARTIFACT-REQUEST-INTAKE-RECORD`
+   - No `Project Brief` or `Work Brief` is required yet.
+
+2. **Gate 2 (`Initiative Defined`)**
+   - Base critical artifacts:
+     - `ARTIFACT-WORK-BRIEF` or `ARTIFACT-PROJECT-BRIEF` according to packaging mode
+     - `ARTIFACT-DECISION-LOG`
+     - `ARTIFACT-OPEN-ITEMS-REGISTER`
+
+3. **Gate 3 (`Authorized`)**
+   - Gate-specific critical artifact:
+     - `ARTIFACT-PROJECT-CHARTER`
+   - Persistent critical artifacts:
+     - `ARTIFACT-WORK-BRIEF` or `ARTIFACT-PROJECT-BRIEF`
+     - `ARTIFACT-DECISION-LOG`
+     - `ARTIFACT-OPEN-ITEMS-REGISTER`
+   - `Project Charter` is the only gate-specific critical artifact at Gate 3; persistent controls still apply.
+
+4. **Gate 4 (`Specification Complete`)**
+   - Persistent critical artifacts:
+     - `ARTIFACT-WORK-BRIEF` or `ARTIFACT-PROJECT-BRIEF`
+     - `ARTIFACT-DECISION-LOG`
+     - `ARTIFACT-OPEN-ITEMS-REGISTER`
+   - Gate-critical conditional artifacts when triggered and materially required:
+     - `ARTIFACT-DELIVERY-CHARTER`
+     - `ARTIFACT-TDD`
+     - `ARTIFACT-API-CONTRACT-SPEC`
+     - `ARTIFACT-DATA-ASSET-SPEC`
+     - `ARTIFACT-DATA-MIGRATION-PLAN`
+     - `ARTIFACT-ACCESS-MODEL`
+     - `ARTIFACT-SECURITY-PRIVACY-RIA`
+   - Required explicit evidence may be embedded in the primary artifact set where no separate standalone artifact exists.
+
+5. **Gate 5 (`MVP Identified`)**
+   - Persistent critical artifacts:
+     - `ARTIFACT-WORK-BRIEF` or `ARTIFACT-PROJECT-BRIEF`
+     - `ARTIFACT-DECISION-LOG`
+     - `ARTIFACT-OPEN-ITEMS-REGISTER`
+   - Gate-critical conditional artifacts when triggered and materially required for MVP feasibility:
+     - any Gate 4 conditional artifact whose absence would invalidate MVP definition or feasibility
+   - Explicit MVP evidence (scope, success measures, acceptance criteria) MUST exist in the primary artifact set and/or formal gate review record.
+   - In packet mode, the `Work Brief` may elevate named project deliverables to Gate 5 criticality only through an explicit gate tie.
+
+6. **Gate 6 (`All Deliverables Accepted`)**
+   - Persistent critical artifacts:
+     - `ARTIFACT-WORK-BRIEF` or `ARTIFACT-PROJECT-BRIEF`
+     - `ARTIFACT-DECISION-LOG`
+     - `ARTIFACT-OPEN-ITEMS-REGISTER`
+   - Gate-critical conditional artifacts when triggered and materially required for acceptance:
+     - `ARTIFACT-DEPLOYMENT-GUIDE`
+     - `ARTIFACT-USER-ADOPTION-PLAN`
+     - `ARTIFACT-DELIVERY-CHARTER` where external-delivery obligations materially affect acceptance
+     - any project-specific deliverable explicitly tied to Gate 6 in the `Work Brief`
+   - Explicit acceptance evidence against the defined acceptance criteria MUST exist in the formal gate review/decision record and reference the relevant artifacts or deliverables.
+
+7. **Gate 7 (`Transition Complete`)**
+   - Persistent critical artifacts:
+     - `ARTIFACT-WORK-BRIEF` or `ARTIFACT-PROJECT-BRIEF`
+     - `ARTIFACT-DECISION-LOG`
+     - `ARTIFACT-OPEN-ITEMS-REGISTER`
+   - Gate-critical conditional artifacts when triggered and materially required for supported operation:
+     - `ARTIFACT-DEPLOYMENT-GUIDE`
+     - `ARTIFACT-USER-ADOPTION-PLAN`
+     - `ARTIFACT-DELIVERY-CHARTER` where external transition responsibilities materially affect operating-state acceptance
+     - any project-specific deliverable explicitly tied to Gate 7 in the `Work Brief`
+   - Explicit supportability and transition evidence MUST exist in the formal gate review/decision record and/or the triggered operational artifacts.
+
+8. **Gate 8 (`Closure Complete`)**
+   - Gate-specific critical artifact:
+     - `ARTIFACT-CLOSURE-RECORD`
+   - Persistent critical artifacts:
+     - `ARTIFACT-WORK-BRIEF` or `ARTIFACT-PROJECT-BRIEF`
+     - `ARTIFACT-DECISION-LOG`
+     - `ARTIFACT-OPEN-ITEMS-REGISTER`
+   - `Closure Record` is the universal closure artifact for the framework and is always required by Gate 8.
+
+#### 2.14.6 Machine-consumable gate-mapping rules (YAML)
+
+```yaml
+kind: gate_mapping
+id: RULE-GATE-1-CRITICAL-ARTIFACTS
+gate_id: GATE-QUALIFIED-REQUEST
+base_critical_artifacts:
+  - ARTIFACT-REQUEST-INTAKE-RECORD
+```
+
+```yaml
+kind: gate_mapping
+id: RULE-GATE-2-CRITICAL-ARTIFACTS
+gate_id: GATE-INITIATIVE-DEFINED
+base_critical_artifacts:
+  - ARTIFACT-WORK-BRIEF
+  - ARTIFACT-PROJECT-BRIEF
+  - ARTIFACT-DECISION-LOG
+  - ARTIFACT-OPEN-ITEMS-REGISTER
+substitution_rule: small_work_uses_work_brief_large_work_uses_project_brief
+```
+
+```yaml
+kind: gate_mapping
+id: RULE-GATE-3-CRITICAL-ARTIFACTS
+gate_id: GATE-AUTHORIZED
+gate_specific_artifacts:
+  - ARTIFACT-PROJECT-CHARTER
+persistent_critical_artifacts:
+  - ARTIFACT-WORK-BRIEF
+  - ARTIFACT-PROJECT-BRIEF
+  - ARTIFACT-DECISION-LOG
+  - ARTIFACT-OPEN-ITEMS-REGISTER
+substitution_rule: project_charter_is_gate_specific_work_brief_or_project_brief_follows_packaging_mode
+```
+
+```yaml
+kind: gate_mapping
+id: RULE-GATE-4-CRITICAL-ARTIFACTS
+gate_id: GATE-SPECIFICATION-COMPLETE
+persistent_critical_artifacts:
+  - ARTIFACT-WORK-BRIEF
+  - ARTIFACT-PROJECT-BRIEF
+  - ARTIFACT-DECISION-LOG
+  - ARTIFACT-OPEN-ITEMS-REGISTER
+conditional_artifacts_become_critical_when_gate_invalidated:
+  - ARTIFACT-DELIVERY-CHARTER
+  - ARTIFACT-TDD
+  - ARTIFACT-API-CONTRACT-SPEC
+  - ARTIFACT-DATA-ASSET-SPEC
+  - ARTIFACT-DATA-MIGRATION-PLAN
+  - ARTIFACT-ACCESS-MODEL
+  - ARTIFACT-SECURITY-PRIVACY-RIA
+embedded_evidence_required: true
+```
+
+```yaml
+kind: gate_mapping
+id: RULE-GATE-5-CRITICAL-ARTIFACTS
+gate_id: GATE-MVP-IDENTIFIED
+persistent_critical_artifacts:
+  - ARTIFACT-WORK-BRIEF
+  - ARTIFACT-PROJECT-BRIEF
+  - ARTIFACT-DECISION-LOG
+  - ARTIFACT-OPEN-ITEMS-REGISTER
+conditional_artifacts_become_critical_when_gate_invalidated:
+  - ARTIFACT-DELIVERY-CHARTER
+  - ARTIFACT-TDD
+  - ARTIFACT-API-CONTRACT-SPEC
+  - ARTIFACT-DATA-ASSET-SPEC
+  - ARTIFACT-DATA-MIGRATION-PLAN
+  - ARTIFACT-ACCESS-MODEL
+  - ARTIFACT-SECURITY-PRIVACY-RIA
+packet_mode_may_elevate_gate_specific_deliverables: true
+embedded_evidence_required: true
+```
+
+```yaml
+kind: gate_mapping
+id: RULE-GATE-6-CRITICAL-ARTIFACTS
+gate_id: GATE-DELIVERABLES-ACCEPTED
+persistent_critical_artifacts:
+  - ARTIFACT-WORK-BRIEF
+  - ARTIFACT-PROJECT-BRIEF
+  - ARTIFACT-DECISION-LOG
+  - ARTIFACT-OPEN-ITEMS-REGISTER
+conditional_artifacts_become_critical_when_gate_invalidated:
+  - ARTIFACT-DELIVERY-CHARTER
+  - ARTIFACT-DEPLOYMENT-GUIDE
+  - ARTIFACT-USER-ADOPTION-PLAN
+packet_mode_may_elevate_gate_specific_deliverables: true
+embedded_evidence_required: true
+```
+
+```yaml
+kind: gate_mapping
+id: RULE-GATE-7-CRITICAL-ARTIFACTS
+gate_id: GATE-TRANSITION-COMPLETE
+persistent_critical_artifacts:
+  - ARTIFACT-WORK-BRIEF
+  - ARTIFACT-PROJECT-BRIEF
+  - ARTIFACT-DECISION-LOG
+  - ARTIFACT-OPEN-ITEMS-REGISTER
+conditional_artifacts_become_critical_when_gate_invalidated:
+  - ARTIFACT-DELIVERY-CHARTER
+  - ARTIFACT-DEPLOYMENT-GUIDE
+  - ARTIFACT-USER-ADOPTION-PLAN
+packet_mode_may_elevate_gate_specific_deliverables: true
+embedded_evidence_required: true
+```
+
+```yaml
+kind: gate_mapping
+id: RULE-GATE-8-CRITICAL-ARTIFACTS
+gate_id: GATE-CLOSURE-COMPLETE
+gate_specific_artifacts:
+  - ARTIFACT-CLOSURE-RECORD
+persistent_critical_artifacts:
+  - ARTIFACT-WORK-BRIEF
+  - ARTIFACT-PROJECT-BRIEF
+  - ARTIFACT-DECISION-LOG
+  - ARTIFACT-OPEN-ITEMS-REGISTER
+substitution_rule: closure_record_is_always_required_project_brief_or_work_brief_follows_packaging_mode
+```
+
 ## 3. Explicit Non-Behaviors
 
 1. The system must not add bureaucracy for its own sake because extra process that does not improve delivery quality weakens adoption and slows execution.
@@ -1672,7 +2143,7 @@ The framework currently operates as a standalone knowledge and delivery-definiti
 7. Acceptance criteria
 8. Delivery expectations
 9. Support and maintenance expectations
-10. Vendor engagement context where applicable
+10. Vendor engagement context where applicable, including expected external engagement mode when known
 
 **Minimum request entry payload (Intake entry readiness)**
 A request may enter Intake even if it is not yet confirmed in-scope. The purpose of Intake entry is to create a tracked item with an accountable triage owner and to schedule an initial clarification session.
@@ -1812,7 +2283,8 @@ These scenarios are intended for external evaluation of the framework’s outcom
 **Expected observable outcomes**
 1. The documentation is sufficient to make the work buildable and supportable.
 2. The framework does not require obviously irrelevant or non-value-adding outputs merely to satisfy process formality.
-3. Reviewers conclude that the framework supported delivery readiness without adding avoidable bureaucracy.
+3. Any omitted non-core item is explicitly justified and recorded rather than skipped informally.
+4. Reviewers conclude that the framework supported delivery readiness without adding avoidable bureaucracy or waiving core controls.
 
 ### 5.7 Edge-case scenario 2: Large multi-team initiative with long-term support needs
 
@@ -1975,16 +2447,38 @@ An agent would likely introduce its own testing or acceptance-writing model.
 **Question to resolve**
 What form should acceptance criteria take, and what do you mean by “testable using holdout patterns” in this framework?
 
-### 6.10 External team engagement modes are underspecified
+### 6.10 External team engagement modes are resolved
 
-**What is ambiguous**
-You mentioned external development teams, but not whether this includes full outsourced delivery, co-delivery, staff augmentation, or advisory vendors.
+**Resolved decision**
+The framework supports exactly three canonical external engagement modes:
+1. **Staff augmentation**
+2. **Co-delivery**
+3. **Full external delivery**
 
-**Likely agent assumption**
-An agent would likely design for one generic vendor handoff model.
+These modes affect both governance expectations and handoff expectations, but they do **not** create separate lifecycle stage models. The core framework lifecycle and gates remain the same.
 
-**Question to resolve**
-What external engagement models must the framework support, and how should handoff requirements differ across them?
+**Mode definitions**
+1. **Staff augmentation** — external personnel work inside the internal team's delivery model as additional capacity. Internal teams retain delivery-system ownership, day-to-day direction, and framework accountability. Staff augmentation is **not** treated as a formal external handoff mode.
+2. **Co-delivery** — internal and external teams share delivery responsibility. The framework requires explicit responsibility mapping, working agreements, escalation paths, and interface rules between the internal and external teams.
+3. **Full external delivery** — the external team is expected to execute from the approved package with minimal dependence on recurring requirement clarification. The handoff package is expected to stand almost entirely on its own.
+
+**Out of scope as a separate mode**
+Advisory or review-only vendors are not a separate framework mode unless they become materially involved in delivery.
+
+**Governance implications**
+1. External engagement mode MUST be declared provisionally by **Gate 2** if external participation is expected.
+2. External engagement mode MUST be finalized no later than **Gate 4**.
+3. Framework gate ownership remains internal in all modes. Vendors or partners may provide evidence of completion, but formal gate passage remains the responsibility of the named internal Gate Decision Owner.
+4. Internal named owners continue to own business acceptance, transition acceptance, and closure decisions even when delivery is fully external.
+
+**Artifact and handoff implications**
+1. **Staff augmentation** does not by itself trigger a Delivery Charter or formal external handoff package.
+2. **Co-delivery** requires a Delivery Charter that makes shared responsibilities, coordination boundaries, escalation paths, and acceptance workflow explicit.
+3. **Full external delivery** requires a Delivery Charter and a stronger autonomy standard for the approved package: the external team should be able to execute from the package with near-zero need to reconstruct foundational business intent, scope boundaries, or acceptance expectations through live clarification.
+4. The difference between Co-delivery and Full External Delivery is not a separate artifact set; it is a higher handoff completeness and autonomy standard for Full External Delivery.
+
+**Implication for implementation**
+The framework MUST not treat all external participation as a single generic vendor case. Reviewers and AI agents applying the framework MUST distinguish staff augmentation from true external delivery, and MUST apply the stronger standalone-handoff expectation to Full External Delivery engagements.
 
 ### 6.11 Supportability and maintainability expectations are not yet decomposed
 
@@ -2011,20 +2505,49 @@ What minimum support and maintenance information must always be defined before w
 **Implication for implementation**
 The framework MUST apply the review mechanism in Section 2.10 rather than inventing local review boards, ad hoc signoff chains, or informal audit rules.
 
-### 6.13 Critical stage-defining artifact mapping is deferred
+### 6.13 Anti-bureaucracy guardrails are resolved
 
-**What is ambiguous**
-The completeness model now requires each gate to identify its critical stage-defining artifacts, but the exact artifact-to-gate mapping has not yet been defined.
+**Resolved decision**
+The framework uses a hybrid anti-bureaucracy model:
+1. Core controls are never waivable.
+2. Only explicitly waivable non-core items may be omitted.
+3. Omission is allowed only when it does not weaken completeness, traceability, ownership clarity, downstream executability, or downstream supportability.
 
-**Likely agent assumption**
-An agent would likely infer the critical artifacts for each gate from context and apply that inference as if it were canonical.
+**Non-waivable core controls**
+1. All formal gates
+2. Named Gate Decision Owners
+3. Tier-required primary artifacts
+4. `Decision Log`
+5. `Open Items Register`
+6. Any conditional artifact whose trigger is true
 
-**Question to resolve**
-Which artifacts are the critical stage-defining artifacts for each gate, and what mapping rules apply when packaging modes or conditional artifacts vary?
+**Approval and recording model**
+1. Delivery Owner may approve explicitly waivable non-core omissions with documented rationale.
+2. PMO review is required when the omission affects gate evidence, cross-team coordination, external delivery controls, or security/privacy/compliance assurance.
+3. Every approved omission or waiver decision MUST be recorded in the `Decision Log`, with local reference from the affected artifact or review record where relevant.
+
+**Implication for implementation**
+The framework MUST not use anti-bureaucracy language as a blanket excuse to skip controls. Reviewers and AI agents applying the framework MUST use Section 2.13's omission rules rather than local judgment calls about what feels unnecessary.
+
+### 6.14 Critical stage-defining artifact mapping is resolved
+
+**Resolved decision**
+The framework now uses a rule-based gate-to-critical-artifact mapping model defined in Section 2.14.
+
+**Key rules**
+1. `Work Brief` and `Project Brief` are packaging-mode substitutes for the primary definition artifact.
+2. `Decision Log` and `Open Items Register` are persistently gate-critical from Gate 2 onward.
+3. Triggered conditional artifacts become gate-critical only when their absence would invalidate the current gate's mandatory pass conditions.
+4. In packet mode, the `Work Brief` may elevate a project-specific deliverable to gate-critical status only when it explicitly ties that deliverable to a named gate.
+5. Where no standalone artifact exists for part of a gate's required evidence, that evidence may be embedded in persistent artifacts, triggered artifacts, or the formal gate review/decision record.
+6. `Closure Record` is now a universal framework artifact and is always required at Gate 8.
+
+**Implication for implementation**
+The framework MUST apply Section 2.14's mapping rules and gate-mapping YAML blocks rather than inferring gate-critical artifacts ad hoc from artifact timing or reviewer intuition.
 
 ## 7. Implementation Constraints
 
-1. The implementation must remain minimal and avoid adding process overhead that does not improve delivery readiness.
+1. The implementation must remain minimal and avoid adding process overhead that does not improve delivery readiness, using the anti-bureaucracy control model in Section 2.13.
 2. The implementation must be suitable for human teams and AI-agent consumers.
 3. The implementation must support complex enterprise and large multi-team initiatives.
 4. No software integrations are currently required.
@@ -2032,4 +2555,9 @@ Which artifacts are the critical stage-defining artifacts for each gate, and wha
 
 ## 8. Remaining Contradictions
 
-No direct contradictions were stated, but there is one tension that should be resolved explicitly: the framework must be rigorous enough for autonomous delivery while also avoiding bureaucracy. That tension is manageable, but only if you define how rigor scales by project type, risk, and complexity.
+No unresolved direct contradictions are currently stated.
+
+The primary historical tension in this specification was that the framework had to be rigorous enough for autonomous delivery while also avoiding bureaucracy. That tension is now managed explicitly through:
+1. the scaling model in Section 2.7
+2. the anti-bureaucracy guardrails in Section 2.13
+3. the completeness model in Section 2.6
