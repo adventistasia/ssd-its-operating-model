@@ -154,14 +154,15 @@ Recommended high-level order of resolution:
   - Risk if unresolved: High
   - Status: Resolved
   - Resolution note: The framework now mandates a single Open Items Register for every initiative by Gate 2. It uses one typed-entry model (`blocker`, `risk`, `issue`, `assumption`, `dependency`) across the full lifecycle, with standard statuses (`open`, `in progress`, `monitoring`, `resolved`, `closed`), mandatory minimum fields, one named item owner per entry, explicit blocker reclassification when a non-blocker becomes gate-disqualifying, mandatory escalation triggers, Gate Decision Owner confirmation for blocker closure, and strict separation from the Decision Log, which records formal decisions rather than item lifecycle updates.
-- [ ] **A15 - AI-agent sufficiency standard is implied but not concretely defined**
+- [x] **A15 - AI-agent sufficiency standard is implied but not concretely defined**
   - Relevant section(s): Section 1; Section 2.1.8-10; Section 2.3.5; Section 3.8; Section 5.3
   - Description: The specification requires outputs to be precise enough for AI-assisted delivery, but it does not define what additional structure, explicitness, or machine-readable discipline is required beyond what would satisfy a human team.
   - Why it matters: The framework may under-specify requirements for AI use while falsely claiming AI readiness.
   - Dependencies: Depends on A07, A08, A10.
   - Estimated complexity: Medium
   - Risk if unresolved: Medium
-  - Status: Unresolved
+  - Status: Resolved
+  - Resolution note: The framework now uses a human-plus AI-sufficiency standard integrated into completeness for all required artifacts and gates. It defines a mandatory AI-sufficiency checklist, immediate-fail patterns, stable local identifiers for materially traceable items, numbered structure by default for normative/reference-bearing content, explicit actor/action/object wording for normative statements, controlled-placeholder rules tied to the Open Items Register, external-reference discipline, and explicit labeling of review failures as AI-sufficiency failures when they occur.
 - [ ] **A16 - Anti-bureaucracy guardrails are stated but not enforceable**
   - Relevant section(s): Section 1; Section 2.3.1; Section 3.1-2; Section 5.6; Section 7.1; Section 8
   - Description: The specification repeatedly says the framework must avoid unnecessary process, but it does not define how to judge whether an artifact, review step, or requirement adds delivery value or may be omitted. Possible interpretations range from strict minimalism to broad mandatory documentation with discretionary waivers.
@@ -224,7 +225,7 @@ These are not unimportant, but they are either conditional by delivery mode or e
 | [x] | 11 | **A11 - Minimum supportability and maintainability definition** | Operational readiness content can be specified after artifact structure and scaling are known. | A minimum operational-readiness content standard. | Support owner, operations lead, delivery manager | Clarification of required support fields, responsibilities, and transition expectations. | Resolved |
 | [x] | 12 | **A13 - Review, assurance, and audit mechanism** | Review design depends on governance, stages, and readiness criteria. | A standard review model with reviewer roles, checkpoints, and evidence. | PMO, framework owner, engineering review leads | Review workflow definition and approval policy. | Resolved |
 | [x] | 13 | **A14 - Blocker, risk, and open-issue handling model** | Blocker handling should align to the approved workflow and governance model. | A standard issue register model and stop/proceed rules. | Delivery managers, PMO, framework owner | Decision on taxonomy, ownership, escalation, and closure rules. | Resolved |
-| [ ] | 14 | **A15 - AI-agent sufficiency standard** | AI-readiness should be calibrated after the human baseline is explicit. | A defined precision standard for AI-consumable documentation. | Framework owner, engineering, AI delivery stakeholders | Clarification of additional structure, explicitness, and prohibited ambiguity. | Unresolved |
+| [x] | 14 | **A15 - AI-agent sufficiency standard** | AI-readiness should be calibrated after the human baseline is explicit. | A defined precision standard for AI-consumable documentation. | Framework owner, engineering, AI delivery stakeholders | Clarification of additional structure, explicitness, and prohibited ambiguity. | Resolved |
 | [ ] | 15 | **A12 - External engagement modes and handoff variants** | External variants should be derived from the core framework rather than invented upfront. | A handoff model adjusted by vendor engagement type. | Vendor management, PMO, delivery leadership | Scope decision plus conditional handoff requirements by engagement model. | Unresolved |
 | [ ] | 16 | **A16 - Anti-bureaucracy guardrails** | Guardrails are most credible once the full framework exists and can be pruned deliberately. | A clear rule for omitting low-value steps without weakening readiness. | Framework owner, PMO, delivery leadership | Principle-to-rule conversion using omission criteria, waiver rules, and examples. | Unresolved |
 | [ ] | 17 | **A17 - Critical stage-defining artifact mapping** | The completeness model now depends on identifying which artifacts are truly stage-defining at each gate. | A canonical gate-to-critical-artifact mapping, including packaging-mode and conditional-artifact rules. | Framework owner, PMO, delivery managers, engineering reviewers | Mapping decision with examples for packet mode, large-work mode, and conditional artifacts. | Unresolved |
@@ -232,9 +233,9 @@ These are not unimportant, but they are either conditional by delivery mode or e
 ## 5. Progress Tracking Summary
 
 - **Total ambiguities identified:** 17
-- **Resolved ambiguities:** 13
-- **Remaining unresolved ambiguities:** 4
+- **Resolved ambiguities:** 14
+- **Remaining unresolved ambiguities:** 3
 - **Foundational items:** 9
 - **Dependent items:** 5
 - **Optional / lower-impact items:** 2
-- **Tracking note:** A01-A11 and A13-A14 have been resolved (13 of 17). A17 remains deferred. Next active ambiguity is now A15 (AI-agent sufficiency standard).
+- **Tracking note:** A01-A11 and A13-A15 have been resolved (14 of 17). A17 remains deferred. Next active ambiguity is now A12 (External engagement modes and handoff variants).

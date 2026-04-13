@@ -847,6 +847,7 @@ Every required artifact MUST be judged against this shared core:
 2. **Internal consistency** — the artifact does not materially contradict itself.
 3. **Decision and assumption visibility** — decisions, assumptions, unknowns, and open issues are explicit rather than implicit.
 4. **Actionability for the next consumer** — the intended next consumer can use the artifact for its stated purpose without redefining the problem.
+5. **AI sufficiency** — the artifact satisfies the AI-agent sufficiency standard in Section 2.12 when judged as a delivery-ready input for AI-assisted downstream work.
 
 Each artifact MUST also define:
 1. its **purpose**
@@ -861,6 +862,7 @@ Every gate review MUST check that:
 2. the required artifacts are cross-artifact consistent
 3. unresolved blockers do not force downstream teams to invent business requirements
 4. the documentation is sufficient for the named downstream consumer to proceed without redefining the problem
+5. the documentation set satisfies the AI-agent sufficiency standard in Section 2.12
 
 Each gate definition MUST explicitly include:
 1. **mandatory pass conditions**
@@ -916,6 +918,8 @@ The framework explicitly forbids reviewers from upgrading an artifact or gate ba
 Document presence is never evidence of completeness. Reviewers MUST judge content sufficiency against the defined criteria, not against template fill, formatting quality, or presentation polish.
 
 If an artifact or gate fails completeness, the review output MUST include a written deficiency list tied to the specific failed criteria.
+
+If the failure includes one or more AI-agent sufficiency failures, the review output MUST state that explicitly as an **AI-sufficiency failure** rather than burying it inside a generic completeness comment.
 
 There is **no conditional progression** for completeness failure. If the artifact or gate fails, work stops until the documented deficiencies are corrected and re-reviewed.
 
@@ -1514,6 +1518,126 @@ escalation_triggers:
 decision_log_boundary:
   register_tracks: unresolved_item_lifecycle
   decision_log_tracks: formal_decisions_and_rationale
+```
+
+### 2.12 AI-agent sufficiency standard (resolved: A15)
+
+This section resolves Ambiguity A15.
+
+#### 2.12.1 Standard type and control model
+
+The framework adopts a **human-plus** AI-agent sufficiency standard.
+
+This means:
+1. required artifacts and gates MUST remain reviewable and enforceable by humans
+2. required artifacts and gates MUST also satisfy additional precision, structure, and explicitness rules needed for reliable AI-assisted downstream use
+3. AI sufficiency is not a parallel advisory check; it is a required sub-dimension of completeness
+
+If a required artifact or gate is human-usable but fails a mandatory AI-sufficiency check, it fails completeness.
+
+#### 2.12.2 Scope of application
+
+The AI-agent sufficiency standard applies to:
+1. all required artifacts
+2. all gate decisions and gate review records
+3. all normative framework content used to define how the framework operates
+
+This includes small-work and large-work modes.
+
+#### 2.12.3 Canonical AI-sufficiency checklist
+
+Every required artifact and gate MUST satisfy the following baseline checklist:
+
+1. **Explicit meaning** — material requirements, responsibilities, and constraints are stated directly rather than implied through tribal knowledge or unstated context.
+2. **Terminological stability** — the same concept uses the same term throughout, or any alias is explicitly mapped.
+3. **Reference clarity** — pronouns, shorthand, and cross-references are specific enough that a reader or agent can determine exactly what is being referenced.
+4. **Scope boundedness** — in-scope, out-of-scope, exclusions, assumptions, and constraints are explicit where relevant.
+5. **Decision visibility** — settled decisions, open decisions, constraints, and unresolved items are explicitly marked rather than buried in prose.
+6. **Traceability** — materially traceable items such as requirements, acceptance criteria, decisions, and open items can be linked to stable identifiers, numbered sections, or equivalent explicit references.
+7. **Structural parseability** — the artifact uses consistent headings, lists, tables, and machine-readable blocks where the framework expects structured extraction.
+8. **Cross-artifact consistency** — the artifact does not materially conflict with other required artifacts in a way that would force interpretation by the reader or agent.
+9. **Actionability for the next consumer** — the intended downstream consumer can act without inventing missing business meaning.
+10. **Target-state explicitness** — the artifact makes explicit what acceptable or good output looks like for the next consumer, using observable outcome descriptions, acceptance patterns, or equivalent target-state language.
+11. **Controlled unknowns only** — remaining unknowns are explicitly bounded and linked to the Open Items Register rather than left as stray placeholders.
+12. **Explicit actor/action/object language** — normative statements identify who does what to what wherever that distinction materially affects execution or accountability.
+13. **External-reference discipline** — any material external source, policy, system, standard, or document is explicitly identified in a retrievable way and its relevance is stated.
+
+#### 2.12.4 Traceability and numbering rules
+
+To support human and AI referenceability:
+1. normative and reference-bearing documents SHOULD use numbered headings, sections, and subsections by default
+2. materially traceable items inside artifacts MUST use stable local identifiers or equivalent explicit references
+3. numbered lists SHOULD be used for normative rules, criteria, and ordered sequences where exact reference matters
+
+Framework implementations and downstream templates MUST preserve these traceability properties even if formatting differs.
+
+#### 2.12.5 Immediate AI-sufficiency fail patterns
+
+The following are immediate AI-sufficiency failure conditions when material to meaning:
+1. unresolved `TBD`, `TBC`, or equivalent placeholder text that is not explicitly controlled through the Open Items Register
+2. contradictory statements across required artifacts
+3. undefined terms, acronyms, or role labels that materially affect interpretation
+4. references to external context, prior discussions, or informal knowledge that are not explicitly identified and referenceable
+5. acceptance criteria, target-state descriptions, or normative expectations that are too vague to observe or apply
+6. materially traceable content that cannot be referenced precisely because identifiers, numbering, or equivalent structure are missing
+
+#### 2.12.6 Controlled unknowns rule
+
+Unknowns are allowed only when controlled.
+
+This means:
+1. a remaining unknown MUST be explicit
+2. it MUST be bounded enough that the reader can understand what is not yet known
+3. it MUST be linked to the Open Items Register with ownership and next action
+4. it MUST NOT invalidate the current gate's mandatory pass conditions
+
+Stray placeholders or vague future-tense statements are not acceptable substitutes for controlled unknowns.
+
+#### 2.12.7 Review and reporting rule
+
+AI sufficiency is reviewed through the existing completeness model, not through a separate control track.
+
+Review outputs therefore MUST:
+1. identify the specific failed AI-sufficiency checklist item(s) when applicable
+2. explicitly label the outcome as an **AI-sufficiency failure** when one or more mandatory AI-sufficiency checks fail
+3. avoid passing an artifact or gate on the basis that a human reviewer could probably infer the missing meaning
+
+#### 2.12.8 Machine-consumable AI-sufficiency model (YAML)
+
+```yaml
+kind: quality_model
+id: QUALITY-MODEL-AI-SUFFICIENCY
+name: AI-Agent Sufficiency Standard
+standard_type: human_plus
+integrated_with_completeness: true
+applies_to:
+  - all_required_artifacts
+  - all_gate_decisions
+  - normative_framework_content
+mandatory_checks:
+  - explicit_meaning
+  - terminological_stability
+  - reference_clarity
+  - scope_boundedness
+  - decision_visibility
+  - traceability
+  - structural_parseability
+  - cross_artifact_consistency
+  - actionability_for_next_consumer
+  - target_state_explicitness
+  - controlled_unknowns_only
+  - explicit_actor_action_object_language
+  - external_reference_discipline
+immediate_fail_patterns:
+  - uncontrolled_placeholder
+  - cross_artifact_contradiction
+  - undefined_material_term
+  - unreferenceable_external_context
+  - vague_acceptance_or_target_state
+  - missing_material_traceability
+reporting_rule: >
+  When one or more mandatory AI-sufficiency checks fail, the review output
+  must explicitly label the result as an AI-sufficiency failure.
 ```
 
 ## 3. Explicit Non-Behaviors
