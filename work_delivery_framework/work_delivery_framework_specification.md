@@ -8,7 +8,7 @@ The framework exists to make “good” and “complete” explicit while avoidi
 
 ### 1.1 Scope of applicability
 
-The framework is optimized for software initiatives.
+The framework is defined for planned software initiatives.
 
 **In scope**
 1. Greenfield software projects
@@ -21,11 +21,10 @@ The framework is optimized for software initiatives.
 4. Small internal process changes
 
 **Conditionally in scope**
-1. Complex operational changes affecting multiple organizations
-2. Complex internal process changes affecting the whole organization
-3. Non-software initiatives that can use the framework with minimum changes
+1. Complex operational changes affecting multiple organizations when the work is still primarily a software initiative
+2. Complex internal process changes affecting the whole organization when the work is still primarily a software initiative
 
-Conditional use does not make this a general enterprise change framework by default. The default design target remains software project delivery.
+Conditional use does not make this a general enterprise change framework. The default and intended design target is planned software initiative delivery.
 ### 1.2 Framework form and publication model
 
 This framework is a full **operating model** for work definition and delivery readiness. It is not optional guidance.
@@ -129,7 +128,7 @@ The framework MUST support human teams using AI agents as assistants while keepi
 The framework lifecycle is defined as a sequence of formal stages with explicit progression gates. A project MAY be blocked at any gate if the required evidence is missing or material ambiguity remains unresolved.
 
 **Important boundary note**
-Stages and gates define the control model. The canonical artifact taxonomy is defined in Section 2.5. Scaling thresholds for “small vs large work” and formal tiering are defined in Section 2.7.
+Stages and gates define the control model. The canonical artifact taxonomy is defined in Section 2.5. Proportionate rigor expectations for different initiative shapes are defined in Section 2.7.
 
 **Stages (in order)**
 1. Intake
@@ -158,7 +157,7 @@ Stages and gates define the control model. The canonical artifact taxonomy is de
 3. Discovery / Initiative Definition ends at Gate 2 (Initiative Defined).
 4. Authorization (conditional) ends at Gate 3 (Authorized).
    - If Authorization is not required, the project transitions from Discovery directly to Solution Definition after Gate 2.
-   - Authorization applicability is informed by the scaling model (see Section 2.7). For small-work, Authorization is typically “Not Required” since requiring an approved budget would already trigger large-work classification. For large-work, the Gate Decision Owner must declare Authorization as “Required” or “Not Required” at Gate 2.
+   - Authorization applicability is informed by the initiative's business, funding, and governance context (see Section 2.7). The Gate Decision Owner must declare Authorization as “Required” or “Not Required” at Gate 2.
 5. Solution Definition ends at Gate 4 (Specification Complete).
 6. Planning / Mobilization / MVP Plan ends at Gate 5 (MVP Identified).
 7. Delivery / Execution ends at Gate 6 (All Deliverables Accepted).
@@ -320,7 +319,6 @@ immediate_fail_conditions:
 minimum_qualitative_threshold: adequate
 critical_stage_defining_artifacts:
   - ARTIFACT-PROJECT-BRIEF
-  - ARTIFACT-WORK-BRIEF
   - ARTIFACT-DECISION-LOG
   - ARTIFACT-OPEN-ITEMS-REGISTER
 critical_mapping_rule_ref: RULE-GATE-2-CRITICAL-ARTIFACTS
@@ -342,7 +340,6 @@ minimum_qualitative_threshold: adequate
 critical_stage_defining_artifacts:
   - ARTIFACT-PROJECT-CHARTER
   - ARTIFACT-PROJECT-BRIEF
-  - ARTIFACT-WORK-BRIEF
   - ARTIFACT-DECISION-LOG
   - ARTIFACT-OPEN-ITEMS-REGISTER
 critical_mapping_rule_ref: RULE-GATE-3-CRITICAL-ARTIFACTS
@@ -364,7 +361,6 @@ immediate_fail_conditions:
 minimum_qualitative_threshold: strong
 critical_stage_defining_artifacts:
   - ARTIFACT-PROJECT-BRIEF
-  - ARTIFACT-WORK-BRIEF
   - ARTIFACT-DECISION-LOG
   - ARTIFACT-OPEN-ITEMS-REGISTER
   - ARTIFACT-DELIVERY-CHARTER
@@ -393,7 +389,6 @@ immediate_fail_conditions:
 minimum_qualitative_threshold: adequate
 critical_stage_defining_artifacts:
   - ARTIFACT-PROJECT-BRIEF
-  - ARTIFACT-WORK-BRIEF
   - ARTIFACT-DECISION-LOG
   - ARTIFACT-OPEN-ITEMS-REGISTER
   - ARTIFACT-DELIVERY-CHARTER
@@ -420,7 +415,6 @@ immediate_fail_conditions:
 minimum_qualitative_threshold: adequate
 critical_stage_defining_artifacts:
   - ARTIFACT-PROJECT-BRIEF
-  - ARTIFACT-WORK-BRIEF
   - ARTIFACT-DECISION-LOG
   - ARTIFACT-OPEN-ITEMS-REGISTER
   - ARTIFACT-DELIVERY-CHARTER
@@ -443,7 +437,6 @@ immediate_fail_conditions:
 minimum_qualitative_threshold: adequate
 critical_stage_defining_artifacts:
   - ARTIFACT-PROJECT-BRIEF
-  - ARTIFACT-WORK-BRIEF
   - ARTIFACT-DECISION-LOG
   - ARTIFACT-OPEN-ITEMS-REGISTER
   - ARTIFACT-DELIVERY-CHARTER
@@ -467,7 +460,6 @@ minimum_qualitative_threshold: adequate
 critical_stage_defining_artifacts:
   - ARTIFACT-CLOSURE-RECORD
   - ARTIFACT-PROJECT-BRIEF
-  - ARTIFACT-WORK-BRIEF
   - ARTIFACT-DECISION-LOG
   - ARTIFACT-OPEN-ITEMS-REGISTER
 critical_mapping_rule_ref: RULE-GATE-8-CRITICAL-ARTIFACTS
@@ -490,24 +482,18 @@ The following are category labels (not artifacts):
 3. DevOps & Support
 4. User Adoption
 
-#### 2.5.2 Packaging model: small-work packet vs large-work artifact set
+#### 2.5.2 Primary definition artifact model
 
-The framework supports two packaging modes:
-1. **Small work:** one packet artifact called **Work Brief**.
-2. **Large work:** separate canonical artifacts (files) as defined in this section.
+The framework uses one canonical primary definition artifact for every in-scope initiative:
+1. **Initiative Definition / Project Brief**
 
-**Important note**
-The thresholds for “small vs large work” and formal tiering are defined in Section 2.7. The Delivery Owner MUST classify the project as small-work or large-work no later than Gate 2.
-
-Both names MUST exist:
-- **Work Brief** is the small-work form.
-- **Initiative Definition / Project Brief** is the large-work form.
+Conditional artifacts supplement the primary definition artifact when their trigger conditions are true, but they do not replace it.
 
 #### 2.5.3 Canonical artifacts (names, triggers, and required-by gates)
 
 **Always required**
 1. Request Intake Record — required by **Gate 1**
-2. Initiative Definition / Project Brief (large-work mode) **OR** Work Brief (small-work mode) — required by **Gate 2**
+2. Initiative Definition / Project Brief — required by **Gate 2**
 3. Decision Log — must exist for every initiative and must exist no later than **Gate 2**
 4. Open Items Register — must exist for every initiative and must exist no later than **Gate 2**
 5. Closure Record — required by **Gate 8**
@@ -563,41 +549,11 @@ common_failure_conditions:
 
 ```yaml
 kind: artifact
-id: ARTIFACT-WORK-BRIEF
-name: Work Brief
-packaging_mode: packet
-required_by_gate: GATE-INITIATIVE-DEFINED
-purpose: Consolidated packet for small-work initiatives that captures the minimum business, delivery, and operational definition needed to decide whether the initiative is sufficiently defined to proceed.
-required_contents:
-  - Background / problem / opportunity
-  - Desired outcome
-  - Success measures (allowed: explicitly Unknown/TBD at entry)
-  - Affected systems / processes (allowed: explicitly Unknown/TBD at entry)
-  - In-scope statement and scope boundaries
-  - Stakeholders and owners (including Gate Decision Owner assignments)
-  - Constraints, dependencies, and known unknowns (explicit TBD allowed where appropriate)
-  - Functional requirements and use cases (as applicable)
-  - User roles (as applicable)
-  - Business rules (as applicable)
-  - Delivery approach (high-level)
-  - Support and operational considerations (if applicable)
-  - User adoption considerations (if applicable)
-artifact_specific_completeness_rules:
-  - Scope boundaries, desired outcome, and key constraints are explicit enough to determine whether the work is bounded.
-  - The packet is internally coherent across business need, scope, delivery approach, and operating implications.
-  - Unknowns are explicitly marked rather than implied or omitted.
-common_failure_conditions:
-  - The packet mixes multiple plausible interpretations of the work without resolving or exposing them.
-  - A downstream team would need to infer core business intent, scope boundaries, or ownership.
-```
-
-```yaml
-kind: artifact
 id: ARTIFACT-PROJECT-BRIEF
 name: Initiative Definition / Project Brief
 packaging_mode: standalone
 required_by_gate: GATE-INITIATIVE-DEFINED
-purpose: Primary large-work artifact that defines the initiative, its scope, business intent, operating context, and the named owners needed for gate decisions.
+purpose: Primary initiative definition artifact that defines the initiative, its scope, business intent, operating context, and the named owners needed for gate decisions.
 required_contents:
   - Background / problem / opportunity
   - Desired outcomes and success measures
@@ -1042,132 +998,68 @@ If the failure includes one or more AI-agent sufficiency failures, the review ou
 
 There is **no conditional progression** for completeness failure. If the artifact or gate fails, work stops until the documented deficiencies are corrected and re-reviewed.
 
-### 2.7 Scaling rules for small-work vs large-work
+### 2.7 Scaling rules for planned software initiatives
 
-This section defines the scaling rules for small-work and large-work.
+This section defines how the framework scales within its intended scope of planned software initiatives.
 
-#### 2.7.1 Tiers
+#### 2.7.1 Core scaling principle
 
-The framework defines two tiers:
-1. **Small-work** — uses the Work Brief packet (see Section 2.5.2)
-2. **Large-work** — uses the separate artifact set (see Section 2.5.3)
+The framework uses one initiative path for all in-scope work.
 
-There is no intermediate tier.
+Scaling is achieved by:
+1. varying the depth and specificity of content inside the canonical artifacts
+2. triggering conditional artifacts only when their trigger conditions are true
+3. keeping the same gate standards while allowing evidence to remain proportionate to the initiative's scope, risk, and complexity
 
-#### 2.7.2 Classification factors
+The framework does not use alternate initiative classes, packet modes, or substitute primary artifacts.
 
-A project is classified as **large-work** if **any one** of the following primary factors is true (single-factor trigger, OR logic):
+#### 2.7.2 Scaling factors
 
-1. **Scope** — any of the following:
-   - Multi-team
-   - Multi-system
-   - Multi-component
-   - Greenfield (all greenfield projects are large-work regardless of team size or system count)
+The Delivery Owner MUST calibrate rigor based on the initiative's actual characteristics, including:
+1. **Scope**
+   - number of teams, systems, modules, or affected business processes
+2. **Business impact**
+   - operational, financial, customer, compliance, or strategic significance
+3. **Delivery complexity**
+   - uncertainty, integration sensitivity, implementation effort, or dependency load
+4. **Operational consequence**
+   - support burden, transition complexity, or long-term maintainability expectations
 
-2. **Business impact** — any of the following:
-   - Affects multiple departments, employees, or organizations (cross-department)
-   - Material impact on operations, revenue, or strategic objectives
-   - Requires an approved budget
+External involvement is relevant context and may trigger specific artifacts, but it does not create a separate framework path.
 
-3. **Effort/complexity** — Delivery Owner judgment; when uncertain, **default to large-work**
+#### 2.7.3 Timing and recording
 
-External involvement is relevant context but is not a primary forcing factor.
+The Delivery Owner MUST make the scaling judgment no later than Gate 2 (Initiative Defined) and reflect it in the depth, specificity, and conditional artifact selections used for the initiative.
 
-#### 2.7.3 Classification timing and declaration
+If the initiative's shape changes materially later, the Decision Log MUST record the change and any newly required artifact work or gate evidence adjustments.
 
-The Delivery Owner MUST declare the classification (small-work or large-work) no later than Gate 2 (Initiative Defined). The classification determines the packaging mode (Work Brief or separate artifact set).
+#### 2.7.4 Gate expectations under scaling
 
-Classification documentation is not required beyond the declaration in the Initiative Definition / Project Brief or Work Brief.
+Scaling does not change the set of gates or allow gate bypass.
 
-#### 2.7.4 Reclassification
+For simpler in-scope initiatives, evidence may be more concise when it still satisfies the gate's mandatory pass conditions and completeness rules.
 
-If a project initially classified as small-work grows beyond the small-work thresholds (e.g., scope expands to multi-team, a budget requirement is discovered, or effort/complexity increases materially), the project MUST be reclassified to large-work. Reclassification requires switching to the separate artifact set and completing any missing artifacts to satisfy the gate requirements of the new tier.
+For more complex, risky, or externally dependent initiatives, evidence is expected to be more explicit, more cross-referenced, and more fully decomposed into conditional artifacts.
 
-Reclassification events MUST be recorded in the Decision Log.
+Every gate must still be formally evaluated and recorded.
 
-#### 2.7.5 Small-work gate passage profile
-
-All gates apply to small-work. However, the following gates allow **quick passage** for small-work (brief confirmation, lighter evidence, Delivery Owner can mark as passed with documented rationale):
-
-1. **Gate 1 (Qualified Request)** — in-scope confirmation and owner assignment is straightforward for small-work
-2. **Gate 3 (Authorized)** — typically "Not Required" for small-work since requiring an approved budget would already trigger large-work classification
-3. **Gate 5 (MVP Identified)** — for small-work, MVP scope often equals the full scope; brief confirmation suffices
-4. **Gate 7 (Transition Complete)** — transition is typically simpler for small-work
-5. **Gate 8 (Closure Complete)** — closure is typically simpler for small-work
-
-The following gates still require **substantive review** for small-work (the Work Brief packet serves as evidence, but the gate standard still applies):
-
-1. **Gate 2 (Initiative Defined)** — scope, outcomes, and ownership must still be clear
-2. **Gate 4 (Specification Complete)** — this is the core quality gate; minimum `strong` rating still required
-3. **Gate 6 (All Deliverables Accepted)** — acceptance must still be verified
-
-Quick passage does not mean gate bypass. Every gate must still be formally evaluated and recorded.
-
-#### 2.7.6 Small-work conditional artifacts
-
-For small-work, only the Work Brief is required. Conditional artifacts (e.g., Delivery Charter, Access Model, Security/Privacy RIA) are at Delivery Owner and team discretion. There is no automatic upgrade to large-work triggered by a conditional artifact.
-
-If the Delivery Owner determines that a conditional artifact is needed for small-work, it is produced and included as a companion to the Work Brief, and its completeness is still judged against the standard completeness model (see Section 2.6).
-
-#### 2.7.7 Machine-consumable scaling model (YAML)
+#### 2.7.5 Machine-consumable scaling model (YAML)
 
 ```yaml
 kind: scaling
 id: SCALING-MODEL
 name: Work Delivery Framework Scaling Model
-tiers:
-  - id: TIER-SMALL-WORK
-    name: Small-Work
-    packaging_mode: packet
-    primary_artifact: ARTIFACT-WORK-BRIEF
-    classification_rule: >
-      None of the primary forcing factors are true.
-      Scope is single-team, single-system, and non-greenfield.
-      Business impact does not cross departments, is not material, and does not require approved budget.
-      Effort/complexity is judged manageable as small-work.
-    gate_passage_profile: quick_pass
-    quick_pass_gates:
-      - GATE-QUALIFIED-REQUEST
-      - GATE-AUTHORIZED
-      - GATE-MVP-IDENTIFIED
-      - GATE-TRANSITION-COMPLETE
-      - GATE-CLOSURE-COMPLETE
-    substantive_review_gates:
-      - GATE-INITIATIVE-DEFINED
-      - GATE-SPECIFICATION-COMPLETE
-      - GATE-DELIVERABLES-ACCEPTED
-    conditional_artifacts: delivery_owner_discretion
-    reclassification_required: true
-  - id: TIER-LARGE-WORK
-    name: Large-Work
-    packaging_mode: separate_artifacts
-    primary_artifact: ARTIFACT-PROJECT-BRIEF
-    classification_rule: >
-      Any one primary forcing factor is true:
-      scope is multi-team OR multi-system OR multi-component OR greenfield;
-      business impact is cross-department OR material OR requires approved budget;
-      effort/complexity is judged beyond small-work.
-      Default to large-work when uncertain.
-    gate_passage_profile: full_review
-    quick_pass_gates: []
-    substantive_review_gates:
-      - GATE-QUALIFIED-REQUEST
-      - GATE-INITIATIVE-DEFINED
-      - GATE-AUTHORIZED
-      - GATE-SPECIFICATION-COMPLETE
-      - GATE-MVP-IDENTIFIED
-      - GATE-DELIVERABLES-ACCEPTED
-      - GATE-TRANSITION-COMPLETE
-      - GATE-CLOSURE-COMPLETE
-    conditional_artifacts: triggered_per_section_2_5_3
-    reclassification_required: not_applicable
-classification_timing: no_later_than_gate_GATE-INITIATIVE-DEFINED
-classification_declaration: Initiative_Definition_or_Work_Brief
-reclassification_rule: >
-  If a small-work project exceeds any primary forcing factor threshold,
-  it MUST be reclassified to large-work. Reclassification events MUST be
-  recorded in the Decision Log. The project MUST then complete any
-  missing artifacts to satisfy the gate requirements of the large-work tier.
+primary_artifact: ARTIFACT-PROJECT-BRIEF
+scaling_factors:
+  - scope
+  - business_impact
+  - delivery_complexity
+  - operational_consequence
+conditional_artifact_trigger_model: triggered_per_section_2_5_3
+gate_model: all_formal_gates_apply_to_all_in_scope_initiatives
+evidence_expectation: proportionate_to_scope_risk_complexity_and_operational_impact
+scaling_judgment_timing: no_later_than_gate_GATE-INITIATIVE-DEFINED
+material_change_recording: record_decision_and_adjust_artifact_expectations_in_decision_log
 ```
 
 ### 2.8 Acceptance criteria and observable validation model
@@ -1197,15 +1089,15 @@ Then [observable outcome]
 ```
 
 **Rules for embedding**:
-- Place acceptance criteria in the **Initiative Definition / Project Brief** (or Work Brief) under a dedicated "Acceptance Criteria" section
+- Place acceptance criteria in the **Initiative Definition / Project Brief** under a dedicated "Acceptance Criteria" section
 - Cross-reference in relevant artifacts (TDD, API/Contract Spec, User Adoption Plan)
 - For complex features, group by use case or user story
 - Always include at least one concrete holdout example per major criterion
 
 #### 2.8.3 Scaling and gate expectations
 
-- **Small-work**: 5-8 acceptance criteria focused on core outcomes sufficient for Gate 4 (`strong` rating required)
-- **Large-work**: Comprehensive set covering functional, non-functional, data, integration, security, and operational validation
+- **Lower-complexity initiatives**: a concise set of acceptance criteria focused on the core outcomes may be sufficient for Gate 4 when the criteria remain complete, observable, and testable
+- **Higher-complexity initiatives**: a broader set is expected, covering functional, non-functional, data, integration, security, and operational validation where relevant
 - **Gate 4 (Specification Complete)**: All acceptance criteria must be present, observable, and rated `strong`. Gate fails if any criterion requires downstream reinterpretation.
 - **Gate 6 (All Deliverables Accepted)**: Acceptance Owner verifies delivered solution against the exact criteria (no deviations without explicit recorded approval).
 
@@ -1255,7 +1147,7 @@ Then order is created with status "pending"
 
 ### 2.9 Minimum supportability and maintainability definition
 
-This section defines supportability and maintainability as explicit minimum requirements embedded in the **Deployment Guide** (for large-work) or **Work Brief** (small-work) and cross-referenced in the TDD.
+This section defines supportability and maintainability as explicit minimum requirements embedded in the **Deployment Guide** when that artifact is required, or in the **Initiative Definition / Project Brief** when a separate Deployment Guide is not required, and cross-referenced in the TDD where applicable.
 
 #### 2.9.1 Minimum required content (always)
 
@@ -1286,8 +1178,8 @@ The following MUST be defined before Gate 6 (Transition Complete):
 
 #### 2.9.2 Scaling
 
-- **Small-work**: Summary in Work Brief + basic runbook (1-2 pages)
-- **Large-work**: Full Deployment Guide + TDD operational section + dedicated runbooks
+- Lower-complexity initiatives may satisfy this section with a concise but explicit supportability summary in the Initiative Definition / Project Brief plus any lightweight operational notes needed for a supported operating state.
+- Higher-complexity or higher-impact initiatives are expected to use a fuller Deployment Guide, TDD operational coverage, and dedicated runbooks where needed.
 
 Gate 7 fails if support model leaves material gaps or cannot establish "supported operating state".
 
@@ -1661,7 +1553,7 @@ The AI-agent sufficiency standard applies to:
 2. all gate decisions and gate review records
 3. all normative framework content used to define how the framework operates
 
-This includes small-work and large-work modes.
+This includes all in-scope planned software initiatives.
 
 #### 2.12.3 Canonical AI-sufficiency checklist
 
@@ -1768,7 +1660,7 @@ This section converts the framework's anti-bureaucracy intent into enforceable r
 The framework MUST minimize overhead by design, but it MUST NOT allow teams to bypass controls that preserve delivery readiness, traceability, ownership clarity, or downstream executability/supportability.
 
 Anti-bureaucracy is achieved by:
-1. using the scaling model to keep small-work lighter than large-work
+1. using the scaling model to keep evidence proportionate to the initiative
 2. defining optional and conditional artifacts explicitly
 3. allowing only controlled omission of non-core items
 
@@ -1779,7 +1671,7 @@ Anti-bureaucracy is **not** achieved by ad hoc skipping of required controls.
 The following controls are non-waivable:
 1. All formal gates defined by the framework
 2. A named Gate Decision Owner for every gate
-3. The tier-required primary artifacts for the initiative's declared path
+3. The required primary artifact for the initiative path
 4. The `Decision Log`
 5. The `Open Items Register`
 6. Any conditional artifact whose trigger condition is true
@@ -1791,7 +1683,7 @@ No project, reviewer, or Delivery Owner may waive these controls under the banne
 Only non-core items may be omitted, and only when the framework explicitly makes them optional, conditional, discretionary, or packaging-flexible.
 
 Examples of potentially omittable non-core items include:
-1. optional companion artifacts for small-work where no trigger condition exists
+1. conditional artifacts whose trigger conditions are not true
 2. duplicated sections or repeated content that can be consolidated without loss of meaning
 3. artifact-local presentation choices that do not change the required content, ownership visibility, or gate evidence
 
@@ -1810,7 +1702,7 @@ If omission weakens any of those outcomes, the omission is not permitted.
 
 #### 2.13.5 Approval model
 
-The framework uses a tiered approval model for non-core omissions:
+The framework uses a structured approval model for non-core omissions:
 1. The Delivery Owner may approve omission of explicitly waivable non-core items when the required rationale is documented.
 2. PMO review is required before omission is approved when the omission affects:
    - gate evidence
@@ -1837,7 +1729,7 @@ name: Anti-Bureaucracy Guardrail
 non_waivable_core_controls:
   - all_formal_gates
   - named_gate_decision_owner
-  - tier_required_primary_artifacts
+  - required_primary_artifact
   - decision_log
   - open_items_register
   - triggered_conditional_artifacts
@@ -1868,36 +1760,31 @@ This section defines the canonical gate-to-critical-artifact mapping rules for t
 
 The framework uses a rule-based mapping model:
 1. each gate has a canonical base critical set
-2. packet mode and large-work mode use explicit substitution rules
-3. triggered conditional artifacts become gate-critical only when their absence would invalidate that gate's mandatory pass conditions
-4. some control artifacts remain persistently gate-critical from Gate 2 onward
-5. where a gate has no dedicated standalone artifact for part of its evidence, the required evidence may be embedded in the persistent artifacts, triggered artifacts, or the formal gate review/decision record
+2. triggered conditional artifacts become gate-critical only when their absence would invalidate that gate's mandatory pass conditions
+3. some control artifacts remain persistently gate-critical from Gate 2 onward
+4. where a gate has no dedicated standalone artifact for part of its evidence, the required evidence may be embedded in the persistent artifacts, triggered artifacts, or the formal gate review/decision record
 
 Critical mapping is therefore not a flat list. It is a combination of:
 1. persistent control artifacts
 2. gate-specific artifacts
 3. triggered conditional artifacts
-4. explicitly elevated project-specific deliverables in packet mode
+4. explicitly elevated project-specific deliverables when the primary definition artifact ties them to a gate
 5. embedded gate evidence where no standalone artifact exists
 
 #### 2.14.2 Persistent critical artifacts
 
 From Gate 2 onward, the following artifacts are persistently gate-critical:
-1. the primary definition artifact for the initiative's packaging mode:
-   - `ARTIFACT-WORK-BRIEF` in small-work
-   - `ARTIFACT-PROJECT-BRIEF` in large-work
+1. `ARTIFACT-PROJECT-BRIEF`
 2. `ARTIFACT-DECISION-LOG`
 3. `ARTIFACT-OPEN-ITEMS-REGISTER`
 
 These artifacts remain critical through Closure because later gates must still be judged against the bounded scope, intended outcomes, decision history, and open-item status established earlier.
 
-#### 2.14.3 Packet-mode substitution and elevation rule
+#### 2.14.3 Project-specific deliverable elevation rule
 
-In small-work packet mode:
-1. `ARTIFACT-WORK-BRIEF` substitutes for the large-work primary definition artifact at all applicable gates.
-2. The `Work Brief` is the base critical artifact unless a conditional artifact is explicitly triggered and separately required.
-3. The `Work Brief` may elevate a project-specific deliverable to gate-critical status only when it explicitly ties that deliverable to a named gate.
-4. A project-specific deliverable mentioned in the `Work Brief` does not become gate-critical merely because it is listed as a deliverable; the gate tie MUST be explicit.
+1. The `Initiative Definition / Project Brief` is the base primary artifact at all applicable gates.
+2. A project-specific deliverable becomes gate-critical only when the `Initiative Definition / Project Brief` explicitly ties that deliverable to a named gate.
+3. A project-specific deliverable mentioned in the `Initiative Definition / Project Brief` does not become gate-critical merely because it is listed as a deliverable; the gate tie MUST be explicit.
 
 #### 2.14.4 Conditional-artifact criticality rule
 
@@ -1911,11 +1798,11 @@ This means:
 
 1. **Gate 1 (`Qualified Request`)**
    - Base critical artifact: `ARTIFACT-REQUEST-INTAKE-RECORD`
-   - No `Project Brief` or `Work Brief` is required yet.
+   - No `Project Brief` is required yet.
 
 2. **Gate 2 (`Initiative Defined`)**
    - Base critical artifacts:
-     - `ARTIFACT-WORK-BRIEF` or `ARTIFACT-PROJECT-BRIEF` according to packaging mode
+      - `ARTIFACT-PROJECT-BRIEF`
      - `ARTIFACT-DECISION-LOG`
      - `ARTIFACT-OPEN-ITEMS-REGISTER`
 
@@ -1923,14 +1810,14 @@ This means:
    - Gate-specific critical artifact:
      - `ARTIFACT-PROJECT-CHARTER`
    - Persistent critical artifacts:
-     - `ARTIFACT-WORK-BRIEF` or `ARTIFACT-PROJECT-BRIEF`
+      - `ARTIFACT-PROJECT-BRIEF`
      - `ARTIFACT-DECISION-LOG`
      - `ARTIFACT-OPEN-ITEMS-REGISTER`
    - `Project Charter` is the only gate-specific critical artifact at Gate 3; persistent controls still apply.
 
 4. **Gate 4 (`Specification Complete`)**
    - Persistent critical artifacts:
-     - `ARTIFACT-WORK-BRIEF` or `ARTIFACT-PROJECT-BRIEF`
+      - `ARTIFACT-PROJECT-BRIEF`
      - `ARTIFACT-DECISION-LOG`
      - `ARTIFACT-OPEN-ITEMS-REGISTER`
    - Gate-critical conditional artifacts when triggered and materially required:
@@ -1945,43 +1832,43 @@ This means:
 
 5. **Gate 5 (`MVP Identified`)**
    - Persistent critical artifacts:
-     - `ARTIFACT-WORK-BRIEF` or `ARTIFACT-PROJECT-BRIEF`
+      - `ARTIFACT-PROJECT-BRIEF`
      - `ARTIFACT-DECISION-LOG`
      - `ARTIFACT-OPEN-ITEMS-REGISTER`
    - Gate-critical conditional artifacts when triggered and materially required for MVP feasibility:
      - any Gate 4 conditional artifact whose absence would invalidate MVP definition or feasibility
    - Explicit MVP evidence (scope, success measures, acceptance criteria) MUST exist in the primary artifact set and/or formal gate review record.
-   - In packet mode, the `Work Brief` may elevate named project deliverables to Gate 5 criticality only through an explicit gate tie.
+   - The `Initiative Definition / Project Brief` may elevate named project deliverables to Gate 5 criticality only through an explicit gate tie.
 
 6. **Gate 6 (`All Deliverables Accepted`)**
    - Persistent critical artifacts:
-     - `ARTIFACT-WORK-BRIEF` or `ARTIFACT-PROJECT-BRIEF`
+      - `ARTIFACT-PROJECT-BRIEF`
      - `ARTIFACT-DECISION-LOG`
      - `ARTIFACT-OPEN-ITEMS-REGISTER`
    - Gate-critical conditional artifacts when triggered and materially required for acceptance:
      - `ARTIFACT-DEPLOYMENT-GUIDE`
      - `ARTIFACT-USER-ADOPTION-PLAN`
      - `ARTIFACT-DELIVERY-CHARTER` where external-delivery obligations materially affect acceptance
-     - any project-specific deliverable explicitly tied to Gate 6 in the `Work Brief`
+      - any project-specific deliverable explicitly tied to Gate 6 in the `Initiative Definition / Project Brief`
    - Explicit acceptance evidence against the defined acceptance criteria MUST exist in the formal gate review/decision record and reference the relevant artifacts or deliverables.
 
 7. **Gate 7 (`Transition Complete`)**
    - Persistent critical artifacts:
-     - `ARTIFACT-WORK-BRIEF` or `ARTIFACT-PROJECT-BRIEF`
+      - `ARTIFACT-PROJECT-BRIEF`
      - `ARTIFACT-DECISION-LOG`
      - `ARTIFACT-OPEN-ITEMS-REGISTER`
    - Gate-critical conditional artifacts when triggered and materially required for supported operation:
      - `ARTIFACT-DEPLOYMENT-GUIDE`
      - `ARTIFACT-USER-ADOPTION-PLAN`
      - `ARTIFACT-DELIVERY-CHARTER` where external transition responsibilities materially affect operating-state acceptance
-     - any project-specific deliverable explicitly tied to Gate 7 in the `Work Brief`
+      - any project-specific deliverable explicitly tied to Gate 7 in the `Initiative Definition / Project Brief`
    - Explicit supportability and transition evidence MUST exist in the formal gate review/decision record and/or the triggered operational artifacts.
 
 8. **Gate 8 (`Closure Complete`)**
    - Gate-specific critical artifact:
      - `ARTIFACT-CLOSURE-RECORD`
    - Persistent critical artifacts:
-     - `ARTIFACT-WORK-BRIEF` or `ARTIFACT-PROJECT-BRIEF`
+      - `ARTIFACT-PROJECT-BRIEF`
      - `ARTIFACT-DECISION-LOG`
      - `ARTIFACT-OPEN-ITEMS-REGISTER`
    - `Closure Record` is the universal closure artifact for the framework and is always required by Gate 8.
@@ -2001,11 +1888,9 @@ kind: gate_mapping
 id: RULE-GATE-2-CRITICAL-ARTIFACTS
 gate_id: GATE-INITIATIVE-DEFINED
 base_critical_artifacts:
-  - ARTIFACT-WORK-BRIEF
   - ARTIFACT-PROJECT-BRIEF
   - ARTIFACT-DECISION-LOG
   - ARTIFACT-OPEN-ITEMS-REGISTER
-substitution_rule: small_work_uses_work_brief_large_work_uses_project_brief
 ```
 
 ```yaml
@@ -2015,11 +1900,9 @@ gate_id: GATE-AUTHORIZED
 gate_specific_artifacts:
   - ARTIFACT-PROJECT-CHARTER
 persistent_critical_artifacts:
-  - ARTIFACT-WORK-BRIEF
   - ARTIFACT-PROJECT-BRIEF
   - ARTIFACT-DECISION-LOG
   - ARTIFACT-OPEN-ITEMS-REGISTER
-substitution_rule: project_charter_is_gate_specific_work_brief_or_project_brief_follows_packaging_mode
 ```
 
 ```yaml
@@ -2027,7 +1910,6 @@ kind: gate_mapping
 id: RULE-GATE-4-CRITICAL-ARTIFACTS
 gate_id: GATE-SPECIFICATION-COMPLETE
 persistent_critical_artifacts:
-  - ARTIFACT-WORK-BRIEF
   - ARTIFACT-PROJECT-BRIEF
   - ARTIFACT-DECISION-LOG
   - ARTIFACT-OPEN-ITEMS-REGISTER
@@ -2047,7 +1929,6 @@ kind: gate_mapping
 id: RULE-GATE-5-CRITICAL-ARTIFACTS
 gate_id: GATE-MVP-IDENTIFIED
 persistent_critical_artifacts:
-  - ARTIFACT-WORK-BRIEF
   - ARTIFACT-PROJECT-BRIEF
   - ARTIFACT-DECISION-LOG
   - ARTIFACT-OPEN-ITEMS-REGISTER
@@ -2059,7 +1940,7 @@ conditional_artifacts_become_critical_when_gate_invalidated:
   - ARTIFACT-DATA-MIGRATION-PLAN
   - ARTIFACT-ACCESS-MODEL
   - ARTIFACT-SECURITY-PRIVACY-RIA
-packet_mode_may_elevate_gate_specific_deliverables: true
+project_brief_may_elevate_gate_specific_deliverables: true
 embedded_evidence_required: true
 ```
 
@@ -2068,7 +1949,6 @@ kind: gate_mapping
 id: RULE-GATE-6-CRITICAL-ARTIFACTS
 gate_id: GATE-DELIVERABLES-ACCEPTED
 persistent_critical_artifacts:
-  - ARTIFACT-WORK-BRIEF
   - ARTIFACT-PROJECT-BRIEF
   - ARTIFACT-DECISION-LOG
   - ARTIFACT-OPEN-ITEMS-REGISTER
@@ -2076,7 +1956,7 @@ conditional_artifacts_become_critical_when_gate_invalidated:
   - ARTIFACT-DELIVERY-CHARTER
   - ARTIFACT-DEPLOYMENT-GUIDE
   - ARTIFACT-USER-ADOPTION-PLAN
-packet_mode_may_elevate_gate_specific_deliverables: true
+project_brief_may_elevate_gate_specific_deliverables: true
 embedded_evidence_required: true
 ```
 
@@ -2085,7 +1965,6 @@ kind: gate_mapping
 id: RULE-GATE-7-CRITICAL-ARTIFACTS
 gate_id: GATE-TRANSITION-COMPLETE
 persistent_critical_artifacts:
-  - ARTIFACT-WORK-BRIEF
   - ARTIFACT-PROJECT-BRIEF
   - ARTIFACT-DECISION-LOG
   - ARTIFACT-OPEN-ITEMS-REGISTER
@@ -2093,7 +1972,7 @@ conditional_artifacts_become_critical_when_gate_invalidated:
   - ARTIFACT-DELIVERY-CHARTER
   - ARTIFACT-DEPLOYMENT-GUIDE
   - ARTIFACT-USER-ADOPTION-PLAN
-packet_mode_may_elevate_gate_specific_deliverables: true
+project_brief_may_elevate_gate_specific_deliverables: true
 embedded_evidence_required: true
 ```
 
@@ -2104,11 +1983,9 @@ gate_id: GATE-CLOSURE-COMPLETE
 gate_specific_artifacts:
   - ARTIFACT-CLOSURE-RECORD
 persistent_critical_artifacts:
-  - ARTIFACT-WORK-BRIEF
   - ARTIFACT-PROJECT-BRIEF
   - ARTIFACT-DECISION-LOG
   - ARTIFACT-OPEN-ITEMS-REGISTER
-substitution_rule: closure_record_is_always_required_project_brief_or_work_brief_follows_packaging_mode
 ```
 
 ## 3. Explicit Non-Behaviors
