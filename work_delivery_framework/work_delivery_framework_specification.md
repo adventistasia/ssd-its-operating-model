@@ -1573,6 +1573,8 @@ Every required artifact and gate MUST satisfy the following baseline checklist:
 12. **Explicit actor/action/object language** — normative statements identify who does what to what wherever that distinction materially affects execution or accountability.
 13. **External-reference discipline** — any material external source, policy, system, standard, or document is explicitly identified in a retrievable way and its relevance is stated.
 
+Where an artifact, template, or machine-readable block defines an allowed status list or other controlled state vocabulary, the document MUST also include a short description of what the statuses are for and what each status means in use, unless the meaning is already stated immediately adjacent to the list in equally explicit terms.
+
 #### 2.12.4 Traceability and numbering rules
 
 To support human and AI referenceability:
