@@ -1,0 +1,51 @@
+models:
+  - kind: quality_model
+    id: QUALITY-MODEL-AI-SUFFICIENCY
+    name: AI-Agent Sufficiency Standard
+    standard_type: human_plus
+    integrated_with_completeness: true
+    applies_to:
+      - all_required_artifacts
+      - all_gate_decisions
+      - normative_framework_content
+    mandatory_checks:
+      - explicit_meaning
+      - terminological_stability
+      - reference_clarity
+      - scope_boundedness
+      - decision_visibility
+      - traceability
+      - structural_parseability
+      - cross_artifact_consistency
+      - actionability_for_next_consumer
+      - target_state_explicitness
+      - controlled_unknowns_only
+      - explicit_actor_action_object_language
+      - external_reference_discipline
+    immediate_fail_patterns:
+      - uncontrolled_placeholder
+      - cross_artifact_contradiction
+      - undefined_material_term
+      - unreferenceable_external_context
+      - vague_acceptance_or_target_state
+      - missing_material_traceability
+  - kind: policy
+    id: POLICY-ANTI-BUREAUCRACY
+    name: Anti-Bureaucracy Guardrail
+    non_waivable_core_controls:
+      - all_formal_gates
+      - named_gate_decision_owner
+      - required_primary_artifact
+      - decision_log
+      - open_items_register
+      - triggered_conditional_artifacts
+    omission_allowed_only_when:
+      - item_is_explicitly_optional_or_conditional_or_discretionary_or_packaging_flexible
+      - omission_does_not_reduce_completeness
+      - omission_does_not_reduce_traceability
+      - omission_does_not_reduce_ownership_clarity
+      - omission_does_not_reduce_downstream_executability
+      - omission_does_not_reduce_downstream_supportability
+    recording_system:
+      canonical_record: ARTIFACT-DECISION-LOG
+      local_reference_when_relevant: true

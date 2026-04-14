@@ -1,0 +1,58 @@
+models:
+  - kind: scaling
+    id: SCALING-MODEL
+    name: Work Delivery Framework Scaling Model
+    primary_artifact: ARTIFACT-PROJECT-BRIEF
+    scaling_factors:
+      - scope
+      - business_impact
+      - delivery_complexity
+      - operational_consequence
+    conditional_artifact_trigger_model: triggered_per_section_2_5_3
+    gate_model: all_formal_gates_apply_to_all_in_scope_initiatives
+    evidence_expectation: proportionate_to_scope_risk_complexity_and_operational_impact
+    scaling_judgment_timing: no_later_than_gate_GATE-INITIATIVE-DEFINED
+    material_change_recording: record_decision_and_adjust_artifact_expectations_in_decision_log
+  - kind: review_model
+    id: REVIEW-MODEL-GATE-ASSURANCE
+    name: Gate Review, Assurance, and Audit Model
+    default_model: delivery_owner_led_with_pmo_assurance
+    review_modes:
+      quick_pass:
+        live_meeting_required: false
+        minimum_record:
+          - Decision Log entry
+      substantive:
+        live_meeting_required: true
+        minimum_record:
+          - Gate reviewed
+          - Review date
+          - Attendees
+          - Decision
+          - Deficiencies or conditions
+          - Action items
+    independent_review_triggers:
+      - Architecture impact
+      - Security or privacy impact
+      - External delivery or vendor handoff
+      - Material business risk or regulatory exposure
+  - kind: control_model
+    id: CONTROL-MODEL-OPEN-ITEMS
+    name: Open Items Register and Blocker Handling Model
+    canonical_artifact: ARTIFACT-OPEN-ITEMS-REGISTER
+    entry_types:
+      - blocker
+      - risk
+      - issue
+      - assumption
+      - dependency
+    statuses:
+      - open
+      - in progress
+      - monitoring
+      - resolved
+      - closed
+    gate_rules:
+      blocker_rule: Any open blocker affecting the current gate forces gate failure.
+      controlled_open_item_rule: Open non-blocker items may remain only if they are explicitly managed, owned, actionable, and do not invalidate the gate's mandatory pass conditions.
+      reclassification_rule: A gate-disqualifying non-blocker item must be reclassified or recorded as a blocker before the gate decision is finalized.
