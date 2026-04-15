@@ -113,8 +113,8 @@ The framework MUST support human teams using AI agents as assistants while keepi
 
 ### 2.3 Boundary conditions
 
-1. When work is simple, the system must still require enough documentation to make the work buildable, but it must not force documentation that does not contribute to delivery readiness.
-2. When work is complex, cross-functional, or multi-team, the system must scale to produce a more complete documentation set without lowering the standard of clarity.
+1. The system must require enough documentation to make the work buildable, but it must not force documentation that does not contribute to delivery readiness.
+2. The system must require more explicit documentation where scope, risk, integration sensitivity, cross-team coordination, or operational consequence make it necessary, without lowering the standard of clarity.
 3. When work is intended for long-term support and maintenance, the system must require documentation that addresses supportability and maintainability, not only initial delivery.
 4. When multiple teams read the same documentation, the system must make the intended outcome clear enough that different teams do not reasonably arrive at conflicting interpretations.
 5. When AI agents are used as delivery teams, the system must provide enough precision that the agents do not need to infer missing business requirements.
@@ -128,7 +128,7 @@ The framework MUST support human teams using AI agents as assistants while keepi
 The framework lifecycle is defined as a sequence of formal stages with explicit progression gates. A project MAY be blocked at any gate if the required evidence is missing or material ambiguity remains unresolved.
 
 **Important boundary note**
-Stages and gates define the control model. The canonical artifact taxonomy is defined in Section 2.5. Proportionate rigor expectations for different initiative shapes are defined in Section 2.7.
+Stages and gates define the control model. The canonical artifact taxonomy is defined in Section 2.5.
 
 **Stages (in order)**
 1. Intake
@@ -157,7 +157,7 @@ Stages and gates define the control model. The canonical artifact taxonomy is de
 3. Discovery / Initiative Definition ends at Gate 2 (Initiative Defined).
 4. Authorization (conditional) ends at Gate 3 (Authorized).
    - If Authorization is not required, the project transitions from Discovery directly to Solution Definition after Gate 2.
-   - Authorization applicability is informed by the initiative's business, funding, and governance context (see Section 2.7). The Gate Decision Owner must declare Authorization as “Required” or “Not Required” at Gate 2.
+   - The Gate Decision Owner must declare Authorization as “Required” or “Not Required” at Gate 2.
 5. Solution Definition ends at Gate 4 (Specification Complete).
 6. Planning / Mobilization / MVP Plan ends at Gate 5 (MVP Identified).
 7. Delivery / Execution ends at Gate 6 (All Deliverables Accepted).
@@ -922,7 +922,7 @@ Every required artifact MUST be judged against this shared core:
 2. **Internal consistency** — the artifact does not materially contradict itself.
 3. **Decision and assumption visibility** — decisions, assumptions, unknowns, and open issues are explicit rather than implicit.
 4. **Actionability for the next consumer** — the intended next consumer can use the artifact for its stated purpose without redefining the problem.
-5. **AI sufficiency** — the artifact satisfies the AI-agent sufficiency standard in Section 2.12 when judged as a delivery-ready input for AI-assisted downstream work.
+5. **AI sufficiency** — the artifact satisfies the AI-agent sufficiency standard in Section 2.11 when judged as a delivery-ready input for AI-assisted downstream work.
 
 Each artifact MUST also define:
 1. its **purpose**
@@ -937,7 +937,7 @@ Every gate review MUST check that:
 2. the required artifacts are cross-artifact consistent
 3. unresolved blockers do not force downstream teams to invent business requirements
 4. the documentation is sufficient for the named downstream consumer to proceed without redefining the problem
-5. the documentation set satisfies the AI-agent sufficiency standard in Section 2.12
+5. the documentation set satisfies the AI-agent sufficiency standard in Section 2.11
 
 Each gate definition MUST explicitly include:
 1. **mandatory pass conditions**
@@ -945,7 +945,7 @@ Each gate definition MUST explicitly include:
 3. **minimum qualitative threshold**
 4. **critical stage-defining artifacts**
 
-The exact mapping rules for critical stage-defining artifacts are defined in Section 2.14. Reviewers and AI agents MUST apply those mapping rules rather than treating the gate YAML lists as flat unconditional artifact checklists.
+The exact mapping rules for critical stage-defining artifacts are defined in Section 2.13. Reviewers and AI agents MUST apply those mapping rules rather than treating the gate YAML lists as flat unconditional artifact checklists.
 
 #### 2.6.5 Blockers vs controlled open items
 
@@ -961,7 +961,7 @@ A controlled open item MAY remain open at gate passage only if all of the follow
 5. the item does not invalidate the gate's mandatory pass conditions
 6. downstream work can proceed without inventing business requirements
 
-If a non-blocker item becomes gate-disqualifying, it MUST be reclassified or recorded as a `blocker` entry and handled under the blocker rules defined in Section 2.11.
+If a non-blocker item becomes gate-disqualifying, it MUST be reclassified or recorded as a `blocker` entry and handled under the blocker rules defined in Section 2.10.
 
 #### 2.6.6 Qualitative rating definitions
 
@@ -998,75 +998,11 @@ If the failure includes one or more AI-agent sufficiency failures, the review ou
 
 There is **no conditional progression** for completeness failure. If the artifact or gate fails, work stops until the documented deficiencies are corrected and re-reviewed.
 
-### 2.7 Scaling rules for planned software initiatives
-
-This section defines how the framework scales within its intended scope of planned software initiatives.
-
-#### 2.7.1 Core scaling principle
-
-The framework uses one initiative path for all in-scope work.
-
-Scaling is achieved by:
-1. varying the depth and specificity of content inside the canonical artifacts
-2. triggering conditional artifacts only when their trigger conditions are true
-3. keeping the same gate standards while allowing evidence to remain proportionate to the initiative's scope, risk, and complexity
-
-The framework does not use alternate initiative classes, packet modes, or substitute primary artifacts.
-
-#### 2.7.2 Scaling factors
-
-The Delivery Owner MUST calibrate rigor based on the initiative's actual characteristics, including:
-1. **Scope**
-   - number of teams, systems, modules, or affected business processes
-2. **Business impact**
-   - operational, financial, customer, compliance, or strategic significance
-3. **Delivery complexity**
-   - uncertainty, integration sensitivity, implementation effort, or dependency load
-4. **Operational consequence**
-   - support burden, transition complexity, or long-term maintainability expectations
-
-External involvement is relevant context and may trigger specific artifacts, but it does not create a separate framework path.
-
-#### 2.7.3 Timing and recording
-
-The Delivery Owner MUST make the scaling judgment no later than Gate 2 (Initiative Defined) and reflect it in the depth, specificity, and conditional artifact selections used for the initiative.
-
-If the initiative's shape changes materially later, the Decision Log MUST record the change and any newly required artifact work or gate evidence adjustments.
-
-#### 2.7.4 Gate expectations under scaling
-
-Scaling does not change the set of gates or allow gate bypass.
-
-For simpler in-scope initiatives, evidence may be more concise when it still satisfies the gate's mandatory pass conditions and completeness rules.
-
-For more complex, risky, or externally dependent initiatives, evidence is expected to be more explicit, more cross-referenced, and more fully decomposed into conditional artifacts.
-
-Every gate must still be formally evaluated and recorded.
-
-#### 2.7.5 Machine-consumable scaling model (YAML)
-
-```yaml
-kind: scaling
-id: SCALING-MODEL
-name: Work Delivery Framework Scaling Model
-primary_artifact: ARTIFACT-PROJECT-BRIEF
-scaling_factors:
-  - scope
-  - business_impact
-  - delivery_complexity
-  - operational_consequence
-conditional_artifact_trigger_model: triggered_per_section_2_5_3
-gate_model: all_formal_gates_apply_to_all_in_scope_initiatives
-evidence_expectation: proportionate_to_scope_risk_complexity_and_operational_impact
-scaling_judgment_timing: no_later_than_gate_GATE-INITIATIVE-DEFINED
-material_change_recording: record_decision_and_adjust_artifact_expectations_in_decision_log
-```
-
-### 2.8 Acceptance criteria and observable validation model
+### 2.7 Acceptance criteria and observable validation model
 
 This section defines the acceptance-criteria and validation model: acceptance criteria must be **observable**, **quantifiable** where possible, and expressed in **hybrid Gherkin** (Gherkin-style Given/When/Then mixed with explicit success metrics and testability rules). The model prioritizes validation that downstream teams (human, vendor, or AI) can execute without subjective interpretation.
 
-#### 2.8.1 Core principle (observable/quantifiable)
+#### 2.7.1 Core principle (observable/quantifiable)
 
 Every acceptance criterion **MUST** be:
 - **Observable**: Can be verified by inspecting outputs, running tests, or querying system state (no "feels good" language)
@@ -1075,14 +1011,14 @@ Every acceptance criterion **MUST** be:
 
 If a requirement cannot be made observable, it is treated as an open issue (see Section 2.6.5) and blocks Gate 4 until resolved.
 
-#### 2.8.2 Hybrid Gherkin guidance
+#### 2.7.2 Hybrid Gherkin guidance
 
 Use this hybrid format for all acceptance criteria:
 
 ```
 Given [preconditions and context]
 When [action or event occurs]
-Then [observable outcome] 
+Then [observable outcome]
   - Metric: [quantifiable success threshold]
   - Validation method: [test, query, inspection, or holdout pattern]
   - Holdout example: [concrete input/output pair for verification]
@@ -1094,14 +1030,14 @@ Then [observable outcome]
 - For complex features, group by use case or user story
 - Always include at least one concrete holdout example per major criterion
 
-#### 2.8.3 Scaling and gate expectations
+#### 2.7.3 Gate expectations
 
 - **Lower-complexity initiatives**: a concise set of acceptance criteria focused on the core outcomes may be sufficient for Gate 4 when the criteria remain complete, observable, and testable
 - **Higher-complexity initiatives**: a broader set is expected, covering functional, non-functional, data, integration, security, and operational validation where relevant
 - **Gate 4 (Specification Complete)**: All acceptance criteria must be present, observable, and rated `strong`. Gate fails if any criterion requires downstream reinterpretation.
 - **Gate 6 (All Deliverables Accepted)**: Acceptance Owner verifies delivered solution against the exact criteria (no deviations without explicit recorded approval).
 
-#### 2.8.4 Updated machine-consumable artifacts and gates (YAML additions)
+#### 2.7.4 Updated machine-consumable artifacts and gates (YAML additions)
 
 Add/update the following in existing YAML blocks (or as new blocks):
 
@@ -1131,7 +1067,7 @@ Update GATE-SPECIFICATION-COMPLETE and GATE-DELIVERABLES-ACCEPTED YAML:
 - Add to `mandatory_pass_conditions`: "- Acceptance criteria are observable, quantifiable, and include validation methods/holdout examples"
 - Update `minimum_qualitative_threshold` for Gate 4 to enforce `strong` on acceptance quality.
 
-#### 2.8.5 Examples
+#### 2.7.5 Examples
 
 **Good (observable hybrid Gherkin)**:
 ```
@@ -1145,11 +1081,11 @@ Then order is created with status "pending"
 
 **Bad (vague)**: "The order creation should work correctly and be fast."
 
-### 2.9 Minimum supportability and maintainability definition
+### 2.8 Minimum supportability and maintainability definition
 
 This section defines supportability and maintainability as explicit minimum requirements embedded in the **Deployment Guide** when that artifact is required, or in the **Initiative Definition / Project Brief** when a separate Deployment Guide is not required, and cross-referenced in the TDD where applicable.
 
-#### 2.9.1 Minimum required content (always)
+#### 2.8.1 Minimum required content (always)
 
 The following MUST be defined before Gate 6 (Transition Complete):
 
@@ -1176,14 +1112,14 @@ The following MUST be defined before Gate 6 (Transition Complete):
    - Handover activities with owners and evidence
    - Post-transition support window
 
-#### 2.9.2 Scaling
+#### 2.8.2 Documentation depth
 
-- Lower-complexity initiatives may satisfy this section with a concise but explicit supportability summary in the Initiative Definition / Project Brief plus any lightweight operational notes needed for a supported operating state.
-- Higher-complexity or higher-impact initiatives are expected to use a fuller Deployment Guide, TDD operational coverage, and dedicated runbooks where needed.
+- This section may be satisfied with a concise but explicit supportability summary in the Initiative Definition / Project Brief plus any lightweight operational notes needed for a supported operating state when that is sufficient to establish support readiness.
+- A fuller Deployment Guide, TDD operational coverage, and dedicated runbooks are expected where support risk, operational consequence, or implementation complexity make them necessary.
 
 Gate 7 fails if support model leaves material gaps or cannot establish "supported operating state".
 
-#### 2.9.3 Updated YAML for artifacts/gates
+#### 2.8.3 Updated YAML for artifacts/gates
 
 Add to ARTIFACT-DEPLOYMENT-GUIDE and ARTIFACT-TDD `required_contents`:
 - Support ownership, observability plan, maintainability commitments, transition checklist.
@@ -1217,11 +1153,11 @@ maintainability:
 
 These sections provide enforceable, observable standards for validation and long-term operations.
 
-### 2.10 Review, assurance, and audit mechanism
+### 2.9 Review, assurance, and audit mechanism
 
 This section defines the review, assurance, and audit mechanism for the framework.
 
-#### 2.10.1 Default review ownership model
+#### 2.9.1 Default review ownership model
 
 The default review model is **Delivery Owner-led review with PMO assurance oversight**.
 
@@ -1234,41 +1170,35 @@ The PMO is the framework assurance function. PMO responsibilities are:
 1. define and maintain the review standard for this framework
 2. assign the named Gate Decision Owner
 3. check evidence completeness for gate reviews
-4. attend every substantive gate review meeting
+4. attend every gate review meeting
 5. audit a sample of completed gate reviews for compliance and quality
 6. intervene when escalation, non-compliance, or dispute occurs
 
-#### 2.10.2 Review modes by gate profile
+#### 2.9.2 Gate review standard
 
-The review mechanism MUST align to the gate profiles already defined in Section 2.7.
+Each gate review MUST follow the same review rigor and record standard.
 
-1. **Small-work** uses:
-   - **substantive review** at Gate 2, Gate 4, and Gate 6
-   - **quick-pass review** at Gate 1, Gate 3, Gate 5, Gate 7, and Gate 8
-2. **Large-work** uses **substantive review** at every gate
+Every gate review:
+1. requires a live gate review meeting
+2. requires the minimum record defined in Section 2.9.5
+3. may require additional domain participation and signoff when the trigger conditions in Section 2.9.4 are present
 
-Review-mode definitions:
-1. **Substantive review** requires a live gate review meeting
-2. **Quick-pass review** does not require a live gate review meeting and requires only the minimum record defined in Section 2.10.5
+#### 2.9.3 Review meeting model
 
-Quick-pass does not remove the gate. It only changes the review depth and evidence-retention model.
-
-#### 2.10.3 Substantive review meeting model
-
-Every substantive gate review MUST include the following attendees by default:
+Every gate review MUST include the following attendees by default:
 1. the named Gate Decision Owner
 2. the Delivery Owner
 3. the relevant artifact owner(s)
 4. PMO
 5. any triggered independent reviewer
 
-Unless a required domain signoff is triggered (see Section 2.10.4), the Gate Decision Owner makes the final pass/fail decision after hearing the reviewers.
+Unless a required domain signoff is triggered (see Section 2.9.4), the Gate Decision Owner makes the final pass/fail decision after hearing the reviewers.
 
 Formal pre-gate artifact review is not required by this framework. Teams MAY perform informal pre-reviews, but the formal decision point remains the gate review itself.
 
-#### 2.10.4 Trigger-based independent review
+#### 2.9.4 Trigger-based independent review
 
-Independent review is **not** required at every substantive gate. It becomes mandatory only when one or more trigger conditions are present.
+Independent review is required only when one or more trigger conditions are present.
 
 The mandatory trigger conditions are:
 1. architecture impact
@@ -1281,30 +1211,25 @@ When triggered:
 2. explicit **domain signoff** is required before the gate can pass
 3. this required signoff is a domain-assurance precondition, not a transfer of overall gate ownership; the Gate Decision Owner still makes the overall gate decision once required domain signoffs are present
 
-If a normally quick-pass gate hits one of the trigger conditions above, PMO decides case by case whether that gate remains quick-pass with targeted domain review or is converted into a substantive gate review.
+#### 2.9.5 Review records and evidence retention
 
-#### 2.10.5 Review records and evidence retention
+Every gate review requires a written **committee-action style** review record.
 
-Review evidence retention is standardized by review mode.
+The record MUST include:
+1. gate reviewed
+2. review date
+3. attendees
+4. decision
+5. deficiencies or conditions (if any)
+6. action items
 
-For **quick-pass** gates:
-1. a **Decision Log** entry is sufficient
-
-For **substantive** gates:
-1. a written **committee-action style** review record is required
-2. the record MUST include:
-   - gate reviewed
-   - review date
-   - attendees
-   - decision
-   - deficiencies or conditions (if any)
-   - action items
+A related **Decision Log** entry MAY be used as a cross-reference, but it is not a substitute for the gate review record.
 
 The framework does not require transcripts, full meeting notes, or full informal comment capture unless a local policy outside this framework requires them.
 
-#### 2.10.6 PMO evidence completeness, intervention, and audit reopening
+#### 2.9.6 PMO evidence completeness, intervention, and audit reopening
 
-PMO MUST perform an evidence-completeness check for every substantive gate review.
+PMO MUST perform an evidence-completeness check for every gate review.
 
 If PMO determines that the evidence package is incomplete:
 1. the Gate Decision Owner MAY still proceed with the review and decision
@@ -1317,7 +1242,7 @@ PMO intervention is required when:
 
 PMO audit findings MAY reopen or invalidate a previously passed gate only when a **material completeness failure** or **material control failure** is discovered after passage.
 
-#### 2.10.7 Machine-consumable review model (YAML)
+#### 2.9.7 Machine-consumable review model (YAML)
 
 ```yaml
 kind: review_model
@@ -1328,32 +1253,27 @@ pmo_responsibilities:
   - Define review standard
   - Assign Gate Decision Owner
   - Check evidence completeness
-  - Attend every substantive gate review
+  - Attend every gate review
   - Audit sample reviews
   - Intervene on escalation, non-compliance, or dispute
-review_modes:
-  quick_pass:
-    live_meeting_required: false
-    minimum_record:
-      - Decision Log entry
-  substantive:
-    live_meeting_required: true
-    required_attendees:
-      - Gate Decision Owner
-      - Delivery Owner
-      - Relevant artifact owner(s)
-      - PMO
-      - Triggered independent reviewer(s)
-    final_decision_rule: >
-      Gate Decision Owner decides after hearing reviewers unless a required
-      domain signoff is still missing.
-    minimum_record:
-      - Gate reviewed
-      - Review date
-      - Attendees
-      - Decision
-      - Deficiencies or conditions
-      - Action items
+review_standard:
+  live_meeting_required: true
+  required_attendees:
+    - Gate Decision Owner
+    - Delivery Owner
+    - Relevant artifact owner(s)
+    - PMO
+    - Triggered independent reviewer(s)
+  final_decision_rule: >
+    Gate Decision Owner decides after hearing reviewers unless a required
+    domain signoff is still missing.
+  minimum_record:
+    - Gate reviewed
+    - Review date
+    - Attendees
+    - Decision
+    - Deficiencies or conditions
+    - Action items
 independent_review_triggers:
   - Architecture impact
   - Security or privacy impact
@@ -1362,22 +1282,19 @@ independent_review_triggers:
 triggered_independent_review_rule: >
   Independent review is mandatory only when triggered. Required domain signoff
   must be present before the gate can pass.
-quick_pass_trigger_override: >
-  If a quick-pass gate hits an independent-review trigger, PMO decides whether
-  the gate stays quick-pass with targeted review or becomes substantive.
 evidence_completeness_override: >
-  If PMO identifies incomplete evidence for a substantive gate, the Gate
+  If PMO identifies incomplete evidence for a gate review, the Gate
   Decision Owner may still proceed if the rationale is documented.
 audit_reopen_rule: >
   PMO audit findings may reopen a passed gate only when a material completeness
   failure or material control failure is discovered.
 ```
 
-### 2.11 Blocker, risk, and open-issue handling model
+### 2.10 Blocker, risk, and open-issue handling model
 
 This section defines the blocker, risk, and open-issue handling model for the framework.
 
-#### 2.11.1 Canonical tracking model
+#### 2.10.1 Canonical tracking model
 
 The framework MUST use one canonical **Open Items Register** for every initiative.
 
@@ -1396,7 +1313,7 @@ The allowed entry types are:
 
 All item types are valid across the lifecycle, but gate reviewers and Gate Decision Owners MUST interpret them according to stage-specific expectations and gate meaning.
 
-#### 2.11.2 Status model
+#### 2.10.2 Status model
 
 The standard lifecycle statuses for Open Items Register entries are:
 1. `open` — identified, recorded, and assigned, but active response has not yet materially started
@@ -1407,7 +1324,7 @@ The standard lifecycle statuses for Open Items Register entries are:
 
 `Monitoring` is not the default state for all unresolved items. It indicates a conscious decision that watchful observation is the correct current treatment.
 
-#### 2.11.3 Ownership and closure authority
+#### 2.10.3 Ownership and closure authority
 
 Every open-item entry MUST have one named item owner.
 
@@ -1422,7 +1339,7 @@ Closure authority is separated from day-to-day ownership:
 2. closure of a non-blocking item that materially affects progression MUST be confirmed by the relevant accountable owner (typically the Delivery Owner or relevant functional owner)
 3. closure of a blocker affecting a gate MUST be confirmed by the named Gate Decision Owner for that gate
 
-#### 2.11.4 Blocker rules and gate effects
+#### 2.10.4 Blocker rules and gate effects
 
 `Blocker` is a first-class item type.
 
@@ -1433,7 +1350,7 @@ At gate passage:
 
 When a blocker arises from another item type, the blocker entry MUST reference the originating item so the escalation path remains traceable.
 
-#### 2.11.5 Minimum entry fields
+#### 2.10.5 Minimum entry fields
 
 Every Open Items Register entry MUST include at least:
 1. `id`
@@ -1455,7 +1372,7 @@ The following are conditionally required:
 
 Projects MAY add local fields, but they MUST NOT remove or rename the canonical minimum fields.
 
-#### 2.11.6 Escalation rules
+#### 2.10.6 Escalation rules
 
 Escalation is mandatory, not optional, when any of the following is true:
 1. an item is classified as a `blocker`
@@ -1468,9 +1385,9 @@ Escalation handling rules:
 1. any `blocker` MUST be escalated immediately to the relevant Gate Decision Owner
 2. a non-blocker item that meets an escalation trigger MUST be escalated to the Delivery Owner and, where progression is affected, to the relevant Gate Decision Owner
 3. escalation outcomes that contain a material decision or stop/proceed determination MUST be recorded in the Decision Log
-4. PMO intervention follows the escalation and dispute rules already defined in Section 2.10
+4. PMO intervention follows the escalation and dispute rules already defined in Section 2.9
 
-#### 2.11.7 Boundary with the Decision Log
+#### 2.10.7 Boundary with the Decision Log
 
 The Open Items Register and Decision Log have distinct purposes.
 
@@ -1491,7 +1408,7 @@ The framework therefore requires strict separation:
 2. the Decision Log records formal decisions such as blocker reclassification, escalation outcomes, explicit proceed decisions with bounded open items, scope/risk treatment decisions, and accepted deviations
 3. teams MUST NOT treat register updates as a substitute for recording a formal decision when one has been made
 
-#### 2.11.8 Machine-consumable open-items model (YAML)
+#### 2.10.8 Machine-consumable open-items model (YAML)
 
 ```yaml
 kind: control_model
@@ -1531,11 +1448,11 @@ decision_log_boundary:
   decision_log_tracks: formal_decisions_and_rationale
 ```
 
-### 2.12 AI-agent sufficiency standard
+### 2.11 AI-agent sufficiency standard
 
 This section defines the AI-agent sufficiency standard used by the framework.
 
-#### 2.12.1 Standard type and control model
+#### 2.11.1 Standard type and control model
 
 The framework adopts a **human-plus** AI-agent sufficiency standard.
 
@@ -1546,7 +1463,7 @@ This means:
 
 If a required artifact or gate is human-usable but fails a mandatory AI-sufficiency check, it fails completeness.
 
-#### 2.12.2 Scope of application
+#### 2.11.2 Scope of application
 
 The AI-agent sufficiency standard applies to:
 1. all required artifacts
@@ -1555,7 +1472,7 @@ The AI-agent sufficiency standard applies to:
 
 This includes all in-scope planned software initiatives.
 
-#### 2.12.3 Canonical AI-sufficiency checklist
+#### 2.11.3 Canonical AI-sufficiency checklist
 
 Every required artifact and gate MUST satisfy the following baseline checklist:
 
@@ -1575,7 +1492,7 @@ Every required artifact and gate MUST satisfy the following baseline checklist:
 
 Where an artifact, template, or machine-readable block defines an allowed status list or other controlled state vocabulary, the document MUST also include a short description of what the statuses are for and what each status means in use, unless the meaning is already stated immediately adjacent to the list in equally explicit terms.
 
-#### 2.12.4 Traceability and numbering rules
+#### 2.11.4 Traceability and numbering rules
 
 To support human and AI referenceability:
 1. normative and reference-bearing documents SHOULD use numbered headings, sections, and subsections by default
@@ -1584,7 +1501,7 @@ To support human and AI referenceability:
 
 Framework implementations and downstream templates MUST preserve these traceability properties even if formatting differs.
 
-#### 2.12.5 Immediate AI-sufficiency fail patterns
+#### 2.11.5 Immediate AI-sufficiency fail patterns
 
 The following are immediate AI-sufficiency failure conditions when material to meaning:
 1. unresolved `TBD`, `TBC`, or equivalent placeholder text that is not explicitly controlled through the Open Items Register
@@ -1594,7 +1511,7 @@ The following are immediate AI-sufficiency failure conditions when material to m
 5. acceptance criteria, target-state descriptions, or normative expectations that are too vague to observe or apply
 6. materially traceable content that cannot be referenced precisely because identifiers, numbering, or equivalent structure are missing
 
-#### 2.12.6 Controlled unknowns rule
+#### 2.11.6 Controlled unknowns rule
 
 Unknowns are allowed only when controlled.
 
@@ -1606,7 +1523,7 @@ This means:
 
 Stray placeholders or vague future-tense statements are not acceptable substitutes for controlled unknowns.
 
-#### 2.12.7 Review and reporting rule
+#### 2.11.7 Review and reporting rule
 
 AI sufficiency is reviewed through the existing completeness model, not through a separate control track.
 
@@ -1615,7 +1532,7 @@ Review outputs therefore MUST:
 2. explicitly label the outcome as an **AI-sufficiency failure** when one or more mandatory AI-sufficiency checks fail
 3. avoid passing an artifact or gate on the basis that a human reviewer could probably infer the missing meaning
 
-#### 2.12.8 Machine-consumable AI-sufficiency model (YAML)
+#### 2.11.8 Machine-consumable AI-sufficiency model (YAML)
 
 ```yaml
 kind: quality_model
@@ -1653,22 +1570,22 @@ reporting_rule: >
   must explicitly label the result as an AI-sufficiency failure.
 ```
 
-### 2.13 Anti-bureaucracy guardrails
+### 2.12 Anti-bureaucracy guardrails
 
 This section converts the framework's anti-bureaucracy intent into enforceable rules.
 
-#### 2.13.1 Core principle
+#### 2.12.1 Core principle
 
 The framework MUST minimize overhead by design, but it MUST NOT allow teams to bypass controls that preserve delivery readiness, traceability, ownership clarity, or downstream executability/supportability.
 
 Anti-bureaucracy is achieved by:
-1. using the scaling model to keep evidence proportionate to the initiative
+1. keeping evidence proportionate to the initiative and its delivery needs
 2. defining optional and conditional artifacts explicitly
 3. allowing only controlled omission of non-core items
 
 Anti-bureaucracy is **not** achieved by ad hoc skipping of required controls.
 
-#### 2.13.2 Non-waivable core controls
+#### 2.12.2 Non-waivable core controls
 
 The following controls are non-waivable:
 1. All formal gates defined by the framework
@@ -1680,7 +1597,7 @@ The following controls are non-waivable:
 
 No project, reviewer, or Delivery Owner may waive these controls under the banner of speed or practicality.
 
-#### 2.13.3 What may be omitted
+#### 2.12.3 What may be omitted
 
 Only non-core items may be omitted, and only when the framework explicitly makes them optional, conditional, discretionary, or packaging-flexible.
 
@@ -1691,7 +1608,7 @@ Examples of potentially omittable non-core items include:
 
 If the framework does not explicitly allow an item to be optional, conditional, discretionary, or packaging-flexible, teams MUST treat it as required.
 
-#### 2.13.4 Omission / waiver test
+#### 2.12.4 Omission / waiver test
 
 A non-core item may be omitted only when the omission does **not** reduce any of the following:
 1. completeness against the framework's readiness model
@@ -1702,7 +1619,7 @@ A non-core item may be omitted only when the omission does **not** reduce any of
 
 If omission weakens any of those outcomes, the omission is not permitted.
 
-#### 2.13.5 Approval model
+#### 2.12.5 Approval model
 
 The framework uses a structured approval model for non-core omissions:
 1. The Delivery Owner may approve omission of explicitly waivable non-core items when the required rationale is documented.
@@ -1714,7 +1631,7 @@ The framework uses a structured approval model for non-core omissions:
 
 PMO review for these cases is a control requirement, not an optional escalation path.
 
-#### 2.13.6 Recording rule
+#### 2.12.6 Recording rule
 
 Every approved omission or waiver decision MUST be recorded canonically in the `Decision Log`.
 
@@ -1722,7 +1639,7 @@ When the omission affects a specific artifact or gate review, the affected artif
 
 Unrecorded omissions are invalid for framework purposes, even if they were discussed informally.
 
-#### 2.13.7 Machine-consumable anti-bureaucracy model (YAML)
+#### 2.12.7 Machine-consumable anti-bureaucracy model (YAML)
 
 ```yaml
 kind: policy
@@ -1754,11 +1671,11 @@ recording_system:
   local_reference_when_relevant: true
 ```
 
-### 2.14 Critical stage-defining artifact mapping
+### 2.13 Critical stage-defining artifact mapping
 
 This section defines the canonical gate-to-critical-artifact mapping rules for the framework.
 
-#### 2.14.1 Mapping philosophy
+#### 2.13.1 Mapping philosophy
 
 The framework uses a rule-based mapping model:
 1. each gate has a canonical base critical set
@@ -1773,7 +1690,7 @@ Critical mapping is therefore not a flat list. It is a combination of:
 4. explicitly elevated project-specific deliverables when the primary definition artifact ties them to a gate
 5. embedded gate evidence where no standalone artifact exists
 
-#### 2.14.2 Persistent critical artifacts
+#### 2.13.2 Persistent critical artifacts
 
 From Gate 2 onward, the following artifacts are persistently gate-critical:
 1. `ARTIFACT-PROJECT-BRIEF`
@@ -1782,13 +1699,13 @@ From Gate 2 onward, the following artifacts are persistently gate-critical:
 
 These artifacts remain critical through Closure because later gates must still be judged against the bounded scope, intended outcomes, decision history, and open-item status established earlier.
 
-#### 2.14.3 Project-specific deliverable elevation rule
+#### 2.13.3 Project-specific deliverable elevation rule
 
 1. The `Initiative Definition / Project Brief` is the base primary artifact at all applicable gates.
 2. A project-specific deliverable becomes gate-critical only when the `Initiative Definition / Project Brief` explicitly ties that deliverable to a named gate.
 3. A project-specific deliverable mentioned in the `Initiative Definition / Project Brief` does not become gate-critical merely because it is listed as a deliverable; the gate tie MUST be explicit.
 
-#### 2.14.4 Conditional-artifact criticality rule
+#### 2.13.4 Conditional-artifact criticality rule
 
 A triggered conditional artifact becomes gate-critical at the gate where its absence would invalidate that gate's mandatory pass conditions.
 
@@ -1796,7 +1713,7 @@ This means:
 1. a conditional artifact may be required by one gate and still remain critical at a later gate if its contents remain necessary for the later stop/proceed decision
 2. a conditional artifact does not become gate-critical merely because it exists; it becomes gate-critical when the current gate depends on it materially
 
-#### 2.14.5 Gate-by-gate canonical mapping
+#### 2.13.5 Gate-by-gate canonical mapping
 
 1. **Gate 1 (`Qualified Request`)**
    - Base critical artifact: `ARTIFACT-REQUEST-INTAKE-RECORD`
@@ -1875,7 +1792,7 @@ This means:
      - `ARTIFACT-OPEN-ITEMS-REGISTER`
    - `Closure Record` is the universal closure artifact for the framework and is always required by Gate 8.
 
-#### 2.14.6 Machine-consumable gate-mapping rules (YAML)
+#### 2.13.6 Machine-consumable gate-mapping rules (YAML)
 
 ```yaml
 kind: gate_mapping
@@ -2149,40 +2066,10 @@ These scenarios are intended for external evaluation of the framework’s outcom
 2. The output is judged incomplete even though documents exist.
 3. The gaps are surfaced explicitly rather than being absorbed into downstream interpretation.
 
-### 5.6 Edge-case scenario 1: Small request with pressure to over-document
-
-**Setup conditions**
-1. A relatively small change request is raised.
-2. Team members are concerned the framework may force unnecessary work.
-
-**Actions**
-1. The team applies the framework to the request.
-2. A reviewer compares the produced outputs with the actual delivery need.
-
-**Expected observable outcomes**
-1. The documentation is sufficient to make the work buildable and supportable.
-2. The framework does not require obviously irrelevant or non-value-adding outputs merely to satisfy process formality.
-3. Any omitted non-core item is explicitly justified and recorded rather than skipped informally.
-4. Reviewers conclude that the framework supported delivery readiness without adding avoidable bureaucracy or waiving core controls.
-
-### 5.7 Edge-case scenario 2: Large multi-team initiative with long-term support needs
-
-**Setup conditions**
-1. A complex enterprise initiative spans multiple internal teams and has long-term operational impact.
-
-**Actions**
-1. The framework is applied across the initiative.
-2. Multiple teams review the resulting documentation independently.
-
-**Expected observable outcomes**
-1. Teams can align on the intended solution and delivery shape from the same documentation set.
-2. Supportability and maintainability expectations are visible, not implied.
-3. Reviewers judge the artifacts sufficient for coordinated downstream planning across teams without conflicting interpretations of core requirements.
-
 ## 6. Implementation Constraints
 
-1. The implementation must remain minimal and avoid adding process overhead that does not improve delivery readiness, using the anti-bureaucracy control model in Section 2.13.
+1. The implementation must remain minimal and avoid adding process overhead that does not improve delivery readiness, using the anti-bureaucracy control model in Section 2.12.
 2. The implementation must be suitable for human teams and AI-agent consumers.
-3. The implementation must support complex enterprise and large multi-team initiatives.
+3. The implementation must support complex enterprise and cross-team initiatives.
 4. No software integrations are currently required.
 5. No code generation or solution implementation is in scope.
