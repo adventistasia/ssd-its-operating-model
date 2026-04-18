@@ -1,8 +1,0 @@
-interface:
-  display_name: "Extract a LORE.md"
-  short_description: "Turn transcripts into LoreSpec LORE.md"
-  brand_color: "#0F766E"
-  default_prompt: "Use $extract-a-lore-md to extract a LoreSpec-compliant LORE.md from this transcript and save it under session_digests/ as YYYYMMDD##_[topic slug underscored].md."
-
-policy:
-  allow_implicit_invocation: true
