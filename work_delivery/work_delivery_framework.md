@@ -273,11 +273,14 @@ The four-phase view only works if these boundaries remain explicit:
 | Sponsor                           | Sponsorship, priority, funding support, risk sponsorship             | Confirms why the work matters and keeps it supported                                                |
 | Decision Authority                | Formal go / no-go and major governance decisions                     | May be the committee itself or a formally delegated person acting within recorded delegation limits |
 | Outcome Owner                     | Intended business outcome and success measures                       | Confirms the work is solving the right problem                                                      |
-| Delivery Owner                    | Stage discipline, coordination, delivery control, evidence readiness | Usually leads the operating rhythm of the work                                                      |
-| Project Manager (if assigned)     | Delivery coordination on behalf of the Delivery Owner                | Maintains plans, status, risks, decisions, dependencies, and follow-up actions                      |
+| Delivery Owner                    | Stage discipline, coordination, delivery control, evidence readiness | Usually leads the operating rhythm of the work and ensures deliverables are owned, evidenced, and acceptance-ready |
 | Acceptance Authority              | Formal sign-off for a deliverable domain or deliverable              | Accepts based on defined acceptance focus and evidence                                              |
 | Support Owner / Operational Owner | Ongoing operational support and service continuity                   | Confirms readiness to run and support the solution                                                  |
 | Subject Matter Leads              | Domain-specific content quality                                      | Draft or review specialist inputs as required                                                       |
+
+**Clarification:** The Delivery Owner is accountable for delivery control and stage discipline. They may do some execution work, but they are not assumed to be the sole person doing the build. Execution typically sits with the delivery team, domain leads, and/or assigned deliverable owners.
+
+**Optional support:** The Delivery Owner may decide to add supporting roles (e.g., a Project Manager / delivery coordinator) to help run plans, status, RAID, and follow-ups. These are not core governance roles in this framework; accountability remains with the named Delivery Owner.
 
 ### 5.1. Delegated Decision Authority
 
@@ -580,7 +583,7 @@ Additional expected deliverables not needed for authorization may be listed at s
 | Support / operational impact summary            | When service or system impact exists                                               | Delivery Owner with operations                | May be summarized in the Initiative Definition Document with supporting detail referenced separately |
 | Supporting authorization artifacts              | As needed                                                                          | Relevant owner                                | Use only where additional detail is necessary for a sound authorization decision                     |
 | Draft Project Charter                           | Yes                                                                                | Delivery Owner                                | Prepare the decision-ready charter for Stage 3                                                       |
-| Initial Delivery Roadmap (high level)           | Yes                                                                                | Delivery Owner with Project Manager support   | Draft high-level phases, milestones, dependencies, and risks to support authorization-level planning visibility |
+| Initial Delivery Roadmap (high level)           | Yes                                                                                | Delivery Owner (may delegate)                 | Draft high-level phases, milestones, dependencies, and risks to support authorization-level planning visibility |
 | Stage 2 readiness decision record               | Yes                                                                                | Delivery Owner with Outcome Owner             | Record whether the package is ready or not ready for Work Authorization, with basis and follow-up    |
 
 ### 10.4. AI Use in This Stage
@@ -684,7 +687,7 @@ No delivery work may start without explicit Work Authorization.
 | Acceptance test approach                  | Yes for deliverables requiring testing | Delivery Owner with testers / reviewers     | Show how acceptance will be evidenced                                                             |
 | Data move, rollout, and recovery approach | When applicable                        | Delivery Owner with operations / data leads | Make transition and recovery practical                                                            |
 | Detailed operational design summary       | When system impact exists              | Operations / support lead                   | Confirm how the solution will be run and supported                                                |
-| Delivery Roadmap (elaborated baseline)    | Yes                                    | Delivery Owner with Project Manager support  | Expand Stage 2 roadmap with release sequence, dependencies, and control checkpoints               |
+| Delivery Roadmap (elaborated baseline)    | Yes                                    | Delivery Owner (may delegate)                | Expand Stage 2 roadmap with release sequence, dependencies, and control checkpoints               |
 
 ### 12.3. AI Use in This Stage
 
@@ -742,10 +745,10 @@ Stage 5 is the readiness checkpoint between delivery-ready design and controlled
 | --- | --- | --- | --- |
 | Delivery Charter | Yes | Delivery Owner | Charter and mobilize the team with clear operating expectations, communication methods, and governance controls |
 | Delivery Roadmap (team-confirmed) | Yes | Delivery Owner with delivery team leads | Confirm scope-aligned sequencing, milestones, dependencies, and ownership with the mobilized team |
-| Initial delivery plan / task breakdown | Yes | Project Manager or Delivery Owner | Enough to start controlled execution |
+| Initial delivery plan / task breakdown | Yes | Delivery Owner (or delegate) | Enough to start controlled execution |
 | Communication plan | Yes | Delivery Owner | Keep key audiences informed at the right level |
 | Change and escalation rules | Yes | Delivery Owner | Clarify who decides what and how issues are escalated |
-| RAID / dependency log setup | Yes | Project Manager or Delivery Owner | Risks, assumptions, issues, dependencies in one maintained place |
+| RAID / dependency log setup | Yes | Delivery Owner (or delegate) | Risks, assumptions, issues, dependencies in one maintained place |
 | Acceptance tracker setup | Yes | Delivery Owner | Track domain-level readiness, evidence, and sign-off status |
 
 ### 13.3. Minimum Operating Rhythm
@@ -798,10 +801,10 @@ AI must not:
 
 | Output                                            | Required           | Accountable                       | Practical note                                                  |
 | ------------------------------------------------- | ------------------ | --------------------------------- | --------------------------------------------------------------- |
-| Deliverables as approved in Initiative Definition | Yes                | Assigned Delivery Owners          | Build and validate only what was authorized or formally changed |
+| Deliverables as approved in Initiative Definition | Yes                | Deliverable Owners (assigned)     | Build and validate only what was authorized or formally changed |
 | Evidence linked to deliverables                   | Yes                | Delivery Owner with domain leads  | Evidence must be attributable and reviewable                    |
-| Status reporting                                  | Yes                | Project Manager or Delivery Owner | Report progress by deliverable status and major outcomes        |
-| RAID / dependency log updates                     | Yes                | Project Manager or Delivery Owner | Keep risks, issues, and dependencies current                    |
+| Status reporting                                  | Yes                | Delivery Owner (or delegate)      | Report progress by deliverable status and major outcomes        |
+| RAID / dependency log updates                     | Yes                | Delivery Owner (or delegate)      | Keep risks, issues, dependencies current                        |
 | Change records                                    | When change occurs | Delivery Owner                    | Record scope, decision, and impact of changes                   |
 | Acceptance tracker updates                        | Yes                | Delivery Owner                    | Show what is ready, blocked, or pending sign-off                |
 
@@ -813,7 +816,7 @@ During execution:
 - unapproved scope expansion should be treated as a governance issue
 - material changes should be routed through the agreed change path
 - evidence should be collected as work is completed, not reconstructed at the end
-- the Delivery Owner or project manager should keep the operating picture current
+- the Delivery Owner (or delegate) should keep the operating picture current
 
 ### 14.4. AI Use in This Stage
 
