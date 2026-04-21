@@ -1,3 +1,5 @@
 .obsidian/
 .worktrees/
 *.ps1
+.codex
+.session_prompt*

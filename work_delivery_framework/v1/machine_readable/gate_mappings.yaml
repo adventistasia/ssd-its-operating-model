@@ -1,0 +1,90 @@
+gate_mappings:
+  - kind: gate_mapping
+    id: RULE-GATE-1-CRITICAL-ARTIFACTS
+    gate_id: GATE-QUALIFIED-REQUEST
+    base_critical_artifacts:
+      - ARTIFACT-REQUEST-INTAKE-RECORD
+  - kind: gate_mapping
+    id: RULE-GATE-2-CRITICAL-ARTIFACTS
+    gate_id: GATE-INITIATIVE-DEFINED
+    base_critical_artifacts:
+      - ARTIFACT-PROJECT-BRIEF
+      - ARTIFACT-DECISION-LOG
+      - ARTIFACT-OPEN-ITEMS-REGISTER
+  - kind: gate_mapping
+    id: RULE-GATE-3-CRITICAL-ARTIFACTS
+    gate_id: GATE-AUTHORIZED
+    gate_specific_artifacts:
+      - ARTIFACT-PROJECT-CHARTER
+    persistent_critical_artifacts:
+      - ARTIFACT-PROJECT-BRIEF
+      - ARTIFACT-DECISION-LOG
+      - ARTIFACT-OPEN-ITEMS-REGISTER
+  - kind: gate_mapping
+    id: RULE-GATE-4-CRITICAL-ARTIFACTS
+    gate_id: GATE-SPECIFICATION-COMPLETE
+    persistent_critical_artifacts:
+      - ARTIFACT-PROJECT-BRIEF
+      - ARTIFACT-DECISION-LOG
+      - ARTIFACT-OPEN-ITEMS-REGISTER
+    conditional_artifacts_become_critical_when_gate_invalidated:
+      - ARTIFACT-DELIVERY-CHARTER
+      - ARTIFACT-TDD
+      - ARTIFACT-API-CONTRACT-SPEC
+      - ARTIFACT-DATA-ASSET-SPEC
+      - ARTIFACT-DATA-MIGRATION-PLAN
+      - ARTIFACT-ACCESS-MODEL
+      - ARTIFACT-SECURITY-PRIVACY-RIA
+    embedded_evidence_required: true
+  - kind: gate_mapping
+    id: RULE-GATE-5-CRITICAL-ARTIFACTS
+    gate_id: GATE-MVP-IDENTIFIED
+    persistent_critical_artifacts:
+      - ARTIFACT-PROJECT-BRIEF
+      - ARTIFACT-DECISION-LOG
+      - ARTIFACT-OPEN-ITEMS-REGISTER
+    conditional_artifacts_become_critical_when_gate_invalidated:
+      - ARTIFACT-DELIVERY-CHARTER
+      - ARTIFACT-TDD
+      - ARTIFACT-API-CONTRACT-SPEC
+      - ARTIFACT-DATA-ASSET-SPEC
+      - ARTIFACT-DATA-MIGRATION-PLAN
+      - ARTIFACT-ACCESS-MODEL
+      - ARTIFACT-SECURITY-PRIVACY-RIA
+    project_brief_may_elevate_gate_specific_deliverables: true
+    embedded_evidence_required: true
+  - kind: gate_mapping
+    id: RULE-GATE-6-CRITICAL-ARTIFACTS
+    gate_id: GATE-DELIVERABLES-ACCEPTED
+    persistent_critical_artifacts:
+      - ARTIFACT-PROJECT-BRIEF
+      - ARTIFACT-DECISION-LOG
+      - ARTIFACT-OPEN-ITEMS-REGISTER
+    conditional_artifacts_become_critical_when_gate_invalidated:
+      - ARTIFACT-DELIVERY-CHARTER
+      - ARTIFACT-DEPLOYMENT-GUIDE
+      - ARTIFACT-USER-ADOPTION-PLAN
+    project_brief_may_elevate_gate_specific_deliverables: true
+    embedded_evidence_required: true
+  - kind: gate_mapping
+    id: RULE-GATE-7-CRITICAL-ARTIFACTS
+    gate_id: GATE-TRANSITION-COMPLETE
+    persistent_critical_artifacts:
+      - ARTIFACT-PROJECT-BRIEF
+      - ARTIFACT-DECISION-LOG
+      - ARTIFACT-OPEN-ITEMS-REGISTER
+    conditional_artifacts_become_critical_when_gate_invalidated:
+      - ARTIFACT-DELIVERY-CHARTER
+      - ARTIFACT-DEPLOYMENT-GUIDE
+      - ARTIFACT-USER-ADOPTION-PLAN
+    project_brief_may_elevate_gate_specific_deliverables: true
+    embedded_evidence_required: true
+  - kind: gate_mapping
+    id: RULE-GATE-8-CRITICAL-ARTIFACTS
+    gate_id: GATE-CLOSURE-COMPLETE
+    gate_specific_artifacts:
+      - ARTIFACT-CLOSURE-RECORD
+    persistent_critical_artifacts:
+      - ARTIFACT-PROJECT-BRIEF
+      - ARTIFACT-DECISION-LOG
+      - ARTIFACT-OPEN-ITEMS-REGISTER

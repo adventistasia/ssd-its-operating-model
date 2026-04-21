@@ -1,0 +1,156 @@
+gates:
+  - kind: gate
+    id: GATE-QUALIFIED-REQUEST
+    name: Qualified Request
+    mandatory_pass_conditions:
+      - Request is in scope for the framework
+      - Gate Decision Owner is named
+    immediate_fail_conditions:
+      - Request is out of scope
+      - Scope cannot be determined due to missing inputs
+    minimum_qualitative_threshold: adequate
+    critical_stage_defining_artifacts:
+      - ARTIFACT-REQUEST-INTAKE-RECORD
+    critical_mapping_rule_ref: RULE-GATE-1-CRITICAL-ARTIFACTS
+    default_decision_owner_role: Delivery Owner
+    requires_named_decision_owner: true
+  - kind: gate
+    id: GATE-INITIATIVE-DEFINED
+    name: Initiative Defined (for Authorization decision)
+    mandatory_pass_conditions:
+      - Scope is bounded
+      - Outcomes and success measures are defined at an appropriate level
+      - Authorization requirement is declared as Required or Not Required
+      - If external participation is expected, a provisional external engagement mode is declared
+    immediate_fail_conditions:
+      - Critical ambiguity remains unresolved
+      - Authorization requirement cannot be decided due to missing information
+    minimum_qualitative_threshold: adequate
+    critical_stage_defining_artifacts:
+      - ARTIFACT-PROJECT-BRIEF
+      - ARTIFACT-DECISION-LOG
+      - ARTIFACT-OPEN-ITEMS-REGISTER
+    critical_mapping_rule_ref: RULE-GATE-2-CRITICAL-ARTIFACTS
+    default_decision_owner_role: Delivery Owner
+    requires_named_decision_owner: true
+  - kind: gate
+    id: GATE-AUTHORIZED
+    name: Authorized
+    conditional: true
+    mandatory_pass_conditions:
+      - Business authorization to invest resources is explicit and recorded
+    immediate_fail_conditions:
+      - Authorization is required but not granted
+    minimum_qualitative_threshold: adequate
+    critical_stage_defining_artifacts:
+      - ARTIFACT-PROJECT-CHARTER
+      - ARTIFACT-PROJECT-BRIEF
+      - ARTIFACT-DECISION-LOG
+      - ARTIFACT-OPEN-ITEMS-REGISTER
+    critical_mapping_rule_ref: RULE-GATE-3-CRITICAL-ARTIFACTS
+    default_decision_owner_role: Business / Product Owner (Budget Owner)
+    requires_named_decision_owner: true
+  - kind: gate
+    id: GATE-SPECIFICATION-COMPLETE
+    name: Specification Complete
+    mandatory_pass_conditions:
+      - Solution definition is sufficient for planning and task breakdown
+      - Acceptance criteria are defined
+      - Acceptance criteria are observable, quantifiable, and include validation methods and holdout examples
+      - If external delivery is used, the engagement mode is finalized and Delivery Charter obligations are satisfied
+    immediate_fail_conditions:
+      - Downstream delivery would require inventing business requirements
+    minimum_qualitative_threshold: strong
+    critical_stage_defining_artifacts:
+      - ARTIFACT-PROJECT-BRIEF
+      - ARTIFACT-DECISION-LOG
+      - ARTIFACT-OPEN-ITEMS-REGISTER
+      - ARTIFACT-DELIVERY-CHARTER
+      - ARTIFACT-TDD
+      - ARTIFACT-API-CONTRACT-SPEC
+      - ARTIFACT-DATA-ASSET-SPEC
+      - ARTIFACT-DATA-MIGRATION-PLAN
+      - ARTIFACT-ACCESS-MODEL
+      - ARTIFACT-SECURITY-PRIVACY-RIA
+    critical_mapping_rule_ref: RULE-GATE-4-CRITICAL-ARTIFACTS
+    default_decision_owner_role: Delivery Owner
+    requires_named_decision_owner: true
+  - kind: gate
+    id: GATE-MVP-IDENTIFIED
+    name: MVP Identified
+    mandatory_pass_conditions:
+      - MVP scope is defined
+      - MVP success measures are explicit
+      - MVP acceptance criteria are explicit and approved
+    immediate_fail_conditions:
+      - MVP is undefined or acceptance expectations are ambiguous
+    minimum_qualitative_threshold: adequate
+    critical_stage_defining_artifacts:
+      - ARTIFACT-PROJECT-BRIEF
+      - ARTIFACT-DECISION-LOG
+      - ARTIFACT-OPEN-ITEMS-REGISTER
+      - ARTIFACT-DELIVERY-CHARTER
+      - ARTIFACT-TDD
+      - ARTIFACT-API-CONTRACT-SPEC
+      - ARTIFACT-DATA-ASSET-SPEC
+      - ARTIFACT-DATA-MIGRATION-PLAN
+      - ARTIFACT-ACCESS-MODEL
+      - ARTIFACT-SECURITY-PRIVACY-RIA
+    critical_mapping_rule_ref: RULE-GATE-5-CRITICAL-ARTIFACTS
+    default_decision_owner_role: Delivery Owner
+    requires_named_decision_owner: true
+  - kind: gate
+    id: GATE-DELIVERABLES-ACCEPTED
+    name: All Deliverables Accepted
+    mandatory_pass_conditions:
+      - Delivered solution is accepted by the Acceptance Owner against the specified acceptance criteria
+    immediate_fail_conditions:
+      - Acceptance criteria are not met and no explicit deviation approval exists
+    minimum_qualitative_threshold: adequate
+    critical_stage_defining_artifacts:
+      - ARTIFACT-PROJECT-BRIEF
+      - ARTIFACT-DECISION-LOG
+      - ARTIFACT-OPEN-ITEMS-REGISTER
+      - ARTIFACT-DELIVERY-CHARTER
+      - ARTIFACT-DEPLOYMENT-GUIDE
+      - ARTIFACT-USER-ADOPTION-PLAN
+    critical_mapping_rule_ref: RULE-GATE-6-CRITICAL-ARTIFACTS
+    default_decision_owner_role: Acceptance Owner (Business / Product Owner)
+    requires_named_decision_owner: true
+  - kind: gate
+    id: GATE-TRANSITION-COMPLETE
+    name: Transition Complete
+    mandatory_pass_conditions:
+      - Support model and operating ownership are accepted
+      - Support model, ownership, observability, and maintainability are explicitly defined and accepted
+      - Transition checklist is complete with evidence
+    immediate_fail_conditions:
+      - The solution cannot be supported as delivered
+      - No named Support Owner or unaddressed operational gaps
+    minimum_qualitative_threshold: adequate
+    critical_stage_defining_artifacts:
+      - ARTIFACT-PROJECT-BRIEF
+      - ARTIFACT-DECISION-LOG
+      - ARTIFACT-OPEN-ITEMS-REGISTER
+      - ARTIFACT-DELIVERY-CHARTER
+      - ARTIFACT-DEPLOYMENT-GUIDE
+      - ARTIFACT-USER-ADOPTION-PLAN
+    critical_mapping_rule_ref: RULE-GATE-7-CRITICAL-ARTIFACTS
+    default_decision_owner_role: Operations / Support Owner
+    requires_named_decision_owner: true
+  - kind: gate
+    id: GATE-CLOSURE-COMPLETE
+    name: Closure Complete
+    mandatory_pass_conditions:
+      - Closure requirements are satisfied and recorded
+    immediate_fail_conditions:
+      - Closure evidence is incomplete
+    minimum_qualitative_threshold: adequate
+    critical_stage_defining_artifacts:
+      - ARTIFACT-CLOSURE-RECORD
+      - ARTIFACT-PROJECT-BRIEF
+      - ARTIFACT-DECISION-LOG
+      - ARTIFACT-OPEN-ITEMS-REGISTER
+    critical_mapping_rule_ref: RULE-GATE-8-CRITICAL-ARTIFACTS
+    default_decision_owner_role: PMO / ITS Director
+    requires_named_decision_owner: true
