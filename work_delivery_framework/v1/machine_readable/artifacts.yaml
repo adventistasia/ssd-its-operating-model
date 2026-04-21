@@ -1,0 +1,94 @@
+artifacts:
+  - kind: artifact
+    id: ARTIFACT-REQUEST-INTAKE-RECORD
+    name: Request Intake Record
+    packaging_mode: standalone
+    required_by_gate: GATE-QUALIFIED-REQUEST
+  - kind: artifact
+    id: ARTIFACT-PROJECT-BRIEF
+    name: Initiative Definition / Project Brief
+    packaging_mode: standalone
+    required_by_gate: GATE-INITIATIVE-DEFINED
+  - kind: artifact
+    id: ARTIFACT-DECISION-LOG
+    name: Decision Log
+    packaging_mode: standalone
+    required_by_gate: GATE-INITIATIVE-DEFINED
+  - kind: artifact
+    id: ARTIFACT-OPEN-ITEMS-REGISTER
+    name: Open Items Register
+    packaging_mode: standalone
+    required_by_gate: GATE-INITIATIVE-DEFINED
+  - kind: artifact
+    id: ARTIFACT-CLOSURE-RECORD
+    name: Closure Record
+    packaging_mode: standalone
+    required_by_gate: GATE-CLOSURE-COMPLETE
+  - kind: artifact
+    id: ARTIFACT-PROJECT-CHARTER
+    name: Project Charter (Approved)
+    conditional_on:
+      - Authorization is required
+    required_by_gate: GATE-AUTHORIZED
+  - kind: artifact
+    id: ARTIFACT-DELIVERY-CHARTER
+    name: Delivery Charter
+    conditional_on:
+      - External engagement mode is Co-delivery or Full External Delivery
+    required_by_gate_default: GATE-SPECIFICATION-COMPLETE
+    may_be_required_by_gate:
+      - GATE-AUTHORIZED
+  - kind: artifact
+    id: ARTIFACT-TDD
+    name: Technical Design Document (TDD)
+    conditional_on:
+      - Material ops/support impact
+    required_by_gate: GATE-SPECIFICATION-COMPLETE
+  - kind: artifact
+    id: ARTIFACT-API-CONTRACT-SPEC
+    name: API/Contract Specification
+    conditional_on:
+      - New integration / API change
+    required_by_gate: GATE-SPECIFICATION-COMPLETE
+  - kind: artifact
+    id: ARTIFACT-DEPLOYMENT-GUIDE
+    name: Deployment Guide
+    conditional_on:
+      - Material ops/support impact
+    required_by_gate: GATE-DELIVERABLES-ACCEPTED
+  - kind: artifact
+    id: ARTIFACT-USER-ADOPTION-PLAN
+    name: User Adoption Plan
+    conditional_on:
+      - Customer-facing change
+    start_by_gate: GATE-SPECIFICATION-COMPLETE
+    required_by_gate: GATE-DELIVERABLES-ACCEPTED
+  - kind: artifact
+    id: ARTIFACT-DATA-ASSET-SPEC
+    name: Data Asset Specification
+    conditional_on:
+      - Data migration
+    required_by_gate: GATE-SPECIFICATION-COMPLETE
+  - kind: artifact
+    id: ARTIFACT-DATA-MIGRATION-PLAN
+    name: Data Migration Plan
+    conditional_on:
+      - Data migration
+    required_by_gate: GATE-SPECIFICATION-COMPLETE
+  - kind: artifact
+    id: ARTIFACT-ACCESS-MODEL
+    name: Access Model
+    conditional_on:
+      - Security/compliance impact
+    required_by_gate: GATE-SPECIFICATION-COMPLETE
+  - kind: artifact
+    id: ARTIFACT-SECURITY-PRIVACY-RIA
+    name: Security/Privacy Risk Impact Assessment
+    conditional_on:
+      - Security/compliance impact
+    required_by_gate: GATE-SPECIFICATION-COMPLETE
+  - kind: artifact
+    id: ARTIFACT-ACCEPTANCE-CRITERIA
+    name: Acceptance Criteria
+    packaging_mode: embedded
+    required_by_gate: GATE-SPECIFICATION-COMPLETE

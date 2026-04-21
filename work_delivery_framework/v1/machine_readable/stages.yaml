@@ -1,0 +1,83 @@
+stages:
+  - kind: stage
+    id: STAGE-INTAKE
+    name: Intake
+    entry_criteria: []
+    exit_criteria:
+      - Initial request captured
+      - Provisional triage ownership assigned
+    required_artifacts: []
+    gate: null
+  - kind: stage
+    id: STAGE-ASSESSMENT
+    name: Assessment / Qualification
+    entry_criteria:
+      - Intake completed
+    exit_criteria:
+      - Request qualified as in-scope or rejected as out-of-scope
+    required_artifacts: []
+    gate: GATE-QUALIFIED-REQUEST
+  - kind: stage
+    id: STAGE-DISCOVERY
+    name: Discovery / Initiative Definition
+    entry_criteria:
+      - Gate 1 passed
+    exit_criteria:
+      - Initiative definition is sufficient to decide authorization requirement
+    required_artifacts: []
+    gate: GATE-INITIATIVE-DEFINED
+  - kind: stage
+    id: STAGE-AUTHORIZATION
+    name: Authorization
+    conditional: true
+    entry_criteria:
+      - Authorization is required and declared at Gate 2
+    exit_criteria:
+      - Authorization decision recorded
+    required_artifacts: []
+    gate: GATE-AUTHORIZED
+  - kind: stage
+    id: STAGE-SOLUTION-DEFINITION
+    name: Solution Definition
+    entry_criteria:
+      - Gate 2 passed
+    exit_criteria:
+      - Solution definition is complete enough for planning and task breakdown
+    required_artifacts: []
+    gate: GATE-SPECIFICATION-COMPLETE
+  - kind: stage
+    id: STAGE-PLANNING
+    name: Planning / Project Team Mobilization / MVP Plan
+    entry_criteria:
+      - Gate 4 passed
+    exit_criteria:
+      - MVP scope and MVP acceptance criteria approved
+    required_artifacts: []
+    gate: GATE-MVP-IDENTIFIED
+  - kind: stage
+    id: STAGE-DELIVERY
+    name: Delivery / Execution
+    entry_criteria:
+      - Gate 5 passed
+    exit_criteria:
+      - Delivered solution accepted against acceptance criteria
+    required_artifacts: []
+    gate: GATE-DELIVERABLES-ACCEPTED
+  - kind: stage
+    id: STAGE-TRANSITION
+    name: Handoff / Transition
+    entry_criteria:
+      - Gate 6 passed
+    exit_criteria:
+      - Supported operating state accepted
+    required_artifacts: []
+    gate: GATE-TRANSITION-COMPLETE
+  - kind: stage
+    id: STAGE-CLOSURE
+    name: Closure
+    entry_criteria:
+      - Gate 7 passed
+    exit_criteria:
+      - Closure requirements satisfied and recorded
+    required_artifacts: []
+    gate: GATE-CLOSURE-COMPLETE
