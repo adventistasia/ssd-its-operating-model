@@ -47,6 +47,8 @@ To ensure that the planned deliverables are completed and made ready for accepta
 
 1. Delivery of the overall work.
 2. Delivery of all deliverables within the work.
+3. Informing the Acceptance Owner when the delivered work is ready for review.
+4. Preparation and submission of the Closure Report.
 
 **Authority**
 
@@ -138,12 +140,14 @@ The Workboard Manager shall be responsible for:
 
 ### 4.8 Work Acceptance and Closure
 
-- The Workboard Manager shall trigger the start of acceptance review of deliverables after the Delivery Owner has declared that delivery is complete.
+- The Delivery Owner shall inform the Acceptance Owner when the delivered work is ready for review after declaring that delivery is complete.
+- The Workboard Manager shall trigger the start of acceptance review of deliverables after the Delivery Owner has informed the Acceptance Owner that the delivered work is ready for review.
 - The Acceptance Owner shall declare when acceptance review is complete.
 - If deliverables are accepted, the work may proceed to closure review.
 - If deliverables are not accepted in full, the Workboard Manager shall organize a meeting to resolve the non-acceptance of deliverables.
 - The Acceptance Owner shall conduct the closure review for work that proceeds to closure review.
-- The Workboard Manager shall trigger the formal closure of the work after the closure review confirms that the work meets the closure criteria.
+- The Delivery Owner shall prepare and submit the Closure Report before a work may be formally closed.
+- The Workboard Manager shall trigger the formal closure of the work after the closure review confirms that the work meets the closure criteria and that the Closure Report has been submitted.
 - The Workboard Manager shall clear closed items from the workboard.
 
 ## 5. Workboard Metrics
